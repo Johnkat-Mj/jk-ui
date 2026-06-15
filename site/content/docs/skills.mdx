@@ -1,0 +1,71 @@
+---
+title: AI Skills
+description: AI-assisted development skills for JK-UI
+---
+
+An AI skill is a packaged set of instructions and reference files that helps AI assistants generate accurate, idiomatic JK-UI code. Instead of guessing component names, props, or install commands, the AI reads from curated source files.
+
+## jk-ui Skill
+
+The [jk-ui skill](/skills/jk-ui) covers the full JK-UI component library — install commands, props, composition patterns, theming, accessibility, and blocks.
+
+Install the skill:
+
+<Terminal command="npx skills add johnkat-mj/ui --skill jk-ui" />
+
+### Setup Flow
+
+Setting up jk-ui in a project follows two steps:
+
+1. **jk-ui CLI** — Initializes the base configuration aligned with jk-ui. Handles theme choice, appearance mode (light, dark, or both), and sets up the styling accordingly.
+
+   ```bash
+   npx jk-ui-cli@latest init
+   ```
+
+2. **shadcn CLI** — Installs individual components on top of the initialized config.
+
+   ```bash
+   npx shadcn add @jk-ui/button @jk-ui/card
+   ```
+
+The jk-ui CLI is the required first step — without it, the base config, theme tokens, and appearance mode won't be set up correctly. Components come after.
+
+### What's Included
+
+| Area | File |
+|------|------|
+| Component reference | `components/*.md` — per-component API docs |
+| Install commands | `SKILL.md` — shadcn CLI install for every component |
+| Theming | `references/theming.md` — CSS variable tokens, semantic colors, theme presets |
+| Variants | `references/style-variants.md` — shared variant/intent system (`uiStyles`) |
+| Best practices | `references/best-practices.md` — verified usage patterns |
+| Things to avoid | `references/things-to-avoid.md` — common mistakes |
+| Accessibility | `references/accessibility.md` — RAC-based patterns |
+| Composition | `references/composition-patterns.md` — common React patterns |
+| Performance | `references/performance.md` — performance guidance |
+| Colors | `references/colors.md` — light/dark CSS variable reference |
+| Components | `references/components.md` — full component index |
+
+### How It Works
+
+1. The AI reads `SKILL.md` for the tech stack, working rules, and answering pattern.
+2. For a specific component, it reads the relevant file in `components/`.
+3. It returns the install command, import path, and minimal working example.
+
+### Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 19 (Next.js, TanStack Router/Start, React Router, Laravel Inertia React, or any React project) |
+| Primitives | react-aria-components 1.17 |
+| Styling | Tailwind CSS 4 with `@tailwindcss/postcss` |
+| Variants | `tailwind-variants` 3.2 + `tailwind-merge` 3.4 |
+| Icons | Phosphor via `@iconify-json/ph` |
+| Animation | `motion` 12 + `tw-animate-css` |
+| Charts | Recharts 3.7 |
+| OTP | `input-otp` 1.4 |
+
+### Source
+
+The skill files live in [`./skills/jk-ui/`](https://github.com/johnkatmj/jk-ui/tree/main/skills/jk-ui) in the repository root.

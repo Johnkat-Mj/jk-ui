@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drop-zone",
+  "title": "Drop Zone",
+  "description": "jk-ui Drop Zone Component",
+  "files": [
+    {
+      "path": "src/components/jk/drop-zone.tsx",
+      "content": "\"use client\"\n\nimport {composeRenderProps, type DropZoneProps, DropZone as RACDropZone} from 'react-aria-components';\nimport { tv } from \"tailwind-variants\";\n\nconst dropZone = tv({\n  base: \"flex items-center justify-center p-8 min-h-24 w-[30%] font-sans text-base text-balance text-center rounded-lg border border-1 border-border-input/70 bg-bg\",\n  variants: {\n    isFocusVisible: {\n      true: \"outline outline-2 -outline-offset-1 outline-primary forced-colors:outline-[Highlight]\"\n    },\n    isDropTarget: {\n      true: \"bg-blue-100/40 dark:bg-blue-900/60 outline outline-2 -outline-offset-1 outline-primary forced-colors:outline-[Highlight]\",\n    }\n  }\n});\n\nexport function DropZone(props: DropZoneProps) {\n  return (\n    <RACDropZone\n      {...props}\n      className={composeRenderProps(props.className, (className, renderProps) => dropZone({ ...renderProps, className }))} />\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/drop-zone.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover",
+  "title": "Popover",
+  "description": "jk-ui Popover Component",
+  "registryDependencies": [
+    "@jk-ui/dialog"
+  ],
+  "files": [
+    {
+      "path": "src/components/jk/popover.tsx",
+      "content": "\"use client\"\n\nimport type {\n  DialogTriggerProps,\n  PopoverProps as RAC_PopoverProps,\n} from \"react-aria-components\"\nimport {\n  DialogTrigger as DialogTriggerPrimitive,\n  OverlayArrow,\n  Popover as RAC_Popover,\n} from \"react-aria-components\"\nimport { cx } from \"@/lib/utils\"\nimport {\n  DialogBody,\n  DialogClose,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"./dialog\"\n\ntype PopoverProps = DialogTriggerProps\nconst Popover = (props: PopoverProps) => {\n  return <DialogTriggerPrimitive {...props} />\n}\n\nconst PopoverTitle = DialogTitle\nconst PopoverHeader = DialogHeader\nconst PopoverBody = DialogBody\nconst PopoverFooter = DialogFooter\n\ninterface PopoverContentProps extends RAC_PopoverProps {\n  arrow?: boolean\n  ref?: React.Ref<HTMLDivElement>\n}\n\nconst PopoverContent = ({\n  children,\n  arrow = false,\n  className,\n  ref,\n  ...props\n}: PopoverContentProps) => {\n  const offset = props.offset ?? (arrow ? 12 : 8)\n  return (\n    <RAC_Popover\n      ref={ref}\n      offset={offset}\n      className={cx(\n        \"group/popover min-w-(--trigger-width) max-w-xs origin-(--trigger-anchor-point)\",\n        \"[--popover-padding:--spacing(1)] [--popover-radius:var(--radius-ui)]\",\n        \"p-(--popover-padding) rounded-(--popover-radius)\",\n        \"border border-fg/10 bg-popover text-fg-muted shadow-xs\",\n        \"outline-hidden transition-transform \",\n        \"sm:text-sm\",\n        \"entering:fade-in entering:animate-in\",\n        \"exiting:fade-out exiting:animate-out\",\n        \"forced-colors:bg-[Canvas]\",\n        \"popover-animation\",\n        className,\n      )}\n      {...props}\n    >\n      {(values) => (\n        <>\n          {arrow && (\n            <OverlayArrow className=\"group\">\n              <svg\n                width={12}\n                height={12}\n                viewBox=\"0 0 12 12\"\n                className=\"block fill-overlay stroke-border group-placement-bottom:rotate-180 group-placement-left:-rotate-90 group-placement-right:rotate-90 forced-colors:fill-[Canvas] forced-colors:stroke-[ButtonBorder]\"\n              >\n                <path d=\"M0 0 L6 6 L12 0\" />\n              </svg>\n            </OverlayArrow>\n          )}\n          {typeof children === \"function\" ? children(values) : children}\n        </>\n      )}\n    </RAC_Popover>\n  )\n}\n\nconst PopoverTrigger = DialogTrigger\nconst PopoverClose = DialogClose\nconst PopoverDescription = DialogDescription\n\nexport type { PopoverProps, PopoverContentProps }\nexport {\n  Popover,\n  PopoverTrigger,\n  PopoverClose,\n  PopoverDescription,\n  PopoverContent,\n  PopoverBody,\n  PopoverFooter,\n  PopoverHeader,\n  PopoverTitle,\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/popover.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

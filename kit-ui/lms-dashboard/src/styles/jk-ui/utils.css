@@ -1,0 +1,252 @@
+@utility dropdown-content {
+  @apply grid max-h-[inherit] grid-cols-[auto_1fr] overflow-y-auto overscroll-contain outline-hidden *:[[role='group']+[role=group]]:mt-4 *:[[role='group']+[role=separator]]:mt-1;
+}
+
+@utility dropdown-item-base-vars {
+  --item-px: var(--dropdown-item-px, calc(var(--spacing) * 3));
+  --item-py: var(--dropdown-item-py, calc(var(--spacing) * 1.5));
+}
+
+@utility dropdown-item-base {
+  border-radius: calc(var(--dropdown-radius) - var(--dropdown-padding));
+  @apply outline-none focus:outline rounded-md px-(--item-px) py-(--item-py) ease-linear duration-200 transition-colors;
+}
+
+
+@utility dropdown-item-grid {
+  @apply col-span-full grid grid-cols-[auto_1fr_1.5rem_0.5rem_auto] supports-[grid-template-columns:subgrid]:grid-cols-subgrid;
+}
+
+
+@utility dropdown-item-icon {
+  @apply *:data-[slot=icon]:col-start-1 *:data-[slot=icon]:row-start-1
+   *:data-[slot=icon]:me-(--mr-icon) *:data-[slot=icon]:-ms-0.5 
+   *:data-[slot=icon]:shrink-0 [&_[data-slot='icon']:not([class*='text-'])]:text-fg-muted;
+}
+
+
+@utility dropdown-item-has-description {
+  @apply not-has-[[slot=description]]:*:data-[slot=icon]:size-5 sm:not-has-[[slot=description]]:*:data-[slot=icon]:size-4
+}
+
+@utility dropdown-item-description {
+  @apply has-[[slot=description]]:*:data-[slot=icon]:h-lh has-[[slot=description]]:[&_[data-slot='icon']:not([class*='w-'])]:w-5 sm:has-[[slot=description]]:[&_[data-slot='icon']:not([class*='w-'])]:w-4
+}
+
+@utility dropdown-item-label {
+  @apply [&>[slot=label]+[data-slot=icon]]:absolute [&>[slot=label]+[data-slot=icon]]:end-0 [&>[slot=label]+[data-slot=icon]]:top-1;
+}
+
+@utility dropdown-item-keyboard{
+  @apply *:data-[slot=keyboard]:end-3
+}
+
+@utility dropdown-item-avatar {
+   @apply *:data-[slot=avatar]:*:me-(--mr-icon) *:data-[slot=avatar]:me-(--mr-icon) has-[[slot=description]]:*:data-[slot=avatar]:row-span-2 *:data-[slot=avatar]:[--avatar-size:--spacing(5)] sm:*:data-[slot=avatar]:[--avatar-size:--spacing(4)];
+}
+
+@utility dropdown-item-force-color {
+  @apply forced-color-adjust-none forced-colors:text-[CanvasText] forced-colors:**:slot-icon:text-[CanvasText] forced-colors:group-focus:**:slot-icon:text-[CanvasText];
+}
+
+@utility dropdown-item-radius {
+  --popover-inner-radius: calc(var(--popover-radius) - var(--popover-padding));
+}
+
+/* animation */
+@utility popover-animation {
+  @apply placement-left:exiting:slide-out-to-right-1 placement-right:exiting:slide-out-to-left-1 placement-top:exiting:slide-out-to-bottom-1 placement-bottom:exiting:slide-out-to-top-1 placement-left:entering:slide-in-from-right-1 placement-right:entering:slide-in-from-left-1 placement-top:entering:slide-in-from-bottom-1 placement-bottom:entering:slide-in-from-top-1;
+
+}
+
+/* dropdown hover and states  */
+@utility dropdown-item-hover {
+  @apply forced-colors:bg-[Highlight] forced-colors:text-[HighlightText];
+
+  &[data-hovered="true"],
+  &[data-focused="true"] {
+    @apply bg-(--dropdown-item-hover-and-select) text-(--dropdown-item-hover-and-select-fg);
+  }
+}
+
+@utility dropdown-item-danger {
+  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-danger-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-danger-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-danger-fg)];
+}
+
+@utility dropdown-item-warning {
+  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-warning-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-warning-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-warning-fg)];
+}
+
+@utility dropdown-item-selected {
+  &[data-selected="true"] {
+    @apply text-(--dropdown-item-selected-fg);
+  }
+}
+
+@utility dropdown-item-selected-icon{
+  @apply selected:[&>[data-slot=icon]:has(+[data-slot=icon])]:absolute selected:[&>[data-slot=icon]:has(+[data-slot=icon])]:end-0 selected:[&>[data-slot=icon]:has(+[data-slot=icon])]:top-1
+}
+
+@utility dropdown-item-selected-avatar-icon{
+  @apply selected:[&>[data-slot=icon]:has(+[data-slot=avatar])]:absolute selected:[&>[data-slot=icon]:has(+[data-slot=avatar])]:end-0 selected:[&>[data-slot=icon]:has(+[data-slot=avatar])]:top-1
+}
+@utility dropdown-item-selected-avatar{
+  @apply selected:[&>[data-slot=avatar]+[data-slot=icon]+[slot=label]]:me-6 selected:[&>[data-slot=avatar]+[slot=label]]:me-6 selected:[&>[data-slot=icon]+[data-slot=avatar]+[slot=label]]:me-6 selected:[&>[data-slot=icon]+[slot=label]]:me-6
+}
+
+@utility dropdown-item-disabled {
+  &[data-disabled="true"] {
+    @apply opacity-50 forced-colors:text-[GrayText];
+  }
+}
+
+
+@utility modal-overlay {
+  height: var(--visual-viewport-height, 100vh);
+  @apply fixed inset-0 z-50 bg-gray-800/60
+}
+
+@utility sheet-overlay {
+  @apply fixed inset-0 z-50 h-(--page-height) w-screen overflow-hidden bg-gray-800/60;
+}
+
+@utility modal-overlay-entering {
+  @apply entering:fade-in entering:animate-in entering:duration-300 entering:ease-out;
+}
+
+@utility modal-overlay-exiting {
+  @apply exiting:fade-out exiting:animate-out exiting:ease-in;
+}
+
+@utility modal-overlay-grid {
+  @apply grid grid-rows-[1fr_auto] justify-items-center sm:grid-rows-[1fr_auto_3fr]
+}
+
+
+@utility modal-transition-entering {
+  @apply entering:slide-in-from-bottom sm:entering:zoom-in-95 sm:entering:slide-in-from-bottom-0 entering:animate-in entering:duration-300 entering:ease-out;
+}
+
+@utility modal-transition-exiting {
+  @apply exiting:slide-out-to-bottom sm:exiting:zoom-out-95 sm:exiting:slide-out-to-bottom-0 exiting:animate-out exiting:ease-in;
+}
+
+@utility modal-size-fullscreen {
+  :is(& *) {
+    &[data-slot="dialog-body"] {
+      min-height: calc(var(--visual-viewport-height) - var(--visual-viewport-vertical-padding) - var(--dialog-header-height, 0px) - var(--dialog-footer-height, 0px));
+    }
+  }
+
+  @apply sm:rounded-ui sm:[--visual-viewport-vertical-padding:16px]
+}
+
+@utility overlay-on-enterring {
+  @apply entering:fade-in entering:animate-in entering:duration-500
+}
+
+@utility overlay-on-exiting {
+  @apply exiting:fade-out exiting:animate-out exiting:duration-300
+}
+
+@utility dialog-footer {
+  gap: var(--gap, calc(var(--spacing) * 3));
+  padding-top: calc(var(--gutter) - calc(var(--spacing) * 3));
+  @apply p-(--gutter) flex items-center;
+}
+
+
+/* range calendar  */
+@utility cell-selection-selected {
+  @apply fx-selected:bg-(--range-selected-bg)
+}
+
+@utility cell-radius {
+  @apply [td:first-child_&]:rounded-s-ui data-selection-start:rounded-s-ui [td:last-child_&]:rounded-e-ui data-selection-end:rounded-e-ui
+}
+
+
+@utility cell-span-selection-none {
+  @apply group-hover:bg-bg-muted/60 group-data-pressed:bg-bg-muted/80
+}
+
+@utility cell-span-selection-middle-base {
+  color: var(--range-selected-fg) !important;
+  @apply group-hover:bg-(--range-selected-bg-hover) group-data-pressed:bg-(--range-selected-bg-pressed) forced-colors:group-hover:bg-[Highlight]
+}
+
+@utility cell-span-selection-middle-invalid {
+  @apply text-(--range-selected-invalid-fg) group-invalid:group-hover:bg-(--range-selected-invalid-bg-hover) group-invalid:group-data-pressed:bg-(--range-selected-invalid-bg-pressed) forced-colors:group-invalid:group-hover:bg-[Mark]
+}
+
+
+/* disclosure group */
+@utility disclosure-group {
+  @apply [--disclosure-gutter-x:--spacing(4)] [--disclosure-radius:var(--radius-lg)] [--disclosure-collapsed-border:var(--color-border)] [--disclosure-expanded-border:var(--color-muted-fg)/30] [--disclosure-collapsed-bg:var(--color-bg)] [--disclosure-collapsed-fg:var(--color-muted-fg)] [--disclosure-expanded-bg:var(--color-secondary)]/20 [--disclosure-expanded-fg:var(--color-fg)] flex flex-col gap-y-2;
+}
+
+
+@utility disclosure-solid {
+  --bg: ;
+  --text: ;
+  --bg-active: ;
+  --text-active: ;
+}
+
+@utility disclosure-soft {
+  --bg: ;
+  --text: ;
+  --bg-active: ;
+  --text-active: ;
+}
+
+@utility disclosure-outline {
+  --text: ;
+  --border: ;
+  --border-active: ;
+}
+
+@utility disclosure-subtle {
+  --bg: ;
+  --text: ;
+  --border: ;
+  --bg-active: ;
+  --border-active: ;
+}
+
+
+@utility ui-card {
+  @apply p-(--card-padding) rounded-(--card-radius);
+}
+
+@utility inner-radius {
+  border-radius: calc(var(--card-radius) - var(--card-padding));
+}
+
+@utility d-flex-items-center {
+  @apply flex items-center;
+}
+
+@utility d-flex-place-center {
+  @apply flex justify-center items-center;
+}
+
+
+@utility ui-grid-dotted {
+  background-image: radial-gradient(currentColor var(--dotsize), var(--bg-grid-dotted) var(--dotsize));
+  background-size: var(--unify-ui-grid-width) var(--unify-ui-grid-height);
+}
+
+@utility ui-radial-gradient {
+  background: radial-gradient(125% 125% at 50% 10%, var(--unify-radial-bg) 40%, currentColor 100%);
+}
+
+@utility ui-grid {
+  --unify-grid-color: currentColor;
+  background-image: linear-gradient(to right, var(--unify-grid-color) 1px, transparent 1px), linear-gradient(to bottom, var(--unify-grid-color) 1px, transparent 1px);
+  background-size: var(--unify-ui-grid-width) var(--unify-ui-grid-height);
+}
+
+@utility ui-striper-overlay-mask {
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 110%);
+}

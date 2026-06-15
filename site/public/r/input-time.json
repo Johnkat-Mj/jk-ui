@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-time",
+  "title": "Input Time",
+  "description": "jk-ui Input Time Component",
+  "registryDependencies": [
+    "@jk-ui/input-date",
+    "@jk-ui/input"
+  ],
+  "files": [
+    {
+      "path": "src/components/jk/input-time.tsx",
+      "content": "\"use client\"\n\n\nimport {\n  TimeField as AriaTimeField,\n  type TimeFieldProps as AriaTimeFieldProps,\n  type TimeValue,\n  type ValidationResult\n} from 'react-aria-components';\nimport { DateInput } from './input-date';\nimport { Description, FieldError, inputGroupVariants, type InputSize, Label } from './input';\nimport { cx } from '@/lib/utils';\n\n\nexport interface InputTimeProps<T extends TimeValue>\n  extends AriaTimeFieldProps<T> {\n  label?: string;\n  description?: string;\n  size?: InputSize,\n  errorMessage?: string | ((validation: ValidationResult) => string);\n}\n\nexport function InputTime<T extends TimeValue>(\n  { label, description, errorMessage, size, ...props }: InputTimeProps<T>\n) {\n  return (\n    <AriaTimeField {...props} className={cx(props.className, 'flex flex-col gap-1 font-sans')}>\n      <Label>{label}</Label>\n      <DateInput className={inputGroupVariants({\n        size,\n      })} />\n      {description && <Description>{description}</Description>}\n      <FieldError>{errorMessage}</FieldError>\n    </AriaTimeField>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/input-time.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

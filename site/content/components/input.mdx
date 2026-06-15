@@ -1,0 +1,43 @@
+---
+title: Input
+description: Single-line text field for general data entry.
+keywords: input, text field, form
+links:
+    - React Aria : https://react-aria.adobe.com/TextField
+    - Flexiwind : https://flexiwind.unoforge.com/components/input
+---
+
+## Demo
+<ComponentPreview noInTabs component="examples.input-demo" />
+
+
+## Installation
+<Terminal command="npx shadcn@latest add @jk-ui/input" />
+
+
+## With label
+<ComponentPreview noInTabs component="examples.input-with-label" />
+
+
+## Input Group
+
+Input groups allow you to compose inputs with leading or trailing elements such as icons, prefixes, suffixes, or actions.
+
+When using `<InputGroup>` , the `<Input>` component must have `variant` prop to `unstyled`.
+
+- Always set `variant='unstyled'` to the input
+- Never pass label to the input
+- Styling and layout are handled by the group container
+
+### Leading
+<ComponentPreview noInTabs component="examples.input-group-leading" />
+
+### Trailing
+
+Trailing elements are commonly used for icons, units, or contextual hints. Use `InputTrailing` for this purpose.
+<ComponentPreview noInTabs component="examples.input-group-trailling" />
+
+In some cases, the trailing/leading element can be visually separated and styled as part of the control. As you can see in given examples.
+
+
+

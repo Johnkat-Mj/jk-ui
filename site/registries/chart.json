@@ -1,0 +1,98 @@
+{
+    "items": [
+        {
+            "name": "chart",
+            "type": "registry:ui",
+            "title": "Chart",
+            "description": "Recharts based chart component",
+            "files": [
+                {
+                    "path": "src/components/jk/chart.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/chart.tsx"
+                }
+            ]
+        },
+        {
+            "name": "area-chart",
+            "type": "registry:ui",
+            "title": "Area Chart",
+            "description": "jk-ui Area Chart Component",
+            "files": [
+                {
+                    "path": "src/components/jk/area-chart.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/area-chart.tsx"
+                }
+            ]
+        },
+        {
+            "name": "bar-chart",
+            "type": "registry:ui",
+            "title": "Bar Chart",
+            "description": "jk-ui Bar Chart Component",
+            "files": [
+                {
+                    "path": "src/components/jk/bar-chart.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/bar-chart.tsx"
+                }
+            ]
+        },
+        {
+            "name": "leaderboard",
+            "type": "registry:ui",
+            "title": "Leaderboard",
+            "description": "jk-ui Leaderboard Component",
+            "files": [
+                {
+                    "path": "src/components/jk/leaderboard.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/leaderboard.tsx"
+                }
+            ]
+        },
+        {
+            "name": "line-chart",
+            "type": "registry:ui",
+            "title": "Line chart",
+            "description": "Line chart component",
+            "files": [
+                {
+                    "path": "src/components/jk/line-chart.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/line-chart.tsx"
+                }
+            ]
+        },
+        {
+            "name": "pie-chart",
+            "type": "registry:ui",
+            "title": "Pie chart",
+            "description": "Pie chart component",
+            "files": [
+                {
+                    "path": "src/components/jk/pie-chart.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/pie-chart.tsx"
+                }
+            ]
+        },
+        {
+            "name": "tracker",
+            "type": "registry:ui",
+            "title": "Tracker",
+            "description": "jk-ui Tracker Component",
+            "registryDependencies": [
+                "@jk-ui/tooltip"
+            ],
+            "files": [
+                {
+                    "path": "src/components/jk/tracker.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/tracker.tsx"
+                }
+            ]
+        }
+    ]
+}

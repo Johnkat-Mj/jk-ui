@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "login02",
+  "title": "Login 02",
+  "description": "Login form with social authentication buttons",
+  "files": [
+    {
+      "path": "src/blocks/application/auth/login02.tsx",
+      "content": "import { Button } from \"@/components/jk/button\"\nimport { Card } from \"@/components/jk/card\"\nimport { Checkbox } from \"@/components/jk/checkbox\"\nimport { Input } from \"@/components/jk/input\"\nimport { Link } from \"@/components/jk/link\"\n\n\nexport const Login02 = () => {\n    return (\n        <main className=\"flex min-h-screen justify-center items-center px-5 sm:px-10 lg:px-0 py-5\">\n            <Card size=\"none\" className=\"rounded-ui p-5 sm:p-8 max-w-md\">\n                <div className=\"text-center mb-6\">\n                    <h2 className=\"text-xl font-semibold text-fg-title\">Sign In</h2>\n                    <p className=\"text-fg-muted text-sm mt-2\">\n                        Welcome back! Please sign in to your account.\n                    </p>\n                </div>\n                <form className=\"space-y-4\">\n                    <Input id=\"email\" type=\"email\" placeholder=\"johndeo@gmail.com\" label=\"Email\" autoComplete=\"off\" />\n                    <Input id=\"password\" type=\"password\" placeholder=\"********\" label=\"Password\" autoComplete=\"off\" />\n\n                    <div className=\"flex items-center justify-between\">\n                        <Checkbox id=\"remember\">\n                            Remember me\n                        </Checkbox>\n\n                        <Link href=\"#\" underlined className=\"text-sm text-primary\">Forgot password?</Link>\n                    </div>\n                    <Button type=\"submit\"\n                        className=\"justify-center w-full\">\n                        Sign In\n                    </Button>\n                </form>\n                <div className=\"mt-6 text-center\">\n                    <p className=\"text-sm text-fg-muted\">\n                        Don&apos;t have an account?\n                        <Link href=\"#\" className=\"text-primary\">Sign up</Link>\n                    </p>\n                </div>\n            </Card>\n        </main>\n    )\n}\n",
+      "type": "registry:block",
+      "target": "components/login.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

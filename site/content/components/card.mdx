@@ -1,0 +1,91 @@
+---
+title: Card
+description: Content container with header, body, and footer structure.
+keywords: card, container, panel, layout
+---
+
+## Demo
+
+<ComponentPreview component="examples.card-demo" />
+
+## Installation
+
+<Terminal command="npx shadcn@latest add @jk-ui/card" />
+
+
+## Examples
+
+### Product Card
+<ComponentPreview component="examples.product-card" />
+
+### Pricing Card
+<ComponentPreview component="examples.pricing-card" />
+
+## Card Principles
+
+The Card component is a fundamental building block for creating organized content layouts. It provides a flexible container system with optional sections for headers, content, and footers. Cards can be customized with different sizes, fill styles, and layout options to match your design requirements.
+
+
+## API Reference
+
+### Card
+
+Main card container component.
+
+**Props:**
+- `size?`: `2xs` | `xs` | `sm` | `default` | `lg` | `none` - Padding size (default: `default`)
+- `fill?`: `default` | `gray` - Background fill style (default: `default`)
+- `noBorder?`: `boolean` - Disable border ring (default: `false`)
+- `noShadow?`: `boolean` - Disable shadow (default: `false`)
+- `variant?`: `none` | `solid` | `soft` | `subtle` | `outline` - Style variant for color theming
+- `intent?`: UiComponentIntent` - Intent/color for variant
+- `className?`: string` - Additional CSS classes
+- `children`: React.ReactNode` - Card content
+
+### CardHeader
+
+Header section with flexible layout options.
+
+**Props:**
+- `direction?`: `column` | `row` - Layout direction (default: "column")
+- `justify?`: `start` | `end` | `center` - Justify content (default: "start")
+- `gap?`: `1` | `2` | `3` | `4` - Spacing between items (default: "2")
+- `flexNone?`: `boolean` - Disable flex layout (default: false)
+- `className?`: `string` - Additional CSS classes
+
+### CardTitle
+
+Title heading component.
+
+**Props:**
+- `level?`: `1` | `2` | `3` | `4` - HTML heading level (default: "2")
+- `size?`: `sm` | `md` | `lg` | `xl` - Text size (default: "lg")
+- `weight?`: `medium` | `semibold` | `bold` - Font weight (default: "semibold")
+- `text?`: `string` - Title text (alternative to children)
+- `className?`: `string` - Additional CSS classes
+
+### CardDescription
+
+Description text component.
+
+**Props:**
+- `size?`: `sm` | `base` | `lg` - Text size (default: "sm")
+- `text?`: `string` - Description text (alternative to children)
+- `className?`: `string` - Additional CSS classes
+
+### CardContent / CardBody
+
+Content container with flexible gap spacing.
+
+**Props:**
+- `gap?`: `1` | `2` | `3` | `4` - Spacing between children (default: "3")
+- `className?`: `string` - Additional CSS classes
+- `children`: `React.ReactNode` - Content items
+
+### CardFooter
+
+Footer section for actions or additional information.
+
+**Props:**
+- `className?`: `string` - Additional CSS classes
+- `children`: `React.ReactNode` - Footer content

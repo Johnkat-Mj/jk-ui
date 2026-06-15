@@ -1,0 +1,47 @@
+---
+title: Installation
+description: Get started with JK-UI in your React project
+keywords: installation, setup, tanstack start, nextjs, rasenganjs, cli, tailwindcss
+---
+
+## Installation
+
+### Prerequisites
+
+Before you begin, make sure you have:
+
+- Node.js 18+ installed
+- A React project (TanStack Start, Vite, Next.js, RasenganJS, or similar)
+- A package manager (npm, yarn, pnpm, or bun)
+
+
+
+### Initialize JK-UI
+Run the JK-UI CLI to set up your project:
+
+<Terminal command="bunx jk-ui-cli@latest init && bun shadcn@latest add @jk-ui/base"/>
+
+The CLI will guide you through the setup:
+
+- **Theme Mode**: Choose between light-only, dark-only, or light/dark toggle
+- **Icon Library**: Select your preferred icon library
+- **CSS Setup**: Automatic TailwindCSS v4 configuration
+- **Utilities**: Add JK-UI utility classes and CSS variables
+- **shadcn-cli**: Add shadcn-cli to your project
+
+### Add Components
+
+After initialization, add components using the shadcn-cli:
+
+<Terminal command="bunx shadcn@latest add @jk-ui/button @jk-ui/card @jk-ui/input"/>
+
+## CLI Reference
+
+For detailed CLI commands and options, see the [CLI documentation](/cli).
+
+## Next Steps
+
+- Browse the [Components](/components) section
+- Learn about the [Principles](/docs/principles) behind JK-UI
+- Customize your theme with [CSS Variables](/docs/colors)
+

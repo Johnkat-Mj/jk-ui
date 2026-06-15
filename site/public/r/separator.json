@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "title": "Separator",
+  "description": "jk-ui Separator Component",
+  "files": [
+    {
+      "path": "src/components/jk/separator.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cx } from \"@/lib/utils\"\n\nconst LABEL_SIZES = {\n    default: \"divider-custom-1\",\n    \"2\": \"divider-custom-2\",\n    \"3\": \"divider-custom-3\",\n} as const\n\nconst PLACEMENTS = {\n    start: \"justify-start\",\n    middle: \"justify-center\",\n    end: \"justify-end\",\n} as const\n\nconst HR_SIZES = {\n    default: \"\",\n    \"2\": \"border-2\",\n    \"3\": \"border-3\",\n    \"4\": \"border-4\",\n} as const\n\ntype SeparatorSize = keyof typeof LABEL_SIZES\ntype LabelPlacement = keyof typeof PLACEMENTS\n\ninterface SeparatorProps extends React.HTMLAttributes<HTMLElement> {\n    size?: SeparatorSize\n    label?: React.ReactNode\n    labelPlacement?: LabelPlacement\n    labelClass?: string\n}\n\nexport const Separator = React.forwardRef<HTMLElement, SeparatorProps>(\n    (\n        {\n            size = \"default\",\n            label,\n            labelPlacement = \"start\",\n            labelClass,\n            className,\n            ...props\n        },\n        ref\n    ) => {\n        if (label) {\n            return (\n                <div\n                    ref={ref as React.RefObject<HTMLDivElement>}\n                    className={cx(\n                        \"divider-custom w-full flex items-center\",\n                        LABEL_SIZES[size],\n                        PLACEMENTS[labelPlacement] ?? \"justify-start\",\n                        className\n                    )}\n                    {...props}\n                >\n                    <span className={labelClass}>\n                        {label}\n                    </span>\n                </div>\n            )\n        }\n\n        return (\n            <hr\n                ref={ref as React.RefObject<HTMLHRElement>}\n                className={cx(\"w-full\", HR_SIZES[size], className)}\n                {...props}\n            />\n        )\n    }\n)\n\nSeparator.displayName = \"Separator\"",
+      "type": "registry:ui",
+      "target": "components/jk/separator.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

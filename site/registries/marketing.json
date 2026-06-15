@@ -1,0 +1,121 @@
+{
+    "items": [
+        {
+            "name": "hero01",
+            "type": "registry:block",
+            "title": "Hero 01",
+            "description": "Marketing hero section with headline and CTA",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/hero/hero01.tsx",
+                    "type": "registry:block",
+                    "target": "components/hero01.tsx"
+                }
+            ]
+        },
+        {
+            "name": "hero02",
+            "type": "registry:block",
+            "title": "Hero 02",
+            "description": "Marketing hero section with headline and CTA",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/hero/hero02.tsx",
+                    "type": "registry:block",
+                    "target": "components/hero02.tsx"
+                }
+            ]
+        },
+        {
+            "name": "hero03",
+            "type": "registry:block",
+            "title": "Hero 03",
+            "description": "Marketing hero section with headline and CTA",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/hero/hero03.tsx",
+                    "type": "registry:block",
+                    "target": "components/hero03.tsx"
+                }
+            ]
+        },
+        {
+            "name": "features01",
+            "type": "registry:block",
+            "title": "Features 01",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/features/features01.tsx",
+                    "type": "registry:block",
+                    "target": "components/features.tsx"
+                }
+            ]
+        },
+        {
+            "name": "content01",
+            "type": "registry:block",
+            "title": "Content 01",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/content/content01.tsx",
+                    "type": "registry:block",
+                    "target": "components/content01.tsx"
+                }
+            ]
+        },
+        {
+            "name": "content02",
+            "type": "registry:block",
+            "title": "Content 02",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/content/content02.tsx",
+                    "type": "registry:block",
+                    "target": "components/content02.tsx"
+                }
+            ]
+        },
+        {
+            "name": "pricing01",
+            "type": "registry:block",
+            "title": "Pricing 01",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/pricing/pricing01.tsx",
+                    "type": "registry:block",
+                    "target": "components/pricing01.tsx"
+                }
+            ]
+        },
+        {
+            "name": "pricing02",
+            "type": "registry:block",
+            "title": "Pricing 02",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/pricing/pricing02.tsx",
+                    "type": "registry:block",
+                    "target": "components/pricing02.tsx"
+                }
+            ]
+        },
+        {
+            "name": "pricing03",
+            "type": "registry:block",
+            "title": "Pricing 03",
+            "description": "Feature grid section with icons and descriptions",
+            "files": [
+                {
+                    "path": "src/blocks/marketing/pricing/pricing03.tsx",
+                    "type": "registry:block",
+                    "target": "components/pricing03.tsx"
+                }
+            ]
+        }
+    ]
+}

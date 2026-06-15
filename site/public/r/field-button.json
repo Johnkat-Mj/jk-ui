@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field-button",
+  "title": "Field Button",
+  "description": "jk-ui Field Button Component",
+  "files": [
+    {
+      "path": "src/components/jk/field-button.tsx",
+      "content": "\"use client\"\n\nimport { composeRenderProps, Button as RACButton,type ButtonProps as RACButtonProps } from 'react-aria-components';\nimport { tv } from 'tailwind-variants';\nimport { focusRing } from '@/lib/utils';\n\nexport interface ButtonProps extends RACButtonProps {\n  /** @default 'primary' */\n  variant?: 'primary' | 'secondary' | 'destructive' | 'icon'\n}\n\nconst button = tv({\n  extend: focusRing,\n  base: [\n    'relative inline-flex items-center border-0 font-sans',\n    'text-sm text-center transition rounded-md cursor-default',\n    'p-1 flex items-center justify-center text-fg-muted',\n    'bg-transparent hover:bg-bg-muted pressed:bg-bg-muted/60',\n    ' ',\n    'disabled:bg-transparent [-webkit-tap-highlight-color:transparent]'],\n  variants: {\n    isDisabled: {\n      true: 'bg-neutral-100 dark:bg-neutral-800 text-neutral-300 dark:text-neutral-600 forced-colors:text-[GrayText] border-black/5 dark:border-white/5'\n    }\n  }\n});\n\nexport function FieldButton(props: ButtonProps) {\n  return (\n    <RACButton\n      {...props}\n      className={composeRenderProps(\n        props.className,\n        (className, renderProps) => button({ ...renderProps, className })\n      )}\n    >\n      {props.children}\n    </RACButton>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/field-button.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}
