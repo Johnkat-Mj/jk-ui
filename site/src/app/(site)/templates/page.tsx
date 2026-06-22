@@ -1,6 +1,7 @@
 import { SiteContainer } from "@/components/atoms/site-container";
 import { SitePageHeader } from "../components/site-page-header";
 import type { Metadata } from "next";
+import { AllTemplates } from "./components/all-templates";
 
 export const metadata: Metadata = {
   title: "Templates - jk-ui",
@@ -40,20 +41,19 @@ export const metadata: Metadata = {
 };
 
 export default function TemplatesPage() {
-    return (
-        <main>
-            <SitePageHeader tagline="Templates"
-                title="Production-Ready React Templates"
-                description="Start with fully structured application and marketing templates built on composable jk-ui blocks. Install, customize, and ship faster." />
-            <section>
-                <SiteContainer className="mx-auto w-full border-x border-border-strong/70 border-dashed">
-                    <div className="py-8 sm:py-16 px-10 flex justify-center">
-                        
-                    </div>
-                    <div className="h-4 linear-gradient-pattern border-y border-dashed border-border-strong/70"></div>
-                </SiteContainer>
-            </section>
-        </main>
-    );
+  return (
+    <main>
+      <SitePageHeader tagline="Templates"
+        title="Production-Ready React Templates"
+        description="Start with fully structured application and marketing templates built on composable jk-ui blocks. Install, customize, and ship faster." />
+      <section>
+        <SiteContainer className="mx-auto w-full border-x border-border-strong/70 border-dashed">
+          <AllTemplates />
+          <div className="h-4 linear-gradient-pattern border-y border-dashed border-border-strong/70"></div>
+        </SiteContainer>
+
+      </section>
+    </main>
+  );
 }
 

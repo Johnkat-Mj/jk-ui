@@ -10,7 +10,7 @@ export const HeroLeft = () => {
         <div className="flex-1 flex flex-col order-2 lg:order-1 text-center lg:text-left max-w-2xl lg:max-w-none mx-auto lg:mx-0">
 
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl/tight font-bold bg-clip-text text-transparent bg-linear-to-tl from-gray-600 to-gray-900 dark:from-gray-50 dark:to-gray-200 text-balance">
-                Digital <ColorifySpan text="Excellence" /> for Your Business.
+                Innovative <ColorifySpan text="Solutions" /> for modern need.
             </h1>
             <p className="text-lg text-fg mt-6">
                 We create stunning digital experiences that drive results and transform your brand's online presence.

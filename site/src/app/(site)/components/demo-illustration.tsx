@@ -19,12 +19,12 @@ export const DemoIllustration = () => {
                     <Card className="shadow-sm [--ui-padding:1.125rem]">
                         <div className="flex items-center gap-4">
                             <div className="size-10">
-                                <Avatar size="lg" src="/defaultavatar.webp" alt="User default" loading="lazy"
+                                <Avatar size="lg" src="/johnkat_mj.webp" alt="User default" loading="lazy"
                                     decoding="async" fetchPriority="auto" width="150" height="150" />
                             </div>
                             <div className="space-y-0.5 flex flex-col">
-                                <span className="font-semibold text-sm text-fg-title">Tresor Kasenda</span>
-                                <p className="text-sm text-fg-muted">tresorkasenda@unoui.app</p>
+                                <span className="font-semibold text-sm text-fg-title">Johnkat MJ</span>
+                                <p className="text-sm text-fg-muted">johnkatmj@hmail.com</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-fg-muted mt-2">

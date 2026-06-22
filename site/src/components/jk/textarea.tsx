@@ -2,10 +2,9 @@
 
 import { tv } from "tailwind-variants"
 import {
-
   TextArea as RACTextArea,
   type TextAreaProps as RACTextAreaProps,
-} from "react-aria-components"
+} from "react-aria-components/TextArea"
 import { useId } from "react"
 import { cx } from "@/lib/utils"
 import { InputVariant, Label } from "./input"

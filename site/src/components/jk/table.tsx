@@ -11,23 +11,23 @@ import type {
     RowProps,
     TableBodyProps,
     TableProps as TablePrimitiveProps,
-} from "react-aria-components";
+} from "react-aria-components/Table";
 import {
     Button,
     Cell,
     Collection,
     Column,
     ColumnResizer as ColumnResizerPrimitive,
-    composeRenderProps,
     ResizableTableContainer,
     Row,
     TableBody as TableBodyPrimitive,
     TableHeader as TableHeaderPrimitive,
     Table as TablePrimitive,
     useTableOptions,
-} from "react-aria-components";
+} from "react-aria-components/Table";
 import { cx } from "@/lib/utils";
 import { Checkbox } from "./checkbox";
+import { composeRenderProps } from "react-aria-components";
 
 interface TableContextValue {
     allowResize?: boolean;
@@ -122,17 +122,13 @@ const Table = ({
 const ColumnResizer = ({ className, ...props }: ColumnResizerProps) => (
     <ColumnResizerPrimitive
         {...props}
-        className={composeRenderProps(
+        className={cx(
+            "absolute inset-e-0 top-0 bottom-0 grid w-px touch-none place-content-center px-1",
+            "data-[resizable-direction=left]:cursor-e-resize",
+            "data-[resizable-direction=right]:cursor-w-resize",
+            "data-[resizable-direction=both]:cursor-ew-resize",
+            "data-[resizing]>div]:bg-primary",
             className,
-            (className) =>
-                cx(
-                    "absolute inset-e-0 top-0 bottom-0 grid w-px touch-none place-content-center px-1",
-                    "data-[resizable-direction=left]:cursor-e-resize",
-                    "data-[resizable-direction=right]:cursor-w-resize",
-                    "data-[resizable-direction=both]:cursor-ew-resize",
-                    "data-[resizing]>div]:bg-primary",
-                    className,
-                ),
         )}
     >
         <div className="h-full w-px bg-border py-(--gutter-y)" />
@@ -187,7 +183,7 @@ const TableColumn = ({
                         "px-(--gutter-x) py-(--gutter-y) font-medium capitalize text-sm text-fg-title relative outline-hidden",
                         "dragging:cursor-grabbing",
                         {
-                            "cursor-default":allowsSorting,
+                            "cursor-default": allowsSorting,
                             "text-left": align === "left",
                             "text-center": align === "center",
                             "text-right": align === "right",
@@ -230,14 +226,14 @@ const TableColumn = ({
 
 interface TableHeaderProps<T extends object> extends HeaderProps<T> {
     ref?: React.Ref<HTMLTableSectionElement>;
-    fillGray?:boolean
+    fillGray?: boolean
 }
 
 const TableHeader = <T extends object>({
     children,
     ref,
     columns,
-    fillGray=false,
+    fillGray = false,
     className,
     ...props
 }: TableHeaderProps<T>) => {
