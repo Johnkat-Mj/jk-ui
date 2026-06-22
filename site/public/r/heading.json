@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "heading",
+  "title": "Heading",
+  "description": "jk-ui Heading Component",
+  "files": [
+    {
+      "path": "src/components/jk/heading.tsx",
+      "content": "\"use client\"\n\nimport type { HeadingProps } from \"react-aria-components\"\nimport { Heading as RAC_Heading } from \"react-aria-components\"\nimport { cx } from \"@/lib/utils\"\n\ninterface JkHeadingProps extends HeadingProps {\n  level?: 1 | 2 | 3 | 4 | 5\n  intent?: \"title\" | \"body\" | \"muted\" | \"primary\" | \"secondary\" | \"danger\" | \"warning\"\n}\n\nconst levelSizeClasses = {\n  1: \"text-3xl font-bold tracking-tight\",\n  2: \"text-2xl font-semibold tracking-tight\",\n  3: \"text-xl font-semibold\",\n  4: \"text-lg font-medium\",\n  5: \"text-base font-medium\",\n} as const\n\nconst intentClasses = {\n  title: \"text-fg-title\",\n  body: \"text-fg\",\n  muted: \"text-fg-muted\",\n  primary: \"text-primary\",\n  secondary: \"text-secondary\",\n  danger: \"text-danger\",\n  warning: \"text-warning\",\n} as const\n\nexport function Heading({\n  level = 1,\n  intent = \"title\",\n  className,\n  ...props\n}: JkHeadingProps) {\n  const levelClass = levelSizeClasses[level] ?? levelSizeClasses[1]\n  const intentClass = intentClasses[intent] ?? intentClasses.title\n\n  return (\n    <RAC_Heading\n      level={level}\n      data-slot=\"heading\"\n      className={cx(levelClass, intentClass, className)}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/heading.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

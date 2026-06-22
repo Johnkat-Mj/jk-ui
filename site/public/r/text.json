@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text",
+  "title": "Text",
+  "description": "jk-ui Text Component",
+  "files": [
+    {
+      "path": "src/components/jk/text.tsx",
+      "content": "\"use client\"\n\nimport type { TextProps } from \"react-aria-components\"\nimport { Text as RAC_Text } from \"react-aria-components\"\nimport { cx } from \"@/lib/utils\"\n\ninterface JkTextProps extends TextProps {\n  intent?: \"muted\" | \"body\" | \"title\" | \"caption\" | \"primary\" | \"secondary\" | \"warning\" | \"danger\"\n  elementType?: \"p\" | \"span\" | \"div\" | \"label\" | \"small\"\n}\n\nconst intentClasses = {\n  muted: \"text-fg-muted\",\n  body: \"text-fg\",\n  title: \"text-fg-title\",\n  caption: \"text-gray-500\",\n  primary: \"text-primary\",\n  secondary: \"text-secondary\",\n  warning: \"text-warning\",\n  danger: \"text-danger\",\n} as const\n\nexport function Text({\n  intent = \"muted\",\n  elementType = \"p\",\n  className,\n  ...props\n}: JkTextProps) {\n  const intentClass = intentClasses[intent] ?? intentClasses.muted\n\n  return (\n    <RAC_Text\n      elementType={elementType}\n      data-slot=\"text\"\n      className={cx(intentClass, className)}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/text.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -770,6 +770,92 @@
                     "target": "components/jk/tooltip.tsx"
                 }
             ]
+        },
+        {
+            "name": "aspect-ratio",
+            "type": "registry:ui",
+            "title": "Aspect Ratio",
+            "description": "jk-ui Aspect Ratio Component",
+            "files": [
+                {
+                    "path": "src/components/jk/aspect-ratio.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/aspect-ratio.tsx"
+                }
+            ]
+        },
+        {
+            "name": "command-menu",
+            "type": "registry:ui",
+            "title": "Command Menu",
+            "description": "jk-ui Command Menu Component",
+            "files": [
+                {
+                    "path": "src/components/jk/command-menu.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/command-menu.tsx"
+                }
+            ],
+            "registryDependencies": [
+                "@jk-ui/dropdown",
+                "@jk-ui/loader",
+                "@jk-ui/menu"
+            ]
+        },
+        {
+            "name": "heading",
+            "type": "registry:ui",
+            "title": "Heading",
+            "description": "jk-ui Heading Component",
+            "files": [
+                {
+                    "path": "src/components/jk/heading.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/heading.tsx"
+                }
+            ]
+        },
+        {
+            "name": "icon",
+            "type": "registry:ui",
+            "title": "Icon",
+            "description": "jk-ui Icon Component",
+            "files": [
+                {
+                    "path": "src/components/jk/icon.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/icon.tsx"
+                }
+            ]
+        },
+        {
+            "name": "text",
+            "type": "registry:ui",
+            "title": "Text",
+            "description": "jk-ui Text Component",
+            "files": [
+                {
+                    "path": "src/components/jk/text.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/text.tsx"
+                }
+            ]
+        },
+        {
+            "name": "textarea",
+            "type": "registry:ui",
+            "title": "Textarea",
+            "description": "jk-ui Textarea Component",
+            "files": [
+                {
+                    "path": "src/components/jk/textarea.tsx",
+                    "type": "registry:ui",
+                    "target": "components/jk/textarea.tsx"
+                }
+            ],
+            "registryDependencies": [
+                "@jk-ui/input"
+            ]
         }
     ]
 }

@@ -1,0 +1,213 @@
+[data-theme=caffeine] {
+  /* --- palette scales --- */
+  --c-primary-50: hsl(30, 30%, 97%);
+  --c-primary-100: hsl(28, 30%, 92%);
+  --c-primary-200: hsl(27, 30%, 83%);
+  --c-primary-300: hsl(26, 32%, 70%);
+  --c-primary-400: hsl(25, 33%, 55%);
+  --c-primary-500: hsl(25, 33%, 42%);
+  --c-primary-600: hsl(25, 33%, 33%);
+  --c-primary-700: hsl(25, 34%, 27%);
+  --c-primary-800: hsl(25, 35%, 22%);
+  --c-primary-900: hsl(25, 36%, 17%);
+  --c-primary-950: hsl(25, 38%, 9%);
+
+  --c-secondary-50: hsl(35, 45%, 96%);
+  --c-secondary-100: hsl(34, 48%, 91%);
+  --c-secondary-200: hsl(33, 50%, 81%);
+  --c-secondary-300: hsl(33, 51%, 68%);
+  --c-secondary-400: hsl(32, 51%, 54%);
+  --c-secondary-500: hsl(32, 50%, 46%);
+  --c-secondary-600: hsl(32, 48%, 38%);
+  --c-secondary-700: hsl(32, 47%, 31%);
+  --c-secondary-800: hsl(32, 46%, 25%);
+  --c-secondary-900: hsl(32, 45%, 19%);
+  --c-secondary-950: hsl(32, 40%, 10%);
+
+  --c-accent-50: hsl(42, 75%, 96%);
+  --c-accent-100: hsl(41, 78%, 91%);
+  --c-accent-200: hsl(41, 80%, 81%);
+  --c-accent-300: hsl(40, 80%, 68%);
+  --c-accent-400: hsl(40, 80%, 56%);
+  --c-accent-500: hsl(40, 80%, 50%);
+  --c-accent-600: hsl(40, 78%, 42%);
+  --c-accent-700: hsl(40, 75%, 35%);
+  --c-accent-800: hsl(40, 72%, 28%);
+  --c-accent-900: hsl(40, 68%, 22%);
+  --c-accent-950: hsl(40, 60%, 12%);
+
+  --c-gray-50: hsl(40, 15%, 98%);
+  --c-gray-100: hsl(35, 12%, 95%);
+  --c-gray-200: hsl(30, 10%, 89%);
+  --c-gray-300: hsl(30, 8%, 82%);
+  --c-gray-400: hsl(30, 6%, 63%);
+  --c-gray-500: hsl(30, 5%, 44%);
+  --c-gray-600: hsl(30, 6%, 32%);
+  --c-gray-700: hsl(30, 8%, 25%);
+  --c-gray-800: hsl(30, 10%, 15%);
+  --c-gray-900: hsl(30, 12%, 10%);
+  --c-gray-950: hsl(30, 15%, 4%);
+
+  --c-success-50: hsl(120, 40%, 96%);
+  --c-success-100: hsl(120, 38%, 91%);
+  --c-success-200: hsl(120, 36%, 81%);
+  --c-success-300: hsl(120, 35%, 68%);
+  --c-success-400: hsl(120, 35%, 55%);
+  --c-success-500: hsl(120, 35%, 42%);
+  --c-success-600: hsl(120, 35%, 34%);
+  --c-success-700: hsl(120, 34%, 27%);
+  --c-success-800: hsl(120, 32%, 21%);
+  --c-success-900: hsl(120, 30%, 16%);
+  --c-success-950: hsl(120, 30%, 8%);
+
+  --c-warning-50: hsl(35, 45%, 96%);
+  --c-warning-100: hsl(34, 48%, 91%);
+  --c-warning-200: hsl(33, 50%, 81%);
+  --c-warning-300: hsl(33, 51%, 68%);
+  --c-warning-400: hsl(32, 51%, 54%);
+  --c-warning-500: hsl(32, 50%, 46%);
+  --c-warning-600: hsl(32, 48%, 38%);
+  --c-warning-700: hsl(32, 47%, 31%);
+  --c-warning-800: hsl(32, 46%, 25%);
+  --c-warning-900: hsl(32, 45%, 19%);
+  --c-warning-950: hsl(32, 40%, 10%);
+
+  --c-danger-50: hsl(0, 70%, 97%);
+  --c-danger-100: hsl(0, 75%, 93%);
+  --c-danger-200: hsl(0, 78%, 87%);
+  --c-danger-300: hsl(0, 80%, 78%);
+  --c-danger-400: hsl(0, 78%, 66%);
+  --c-danger-500: hsl(0, 75%, 56%);
+  --c-danger-600: hsl(0, 72%, 48%);
+  --c-danger-700: hsl(0, 70%, 40%);
+  --c-danger-800: hsl(0, 68%, 33%);
+  --c-danger-900: hsl(0, 65%, 27%);
+  --c-danger-950: hsl(0, 65%, 12%);
+
+  --c-info-50: hsl(210, 50%, 97%);
+  --c-info-100: hsl(210, 48%, 93%);
+  --c-info-200: hsl(210, 46%, 85%);
+  --c-info-300: hsl(210, 45%, 74%);
+  --c-info-400: hsl(210, 45%, 60%);
+  --c-info-500: hsl(210, 45%, 48%);
+  --c-info-600: hsl(210, 48%, 38%);
+  --c-info-700: hsl(210, 46%, 30%);
+  --c-info-800: hsl(210, 44%, 24%);
+  --c-info-900: hsl(210, 42%, 19%);
+  --c-info-950: hsl(210, 40%, 10%);
+
+  /* --- semantic base (light) --- */
+  --c-primary: hsl(25, 33%, 33%);
+  --c-secondary: hsl(32, 48%, 38%);
+  --c-accent: hsl(40, 78%, 42%);
+  --c-success: hsl(120, 35%, 34%);
+  --c-warning: hsl(32, 48%, 38%);
+  --c-danger: hsl(0, 72%, 48%);
+  --c-info: hsl(210, 48%, 38%);
+
+  --c-fg-title: hsl(30, 12%, 10%);
+  --c-fg-subtitle: hsl(30, 10%, 15%);
+  --c-fg: hsl(30, 6%, 32%);
+  --c-fg-muted: hsl(30, 6%, 63%);
+
+  --c-bg: hsl(0, 0%, 100%);
+  --c-bg-subtle: hsl(35, 12%, 95%);
+  --c-bg-surface: hsl(40, 15%, 98%);
+  --c-bg-muted: hsl(30, 10%, 89%);
+  --c-card: hsl(0, 0%, 100%);
+  --c-overlay: hsl(0, 0%, 100%);
+
+  --c-border-strong: hsl(30, 8%, 82%);
+  --c-border: hsl(30, 10%, 89%);
+  --c-border-card: hsl(30, 10%, 89%);
+  --c-border-input: hsl(30, 10%, 89%);
+
+  --chart-1: oklch(0.60 0.14 45);
+  --chart-2: oklch(0.55 0.10 70);
+  --chart-3: oklch(0.65 0.10 30);
+  --chart-4: oklch(0.70 0.12 80);
+  --chart-5: oklch(0.50 0.06 50);
+
+  /* --- component vars (light) --- */
+  --global-main-radius: 0.5rem;
+  --ui-input-focus-outline: hsl(25, 33%, 33%);
+  --ui-input-place-holder: hsl(30, 5%, 44%);
+  --ui-input-invalid-outline: hsl(0, 72%, 48%);
+  --ring-bg: hsl(25, 33%, 33%);
+  --ring-offset-color: hsl(0, 0%, 100%);
+  --focus-ring: hsla(27, 30%, 83%, 1);
+  --ui-radius: 0.5rem;
+  --card-radius: 0.5rem;
+  --checkbox-radius: 0.125rem;
+  --checkbox-bg: hsl(0, 0%, 100%);
+  --checkbox-fg: transparent;
+  --checkbox-bg-checked: hsl(25, 33%, 33%);
+  --checkbox-fg-checked: hsl(0, 0%, 100%);
+  --checkbox-bg-invalid: hsl(0, 72%, 48%);
+  --checkbox-fg-invalid: hsl(0, 0%, 100%);
+  --dropdown-item-hover-and-select: hsl(30, 10%, 89%);
+  --dropdown-item-hover-and-select-fg: hsl(30, 12%, 10%);
+  --dropdown-item-selected-fg: hsl(30, 12%, 10%);
+  --dropdown-item-danger-fg: hsl(0, 72%, 48%);
+  --dropdown-item-warning-fg: hsl(32, 48%, 38%);
+  --dropdown-item-danger-hover-and-select: hsla(0, 75%, 93%, 0.4);
+  --dropdown-item-danger-hover-and-select-fg: hsl(0, 72%, 48%);
+  --dropdown-item-warning-hover-and-select: hsla(34, 48%, 91%, 0.4);
+  --dropdown-item-warning-hover-and-select-fg: hsl(32, 48%, 38%);
+  --date-segment-focus-bg: hsl(25, 33%, 33%);
+  --date-segment-focus-fg: hsl(0, 0%, 100%);
+  --range-selected-bg: hsl(28, 30%, 92%);
+  --range-selected-invalid-bg: hsl(0, 75%, 93%);
+  --range-selected-bg-hover: hsl(27, 30%, 83%);
+  --range-selected-invalid-bg-hover: hsl(0, 78%, 87%);
+  --range-selected-fg: hsl(25, 33%, 33%);
+  --range-selected-invalid-fg: hsl(0, 72%, 48%);
+  --range-selected-bg-pressed: hsl(26, 32%, 70%);
+  --range-selected-invalid-bg-pressed: hsl(0, 80%, 78%);
+  --pattern-fg: hsla(30, 10%, 89%, 0.5);
+}
+
+[data-theme=caffeine].dark {
+  /* --- semantic base (dark) --- */
+  --c-primary: hsl(25, 33%, 42%);
+  --c-secondary: hsl(32, 50%, 46%);
+  --c-accent: hsl(40, 80%, 50%);
+  --c-success: hsl(120, 35%, 42%);
+  --c-warning: hsl(32, 50%, 46%);
+  --c-danger: hsl(0, 75%, 56%);
+  --c-info: hsl(210, 45%, 48%);
+
+  --c-fg-title: hsl(0, 0%, 100%);
+  --c-fg-subtitle: hsl(30, 8%, 82%);
+  --c-fg: hsl(30, 6%, 63%);
+  --c-fg-muted: hsl(30, 6%, 50%);
+
+  --c-bg: hsl(30, 15%, 4%);
+  --c-bg-subtle: hsl(30, 12%, 10%);
+  --c-bg-surface: hsla(30, 12%, 10%, 0.7);
+  --c-bg-muted: hsl(30, 8%, 25%);
+  --c-card: hsl(30, 15%, 4%);
+  --c-overlay: hsl(30, 15%, 4%);
+
+  --c-border-strong: hsl(30, 8%, 25%);
+  --c-border: hsl(30, 12%, 10%);
+  --c-border-card: hsl(30, 8%, 25%);
+  --c-border-input: hsl(30, 8%, 25%);
+
+  /* --- component vars (dark) --- */
+  --ring-offset-color: hsl(30, 15%, 4%);
+  --focus-ring: hsla(25, 35%, 22%, 0.3);
+  --dropdown-item-danger-hover-and-select: hsla(0, 65%, 27%, 0.3);
+  --dropdown-item-danger-hover-and-select-fg: hsl(0, 80%, 78%);
+  --dropdown-item-warning-hover-and-select: hsla(32, 45%, 19%, 0.3);
+  --dropdown-item-warning-hover-and-select-fg: hsl(33, 51%, 68%);
+  --range-selected-bg: hsla(25, 36%, 17%, 0.3);
+  --range-selected-invalid-bg: hsla(0, 68%, 33%, 0.3);
+  --range-selected-bg-hover: hsl(25, 35%, 22%);
+  --range-selected-invalid-bg-hover: hsl(0, 68%, 33%);
+  --range-selected-fg: hsl(27, 30%, 83%);
+  --range-selected-invalid-fg: hsl(0, 80%, 78%);
+  --range-selected-bg-pressed: hsl(25, 34%, 27%);
+  --range-selected-invalid-bg-pressed: hsl(0, 70%, 40%);
+  --pattern-fg: hsla(30, 8%, 25%, 0.6);
+}

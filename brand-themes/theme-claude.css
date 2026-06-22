@@ -1,0 +1,103 @@
+[data-theme=claude] {
+  --c-primary-50: hsl(25, 100%, 97%);
+  --c-primary-100: hsl(24, 100%, 93%);
+  --c-primary-200: hsl(23, 100%, 84%);
+  --c-primary-300: hsl(22, 100%, 73%);
+  --c-primary-400: hsl(22, 100%, 60%);
+  --c-primary-500: hsl(22, 100%, 50%);
+  --c-primary-600: hsl(22, 100%, 40%);
+  --c-primary-700: hsl(22, 90%, 34%);
+  --c-primary-800: hsl(22, 85%, 28%);
+  --c-primary-900: hsl(22, 80%, 22%);
+  --c-primary-950: hsl(22, 70%, 12%);
+
+  --c-secondary-50: hsl(40, 80%, 96%);
+  --c-secondary-100: hsl(39, 82%, 91%);
+  --c-secondary-200: hsl(39, 85%, 81%);
+  --c-secondary-300: hsl(38, 88%, 68%);
+  --c-secondary-400: hsl(38, 90%, 56%);
+  --c-secondary-500: hsl(38, 92%, 50%);
+  --c-secondary-600: hsl(38, 85%, 42%);
+  --c-secondary-700: hsl(38, 80%, 35%);
+  --c-secondary-800: hsl(38, 72%, 28%);
+  --c-secondary-900: hsl(38, 65%, 22%);
+  --c-secondary-950: hsl(38, 60%, 12%);
+
+  --c-accent-50: hsl(10, 80%, 97%);
+  --c-accent-100: hsl(10, 80%, 93%);
+  --c-accent-200: hsl(12, 80%, 84%);
+  --c-accent-300: hsl(12, 80%, 73%);
+  --c-accent-400: hsl(12, 80%, 60%);
+  --c-accent-500: hsl(12, 80%, 50%);
+  --c-accent-600: hsl(12, 78%, 42%);
+  --c-accent-700: hsl(12, 75%, 35%);
+  --c-accent-800: hsl(12, 72%, 28%);
+  --c-accent-900: hsl(12, 70%, 22%);
+  --c-accent-950: hsl(12, 60%, 12%);
+
+  --c-gray-50: hsl(40, 15%, 98%);
+  --c-gray-100: hsl(35, 12%, 95%);
+  --c-gray-200: hsl(30, 10%, 89%);
+  --c-gray-300: hsl(30, 8%, 82%);
+  --c-gray-400: hsl(30, 6%, 63%);
+  --c-gray-500: hsl(30, 5%, 44%);
+  --c-gray-600: hsl(30, 6%, 32%);
+  --c-gray-700: hsl(30, 8%, 25%);
+  --c-gray-800: hsl(30, 10%, 15%);
+  --c-gray-900: hsl(30, 12%, 10%);
+  --c-gray-950: hsl(30, 15%, 4%);
+
+  --c-success-50: hsl(150, 60%, 96%);
+  --c-success-100: hsl(150, 58%, 91%);
+  --c-success-200: hsl(150, 55%, 81%);
+  --c-success-300: hsl(150, 55%, 68%);
+  --c-success-400: hsl(150, 55%, 55%);
+  --c-success-500: hsl(150, 55%, 42%);
+  --c-success-600: hsl(150, 55%, 34%);
+  --c-success-700: hsl(150, 52%, 27%);
+  --c-success-800: hsl(150, 50%, 21%);
+  --c-success-900: hsl(150, 48%, 16%);
+  --c-success-950: hsl(150, 45%, 8%);
+
+  --c-warning-50: hsl(38, 80%, 96%);
+  --c-warning-100: hsl(38, 82%, 91%);
+  --c-warning-200: hsl(38, 85%, 81%);
+  --c-warning-300: hsl(38, 88%, 68%);
+  --c-warning-400: hsl(38, 90%, 56%);
+  --c-warning-500: hsl(38, 92%, 50%);
+  --c-warning-600: hsl(38, 85%, 42%);
+  --c-warning-700: hsl(38, 80%, 35%);
+  --c-warning-800: hsl(38, 72%, 28%);
+  --c-warning-900: hsl(38, 65%, 22%);
+  --c-warning-950: hsl(38, 60%, 12%);
+
+  --c-danger-50: hsl(0, 86%, 97%);
+  --c-danger-100: hsl(0, 93%, 94%);
+  --c-danger-200: hsl(0, 96%, 89%);
+  --c-danger-300: hsl(0, 94%, 82%);
+  --c-danger-400: hsl(0, 91%, 71%);
+  --c-danger-500: hsl(0, 84%, 60%);
+  --c-danger-600: hsl(0, 72%, 51%);
+  --c-danger-700: hsl(0, 74%, 42%);
+  --c-danger-800: hsl(0, 70%, 35%);
+  --c-danger-900: hsl(0, 63%, 31%);
+  --c-danger-950: hsl(0, 75%, 15%);
+
+  --c-info-50: hsl(204, 100%, 97%);
+  --c-info-100: hsl(204, 94%, 94%);
+  --c-info-200: hsl(201, 94%, 86%);
+  --c-info-300: hsl(199, 95%, 74%);
+  --c-info-400: hsl(198, 93%, 60%);
+  --c-info-500: hsl(199, 89%, 48%);
+  --c-info-600: hsl(200, 98%, 39%);
+  --c-info-700: hsl(201, 96%, 32%);
+  --c-info-800: hsl(201, 90%, 27%);
+  --c-info-900: hsl(202, 80%, 24%);
+  --c-info-950: hsl(204, 80%, 16%);
+
+  --chart-1: oklch(0.63 0.18 35);
+  --chart-2: oklch(0.58 0.14 55);
+  --chart-3: oklch(0.68 0.12 25);
+  --chart-4: oklch(0.72 0.10 75);
+  --chart-5: oklch(0.55 0.08 40);
+}
