@@ -15,7 +15,7 @@ export const DocTabCodeLoader = ({ children, values }: { children: ReactNode, va
                 className={cx('border border-gray-800/60 p-(--card-padding) rounded-(--card-radius) ui-card [--card-padding:--spacing(1)] [--card-radius:var(--radius-ui)] bg-gray-800 dark:bg-gray-900/50 text-gray-300 grid mt-6 first:mt-0 gap-0')}
             >
                 <div className="grid grid-cols-[1fr_2rem] overflow-hidden px-5 items-center h-10 pt-1 w-full">
-                    <TabList border={false}
+                    <TabList withBorder={false}
                         aria-label="Tabs"
                         className={cx(
                             'flex items-center gap-x-3 flex-1 overflow-hidden overflow-x-auto',

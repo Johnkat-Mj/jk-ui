@@ -37,7 +37,7 @@ export const PreviewerCodeUI = ({ noInTabs, component, codeblock, isFrame = fals
             { 'text': 'Code', 'icon': 'ph--code', 'value': `Code-${id}` },
         ]}
             triggersClass="px-3 cursor-pointer py-1 rounded-(--global-main-radius) fx-selected:bg-white dark:fx-selected:bg-gray-800 border border-transparent fx-selected:border-gray-200 dark:fx-selected:border-gray-700/60 fx-selected:shadow fx-selected:text-fg-title"
-            tabListContainer="pb-2 border-b border-border-strong/60 relative text-fg-muted" docPanelClass="rounded-[8px]">
+            tabListContainer="relative text-fg-muted" docPanelClass="rounded-[8px]">
             <TabPanel id={`Preview-${id}`} className={"border border-gray-200 dark:border-gray-800/60 ui-card [--card-padding:--spacing(1)] [--card-radius:var(--global-main-radius)] bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center h-max"} >
                 <div className={
                     cx(

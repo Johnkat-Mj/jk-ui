@@ -36,10 +36,10 @@ export function DocsTab({
             defaultSelectedKey={defaultSelectedKey}
             className={cx('mt-5 first:mt-0', className)}
         >
-            <TabList border={false}
+            <TabList withBorder={false}
                 aria-label="Tabs"
                 className={cx(
-                    'flex items-center gap-x-3',
+                    'flex items-center gap-x-3 border-transparent pb-0 mb-0',
                     tabListContainer
                 )}
             >
