@@ -5,7 +5,7 @@ import {
   type DatePickerProps as AriaDatePickerProps,
   type DateValue,
   type ValidationResult
-} from 'react-aria-components';
+} from 'react-aria-components/DatePicker';
 import { Calendar } from './calendar';
 import { DateInput } from './input-date';
 import { Description, FieldError, InputGroup as FieldGroup, Label } from './input';

@@ -1,7 +1,7 @@
 "use client"
 
-import type { TextProps } from "react-aria-components"
-import { Text as RAC_Text } from "react-aria-components"
+import type { TextProps } from "react-aria-components/Text"
+import { Text as RAC_Text } from "react-aria-components/Text"
 import { cx } from "@/lib/utils"
 
 interface JkTextProps extends TextProps {

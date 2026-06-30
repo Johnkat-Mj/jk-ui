@@ -2,8 +2,8 @@
 
 
 import { createContext, use } from "react"
-import type { ProgressBarProps, ProgressBarRenderProps } from "react-aria-components"
-import { ProgressBar as ProgressBarPrimitive } from "react-aria-components"
+import type { ProgressBarProps, ProgressBarRenderProps } from "react-aria-components/ProgressBar"
+import { ProgressBar as ProgressBarPrimitive } from "react-aria-components/ProgressBar"
 import { twMerge } from "tailwind-merge"
 import { cx } from "@/lib/utils"
 

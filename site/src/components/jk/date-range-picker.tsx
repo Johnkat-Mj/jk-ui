@@ -6,7 +6,7 @@ import {
   type DateRangePickerProps as AriaDateRangePickerProps,
   type DateValue,
   type ValidationResult
-} from 'react-aria-components';
+} from 'react-aria-components/DateRangePicker';
 import { DateInput } from './input-date';
 import { Description, FieldError, InputGroup as FieldGroup, Label } from './input';
 import { PopoverContent } from './popover';

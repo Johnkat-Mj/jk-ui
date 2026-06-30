@@ -1,7 +1,7 @@
 "use client"
 
-import type { HeadingProps } from "react-aria-components"
-import { Heading as RAC_Heading } from "react-aria-components"
+import type { HeadingProps } from "react-aria-components/Heading"
+import { Heading as RAC_Heading } from "react-aria-components/Heading"
 import { cx } from "@/lib/utils"
 
 interface JkHeadingProps extends HeadingProps {

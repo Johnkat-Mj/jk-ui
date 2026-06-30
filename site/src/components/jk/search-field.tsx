@@ -3,7 +3,7 @@
 import {
     SearchField as AriaSearchField,
     type SearchFieldProps as AriaSearchFieldProps,
-} from 'react-aria-components';
+} from 'react-aria-components/SearchField';
 
 import { FieldButton } from './field-button';
 import { Input, InputGroup, InputLeading, type InputProps, InputTrailing } from './input';

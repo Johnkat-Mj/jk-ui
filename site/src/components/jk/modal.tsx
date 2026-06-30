@@ -6,7 +6,7 @@ import {
   DialogTrigger as RAC_DialogTrigger,
   ModalOverlay,
   Modal as RAC_Modal,
-} from "react-aria-components"
+} from "react-aria-components/Modal"
 import { cx } from "@/lib/utils"
 import {
   Dialog,
