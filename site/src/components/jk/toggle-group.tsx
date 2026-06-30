@@ -5,7 +5,7 @@ import {
   ToggleButtonGroup,
   type ToggleButtonGroupProps,
   type ToggleButtonProps,
-} from "react-aria-components"
+} from "react-aria-components/ToggleButtonGroup"
 import { cx } from "@/lib/utils"
 import { Toggle, type ToggleProps, type ToggleSize } from "./toggle"
 

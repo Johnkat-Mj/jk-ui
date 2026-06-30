@@ -27,7 +27,7 @@ import {
 } from "react-aria-components/Table";
 import { cx } from "@/lib/utils";
 import { Checkbox } from "./checkbox";
-import { composeRenderProps } from "react-aria-components";
+import { composeRenderProps } from "react-aria-components/composeRenderProps";
 
 interface TableContextValue {
     allowResize?: boolean;

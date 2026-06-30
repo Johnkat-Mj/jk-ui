@@ -1,14 +1,10 @@
 "use client"
 
 import { tv } from "tailwind-variants"
-import {
-  TextArea as RACTextArea,
-  type TextAreaProps as RACTextAreaProps,
-} from "react-aria-components/TextArea"
+import { TextArea as RACTextArea, type TextAreaProps as RACTextAreaProps } from "react-aria-components/TextArea"
 import { useId } from "react"
 import { cx } from "@/lib/utils"
 import { InputVariant, Label } from "./input"
-
 
 
 export const textareaVariants = tv({
@@ -16,12 +12,12 @@ export const textareaVariants = tv({
   variants: {
     size: {
       none: "",
-      sm: "",
-      md: "",
-      lg: "",
+      sm: "p-2 text-xs",
+      md: "p-2.5 text-sm",
+      lg: "p-3 text-sm",
     },
     variant: {
-      default: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring border border-border-input bg-bg rounded-ui",
+      default: "ui-form-input ui-form-outline text-fg uiƒ-form-ring-base ui-form-ring border border-border-input bg-bg rounded-ui",
       outline: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring border border-border-input bg-transparent rounded-ui",
       flush: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring rounded-ui",
       unstyled: "",

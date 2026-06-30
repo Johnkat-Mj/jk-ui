@@ -1,8 +1,8 @@
 "use client"
 
 import { createContext, use, useMemo } from "react"
-import type { BreadcrumbProps, BreadcrumbsProps } from "react-aria-components"
-import { Breadcrumb, Breadcrumbs as BreadcrumbsPrimitive } from "react-aria-components"
+import type { BreadcrumbProps, BreadcrumbsProps } from "react-aria-components/Breadcrumbs"
+import { Breadcrumb, Breadcrumbs as BreadcrumbsPrimitive } from "react-aria-components/Breadcrumbs"
 import { cx } from "@/lib/utils"
 import { Link } from "./link"
 

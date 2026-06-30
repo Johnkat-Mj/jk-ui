@@ -12,14 +12,14 @@ import {
   type DateValue,
   Heading,
   Text,
-  useLocale,
   type CalendarCellProps,
   type CalendarGridProps
-} from 'react-aria-components';
+} from 'react-aria-components/Calendar';
 import { tv } from 'tailwind-variants';
 import { Button } from './button';
 import { cx } from '@/lib/utils';
 import { MonthDropdown, YearDropdown } from './calendar-month-year';
+import { useLocale } from 'react-aria-components';
 
 const cellStyles = tv({
 

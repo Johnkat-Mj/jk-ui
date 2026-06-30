@@ -3,12 +3,12 @@
 import type {
   DialogTriggerProps,
   PopoverProps as RAC_PopoverProps,
-} from "react-aria-components"
+} from "react-aria-components/Popover"
 import {
   DialogTrigger as DialogTriggerPrimitive,
   OverlayArrow,
   Popover as RAC_Popover,
-} from "react-aria-components"
+} from "react-aria-components/Popover"
 import { cx } from "@/lib/utils"
 import {
   DialogBody,

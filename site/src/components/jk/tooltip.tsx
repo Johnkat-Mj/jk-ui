@@ -2,14 +2,16 @@
 
 
 import { cx } from "@/lib/utils"
-import type { TooltipProps as TooltipPrimitiveProps } from "react-aria-components"
+import type { TooltipProps as TooltipPrimitiveProps } from "react-aria-components/Tooltip"
 import {
-  Button,
-  composeRenderProps,
+
   OverlayArrow,
   Tooltip as TooltipPrimitive,
   TooltipTrigger as TooltipTriggerPrimitive,
-} from "react-aria-components"
+} from "react-aria-components/Tooltip"
+
+import {  Button } from "react-aria-components/Button"
+import {  composeRenderProps } from "react-aria-components/composeRenderProps"
 import type { VariantProps } from "tailwind-variants"
 import { tv } from "tailwind-variants"
 

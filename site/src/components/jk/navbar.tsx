@@ -1,7 +1,7 @@
 "use client"
 
 import { type ReactNode, createContext, useContext, useReducer } from "react";
-import { Button as RAC_Button } from "react-aria-components";
+import { Button as RAC_Button } from "react-aria-components/Button";
 import { type ButtonProps, buttonStyles } from "./button";
 
 type NavbarContextProps = {

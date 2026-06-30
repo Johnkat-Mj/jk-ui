@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio",
+  "title": "Aspect Ratio",
+  "description": "jk-ui Aspect Ratio Component",
+  "files": [
+    {
+      "path": "src/components/jk/aspect-ratio.tsx",
+      "content": "\"use client\"\n\nimport type { ComponentProps } from 'react';\nimport { tv } from 'tailwind-variants';\n\nconst aspectVariants = tv({\n    base: 'aspect-square',\n    variants: {\n        aspect: {\n            video: 'aspect-video',\n            square: 'aspect-square',\n            '35mm-film': 'aspect-35mm-film',\n            'standard-tv': 'aspect-standard-tv',\n            ultrawide: 'aspect-ultrawide',\n        },\n    },\n    defaultVariants: {\n        aspect: 'video',\n    },\n});\n\ntype AspectRatioProps = {\n    aspect?: 'video' | 'square' | '35mm-film' | 'standard-tv' | 'ultrawide';\n    className?: string;\n} & ComponentProps<\"div\">\n\nexport const AspectRatio = ({\n    aspect = 'video',\n    className,\n    ...rest\n}: AspectRatioProps) => {\n    return (\n        <div className={aspectVariants({ aspect, className })} {...rest} />\n    );\n};\n\n",
+      "type": "registry:ui",
+      "target": "components/jk/aspect-ratio.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

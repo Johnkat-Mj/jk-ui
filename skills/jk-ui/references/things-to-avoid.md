@@ -35,3 +35,8 @@ Most important mistakes to avoid when answering jk-ui questions.
 - jk-ui uses `tailwind-variants` (not `cva`, not `class-variance-authority`).
 - jk-ui uses `clsx` + `tailwind-merge` via `cx()` (not `cn()` from shadcn/ui).
 - jk-ui uses `@iconify-json/ph` for Phosphor icons (not `lucide-react`).
+
+## Do Not Use Deprecated RAC Props
+
+- **Select**: `defaultSelectedKey` is deprecated — use `defaultValue` instead.
+- **Select**: `onSelectionChange` is deprecated — use `onChange` instead.

@@ -4,10 +4,14 @@
 
 import type { HeadingProps, TextProps } from "react-aria-components"
 import {
-  Heading,
-  Button as RAC_Button,
   Dialog as RAC_Dialog,
-} from "react-aria-components"
+} from "react-aria-components/Dialog"
+import {
+  Button as RAC_Button
+} from "react-aria-components/Button"
+import {
+  Heading
+} from "react-aria-components/Heading"
 import { cx } from "@/lib/utils"
 import { Button, type ButtonProps } from "./button"
 
@@ -51,7 +55,7 @@ const DialogHeader = ({ className, paddingNone = false, ...props }: DialogHeader
         },
         className,
       )}
-    > 
+    >
       {props.title && <DialogTitle>{props.title}</DialogTitle>}
       {props.description && <DialogDescription>{props.description}</DialogDescription>}
       {!props.title && typeof props.children === "string" ? (

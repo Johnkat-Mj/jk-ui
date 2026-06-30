@@ -8,12 +8,19 @@ import type {
   DisclosureProps,
 } from "react-aria-components"
 import {
-  Button,
-  Heading,
   Disclosure as PrimitiveDisclosure,
-  DisclosureGroup as PrimitiveDisclosureGroup,
   DisclosurePanel as PrimitiveDisclosurePanel,
-} from "react-aria-components"
+} from "react-aria-components/Disclosure"
+import {
+  DisclosureGroup as PrimitiveDisclosureGroup,
+} from "react-aria-components/DisclosureGroup"
+
+import {
+  Button
+} from "react-aria-components/Button"
+import {
+  Heading
+} from "react-aria-components/Heading"
 import { cx } from "@/lib/utils"
 import { tv } from "tailwind-variants"
 import { createContext, useContext } from "react"
@@ -174,7 +181,7 @@ const DisclosureItemTrigger = ({ ref, className, ...props }: DisclosureItemTrigg
 }
 
 
-const DisclosurePanel = ({ className, contentClass, ...props }: DisclosurePanelProps & {contentClass?:string}) => {
+const DisclosurePanel = ({ className, contentClass, ...props }: DisclosurePanelProps & { contentClass?: string }) => {
   return (
     <PrimitiveDisclosurePanel
       data-slot="disclosure-panel"

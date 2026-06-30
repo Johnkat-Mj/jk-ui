@@ -1,69 +1,83 @@
 "use client"
 
-
-import type { RadioGroupProps, RadioProps } from "react-aria-components"
+import React, { type ReactNode } from 'react';
+import { composeRenderProps } from 'react-aria-components/composeRenderProps';
 import {
-    composeRenderProps,
-    RadioGroup as RadioGroupPrimitive,
-    Radio as RadioPrimitive,
-} from "react-aria-components"
-import { cx } from "@/lib/utils"
-import { Label } from "./input"
+  RadioField,
+  RadioButton,
+  RadioGroup as RACRadioGroup,
+  type RadioGroupProps as RACRadioGroupProps,
+  type RadioFieldProps,
+  type ValidationResult
+} from 'react-aria-components/RadioGroup';
+import { tv } from 'tailwind-variants';
+import { cx, focusRing } from '@/lib/utils';
+import { Label, Description, FieldError } from './input';
 
-export function RadioGroup({ className, ...props }: RadioGroupProps) {
-    return (
-        <RadioGroupPrimitive
-            {...props}
-            data-slot="control"
-            className={cx(
-                "ui-c_r-group",
-                className,
-            )}
-        />
-    )
+export interface RadioGroupProps extends Omit<RACRadioGroupProps, 'children'> {
+  label?: string;
+  children?: ReactNode;
+  description?: string;
+  errorMessage?: string | ((validation: ValidationResult) => string);
 }
 
-export function Radio({ className, children, ...props }: RadioProps) {
-    return (
-        <RadioPrimitive {...props} className={cx("group block disabled:opacity-50", className)}>
-            {composeRenderProps(children, (children, { isSelected, isFocusVisible, isInvalid }) => {
-                const isStringChild = typeof children === "string"
-                const content = isStringChild ? <Label>{children}</Label> : children
+export function RadioGroup(props: RadioGroupProps) {
+  const { label, children, description, errorMessage, className, ...groupProps } = props;
+  return (
+    <RACRadioGroup
+      {...groupProps}
+      className={cx(
+        'group flex flex-col gap-2 font-sans',
+        className
+      )}>
+      {label && <Label>{label}</Label>}
+      <div className="flex group-orientation-vertical:flex-col gap-2 group-orientation-horizontal:gap-4">
+        {children}
+      </div>
+      {description && <Description>{description}</Description>}
+      <FieldError>{errorMessage}</FieldError>
+    </RACRadioGroup>
+  );
+}
 
-                return (
-                    <div
-                        className={cx(
-                            "[--radio-size:1.5rem] sm:[--radio-size:1rem]",
-                            "[--radio-indicator-size:0.75rem]",
-                            "[--radio-indicator-size:1rem] sm:[--radio-indicator-size:0.875rem]",
-                            "ui-c_r-wrapper",
-                            "ui-c_r-wrapper-label",
-                            "ui-c_r-wrapper-description",
-                            "ui-c_r-wrapper-indicator",
-                            "grid-cols-[var(--radio-size)_1fr]",
-                            ""
-                        )}
-                    >
-                        <span
-                            data-slot="indicator"
-                            data-checked={isSelected ? "true" : "false"}
-                            data-invalid={isInvalid ? "true" : "false"}
-                            data-focus-visible={isFocusVisible ? "true" : "false"}
-                            className={cx([
-                                "ui_c_r",
-                                "ui-c_r-ring",
-                                "ui-radio-base",
-                                "ui_color_color_base",
-                                "ui_c_r-selected",
-                                "ui-c_r-selected-indeterminate",
-                                "ui-radio-indicator",
-                                "border border-border-input"
-                            ])}
-                        />
-                        {content}
-                    </div>
-                )
-            })}
-        </RadioPrimitive>
-    )
+const styles = tv({
+  extend: focusRing,
+  base: 'w-4.5 h-4.5 flex-shrink-0 box-border rounded-full border bg-white dark:bg-neutral-900 transition-all',
+  variants: {
+    isSelected: {
+      false:
+        'border-neutral-400 dark:border-neutral-400 group-pressed:border-neutral-500 dark:group-pressed:border-neutral-300',
+      true: 'border-[calc(var(--spacing)*1.5)] border-neutral-700 dark:border-neutral-300 forced-colors:border-[Highlight]! group-pressed:border-neutral-800 dark:group-pressed:border-neutral-200'
+    },
+    isInvalid: {
+      true: 'border-red-700 dark:border-red-600 group-pressed:border-red-800 dark:group-pressed:border-red-700 forced-colors:border-[Mark]!'
+    },
+    isDisabled: {
+      true: 'border-neutral-200 dark:border-neutral-700 forced-colors:border-[GrayText]!'
+    }
+  }
+});
+
+export interface RadioProps extends RadioFieldProps {
+  description?: string;
+}
+
+export function Radio(props: RadioProps) {
+  return (
+    <RadioField {...props} className="flex flex-col gap-1 group">
+      <RadioButton
+        className={cx(
+          'flex relative gap-2 items-center group text-neutral-800 disabled:text-neutral-300 dark:text-neutral-200 dark:disabled:text-neutral-600 forced-colors:disabled:text-[GrayText] text-sm transition [-webkit-tap-highlight-color:transparent]',
+          props.className
+        )}>
+        {composeRenderProps(props.children, (children, renderProps) => (
+          <>
+            <div className={styles(renderProps)} />
+            {children}
+          </>
+        ))}
+      </RadioButton>
+      {props.description && <Description className="ms-6.5">{props.description}</Description>}
+    </RadioField>
+  );
 }

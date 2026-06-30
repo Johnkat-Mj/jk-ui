@@ -1,6 +1,6 @@
 "use client"
 
-import type { TagGroupProps, TagListProps, TagProps } from "react-aria-components"
+import type { TagGroupProps, TagListProps, TagProps } from "react-aria-components/TagGroup"
 import {
   Button,
   Tag as AriaTag,
