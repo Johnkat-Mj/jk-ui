@@ -41,9 +41,9 @@ const Tabs = ({ className, ref, orientation = "horizontal", ...props }: TabsProp
 
 interface TabListProps<T extends object> extends RACTabListProps<T> {
   ref?: React.RefObject<HTMLDivElement | null>,
-  border?: boolean
+  withBorder?: boolean
 }
-const TabList = <T extends object>({ className, ref, border, ...props }: TabListProps<T>) => {
+const TabList = <T extends object>({ className, ref, withBorder = true, ...props }: TabListProps<T>) => {
   return (
     <RACTabList
       ref={ref}
@@ -52,7 +52,7 @@ const TabList = <T extends object>({ className, ref, border, ...props }: TabList
       className={composeRenderProps(className, (className, { orientation }) =>
         cx([
           "flex gap-1",
-          border === false ? '' : (orientation === "horizontal"
+          !withBorder ? '' : (orientation === "horizontal"
             ? "flex-row border-b border-border-strong/20"
             : "flex-col border-l border-border-strong/20"),
           className,
