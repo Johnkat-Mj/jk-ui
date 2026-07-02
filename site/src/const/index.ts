@@ -10,7 +10,7 @@ export const githubUrl = 'https://github.com/johnkat-mj'
 export const repositoryUrl = "https://github.com/johnkat-mj/ui"
 
 export const repoContentLocation = "https://github.com/johnkat-mj/ui/blob/main/site"
-export const orgUrl = "https://github.com/johnkat-mj/jk-ui"
+export const orgUrl = "https://github.com/johnkat-mj/ui"
 export const startDiscussion = "https://github.com/johnkat-mj/ui/discussions"
 export const contribUrl = 'https://github.com/johnkat-mj/ui/blob/main/CONTRIBUTING.MD'
 
