@@ -1,0 +1,50 @@
+---
+title: Dark Mode
+description: Dark mode support in JK-UI — theme variants, CSS variable structure, and configuration
+---
+
+JK-UI has first-class dark mode support through CSS variable switching.
+
+## How It Works
+
+All theme tokens are defined twice — once under `:root` for light mode and once under `.dark` for dark mode:
+
+```css
+:root {
+  --background: var(--color-white);
+  --foreground: var(--color-gray-700);
+  --primary: var(--color-primary-600);
+  --muted: var(--color-gray-100);
+  /* ... */
+}
+
+.dark {
+  --background: var(--color-gray-950);
+  --foreground: var(--color-gray-300);
+  --primary: var(--color-primary-500);
+  --muted: var(--color-gray-900);
+  /* ... */
+}
+```
+
+## Toggle Strategy
+
+JK-UI does not prescribe a specific dark mode toggle library. You can use:
+
+- **`next-themes`** — Recommended for Next.js projects
+- **Custom `class` toggle** — Add/remove `.dark` from `<html>`
+- **`prefers-color-scheme`** — Auto-detect system preference
+
+## Theme Presets
+
+JK-UI includes 17 built-in theme presets, each with both light and dark variants:
+
+| Theme | Character |
+|-------|-----------|
+| Default | Balanced, neutral palette |
+| Air | Light, airy tones |
+| Earth | Warm earthy tones |
+| Fire | Bold red/orange |
+| Water | Cool blue tones |
+
+Select a theme during `npx jk-ui-cli setup`, or switch CSS files to change themes dynamically.

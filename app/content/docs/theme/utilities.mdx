@@ -1,0 +1,71 @@
+---
+title: UI Variants
+description: Shared UI variant system — solid, soft, outline, subtle utilities and customization
+---
+
+JK-UI provides shared visual variant utilities (`ui-solid`, `ui-soft`, `ui-outline`, `ui-subtle`) used by components like Alert, Badge, Card, and Callout.
+
+The base recipes are defined in `ui.css`. All variant+intent color utilities are grouped in `intents.css`, making the available combinations easy to inspect and customize.
+
+## Base Utilities
+
+These are defined in `ui.css`:
+
+```css
+@utility ui-solid {
+  color: var(--ui-fg);
+  background-color: var(--ui-color);
+}
+```
+
+## Variants
+
+| Variant | Description |
+|---------|-------------|
+| `solid` | Filled background |
+| `soft` | Light tinted background |
+| `outline` | Border only |
+| `subtle` | Very subtle background with border |
+
+## Intents
+
+Intent values are declared in `intents.css`:
+
+```css
+@utility ui-solid-primary {
+  --ui-color: var(--color-primary);
+  --ui-fg: var(--color-primary-foreground);
+}
+```
+
+<PreviewUI>
+<DemoUI variant="solid"/>
+</PreviewUI>
+
+<PreviewUI>
+<DemoUI variant="outline"/>
+</PreviewUI>
+
+<PreviewUI>
+<DemoUI variant="soft"/>
+</PreviewUI>
+
+<PreviewUI>
+<DemoUI variant="subtle"/>
+</PreviewUI>
+
+## Card Utility
+
+The `ui-card` utility provides base card styling:
+
+| Utility | Effect |
+|---------|--------|
+| `ui-card` | Padding and border radius via `--card-padding` and `--card-radius` |
+
+Customize by overriding:
+- `--card-padding` — Padding size
+- `--card-radius` — Border radius
+
+## Inner Radius
+
+The `inner-radius` utility calculates `calc(var(--card-radius) - var(--card-padding))` for elements nested inside cards, ensuring proper visual alignment.

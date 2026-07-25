@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton",
+  "title": "Skeleton",
+  "description": "jk-ui Skeleton Component",
+  "files": [
+    {
+      "path": "src/components/jk/skeleton.tsx",
+      "content": "\"use client\"\n\nimport { forwardRef } from \"react\"\nimport { cx } from \"@/lib/utils\"\n\nexport interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {\n    radius?: \"none\" | \"full\"\n    bg?: boolean\n}\n\nconst Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(\n    ({ className, radius = \"full\", bg = true, ...props }, ref) => {\n\n        return (\n            <div\n                className={cx(\n                    \"animate-pulse\",\n                    bg ? \"bg-muted\" : \"\",\n                    radius === \"full\" ? \"rounded-full\" : \"\",\n                    className\n                )}\n                ref={ref}\n                {...props}\n            />\n        )\n    }\n)\nSkeleton.displayName = \"Skeleton\"\n\nexport { Skeleton }",
+      "type": "registry:ui",
+      "target": "components/jk/skeleton.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

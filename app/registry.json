@@ -1,0 +1,1478 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "jk-ui",
+  "homepage": "https://jk-ui.unoforge.com",
+  "author": "Johnkat MJ <johnkatmj@gmail.com>",
+  "items": [
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "jk-ui Alert Component",
+      "registryDependencies": [
+        "@jk-ui/lib"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "jk-ui Avatar Component",
+      "files": [
+        {
+          "path": "src/components/jk/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "jk-ui Badge Component",
+      "files": [
+        {
+          "path": "src/components/jk/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "jk-ui Breadcrumbs Component",
+      "files": [
+        {
+          "path": "src/components/jk/breadcrumbs.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/breadcrumbs.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/link"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "jk-ui Button Component",
+      "files": [
+        {
+          "path": "src/components/jk/button.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "jk-ui Calendar Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/calendar.tsx"
+        },
+        {
+          "path": "src/components/jk/calendar-month-year.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/calendar-month-year.tsx"
+        }
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "registry:ui",
+      "title": "Callout",
+      "description": "jk-ui Callout Component",
+      "registryDependencies": [
+        "@jk-ui/alert"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/callout.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/callout.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "jk-ui Card Component",
+      "files": [
+        {
+          "path": "src/components/jk/card.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "jk-ui Checkbox Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "jk-ui Date Picker Component",
+      "registryDependencies": [
+        "@jk-ui/field-button",
+        "@jk-ui/calendar",
+        "@jk-ui/input",
+        "@jk-ui/input-date",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/date-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:ui",
+      "title": "Date Range Picker",
+      "description": "jk-ui Date Range Picker Component",
+      "registryDependencies": [
+        "@jk-ui/field-button",
+        "@jk-ui/range-calendar",
+        "@jk-ui/input",
+        "@jk-ui/input-date",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/date-range-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/date-range-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "jk-ui Dialog Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "disclosure",
+      "type": "registry:ui",
+      "title": "Disclosure",
+      "description": "jk-ui Disclosure Component",
+      "files": [
+        {
+          "path": "src/components/jk/disclosure-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/disclosure-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:ui",
+      "title": "Dropdown",
+      "description": "jk-ui Dropdown Component",
+      "registryDependencies": [
+        "@jk-ui/keyboard"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/dropdown.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/dropdown.tsx"
+        }
+      ]
+    },
+    {
+      "name": "field-button",
+      "type": "registry:ui",
+      "title": "Field Button",
+      "description": "jk-ui Field Button Component",
+      "files": [
+        {
+          "path": "src/components/jk/field-button.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/field-button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "native-table",
+      "type": "registry:ui",
+      "title": "Native Table",
+      "description": "jk-ui Native Table Component",
+      "files": [
+        {
+          "path": "src/components/jk/native-table.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/native-table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-date",
+      "type": "registry:ui",
+      "title": "Input Date",
+      "description": "jk-ui Input Date Component",
+      "files": [
+        {
+          "path": "src/components/jk/input-date.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-date.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "jk-ui Input OTP Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-otp.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input-time",
+      "type": "registry:ui",
+      "title": "Input Time",
+      "description": "jk-ui Input Time Component",
+      "registryDependencies": [
+        "@jk-ui/input-date",
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/input-time.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-time.tsx"
+        }
+      ]
+    },
+    {
+      "name": "keyboard",
+      "type": "registry:ui",
+      "title": "Keyboard",
+      "description": "jk-ui Keyboard Component",
+      "files": [
+        {
+          "path": "src/components/jk/keyboard.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/keyboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "title": "Link",
+      "description": "jk-ui Link Component",
+      "files": [
+        {
+          "path": "src/components/jk/link.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/link.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/button"
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "jk-ui Menu Component",
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/menu.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "jk-ui Modal Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/modal.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/modal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "title": "Navbar",
+      "description": "jk-ui Navbar Component",
+      "files": [
+        {
+          "path": "src/components/jk/navbar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/navbar.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/button"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "jk-ui Popover Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "jk-ui Radio Component",
+      "files": [
+        {
+          "path": "src/components/jk/radio.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/radio.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input"
+      ]
+    },
+    {
+      "name": "range-calendar",
+      "type": "registry:ui",
+      "title": "Range Calendar",
+      "description": "jk-ui Range Calendar Component",
+      "registryDependencies": [
+        "@jk-ui/calendar"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/range-calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/range-calendar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "jk-ui Select Component",
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/input",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/select.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "jk-ui Separator Component",
+      "files": [
+        {
+          "path": "src/components/jk/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "jk-ui Sheet Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/sheet.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "jk-ui Sidebar Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/sidebar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "jk-ui Switch Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "jk-ui Tabs Component",
+      "files": [
+        {
+          "path": "src/components/jk/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combo-box",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "jk-ui Combobox Component",
+      "files": [
+        {
+          "path": "src/components/jk/combo-box.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/combo-box.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/text-field",
+        "@jk-ui/input",
+        "@jk-ui/dropdown",
+        "@jk-ui/popover"
+      ]
+    },
+    {
+      "name": "drop-zone",
+      "type": "registry:ui",
+      "title": "Drop Zone",
+      "description": "jk-ui Drop Zone Component",
+      "files": [
+        {
+          "path": "src/components/jk/drop-zone.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/drop-zone.tsx"
+        }
+      ]
+    },
+    {
+      "name": "file-trigger",
+      "type": "registry:ui",
+      "title": "File Trigger",
+      "description": "jk-ui File Trigger Component",
+      "registryDependencies": [
+        "@jk-ui/button",
+        "@jk-ui/loader"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/file-trigger.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/file-trigger.tsx"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "jk-ui Input Component",
+      "files": [
+        {
+          "path": "src/components/jk/input.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "jk-ui Number Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/number-field.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input",
+        "@jk-ui/text-field"
+      ]
+    },
+    {
+      "name": "progress-bar",
+      "type": "registry:ui",
+      "title": "Progress Bar",
+      "description": "jk-ui Progress Bar Component",
+      "files": [
+        {
+          "path": "src/components/jk/progress-bar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/progress-bar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loader",
+      "type": "registry:ui",
+      "title": "Loader",
+      "description": "jk-ui Loader Component",
+      "files": [
+        {
+          "path": "src/components/jk/loader.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/loader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress-bar-circle",
+      "type": "registry:ui",
+      "title": "Progress Bar Circle",
+      "description": "jk-ui Circular Progress Bar Component",
+      "files": [
+        {
+          "path": "src/components/jk/progress-bar-circle.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/progress-bar-circle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "jk-ui Search Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/search-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/search-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "jk-ui Skeleton Component",
+      "files": [
+        {
+          "path": "src/components/jk/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "jk-ui Slider Component",
+      "files": [
+        {
+          "path": "src/components/jk/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "jk-ui Table Component",
+      "files": [
+        {
+          "path": "src/components/jk/table.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/table.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/checkbox"
+      ]
+    },
+    {
+      "name": "tag-field",
+      "type": "registry:ui",
+      "title": "Tag Field",
+      "description": "jk-ui Tag Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/tag-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tag-field.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/tag-group",
+        "@jk-ui/input",
+        "@jk-ui/text-field"
+      ]
+    },
+    {
+      "name": "tag-group",
+      "type": "registry:ui",
+      "title": "Tag Group",
+      "description": "jk-ui Tag Group Component",
+      "files": [
+        {
+          "path": "src/components/jk/tag-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tag-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text Field",
+      "description": "jk-ui Text Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/text-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/text-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "jk-ui Toggle Component",
+      "files": [
+        {
+          "path": "src/components/jk/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/toggle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "jk-ui Toggle Group Component",
+      "files": [
+        {
+          "path": "src/components/jk/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/toggle-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/toggle"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "jk-ui Tooltip Component",
+      "files": [
+        {
+          "path": "src/components/jk/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "jk-ui Aspect Ratio Component",
+      "files": [
+        {
+          "path": "src/components/jk/aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/aspect-ratio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-menu",
+      "type": "registry:ui",
+      "title": "Command Menu",
+      "description": "jk-ui Command Menu Component",
+      "files": [
+        {
+          "path": "src/components/jk/command-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/command-menu.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/loader",
+        "@jk-ui/menu"
+      ]
+    },
+    {
+      "name": "heading",
+      "type": "registry:ui",
+      "title": "Heading",
+      "description": "jk-ui Heading Component",
+      "files": [
+        {
+          "path": "src/components/jk/heading.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "jk-ui Icon Component",
+      "files": [
+        {
+          "path": "src/components/jk/icon.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "title": "Text",
+      "description": "jk-ui Text Component",
+      "files": [
+        {
+          "path": "src/components/jk/text.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/text.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "jk-ui Textarea Component",
+      "files": [
+        {
+          "path": "src/components/jk/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/textarea.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input"
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Recharts based chart component",
+      "files": [
+        {
+          "path": "src/components/jk/chart.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "area-chart",
+      "type": "registry:ui",
+      "title": "Area Chart",
+      "description": "jk-ui Area Chart Component",
+      "files": [
+        {
+          "path": "src/components/jk/area-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/area-chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bar-chart",
+      "type": "registry:ui",
+      "title": "Bar Chart",
+      "description": "jk-ui Bar Chart Component",
+      "files": [
+        {
+          "path": "src/components/jk/bar-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/bar-chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "leaderboard",
+      "type": "registry:ui",
+      "title": "Leaderboard",
+      "description": "jk-ui Leaderboard Component",
+      "files": [
+        {
+          "path": "src/components/jk/leaderboard.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/leaderboard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "line-chart",
+      "type": "registry:ui",
+      "title": "Line chart",
+      "description": "Line chart component",
+      "files": [
+        {
+          "path": "src/components/jk/line-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/line-chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pie-chart",
+      "type": "registry:ui",
+      "title": "Pie chart",
+      "description": "Pie chart component",
+      "files": [
+        {
+          "path": "src/components/jk/pie-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/pie-chart.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tracker",
+      "type": "registry:ui",
+      "title": "Tracker",
+      "description": "jk-ui Tracker Component",
+      "registryDependencies": [
+        "@jk-ui/tooltip"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/tracker.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tracker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "login01",
+      "type": "registry:block",
+      "title": "Login 01",
+      "description": "Simple centered login form with email and password fields",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/login01.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
+        }
+      ]
+    },
+    {
+      "name": "login02",
+      "type": "registry:block",
+      "title": "Login 02",
+      "description": "Login form with social authentication buttons",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/login02.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
+        }
+      ]
+    },
+    {
+      "name": "login03",
+      "type": "registry:block",
+      "title": "Login 03",
+      "description": "Split-screen login page with illustration side panel",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/login03.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
+        }
+      ]
+    },
+    {
+      "name": "signup01",
+      "type": "registry:block",
+      "title": "Sign Up 01",
+      "description": "User registration form with email, password and terms",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/signup01.tsx",
+          "type": "registry:block",
+          "target": "components/signup.tsx"
+        }
+      ]
+    },
+    {
+      "name": "otp01",
+      "type": "registry:block",
+      "title": "OTP 01",
+      "description": "One-time password verification input form",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/otp01.tsx",
+          "type": "registry:block",
+          "target": "components/otp.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kpi01",
+      "type": "registry:block",
+      "title": "KPI Card 01",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi01.tsx",
+          "type": "registry:block",
+          "target": "components/kpi-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kpi02",
+      "type": "registry:block",
+      "title": "KPI Card 02",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi02.tsx",
+          "type": "registry:block",
+          "target": "components/kpi02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kpi03",
+      "type": "registry:block",
+      "title": "KPI Card 03",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi03.tsx",
+          "type": "registry:block",
+          "target": "components/kpi03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "activity01",
+      "type": "registry:block",
+      "title": "Activity Card 01",
+      "description": "Recent activity feed card for dashboards",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/activity01.tsx",
+          "type": "registry:block",
+          "target": "components/activity-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "empty-state01",
+      "type": "registry:block",
+      "title": "Empty State 01",
+      "description": "Empty state placeholder with illustration and action",
+      "files": [
+        {
+          "path": "src/blocks/application/empty-state/empty-state01.tsx",
+          "type": "registry:block",
+          "target": "components/empty-state.tsx"
+        }
+      ]
+    },
+    {
+      "name": "header01",
+      "type": "registry:block",
+      "title": "Header 01",
+      "description": "Simple application header with navigation",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header01.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ]
+    },
+    {
+      "name": "header02",
+      "type": "registry:block",
+      "title": "Header 02",
+      "description": "Header with search and user menu dropdown",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header02.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ]
+    },
+    {
+      "name": "header03",
+      "type": "registry:block",
+      "title": "Header 03",
+      "description": "Header with breadcrumb navigation and actions",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header03.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar01",
+      "type": "registry:block",
+      "title": "Sidebar 01",
+      "description": "Collapsible sidebar navigation with icons",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar01.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar02",
+      "type": "registry:block",
+      "title": "Sidebar 02",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar02.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar-nav-group.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-nav-group.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar03",
+      "type": "registry:block",
+      "title": "Sidebar 03",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar03.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar-nav-group.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-nav-group.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar04",
+      "type": "registry:block",
+      "title": "Sidebar 04",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar04.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sidebar05",
+      "type": "registry:block",
+      "title": "Sidebar 05",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar05.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "shell01",
+      "type": "registry:block",
+      "title": "App Shell 01",
+      "description": "Application shell layout with sidebar and header",
+      "files": [
+        {
+          "path": "src/blocks/application/app-shell/shell01.tsx",
+          "type": "registry:block",
+          "target": "components/app-shell.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/sidebar01"
+      ]
+    },
+    {
+      "name": "table01",
+      "type": "registry:block",
+      "title": "Table 01",
+      "description": "Sortable data table with pagination and filtering",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table01.tsx",
+          "type": "registry:block",
+          "target": "components/data-table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table02",
+      "type": "registry:block",
+      "title": "Table 02",
+      "description": "Table",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table02.tsx",
+          "type": "registry:block",
+          "target": "components/table02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table03",
+      "type": "registry:block",
+      "title": "Table 03",
+      "description": "Table",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table03.tsx",
+          "type": "registry:block",
+          "target": "components/table03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "title": "JK-UI utilities",
+      "type": "registry:file",
+      "description": "Base styles for JK UI components.",
+      "files": [
+        {
+          "path": "src/styles/jk-ui/base.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/base.css"
+        },
+        {
+          "path": "src/styles/jk-ui/button.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/button.css"
+        },
+        {
+          "path": "src/styles/jk-ui/form.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/form.css"
+        },
+        {
+          "path": "src/styles/jk-ui/ui.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/ui.css"
+        },
+        {
+          "path": "src/styles/jk-ui/intents.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/intents.css"
+        },
+        {
+          "path": "src/styles/jk-ui/utils.css",
+          "type": "registry:file",
+          "target": "styles/jk-ui/utils.css"
+        },
+        {
+          "path": "src/lib/ui-variants.ts",
+          "type": "registry:lib",
+          "target": "lib/ui-variants.ts"
+        },
+        {
+          "path": "src/lib/ui-variant-types.ts",
+          "type": "registry:lib",
+          "target": "lib/ui-variant-types.ts"
+        },
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "hero01",
+      "type": "registry:block",
+      "title": "Hero 01",
+      "description": "Marketing hero section with headline and CTA",
+      "files": [
+        {
+          "path": "src/blocks/marketing/hero/hero01.tsx",
+          "type": "registry:block",
+          "target": "components/hero01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hero02",
+      "type": "registry:block",
+      "title": "Hero 02",
+      "description": "Marketing hero section with headline and CTA",
+      "files": [
+        {
+          "path": "src/blocks/marketing/hero/hero02.tsx",
+          "type": "registry:block",
+          "target": "components/hero02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hero03",
+      "type": "registry:block",
+      "title": "Hero 03",
+      "description": "Marketing hero section with headline and CTA",
+      "files": [
+        {
+          "path": "src/blocks/marketing/hero/hero03.tsx",
+          "type": "registry:block",
+          "target": "components/hero03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features01",
+      "type": "registry:block",
+      "title": "Features 01",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/features/features01.tsx",
+          "type": "registry:block",
+          "target": "components/features.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content01",
+      "type": "registry:block",
+      "title": "Content 01",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/content/content01.tsx",
+          "type": "registry:block",
+          "target": "components/content01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content02",
+      "type": "registry:block",
+      "title": "Content 02",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/content/content02.tsx",
+          "type": "registry:block",
+          "target": "components/content02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing01",
+      "type": "registry:block",
+      "title": "Pricing 01",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/pricing/pricing01.tsx",
+          "type": "registry:block",
+          "target": "components/pricing01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing02",
+      "type": "registry:block",
+      "title": "Pricing 02",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/pricing/pricing02.tsx",
+          "type": "registry:block",
+          "target": "components/pricing02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing03",
+      "type": "registry:block",
+      "title": "Pricing 03",
+      "description": "Feature grid section with icons and descriptions",
+      "files": [
+        {
+          "path": "src/blocks/marketing/pricing/pricing03.tsx",
+          "type": "registry:block",
+          "target": "components/pricing03.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+---
+title: Principles
+description: How JK-UI works — architecture, theming, and design decisions
+keywords: principles, architecture, design system, tailwind, react aria, css variables, theming
+---
+
+JK-UI is a React adaptation of the [Flexiwind](https://github.com/unoforge/flexiwind) design system for Laravel, built on top of [Intent UI](https://intentui.com/) patterns and [React Aria Components](https://react-aria.adobe.com/).
+
+## Architecture
+
+### TailwindCSS v4 + React Aria Components
+
+JK-UI combines two core technologies:
+
+- **React Aria Components** — Accessible, headless UI primitives from Adobe
+- **TailwindCSS v4** — Utility-first CSS with `@theme`, `@utility`, and `@apply` directives
+
+Components use `tailwind-variants` to compose utilities with full TypeScript safety.
+
+### CSS Variable-Based Theming
+
+All design tokens use CSS variables. This makes customization straightforward — change a variable, and every component updates:
+
+```css
+@utility ui-solid-primary {
+    --ui-color: var(--color-primary);
+    --ui-fg: var(--color-primary-foreground);
+
+    &:is(.dark *) {
+        --ui-color: var(--color-primary);
+    }
+}
+```
+
+Components consume these through class names:
+
+```tsx
+<span className="ui-solid ui-solid-primary">Label</span>
+```
+
+Or inline directly using arbitrary values:
+
+```tsx
+<span className="ui-solid text-white bg-violet-600">Label</span>
+```
+
+### Utility Classes
+
+TailwindCSS v4's `@utility` directive creates reusable utility classes:
+
+```css
+@utility ui-solid {
+  @apply bg-(--ui-solid-bg) text-(--ui-solid-text);
+}
+
+@utility ui-soft {
+  @apply bg-(--ui-soft-bg) text-(--ui-soft-text);
+}
+
+@utility ui-outline {
+  @apply text-(--ui-outline-text) border border-(--ui-outline-border);
+}
+```
+
+## Variant & Intent System
+
+Components use a two-level styling system for consistency.
+
+### Variants
+The visual style layer:
+- `solid` — Filled background
+- `soft` — Subtle tinted background
+- `outline` — Border only, transparent background
+- `subtle` — Very subtle background with border
+- `ghost` — Transparent until hover
+
+### Intents
+The semantic meaning:
+- `primary`, `secondary`, `accent`
+- `success`, `warning`, `destructive`, `info`
+- `gray`, `neutral`
+
+```tsx
+<Badge variant="solid" intent="primary">Primary</Badge>
+<Badge variant="soft" intent="success">Success</Badge>
+<Badge variant="outline" intent="destructive">Destructive</Badge>
+```
+
+TypeScript ensures valid combinations — incorrect intent/variant pairs are caught at compile time.
+
+## shadcn Compatibility
+
+JK-UI follows the **shadcn distribution model** — components are copied into your project as source code, not installed as dependencies. This gives you:
+
+- **Full ownership** — Every component file is yours to edit
+- **Tree-shaking by default** — Only the components you install
+- **No lock-in** — Migrate away at any time by keeping the source files
+
+The `@jk-ui` namespace works seamlessly with the shadcn CLI after running `jk-ui-cli setup`.
+
+## shadcn-Standard CSS Variables
+
+JK-UI uses shadcn-standard CSS variable names so that components work out of the box with Tailwind's `@theme inline` mappings:
+
+| Category | Variable | Tailwind Utility |
+|----------|----------|-----------------|
+| Background | `--background` | `bg-background` |
+| Foreground | `--foreground` | `text-foreground` |
+| Primary | `--primary` | `bg-primary` |
+| Muted | `--muted` | `bg-muted` |
+| Border | `--border` | `border-border` |
+| Input | `--input` | `border-input` |
+| Ring | `--ring` | `ring-ring` |
+| Radius | `--radius` | `rounded-lg` |
+
+JK-UI also provides **component-specific radius utilities** backed by dedicated variables:
+
+| Utility | Variable | Default |
+|---------|----------|---------|
+| `rounded-ui` | `--ui-radius` | `var(--radius-lg)` |
+| `rounded-card` | `--card-radius` | `var(--radius-lg)` |
+| `rounded-checkbox` | `--checkbox-radius` | `var(--radius-sm)` |
+
+Extended jk-ui tokens (`--fg-title`, `--bg-subtle`, `--border-strong`, etc.) are maintained for backward compatibility.
+
+## Customization
+
+CSS variables are designed to be overridden at any level:
+
+### Component-level override
+```tsx
+<Button className="[--btn-solid-bg:var(--color-purple-600)]">
+  Custom Color
+</Button>
+```
+
+### Theme-level override
+```css
+:root {
+  --primary: var(--color-purple-600);
+  --radius: 0.375rem;
+}
+```
+
+### New variant
+```css
+@utility ui-gradient-primary {
+    background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-400));
+    --ui-gradient-text: var(--color-white);
+}
+```
+
+All component tokens are documented and accessible for override.

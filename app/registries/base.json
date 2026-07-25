@@ -1,0 +1,60 @@
+{
+    "name": "jk-ui-ui",
+    "title": "JK-UI UI",
+    "description": "JK-UI UI components for Laravel Blade.",
+    "items": [
+        {
+            "name": "base",
+            "title": "JK-UI utilities",
+            "type": "registry:file",
+            "description": "Base styles for JK UI components.",
+            "files": [
+                {
+                    "path": "src/styles/jk-ui/base.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/base.css"
+                },
+                {
+                    "path": "src/styles/jk-ui/button.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/button.css"
+                },
+                {
+                    "path": "src/styles/jk-ui/form.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/form.css"
+                },
+                {
+                    "path": "src/styles/jk-ui/ui.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/ui.css"
+                },
+                {
+                    "path": "src/styles/jk-ui/intents.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/intents.css"
+                },
+                {
+                    "path": "src/styles/jk-ui/utils.css",
+                    "type": "registry:file",
+                    "target": "styles/jk-ui/utils.css"
+                },
+                {
+                    "path": "src/lib/ui-variants.ts",
+                    "type": "registry:lib",
+                    "target": "lib/ui-variants.ts"
+                },
+                {
+                    "path": "src/lib/ui-variant-types.ts",
+                    "type": "registry:lib",
+                    "target": "lib/ui-variant-types.ts"
+                },
+                {
+                    "path": "src/lib/utils.ts",
+                    "type": "registry:lib",
+                    "target": "lib/utils.ts"
+                }
+            ]
+        }
+    ]
+}
