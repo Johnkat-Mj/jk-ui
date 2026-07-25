@@ -13,7 +13,7 @@ export const SidebarNavGroup = ({ text, icon, items }: { icon: string, text: str
         <>
             {
                 isResizedSidebar && !isMobile ?
-                    <button onClick={() => resizeSidebar?.()} type="button" className="group flex items-center text-sm px-3 py-2 text-muted-foreground hover:bg-card hover:text-foreground-subtitle rounded-lg">
+                    <button onClick={() => resizeSidebar?.()} type="button" className="group flex items-center text-sm px-3 py-2 text-muted-foreground hover:bg-card hover:text-muted-foreground rounded-lg">
                         <div className="flex items-center gap-2.5 w-full">
                             <span className="flex min-w-max">
                                 <Icon name={icon} className="size-4.5 transition duration-75" />
@@ -22,7 +22,7 @@ export const SidebarNavGroup = ({ text, icon, items }: { icon: string, text: str
                     </button> :
                     <Disclosure defaultExpanded className="w-full flex flex-col">
                         <DisclosureTrigger withIndicator={false}
-                            className="group flex flex-row items-center text-sm px-3 py-2 text-muted-foreground hover:bg-card hover:text-foreground-subtitle rounded-lg">
+                            className="group flex flex-row items-center text-sm px-3 py-2 text-muted-foreground hover:bg-card hover:text-muted-foreground rounded-lg">
                             <div className="flex items-center gap-2.5 w-full">
                                 <span className="flex min-w-max">
                                     <Icon name={icon} className="size-4.5 transition duration-75" />
@@ -45,7 +45,7 @@ export const SidebarNavGroup = ({ text, icon, items }: { icon: string, text: str
                                 {
                                     items.map(item => <li key={item.id}>
                                         <a href="{{ $item['href'] ?? '#' }}"
-                                            className="flex fx-current:relative fx-active:relative items-center text-sm gap-2.5 px-3 py-1.5 text-muted-foreground hover:bg-card hover:text-foreground-subtitle fx-current:bg-muted/60 fx-current:text-foreground rounded-lg nav-sub-item-ind"
+                                            className="flex fx-current:relative fx-active:relative items-center text-sm gap-2.5 px-3 py-1.5 text-muted-foreground hover:bg-card hover:text-muted-foreground fx-current:bg-muted/60 fx-current:text-foreground rounded-lg nav-sub-item-ind"
                                         >
                                             <span className="ml-7">
                                                 {item.text}

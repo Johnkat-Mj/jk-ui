@@ -41,9 +41,9 @@ export const Sidebar = () => {
         <>
             <SidebarOverlayElement className="md:hidden md:invisible invisible opacity-0 fx-open:visible fx-open:opacity-100 ease-linear transition-all duration-200 z-50" />
 
-            <SidebarBase className="fixed h-dvh py-3 overflow-hidden w-11/12 max-w-64 md:w-64 transition-all -translate-x-full fx-open:translate-x-0 md:translate-x-0 md:transition-none  bg-card border-r border-bg-muted/70 flex flex-col justify-between px-4 ease-linear z-80">
+            <SidebarBase className="fixed h-dvh py-3 overflow-hidden w-11/12 max-w-64 md:w-64 transition-all -translate-x-full fx-open:translate-x-0 md:translate-x-0 md:transition-none bg-bg-surface border-r border-bg-muted/70 flex flex-col justify-between px-4 ease-linear z-80">
                 <div className="min-h-max py-2 border-b border-border">
-                    <a href="#" className="flex items-center gap-x-3 font-semibold text-foreground-subtitle">
+                    <a href="#" className="flex items-center gap-x-3 font-semibold text-muted-foreground">
                         <span className="size-8 bg-fg-title text-background rounded-lg d-flex-place-center shadow-sm transition-colors duration-300">
                             <svg aria-hidden="true" width="488" height="488" className="size-5" viewBox="0 0 488 488" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@ export const Sidebar = () => {
                         <SidebarItem text="Settings" href="#" icon="ph--gear" />
                         <li className="w-full">
                             <Menu>
-                                <Button aria-label="Open user menu" size='none' variant='ghost' className="gap-3 w-full p-1.5 border border-border/40">
+                                <Button aria-label="Open user menu" size='none' variant='ghost' className="gap-3 w-full p-1.5 border border-border-strong/40">
                                     <Avatar size="md" radius="default" src={"https://avatars.githubusercontent.com/u/59884686?v=4"} width={100} height={100} alt='Johnkat Profile Picture' />
                                     <div className="flex flex-1 justify-between items-center overflow-hidden">
                                         <div className="flex flex-col -space-y-0.5 text-left flex-1 overflow-hidden">

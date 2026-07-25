@@ -48,10 +48,10 @@
     --dropdown-item-hover-and-select: var(--bg-muted);
     --dropdown-item-hover-and-select-fg: var(--fg-title);
     --dropdown-item-selected-fg: var(--fg-title);
-    --dropdown-item-danger-fg: var(--destructive);
+    --dropdown-item-destructive-fg: var(--destructive);
     --dropdown-item-warning-fg: var(--warning);
-    --dropdown-item-danger-hover-and-select: color-mix(in oklab, var(--destructive) 10%, transparent);
-    --dropdown-item-danger-hover-and-select-fg: var(--destructive);
+    --dropdown-item-destructive-hover-and-select: color-mix(in oklab, var(--destructive) 10%, transparent);
+    --dropdown-item-destructive-hover-and-select-fg: var(--destructive);
     --dropdown-item-warning-hover-and-select: color-mix(in oklab, var(--warning) 10%, transparent);
     --dropdown-item-warning-hover-and-select-fg: var(--warning);
     --date-segment-focus-bg: var(--primary);

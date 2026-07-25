@@ -20,7 +20,7 @@ export const Pricing02 = () => {
                     <div className="grid gap-8 items-center sm:grid-cols-2 lg:grid-cols-3">
                         {/* Starter Plan */}
                         <div className="md-h-auto flex flex-col rounded-3xl p-5 sm:p-6 xl:p-10 border border-border">
-                            <span className="font-semibold text-2xl text-foreground-subtitle">
+                            <span className="font-semibold text-2xl text-muted-foreground">
                                 Starter
                             </span>
                             <div className="mt-2 font-bold text-2xl md:text-3xl text-foreground">
@@ -104,7 +104,7 @@ export const Pricing02 = () => {
                         </div>
                         {/* Pro Plan */}
                         <div className="md-h-auto flex flex-col rounded-3xl p-5 sm:p-6 xl:p-10 border border-border">
-                            <span className="font-semibold text-2xl text-foreground-subtitle">
+                            <span className="font-semibold text-2xl text-muted-foreground">
                                 Pro
                             </span>
                             <div className="mt-2 font-bold text-2xl md:text-3xl text-foreground">

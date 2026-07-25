@@ -34,7 +34,7 @@ export const Pricing03 = () => {
                                 </div>
                                 <span className="text-foreground">/month</span>
                             </div>
-                            <h2 className="text-xl font-semibold text-foreground-subtitle pt-5">
+                            <h2 className="text-xl font-semibold text-muted-foreground pt-5">
                                 Free
                             </h2>
                             <p className="text-foreground pt-2">
@@ -74,7 +74,7 @@ export const Pricing03 = () => {
                                 </div>
                                 <span className="text-foreground">/month</span>
                             </div>
-                            <h2 className="text-xl font-semibold text-foreground-subtitle pt-5">
+                            <h2 className="text-xl font-semibold text-muted-foreground pt-5">
                                 Team
                             </h2>
                             <p className="text-foreground pt-2">

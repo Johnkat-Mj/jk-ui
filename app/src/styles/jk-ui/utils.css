@@ -67,8 +67,8 @@
   }
 }
 
-@utility dropdown-item-danger {
-  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-danger-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-danger-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-danger-fg)];
+@utility dropdown-item-destructive {
+  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-destructive-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-destructive-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-destructive-fg)];
 }
 
 @utility dropdown-item-warning {

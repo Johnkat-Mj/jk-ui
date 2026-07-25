@@ -113,8 +113,8 @@ const MenuItem = ({ className, intent, children, ...props }: MenuItemProps) => {
                     intent,
                     className: hasSubmenu
                         ? cx(
-                            intent === "destructive" && "open:bg-destructive-subtle open:text-destructive-subtle-fg",
-                            intent === "warning" && "open:bg-warning-subtle open:text-warning-subtle-fg",
+                            intent === "destructive" && "dropdown-item-destructive text-(--dropdown-item-destructive-fg) **:text-(--dropdown-item-destructive-fg)",
+                            intent === "warning" && "dropdown-item-warning text-(--dropdown-item-warning-fg) **:text-(--dropdown-item-warning-fg)",
                             intent === undefined &&
                             className,
                             "text-muted-foreground",

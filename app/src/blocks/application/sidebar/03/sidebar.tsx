@@ -142,7 +142,7 @@ export const Sidebar = () => {
                                 <li className="flex w-full">
                                     <Menu>
                                         <Button intent="none" variant="none" size="none"
-                                            className="flex items-center text-sm gap-2.5 md:in-fx-resized:pl-0 px-1 py-1 text-muted-foreground hover:bg-card hover:text-foreground-subtitle rounded-lg w-full">
+                                            className="flex items-center text-sm gap-2.5 md:in-fx-resized:pl-0 px-1 py-1 text-muted-foreground hover:bg-card hover:text-muted-foreground rounded-lg w-full">
                                             <span
                                                 className="size-8 min-w-8 md:in-fx-resized:w-10.5 md:in-fx-resized:min-w-10.5 flex items-center justify-center rounded-lg ui-subtle ui-subtle-gray">
                                                 J
