@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon",
+  "title": "Icon",
+  "description": "jk-ui Icon Component",
+  "files": [
+    {
+      "path": "src/components/jk/icon.tsx",
+      "content": "\"use client\"\n\nimport { cx } from \"@/lib/utils\"\n\ninterface IconProps extends React.HTMLAttributes<HTMLSpanElement> {\n  name: string\n  size?: \"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"2xl\"\n  intent?: \"current\" | \"fg\" | \"muted\" | \"primary\" | \"secondary\" | \"success\" | \"warning\" | \"destructive\"\n}\n\nconst sizeClasses = {\n  xs: \"size-3.5\",\n  sm: \"size-4\",\n  md: \"size-5\",\n  lg: \"size-6.5\",\n  xl: \"size-7.5\",\n  \"2xl\": \"size-9\",\n} as const\n\nconst intentClasses = {\n  current: \"text-current\",\n  fg: \"text-foreground\",\n  muted: \"text-muted-foreground\",\n  primary: \"text-primary\",\n  secondary: \"text-secondary\",\n  success: \"text-success\",\n  warning: \"text-warning\",\n  destructive: \"text-destructive\",\n} as const\n\nexport function Icon({\n  name,\n  size = \"sm\",\n  intent = \"current\",\n  className,\n  ...props\n}: IconProps) {\n  const sizeClass = sizeClasses[size] ?? sizeClasses.md\n  const intentClass = intentClasses[intent] ?? intentClasses.current\n\n  return (\n    <span\n      data-slot=\"icon\"\n      aria-hidden=\"true\"\n      className={cx(\"flex iconify\", name, sizeClass, intentClass, className)}\n      {...props}\n    />\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/icon.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

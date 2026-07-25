@@ -1,0 +1,91 @@
+---
+title: Installation
+description: Get started with JK-UI in your React project
+keywords: installation, setup, tanstack start, nextjs, shadcn, cli, tailwindcss
+---
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- Node.js 18+ installed
+- A React project (Next.js, TanStack Start, Vite + React, or any React framework)
+- A package manager (npm, yarn, pnpm, or bun)
+
+## Setup Flow
+
+JK-UI follows the standard shadcn setup flow with `--base aria`:
+
+### Step 1: Initialize shadcn with React Aria
+
+```bash
+bunx --bun shadcn@latest init --base aria
+```
+
+This configures `shadcn` for your project with React Aria Components as the base primitives.
+
+### Step 2: Install JK-UI base CSS
+
+```bash
+npx shadcn add @jk-ui/base
+```
+
+Then add these imports to your main CSS file:
+
+```css
+@import "./jk-ui/base.css";
+@import "./jk-ui/button.css";
+@import "./jk-ui/form.css";
+@import "./jk-ui/ui.css";
+@import "./jk-ui/intents.css";
+@import "./jk-ui/utils.css";
+```
+
+### Step 3: Run JK-UI setup
+
+```bash
+npx jk-ui-cli setup
+```
+
+This prompts you to:
+- Choose a **theme preset** (default, air, earth, fire, water, and more)
+- Select an **icon library** (Phosphor by default)
+- Generates a self-contained `jk-ui-theme.css` with your chosen theme
+- Patches `components.json` to add the `@jk-ui` registry namespace
+
+### Step 4: Install components
+
+```bash
+npx shadcn add @jk-ui/button
+npx shadcn add @jk-ui/card
+npx shadcn add @jk-ui/input
+npx shadcn add @jk-ui/checkbox
+```
+
+All components are available under the `@jk-ui` namespace.
+
+## Quick Start
+
+```bash
+# One-line setup (all steps)
+bunx --bun shadcn@latest init --base aria
+npx shadcn add @jk-ui/base
+npx jk-ui-cli setup
+npx shadcn add @jk-ui/button
+
+# Use in your app
+```
+
+```tsx
+import { Button } from "@/components/jk/button"
+
+export default function Home() {
+  return <Button>Hello, JK-UI!</Button>
+}
+```
+
+## Next Steps
+
+- Browse the [Components](/components) section
+- Learn about [Theming](/docs/theme)
+- Explore [Theme Colors](/docs/theme/colors)

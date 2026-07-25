@@ -1,0 +1,30 @@
+---
+title: Text
+description: Semantic text component with intent-based styling.
+keywords: text, typography, paragraph, span
+---
+
+## Demo
+
+<ComponentPreview noInTabs component="examples.text-demo" />
+
+## Installation
+
+<Terminal command="npx shadcn@latest add @jk-ui/text" />
+
+## Usage
+
+The Text component provides semantic text styling with intent-based coloring. Use the `intent` prop to apply different text colors, and `elementType` to change the HTML tag.
+
+## Examples
+
+### Intents
+
+<ComponentPreview noInTabs component="examples.text-intents" />
+
+## API
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| intent | `muted \| body \| title \| caption \| primary \| secondary \| warning \| destructive` | Semantic color intent for the text. |
+| elementType | `p \| span \| div \| label \| small` | HTML tag to render (default: p). |

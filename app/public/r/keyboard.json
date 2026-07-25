@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "keyboard",
+  "title": "Keyboard",
+  "description": "jk-ui Keyboard Component",
+  "files": [
+    {
+      "path": "src/components/jk/keyboard.tsx",
+      "content": "\"use client\"\n\n\nimport { tv } from \"tailwind-variants\"\nimport { uiStyles, type UiVariant, type UiIntent } from \"@/lib/ui-variants\"\nimport {\n    type UiComponentVariant,\n    type UiComponentIntent,\n    resolveIntent,\n} from \"@/lib/ui-variant-types\"\nimport type { ComponentProps } from \"react\"\nimport { Keyboard as RAC_Keyboard } from \"react-aria-components\"\n\n/**\n * Kbd variant configuration\n */\nconst kbdVariants = tv({\n    base: \"font-mono\",\n    variants: {\n        size: {\n            none: \"\",\n            default: \"kbd-md\",\n            xs: \"kbd-xs\",\n            sm: \"kbd-sm\",\n            lg: \"kbd-lg\",\n            xl: \"kbd-xl\",\n        },\n    },\n    defaultVariants: {\n        size: \"default\",\n    },\n})\n\n/**\n * Kbd-specific type aliases using shared UI variant types\n */\ntype KbdVariant = UiComponentVariant\ntype KbdIntent<V extends KbdVariant> = UiComponentIntent<V>\n\n/**\n * Kbd component props\n */\nexport interface KeyboardProps<V extends KbdVariant = \"solid\"> extends ComponentProps<typeof RAC_Keyboard> {\n    variant?: V\n    intent?: KbdIntent<V>\n    size?: \"none\" | \"default\" | \"xs\" | \"sm\" | \"lg\" | \"xl\"\n    className?: string\n    children: React.ReactNode\n}\n\n\nexport const Keyboard = <V extends KbdVariant = \"solid\">({\n    variant = \"solid\" as V,\n    intent,\n    size = \"default\",\n    className,\n    ...rest\n}: KeyboardProps<V>) => {\n    // Handle default variant (bg-muted text-foreground)\n    if (variant === \"default\") {\n        const classes = kbdVariants({\n            size,\n            className: `bg-muted text-foreground rounded-ui ${className || \"\"}`,\n        })\n        return <RAC_Keyboard className={classes} {...rest}/>\n    }\n\n    // Handle none variant\n    if (variant === \"none\") {\n        const classes = kbdVariants({\n            size,\n            className: `rounded-ui ${className || \"\"}`,\n        })\n        return <RAC_Keyboard className={classes} {...rest}/>\n    }\n\n    // Resolve intent with default if not provided\n    const resolvedIntent = resolveIntent(variant, intent)\n\n    // Get variant classes from uiStyles\n    const variantClasses = uiStyles({\n        variant: variant as UiVariant,\n        intent: resolvedIntent as UiIntent,\n    })\n\n    // Combine all classes\n    const classes = kbdVariants({\n        size,\n        className: `${variantClasses} rounded-ui ${className || \"\"}`,\n    })\n\n    return <RAC_Keyboard className={classes} {...rest}/>\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/keyboard.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

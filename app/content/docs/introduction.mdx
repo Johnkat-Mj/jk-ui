@@ -1,0 +1,65 @@
+---
+title: Introduction
+description: A collection of React UI components and blocks built with TailwindCSS v4 and React Aria Components, featuring CSS variable-based customization and shadcn/ui compatibility
+---
+
+## Overview
+
+**JK-UI is a React component library distributed via the shadcn registry, built on react-aria-components and styled with TailwindCSS v4.**
+
+It provides a complete set of accessible, customizable components that you install directly into your codebase — you own the code, not a dependency.
+
+### What makes JK-UI different?
+
+- **shadcn-compatible** — Works with the standard `shadcn init --base aria` flow. Install components via `npx shadcn add @jk-ui/{name}`.
+- **Semantic theming** — Full shadcn-standard CSS variable system (`--background`, `--foreground`, `--primary`, `--muted`, etc.) plus extended jk-ui tokens for advanced customization.
+- **React Aria Components** — Accessible, headless primitives with built-in keyboard navigation, screen reader support, and internationalization.
+- **TailwindCSS v4** — Utilities, `@theme` integration, and `@utility` directives for clean, composable styling.
+- **17 theme presets** — Built-in color themes (default, air, earth, fire, water, and more) switchable via CSS variables.
+- **60+ components** — Buttons, forms, overlays, tables, charts, navigation, and layout primitives.
+- **Pre-built blocks** — Login forms, sidebars, KPI cards, marketing sections, and application shells.
+
+## Key Features
+
+### Color System
+- **Semantic naming**: `primary`, `secondary`, `accent`, `muted`, `destructive`, and extended jk-ui tokens
+- **shadcn-standard**: All shadcn/ui variable names are supported natively (`--input`, `--ring`, `--sidebar-*`, etc.)
+- **Theme presets**: 17 built-in themes covering light and dark modes
+
+### Component Styling
+- **TailwindCSS v4 utilities**: Components use standard Tailwind classes (`bg-background`, `text-foreground`, `border-input`, `ring-ring`)
+- **CSS variable customization**: Every component token is exposed as a CSS variable for easy overrides
+- **Variant system**: Consistent `solid`/`soft`/`outline`/`ghost`/`subtle` variants across components
+
+### Development Experience
+- **TypeScript**: Full type safety with `tailwind-variants` and `tailwind-merge`
+- **Iconify Integration**: Phosphor icons via `@iconify-json/ph`
+- **Accessibility**: WCAG-compliant through react-aria-components
+- **Motion**: Animations via `motion` + `tw-animate-css`
+
+## Quick Links
+
+<LinksGrid links={[
+    {
+        href: '/docs/installation',
+        title: 'Getting Started',
+        description: 'Set up JK-UI in your project',
+        icon: 'ph--compass',
+    },
+    {
+        href: '/components',
+        title: 'Components',
+        description: 'Browse the available components',
+        icon: 'ph--code',
+    },
+    {
+        href: '/docs/theme',
+        title: 'Theming',
+        description: 'Customize colors, borders, and radii',
+        icon: 'ph--paint-brush',
+    }
+]} />
+
+## License
+
+MIT — see [LICENSE](https://github.com/Johnkat-Mj/jk-ui/blob/main/LICENSE) for details.

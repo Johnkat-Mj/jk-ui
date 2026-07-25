@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-date",
+  "title": "Input Date",
+  "description": "jk-ui Input Date Component",
+  "files": [
+    {
+      "path": "src/components/jk/input-date.tsx",
+      "content": "\"use client\"\n\nimport {\n  DateField as AriaDateField,\n  type DateFieldProps as AriaDateFieldProps,\n  DateInput as AriaDateInput,\n type  DateInputProps,\n  DateSegment,\n type DateValue,\n  type ValidationResult\n} from 'react-aria-components';\nimport { tv } from 'tailwind-variants';\nimport { Description, FieldError, inputGroupVariants, type InputSize, Label } from './input';\nimport { cx } from '@/lib/utils';\n\nexport interface DateFieldProps<T extends DateValue> extends AriaDateFieldProps<T> {\n  label?: string;\n  description?: string;\n  size?: InputSize,\n  border?: boolean\n  bgNone?: boolean\n  radius?: boolean\n  errorMessage?: string | ((validation: ValidationResult) => string);\n}\n\nexport function InputDate<T extends DateValue>(\n  { label, description, errorMessage, size, radius=true, ...props }: DateFieldProps<T>\n) {\n  return (\n    <AriaDateField {...props} className={cx(props.className, 'flex flex-col gap-1')}>\n      {label ? <Label>{label}</Label>:null}\n      <DateInput className={inputGroupVariants({\n        size,\n        radius,\n      })} />\n      {description && <Description>{description}</Description>}\n      <FieldError>{errorMessage}</FieldError>\n    </AriaDateField>\n  );\n}\n\nconst segmentStyles = tv({\n  base: 'inline px-0.5 py-px whitespace-nowrap type-literal:p-0 rounded outline outline-0 forced-color-adjust-none caret-transparent text-muted-foreground forced-colors:text-[ButtonText] [-webkit-tap-highlight-color:transparent]',\n  variants: {\n    isPlaceholder: {\n      true: 'ui-data-segment-placeholder'\n    },\n    isDisabled: {\n      true: 'text-border-strong/80 forced-colors:text-[GrayText]'\n    },\n    isFocused: {\n      true: 'ui-date-segment'\n    }\n  }\n});\n\n\nexport function DateInput(props: Omit<DateInputProps, 'children'>&{unStyled?:boolean}) {\n  return (\n    <AriaDateInput {...props} className={cx(props.className, 'inline px-3 text-sm leading-8.5 font-sans cursor-text disabled:cursor-default whitespace-nowrap overflow-x-auto scrollbar-none')} >\n      {(segment) => <DateSegment segment={segment} className={segmentStyles} />}\n    </AriaDateInput>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/input-date.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

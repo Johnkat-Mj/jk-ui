@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "file-trigger",
+  "title": "File Trigger",
+  "description": "jk-ui File Trigger Component",
+  "registryDependencies": [
+    "@jk-ui/button",
+    "@jk-ui/loader"
+  ],
+  "files": [
+    {
+      "path": "src/components/jk/file-trigger.tsx",
+      "content": "\"use client\"\n\nimport {\n    Button as AriaButton,\n    FileTrigger as FileTriggerPrimitive,\n    type FileTriggerProps as FileTriggerPrimitiveProps,\n} from \"react-aria-components\"\nimport { Loader } from \"./loader\"\nimport {\n    buttonStyles,\n    type ButtonIntent,\n    type ButtonRadius,\n    type ButtonSize,\n    type ButtonVariant,\n} from \"./button\"\nimport { cx } from \"@/lib/utils\"\n\nexport interface FileTriggerProps\n    extends FileTriggerPrimitiveProps {\n    isDisabled?: boolean\n    isPending?: boolean\n    ref?: React.RefObject<HTMLInputElement>\n    className?: string,\n    variant?: ButtonVariant\n    intent?: ButtonIntent<ButtonVariant>\n    size?: ButtonSize\n    radius?: ButtonRadius\n    iconOnly?: boolean\n}\n\nexport const FileTrigger = ({\n    variant = \"outline\",\n    intent,\n    size = \"md\",\n    iconOnly,\n    ref,\n    radius=\"default\",\n    className,\n    ...props\n}: FileTriggerProps) => {\n    return (\n        <FileTriggerPrimitive ref={ref} {...props}>\n            <AriaButton\n                className={buttonStyles({\n                    size,\n                    variant,\n                    intent,\n                    iconOnly,\n                    radius,\n                    className : cx(\"gap-x-1.5\", className)\n                })}\n                isDisabled={props.isDisabled}\n\n            >\n                {!props.isPending ? (\n                    props.defaultCamera ? (\n                        <span aria-hidden className=\"iconify size-4 ph--camera\" />\n                    ) : props.acceptDirectory ? (\n                        <span aria-hidden className=\"iconify size-4 ph--folder\" />\n                    ) : (\n                        <span aria-hidden className=\"iconify size-4 ph--paperclip\" />\n                    )\n                ) : (\n                    <Loader />\n                )}\n                {props.children ? (\n                    props.children\n                ) : (\n                    <>\n                        {props.allowsMultiple\n                            ? \"Browse a files\"\n                            : props.acceptDirectory\n                                ? \"Browse\"\n                                : \"Browse a file\"}\n                        ...\n                    </>\n                )}\n            </AriaButton>\n        </FileTriggerPrimitive>\n    )\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/file-trigger.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

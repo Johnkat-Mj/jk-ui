@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tag-group",
+  "title": "Tag Group",
+  "description": "jk-ui Tag Group Component",
+  "files": [
+    {
+      "path": "src/components/jk/tag-group.tsx",
+      "content": "\"use client\"\n\nimport type { TagGroupProps, TagListProps, TagProps } from \"react-aria-components/TagGroup\"\nimport {\n  Button,\n  Tag as AriaTag,\n  TagGroup as AriaTagGroup,\n  TagList as AriaTagList,\n} from \"react-aria-components\"\n\nimport { twMerge } from \"tailwind-merge\"\nimport { cx } from \"@/lib/utils\"\n\nexport function TagGroup({ className, ...props }: TagGroupProps) {\n  return (\n    <AriaTagGroup\n      data-slot=\"control\"\n      className={twMerge(\"flex flex-col gap-y-1 *:data-[slot=label]:font-medium\", className)}\n      {...props}\n    />\n  )\n}\n\nexport function TagList<T extends object>({ className, ...props }: TagListProps<T>) {\n  return <AriaTagList className={cx(\"flex flex-wrap gap-1\", className)} {...props} />\n}\n\nexport function Tag({ children, className, ...props }: TagProps) {\n  const textValue = typeof children === \"string\" ? children : undefined\n\n  return (\n    <AriaTag\n      textValue={textValue}\n      className={cx(\n        \"text-fg [--tag-selected-bg:color-mix(in_oklab,var(--color-primary)_10%,transparent)] [--tag-selected-fg:var(--color-primary)]\",\n        \"[--tag-selected-ring:color-mix(in_oklab,var(--color-primary)_35%,transparent)]\",\n        \"inset-ring inset-ring-border-input outline-hidden bg-background\",\n        \"inline-flex items-center gap-x-1.5 py-0.5 font-medium text-xs/5 forced-colors:outline\",\n        \"*:data-[slot=icon]:size-3 *:data-[slot=icon]:shrink-0\",\n        \"cursor-default rounded-full px-2\",\n        \"selected:inset-ring-(--tag-selected-ring) selected:bg-(--tag-selected-bg) selected:text-(--tag-selected-fg)\",\n        \"disabled:opacity-50 disabled:forced-colors:text-[GrayText]\",\n        props.href && \"cursor-pointer hover:inset-ring-muted-fg\",\n        className,\n      )}\n      {...props}\n    >\n      {({ allowsRemoving }) => (\n        <>\n          {children}\n          {allowsRemoving ? (\n            <Button slot=\"remove\" className=\"bg-foreground text-background -me-1 flex size-3.5 items-center-safe justify-center rounded-full in-selected:bg-primary in-selected:text-white\">\n              <span aria-hidden className=\"size-2.5 iconify ph--x\" />\n            </Button>\n          ):null}\n        </>\n      )}\n    </AriaTag>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/jk/tag-group.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

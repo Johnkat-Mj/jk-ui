@@ -1,0 +1,90 @@
+---
+title: Button Variants
+description: Button styling system — variants, intents, and customization
+---
+
+JK-UI buttons use a dual variant+intent system. Base visual recipes live in `button.css`, while every available variant+intent combination is grouped in `intents.css`.
+
+## How It Works
+
+The base `btn-solid`, `btn-outline`, `btn-soft`, and `btn-ghost` utilities consume CSS variables. Combined utilities only provide those variables:
+
+```css
+/* intents.css */
+@utility btn-solid-primary {
+  --btn-color: var(--color-primary);
+  --btn-fg: var(--color-primary-foreground);
+}
+```
+
+## Variants
+
+| Variant | Description |
+|---------|-------------|
+| `solid` | Filled background with layered shadow |
+| `outline` | Border with subtle background |
+| `soft` | Light tinted background |
+| `ghost` | Transparent, visible on hover |
+
+### Solid
+
+<PreviewUI>
+<DemoButton variant="solid"/>
+</PreviewUI>
+
+### Outline
+
+<PreviewUI>
+<DemoButton variant="outline"/>
+</PreviewUI>
+
+### Soft
+
+<PreviewUI>
+<DemoButton variant="soft"/>
+</PreviewUI>
+
+### Ghost
+
+<PreviewUI>
+<DemoButton variant="ghost"/>
+</PreviewUI>
+
+## Intents by Variant
+
+| Variant | Available Intents |
+|---------|------------------|
+| `solid` | `primary`, `secondary`, `accent`, `neutral`, `destructive` |
+| `soft` | `primary`, `destructive`, `warning`, `gray` |
+| `outline` | `gray` |
+| `ghost` | `gray` |
+
+## Sizes
+
+| Size | Height | Padding | Font |
+|------|--------|---------|------|
+| `xs` | 1.5rem | 0.875rem | xs |
+| `sm` | 2rem | 1rem | sm |
+| `md` | 2.5rem | 1.25rem | sm |
+| `lg` | 2.5rem | 1.25rem | sm |
+| `xl` | 2.75rem | 1.5rem | base |
+
+## Customization
+
+Override button colors at any level:
+
+### Component-level
+```tsx
+<Button className="[--btn-solid-bg:var(--color-purple-600)]">
+  Custom
+</Button>
+```
+
+### New intent
+Add new intent values to the `tv()` config in your local `button.tsx`:
+
+```tsx
+solid: {
+  purple: "[--btn-solid-top-shadow:var(--color-purple-500)] [--btn-solid-bottom-shadow:var(--color-purple-700)] ...",
+}
+```

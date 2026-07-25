@@ -1,0 +1,3 @@
+module.exports=[98503,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(85835);a.n(d("[project]/projects/uno-forge/jk-ui/kit-ui/inno-agency/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},87169,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(85835);a.n(d("[project]/projects/uno-forge/jk-ui/kit-ui/inno-agency/node_modules/next/dist/client/components/builtin/global-error.js"))},75309,a=>{"use strict";a.i(98503);var b=a.i(87169);a.n(b)},44861,a=>{a.n(a.i(75309))}];
+
+//# sourceMappingURL=0hqu_next_dist_client_components_builtin_global-error_0.1h_j-.js.map

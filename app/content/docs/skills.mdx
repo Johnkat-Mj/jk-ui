@@ -1,0 +1,71 @@
+---
+title: AI Skills
+description: AI-assisted development skills for JK-UI
+---
+
+An AI skill is a packaged set of instructions and reference files that helps AI assistants generate accurate, idiomatic JK-UI code. Instead of guessing component names, props, or install commands, the AI reads from curated source files.
+
+## jk-ui Skill
+
+The [jk-ui skill](/skills/jk-ui) covers the full JK-UI component library — install commands, props, composition patterns, theming, accessibility, and blocks.
+
+Install the skill:
+
+<Terminal command="npx skills add johnkat-mj/ui --skill jk-ui" />
+
+### Setup Flow
+
+Setting up jk-ui follows the standard shadcn flow:
+
+1. **shadcn init** — Initialize with React Aria base:
+   ```bash
+   bunx --bun shadcn@latest init --base aria
+   ```
+
+2. **Install base CSS** — JK-UI base styles:
+   ```bash
+   npx shadcn add @jk-ui/base
+   ```
+
+3. **jk-ui CLI setup** — Configure theme and namespace:
+   ```bash
+   npx jk-ui-cli setup
+   ```
+
+4. **Install components** — Add individual components:
+   ```bash
+   npx shadcn add @jk-ui/button @jk-ui/card
+   ```
+
+### What's Included
+
+| Area | File |
+|------|------|
+| Component reference | `components/*.md` — per-component API docs |
+| Install commands | `SKILL.md` — shadcn CLI install for every component |
+| Theming | `references/theming.md` — CSS variable tokens, semantic colors, theme presets |
+| Variants | `references/style-variants.md` — shared variant/intent system (`uiStyles`) |
+| Best practices | `references/best-practices.md` — verified usage patterns |
+| Things to avoid | `references/things-to-avoid.md` — common mistakes |
+| Accessibility | `references/accessibility.md` — RAC-based patterns |
+| Composition | `references/composition-patterns.md` — common React patterns |
+| Performance | `references/performance.md` — performance guidance |
+| Colors | `references/colors.md` — light/dark CSS variable reference |
+| Components | `references/components.md` — full component index |
+
+### Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 19 (Next.js, TanStack Router/Start, React Router, or any React project) |
+| Primitives | react-aria-components |
+| Styling | Tailwind CSS 4 with `@tailwindcss/postcss` |
+| Variants | `tailwind-variants` 3.2 + `tailwind-merge` 3.4 |
+| Icons | Phosphor via `@iconify-json/ph` |
+| Animation | `motion` 12 + `tw-animate-css` |
+| Charts | Recharts 3.7 |
+| OTP | `input-otp` 1.4 |
+
+### Source
+
+The skill files live in [`./skills/jk-ui/`](https://github.com/johnkatmj/jk-ui/tree/main/skills/jk-ui) in the repository root.
