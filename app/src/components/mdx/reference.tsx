@@ -7,7 +7,7 @@ export const Reference = ({ href, title, description }: { href: string, title: s
             <span className="font-semibold text-sm text-fg-title">
                 {title}
             </span>
-            <p className="mt-1 text-xs sm:text-sm text-fg-muted">
+            <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
                 {description}
             </p>
         </Link>

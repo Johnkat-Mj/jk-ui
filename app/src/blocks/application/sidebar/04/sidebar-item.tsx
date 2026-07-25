@@ -9,7 +9,7 @@ const ItemBadge = ({ badge }: { badge?: ComponentType }) => {
     return <Badge />;
 };
 
-export const SidebarItem = ({isActive, href, icon, text, badge }: {
+export const SidebarItem = ({ isActive, href, icon, text, badge }: {
     isActive?: boolean,
     href: string;
     text: string;
@@ -20,12 +20,12 @@ export const SidebarItem = ({isActive, href, icon, text, badge }: {
         <li>
             <a
                 href={href}
-                data-state={isActive?"active":null}
+                data-state={isActive ? "active" : null}
                 className={cx(
-                    "h-10 flex items-center px-2.5 rounded-lg text-[15px]",
-                    "fx-active:bg-card fx-active:text-foreground",
+                    "h-10 flex items-center px-2.5 rounded-ui text-[15px]",
+                    "fx-active:bg-bg-surface fx-active:text-fg-title",
                     "fx-active:shadow-[0px_0.7px_0px_0px_#E1E1E1,0px_0px_0px_1px_#F0F0F0]",
-                    "dark:fx-active:shadow-[0px_0.7px_0px_0px_var(--color-foreground),0px_0px_0px_1px_var(--color-border)]",
+                    "dark:fx-active:shadow-[0px_0.7px_0px_0px_var(--color-gray-700),0px_0px_0px_1px_var(--color-gray-800)]",
                 )}
             >
                 <Icon name={icon} className="mr-2.5" />

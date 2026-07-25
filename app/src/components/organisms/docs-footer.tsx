@@ -28,11 +28,11 @@ export const DocsFooter = () => {
                     <div
                         className="w-full flex flex-col md:flex-row gap-6 md:justify-between items-center text-sm"
                     >
-                        <div className="text-sm text-fg">
+                        <div className="text-sm text-foreground">
                             Published under <UiLink
                                 href="https://github.com/johnkat-mj/jk-ui"
                                 aria-label="MIT License"
-                                className={"text-fg-muted"}>MIT License</UiLink>
+                                className={"text-muted-foreground"}>MIT License</UiLink>
                         </div>
                         <ul className="flex flex-wrap items-center gap-x-4 gap-y-2">
                             {
@@ -40,7 +40,7 @@ export const DocsFooter = () => {
                                     <UiLink key={`footer-link-${link.text.trim()}`}
                                         aria-label={`Link to ${link.text}`}
                                         href={link.href}
-                                        className={"text-fg-muted hover:text-fg-title flex items-center gap-x-0.5"}
+                                        className={"text-muted-foreground hover:text-fg-title flex items-center gap-x-0.5"}
                                     >
                                         {link.text}
                                         {link.href.startsWith("/") || link.href.startsWith("#") ? null : (
@@ -58,7 +58,7 @@ export const DocsFooter = () => {
                         </div>
                     </div>
                     <div
-                        className="text-sm border-t border-border bg-bg-subtle px-4 py-2 rounded-lg text-fg-muted text-center"
+                        className="text-sm border-t border-border bg-bg-subtle px-4 py-2 rounded-lg text-muted-foreground text-center"
                     >
                       Copyright © jk-ui {new Date().getFullYear()}. Designed By <UiLink
                             href="#linkUnifyDev"

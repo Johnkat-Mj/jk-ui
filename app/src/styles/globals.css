@@ -112,8 +112,8 @@
     --color-ring: var(--ring);
     --color-fg-title: var(--fg-title);
     --color-fg-subtitle: var(--fg-subtitle);
-    --color-fg: var(--fg);
-    --color-fg-muted: var(--fg-muted);
+    --color-fg: var(--foreground);
+    --color-fg-muted: var(--muted-foreground);
     --color-bg: var(--bg);
     --color-bg-subtle: var(--bg-subtle);
     --color-bg-surface: var(--bg-surface);

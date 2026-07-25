@@ -22,5 +22,5 @@ npx shadcn add https://jk-ui.unoforge.com/r/skeleton.json
 | bg | boolean | `true` |
 
 - `radius="full"` gives rounded-full (pill/circle shape).
-- `bg` controls background color (`bg-bg-muted`).
+- `bg` controls background color (`bg-muted`).
 - Always has `animate-pulse` for the loading animation.

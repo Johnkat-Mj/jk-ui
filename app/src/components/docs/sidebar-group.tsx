@@ -14,7 +14,7 @@ export const SidebarGroup = ({ label, items, activeItem }: {
     return (
         <div className="space-y-0.5 pt-5">
             <SidebarItemBlock label={label}>
-                <ul className="space-y-2 text-fg-muted py-3">
+                <ul className="space-y-2 text-muted-foreground py-3">
                     {
                         items.map((item) => (
                             <Fragment key={`key-item-${item.title.trim()}`}>
@@ -24,7 +24,7 @@ export const SidebarGroup = ({ label, items, activeItem }: {
                                             href={item.path}
                                             aria-label={`Link to ${item.title}`}
                                             data-state={item.path === activeItem ? "active" : "inactive"}
-                                            className={`ease-linear text-sm fx-active:text-fg-title fx-active:bg-bg-subtle text-fg-muted font-light hover:text-fg-title px-3 py-1.5 rounded-ui hover:bg-bg-muted w-full flex justify-between`}
+                                            className={`ease-linear text-sm fx-active:text-fg-title fx-active:bg-bg-subtle text-muted-foreground font-light hover:text-fg-title px-3 py-1.5 rounded-ui hover:bg-bg-muted w-full flex justify-between`}
                                         >
                                             <span>
                                                 {item.title}

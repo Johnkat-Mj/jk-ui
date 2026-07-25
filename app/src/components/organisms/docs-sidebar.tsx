@@ -15,7 +15,7 @@ export const DocsSidebar = ({ activeGroup, activeItem }: {
             <DocsSidebarWrapper>
                 <div className="w-full overflow-hidden overflow-y-auto">
                     <nav className="w-full space-y-6 relative px-5 lg:pl-0 lg:pr-4 h-full">
-                        <ul className="space-y-3 text-fg">
+                        <ul className="space-y-3 text-foreground">
                             {
                                 sidebarGroups.map((group) => (
                                     <GroupItem key={`index-group-${group.name}`} isActive={activeGroup === group.name} {...group} />

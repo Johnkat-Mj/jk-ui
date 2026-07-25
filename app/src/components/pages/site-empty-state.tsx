@@ -7,10 +7,10 @@ export const SiteEmptyState = ({ title, description, children }: { title: string
             </div>
             <div className="px-3.5 sm:px-8 md:px-16 lg:px-8 xl:px-0 mx-auto w-full max-w-3xl lg:max-w-5xl flex flex-col">
                 <h2
-                    className="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
+                    className="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-foreground">
                     {title}
                 </h2>
-                <p className="text-fg-muted max-w-md text-sm mt-3.5">
+                <p className="text-muted-foreground max-w-md text-sm mt-3.5">
                     {description}
                 </p>
                 {children}

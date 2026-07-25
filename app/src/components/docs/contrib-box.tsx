@@ -10,7 +10,7 @@ export const ContribBox = (
         <div className="mb-2 pt-3 border-t border-border-strong border-dashed">
             <h2 className="text-sm font-semibold hidden lg:flex text-fg-subtitle">Community</h2>
             <nav aria-label="Contribute Links" className="mt-3 flex flex-col">
-                <ol className="flex flex-col space-y-2 text-fg-muted text-sm">
+                <ol className="flex flex-col space-y-2 text-muted-foreground text-sm">
                     {
                         getContribLinks(fileName).map((link) => (
                             <li key={`contrib-link-${link.text.trim()}`} className="flex">

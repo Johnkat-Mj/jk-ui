@@ -37,7 +37,7 @@ const PreviewBlockFrameComponent = ({ preview, reloadKey = 0 }: PreviewBlockFram
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-bg">
           <span
             aria-label="Loading preview"
-            className="iconify ph--spinner-gap size-6 text-fg-muted animate-spin"
+            className="iconify ph--spinner-gap size-6 text-muted-foreground animate-spin"
           />
         </div>
       )}

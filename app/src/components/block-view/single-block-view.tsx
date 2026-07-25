@@ -8,7 +8,7 @@ import { ButtonCopyBlock } from "./button-copy-block"
 import { LoadRegistrySource } from "./load-registry-source"
 
 const tabClassName =
-  "px-2 py-1 flex items-center text-sm fx-selected:bg-bg-muted/60 fx-selected:textfgti border border-transparent fx-selected:border-border-strong/30 rounded-[5px] ease-linear duration-200 font-300 text-fg-muted fx-selected:text-fg-title cursor-pointer"
+  "px-2 py-1 flex items-center text-sm fx-selected:bg-bg-muted/60 fx-selected:textfgti border border-transparent fx-selected:border-border-strong/30 rounded-[5px] ease-linear duration-200 font-300 text-muted-foreground fx-selected:text-fg-title cursor-pointer"
 
 interface SingleBlockViewProps {
   name: string
@@ -40,7 +40,7 @@ const SingleBlockViewComponent = ({ name, preview }: SingleBlockViewProps) => {
               Code
             </Tab>
           </TabList>
-          <div className="flex items-center min-w-max text-fg">
+          <div className="flex items-center min-w-max text-foreground">
             <div className="hidden sm:flex">
               <ButtonCopyBlock name={name}/>
             </div>
@@ -63,7 +63,7 @@ const SingleBlockViewComponent = ({ name, preview }: SingleBlockViewProps) => {
                 onClick={handleReload}
                 aria-label="Reload preview"
                 title="Reload preview"
-                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-bg shadow border border-border/50 text-fg-muted hover:text-fg"
+                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-bg shadow border border-border/50 text-muted-foreground hover:text-foreground"
               >
                 <span aria-hidden="true" className="flex iconify ph--arrow-clockwise"></span>
               </button>

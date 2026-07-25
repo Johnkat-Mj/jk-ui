@@ -30,13 +30,13 @@ export const DocsNavbar = () => {
                         </div>
                         <UiLink
                             href="https://github.com/johnkat-mj/jk-ui"
-                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-fg hover:text-fg-title"
+                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-foreground hover:text-fg-title"
                         >
                             <span className="iconify ph--github-logo"></span>
                         </UiLink>
                         <UiLink
                             href="https://x.com/johnkat_Mj"
-                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-fg hover:text-fg-title"
+                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-foreground hover:text-fg-title"
                         >
                             <span className="iconify ph--x-logo"></span>
                         </UiLink>

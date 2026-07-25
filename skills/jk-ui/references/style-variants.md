@@ -2,7 +2,7 @@
 
 jk-ui provides a shared variant/intent system accessible via `@/lib/ui-variants.ts`. Components like `Alert`, `Badge`, `Card`, and `Callout` use this system for consistent styling.
 
-The `Button` component has its own extended variant system.
+The `Button` component has its own extended variant system with separate intent naming.
 
 ## Shared Variant System
 
@@ -50,14 +50,14 @@ const classes = uiStyles({
 
 ## Button Variants
 
-Button has a broader variant set with variant-specific intents:
+Button has broader variant set with variant-specific intents. Intent values are inlined in `tv()` config — no separate CSS utility classes needed.
 
 | Variant | Available Intents |
 |---------|------------------|
-| `solid` | `solid-primary`, `solid-secondary`, `solid-success`, `solid-danger`, `solid-neutral` |
-| `outline` | `outline-gray`, `outline-primary`, `outline-secondary`, `outline-success`, `outline-danger`, `outline-neutral` |
-| `soft` | `soft-gray`, `soft-primary`, `soft-secondary`, `soft-success`, `soft-danger`, `soft-neutral` |
-| `ghost` | `ghost-gray`, `ghost-primary`, `ghost-secondary`, `ghost-danger`, `ghost-neutral` |
+| `solid` | `primary`, `secondary`, `success`, `danger`, `neutral` |
+| `outline` | `gray`, `primary`, `secondary`, `success`, `danger`, `neutral` |
+| `soft` | `gray`, `primary`, `secondary`, `success`, `danger`, `neutral` |
+| `ghost` | `gray`, `primary`, `secondary`, `danger`, `neutral` |
 | `white/black-outline` | automatic light/dark inversion |
 | `none` | raw unstyled button |
 
@@ -70,13 +70,18 @@ Button radius: `none`, `default`, `circle`
 import { buttonStyles } from "@/components/jk/button"
 
 // Use buttonStyles as a class utility outside of <Button>
-buttonStyles({ variant: "solid", intent: "solid-primary", size: "md" })
+buttonStyles({ variant: "solid", intent: "primary", size: "md" })
 ```
 
 ## CSS Utilities
 
-jk-ui's CSS layer provides the actual styling through Tailwind v4 `@utility` definitions in:
-- `src/styles/jk-ui/button.css` — Button-specific utilities
-- `src/styles/jk-ui/ui.css` — Shared UI variant utilities (`ui-solid`, `ui-soft`, etc.)
-- `src/styles/jk-ui/form.css` — Form input utilities
-- `src/styles/jk-ui/base.css` — Base element styles
+jk-ui's CSS layer provides the actual styling through Tailwind v4 `@utility` definitions:
+
+| File | Utilities |
+|------|-----------|
+| `src/styles/jk-ui/button.css` | Button base utilities (`btn`, `btn-solid`, `btn-outline`, `btn-soft`, `btn-ghost`, `btn-xs`..`btn-xl`, `btn-icon-*`) |
+| `src/styles/jk-ui/ui.css` | Shared UI variant utilities (`ui-solid`, `ui-soft`, `ui-outline`, `ui-subtle`) |
+| `src/styles/jk-ui/form.css` | Form/checkbox/radio utilities (`ui-form-*`, `ui-c_r-*`, `ui-checkbox-base`, `ui-radio-base`) |
+| `src/styles/jk-ui/base.css` | `@custom-variant fx-*` definitions |
+
+Intent-specific CSS was **inlined into component `tv()` configs** — intent utilities like `btn-solid-primary` and `ui-solid-primary` no longer exist as separate CSS classes. Use the component's `variant` + `intent` props instead of manually composing CSS classes.

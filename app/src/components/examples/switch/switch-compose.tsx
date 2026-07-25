@@ -12,7 +12,7 @@ export const SwitchCompose = () => {
       <div className="flex items-center gap-4 flex-1">
         <div className="flex flex-col flex-1">
           <SwitchLabel className="font-semibold text-fg-title">Public access</SwitchLabel>
-          <Description className="text-fg-muted text-xs sm:text-sm line-clamp-1">
+          <Description className="text-muted-foreground text-xs sm:text-sm line-clamp-1">
             Publish and share link with anyone
           </Description>
         </div>

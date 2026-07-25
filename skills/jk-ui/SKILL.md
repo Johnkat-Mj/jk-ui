@@ -22,7 +22,7 @@ jk-ui has three layers:
 
 2. **Blocks** — Pre-built page sections (login forms, sidebars, KPI cards, hero sections, etc.) composed from primitives. Listed in the registry as `type: "registry:block"`.
 
-3. **Theme** — CSS variable tokens (`--primary`, `--bg`, `--fg`, `--border`, etc.) consumed through Tailwind v4 `@theme` utilities (`bg-primary`, `text-fg`, `border-border-input`). Supported by 5 built-in theme presets (default, air, earth, fire, water).
+3. **Theme** — shadcn-standard CSS variable tokens (`--primary`, `--background`, `--foreground`, `--border`, `--input`, `--ring`, etc.) consumed through Tailwind v4 `@theme` utilities (`bg-primary`, `bg-background`, `text-foreground`, `border-input`, `ring-ring`). Also supports jk-ui extended tokens (`--fg-title`, `--bg-subtle`, `--border-strong`, etc.) for advanced styling. Supported by 17 built-in theme presets.
 
 ## Source of Truth
 
@@ -64,29 +64,38 @@ Use the files in this skill first. The public docs site is at `https://jk-ui.uno
 
 ## Setup Flow
 
-Setting up jk-ui requires two steps:
+Setting up jk-ui follows the standard shadcn flow:
 
-1. **jk-ui CLI** — Initializes the base configuration, theme tokens, appearance mode (light, dark, or both), and registers the `@jk-ui` namespace.
-
+1. **shadcn init** — Initialize your project with React Aria base:
    ```bash
-   npx jk-ui-cli@latest init
+   bunx --bun shadcn@latest init --base aria
    ```
 
-2. **shadcn CLI** — Installs individual components using the `@jk-ui` namespace (no full URL needed).
-
+2. **Install base CSS** — JK-UI base styles with the shadcn CLI:
    ```bash
    npx shadcn add @jk-ui/base
-   npx shadcn add @jk-ui/button
    ```
 
-The jk-ui CLI must run first — without it, the `@jk-ui` namespace is not configured and component installs will fail.
+3. **jk-ui CLI setup** — Configure theme, icons, and registry namespace:
+   ```bash
+   npx jk-ui-cli setup
+   ```
+
+4. **Install components** — Add individual components:
+   ```bash
+   npx shadcn add @jk-ui/button
+   npx shadcn add @jk-ui/card
+   npx shadcn add @jk-ui/input
+   ```
+
+The `jk-ui-cli setup` command must run before installing @jk-ui/* components — without it, the `@jk-ui` namespace is not configured and installs will fail.
 
 ## Install Commands
 
 Once the CLI has been run and the `@jk-ui` namespace is configured, all components install via the shadcn CLI:
 
 ```bash
-# Using the namespace (CLI must have been run first)
+# Using the namespace (setup must have been run first)
 npx shadcn add @jk-ui/{name}
 ```
 
@@ -123,19 +132,19 @@ npx shadcn add @jk-ui/base
 >
 > export function MyComponent() {
 >   return (
->     <Button variant="solid" intent="solid-primary" size="md">
+>     <Button variant="solid" intent="primary" size="md">
 >       Click me
 >     </Button>
 >   )
 > }
 > ```
-> Key props: `variant` (solid|outline|soft|ghost|white/black-outline|none), `intent` (variant-specific, e.g. `solid-primary`), `size` (xs|sm|md|lg|xl), `radius` (none|default|circle).
-> Avoid: Do not invent variant names outside the documented set. Intent names are prefixed with the variant name (e.g., `solid-primary`, `outline-danger`).
+> Key props: `variant` (solid|outline|soft|ghost|white/black-outline|none), `intent` (variant-specific, e.g. `primary` for solid, `gray` for outline), `size` (xs|sm|md|lg|xl), `radius` (none|default|circle).
+> Avoid: Do not invent variant names outside the documented set. Intents are variant-specific — `primary` is valid for `solid` but not for `ghost` (use `ghost-primary`).
 
 ### Example Answer (bad)
 
 > Use `<Button variant="primary" />`.
-> ❌ "primary" is not a variant. Variants are solid|outline|soft|ghost. Intents are prefixed, e.g. `solid-primary`.
+> ❌ "primary" is not a variant. Variants are solid|outline|soft|ghost. Intents depend on the variant.
 
 ## Component Categories
 
@@ -277,18 +286,38 @@ Blocks are full page sections composed from primitives. They install as `type: "
 | `info` | Informational messages |
 | `success` | Positive states |
 | `warning` | Caution states |
-| `danger` | Destructive actions |
+| `danger` / `destructive` | Destructive actions |
 | `gray` | Neutrals and backgrounds |
 
 ### Token Families
 
-- Background: `--bg`, `--bg-subtle`, `--bg-surface`, `--bg-muted`, `--card`, `--card-gray`
+**shadcn Standard CSS Variables:**
+- `--background`, `--foreground` — page bg / body text
+- `--card`, `--card-foreground` — card bg / title text
+- `--popover`, `--popover-foreground` — popover bg / text
+- `--primary`, `--primary-foreground` — brand / text on primary
+- `--secondary`, `--secondary-foreground` — secondary brand / text
+- `--muted`, `--muted-foreground` — subtle bg / secondary text
+- `--accent`, `--accent-foreground` — accent / text on accent
+- `--destructive`, `--destructive-foreground` — danger / text on danger
+- `--border`, `--input`, `--ring` — borders, inputs, focus rings
+- `--radius`, `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-xl` — border radius
+- `--ui-radius` → `rounded-ui` — generic component radius (default `--radius-lg`)
+- `--card-radius` → `rounded-card` — card radius (default `--radius-lg`)
+- `--checkbox-radius` → `rounded-checkbox` — checkbox indicator radius (default `--radius-sm`)
+- `--sidebar-*` — sidebar specific tokens
+- `--chart-1..5` — chart color tokens
+
+**jk-ui Extended Tokens (for internal component utilities):**
+- Background: `--bg`, `--bg-subtle`, `--bg-surface`, `--bg-muted`
 - Foreground: `--fg-title`, `--fg`, `--fg-muted`
-- Border: `--border-strong`, `--border`, `--border-subtle`, `--border-card`, `--border-input`
+- Border: `--border-strong`, `--border-card`
+- Semantic aliases: `--danger`, `--info`, `--warning`, `--success`
+- Internal: `--focus-ring`, etc.
 
 ### Theme Presets
 
-Multiple theme presets are available and selected during `npx jk-ui-cli@latest init`. The CLI prompts you to choose a theme preset (default, air, earth, fire, water, and more) and generates the corresponding CSS variables automatically.
+17 built-in theme presets are available. Select one during `npx jk-ui-cli setup`.
 
 ## Key Composition Patterns
 
@@ -326,8 +355,8 @@ import { Button } from "@/components/jk/button"
   </CardHeader>
   <CardBody>Content</CardBody>
   <CardFooter className="flex justify-end gap-2">
-    <Button variant="outline" size="sm">Cancel</Button>
-    <Button size="sm">Save</Button>
+    <Button variant="outline" intent="gray" size="sm">Cancel</Button>
+    <Button intent="primary" size="sm">Save</Button>
   </CardFooter>
 </Card>
 ```
@@ -339,7 +368,7 @@ import { Button } from "@/components/jk/button"
 import { Input } from "@/components/jk/input"
 
 <Modal>
-  <Button variant="outline">Open Modal</Button>
+  <Button variant="outline" intent="gray">Open Modal</Button>
   <ModalContent>
     {({ close }) => (
       <>
@@ -399,13 +428,22 @@ Do not load everything at once. Read only the files relevant to the current task
 ## Quick Start
 
 ```bash
-# Step 1: Initialize jk-ui (required — configures @jk-ui namespace)
-npx jk-ui-cli@latest init
+# Step 1: Initialize project with shadcn (React Aria base)
+bunx --bun shadcn@latest init --base aria
 
-# Step 2: Install base styles
+# Step 2: Install base CSS
 npx shadcn add @jk-ui/base
+# Then add imports to main CSS:
+#   @import "./jk-ui/base.css";
+#   @import "./jk-ui/button.css";
+#   @import "./jk-ui/form.css";
+#   @import "./jk-ui/ui.css";
+#   @import "./jk-ui/utils.css";
 
-# Step 3: Install components
+# Step 3: Run jk-ui setup (theme, icons, registry namespace)
+npx jk-ui-cli setup
+
+# Step 4: Install components
 npx shadcn add @jk-ui/button
 npx shadcn add @jk-ui/card
 npx shadcn add @jk-ui/input

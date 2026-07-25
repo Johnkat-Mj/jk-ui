@@ -5,7 +5,7 @@ export const CalloutCustom = () => {
         <div className="space-y-8">
             {/* With Custom Children */}
             <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-fg-muted">Custom Content</h3>
+                <h3 className="text-sm font-semibold text-muted-foreground">Custom Content</h3>
                 <Callout type="note">
                     <CalloutTitle>Custom Title Component</CalloutTitle>
                     <CalloutDescription>
@@ -17,13 +17,13 @@ export const CalloutCustom = () => {
 
             {/* Without Icon */}
             <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-fg-muted">Without Icon</h3>
+                <h3 className="text-sm font-semibold text-muted-foreground">Without Icon</h3>
                 <Callout type="warning" title="No Icon" message="This callout has no icon." noIcon />
             </div>
 
             {/* Different Sizes */}
             <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-fg-muted">Different Sizes</h3>
+                <h3 className="text-sm font-semibold text-muted-foreground">Different Sizes</h3>
                 <div className="flex flex-col gap-3">
                     <Callout type="note" title="Small Size" message="This is a small callout." size="sm" />
                     <Callout type="note" title="Medium Size" message="This is a medium callout (default)." size="md" />
@@ -33,7 +33,7 @@ export const CalloutCustom = () => {
 
             {/* Complex Content */}
             <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-fg-muted">Complex Content</h3>
+                <h3 className="text-sm font-semibold text-muted-foreground">Complex Content</h3>
                 <Callout type="important" variant="soft">
                     <CalloutTitle>Breaking Changes in v2.0</CalloutTitle>
                     <CalloutDescription>

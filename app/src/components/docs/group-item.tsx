@@ -14,7 +14,7 @@ export const GroupItem = ({ icon, title, path, isActive }: {
 
                 aria-label={`Link to ${title}`}
                 data-state={isActive ? "active" : "inactive"}
-                className={`flex items-center gap-x-2.5 fx-active:font-600 fx-active:text-fg-title text-fg hover:text-fg-title`}
+                className={`flex items-center gap-x-2.5 fx-active:font-600 fx-active:text-fg-title text-foreground hover:text-fg-title`}
             >
                 <span
                     aria-hidden="true"

@@ -160,7 +160,7 @@ const MenuHeader = ({ className, separator = false, ...props }: MenuHeaderProps)
     <Header
         className={cx(
             "col-span-full px-2.5 py-2 font-medium text-base sm:text-sm",
-            separator && "-mx-1 border-b border-fg/10 sm:px-3 sm:pb-2.5",
+            separator && "-mx-1 border-b border-foreground/10 sm:px-3 sm:pb-2.5",
             className,
         )}
         {...props}

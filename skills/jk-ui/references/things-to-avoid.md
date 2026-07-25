@@ -6,7 +6,7 @@ Most important mistakes to avoid when answering jk-ui questions.
 
 - Do not invent components that are not in `registries/components.json` or `registries/blocks.json`.
 - Do not invent props that are not declared in the component implementation.
-- Do not invent install commands (use `npx shadcn add https://jk-ui.unoforge.com/r/{name}.json`).
+- Do not invent install commands (use `npx shadcn add @jk-ui/{name}` after setup, or `npx shadcn add https://jk-ui.unoforge.com/r/{name}.json` as fallback).
 - Do not invent block names outside the registry.
 
 ## Do Not Confuse Import Names

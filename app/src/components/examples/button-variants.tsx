@@ -1,7 +1,7 @@
 import { Button } from "@/components/jk/button"
 
 
-const EmptyUi = () => <span className="btn btn-sm justify-center text-center text-fg-muted relative">
+const EmptyUi = () => <span className="btn btn-sm justify-center text-center text-muted-foreground relative">
     <span className="invisible">Click me</span>
     <span className="absolute left-1/2 top-1/2 -translate-1/2">-</span>
 </span>
@@ -9,7 +9,7 @@ export const ButtonVariants = () => {
     return (
         <div>
             <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-4 overflow-hidden">
-                <div className="grid text-sm text-fg-muted mt-14 pl-3 sm:pl-0">
+                <div className="grid text-sm text-muted-foreground mt-14 pl-3 sm:pl-0">
                     <div>Primary</div>
                     <div>Secondry</div>
                     <div>Accent</div>
@@ -20,7 +20,7 @@ export const ButtonVariants = () => {
                 </div>
                 <div className="grid overflow-hidden">
                     <div data-invisible-scrollbar className="grid overflow-x-auto">
-                        <div className="grid grid-cols-4 gap-4 px-4 text-sm text-fg-muted pb-3">
+                        <div className="grid grid-cols-4 gap-4 px-4 text-sm text-muted-foreground pb-3">
                             <div>Solid</div>
                             <div>Outline</div>
                             <div>Soft</div>

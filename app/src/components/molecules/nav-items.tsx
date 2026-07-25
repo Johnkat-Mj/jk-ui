@@ -40,7 +40,7 @@ export const NavItems = () => {
         fixed w-full lg:w-auto left-0 top-16 lg:top-0 px-1 sm:px-2
         invisible fx-open:visible opacity-0 fx-open:opacity-100 lg:opacity-100 lg:visible scale-90 fx-open:scale-100 lg:scale-100 lg:relative ease-linear duration-200 transition-all lg:transition-none origin-top
         ">
-            <ul className="w-full flex flex-col lg:flex-row lg:items-center gap-0.5 text-fg-muted bg-bg lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
+            <ul className="w-full flex flex-col lg:flex-row lg:items-center gap-0.5 text-muted-foreground bg-bg lg:bg-transparent rounded-ui p-2 lg:p-0 border border-border dark:border-border-strong lg:border-none">
                 {navItems.map((item, index) => (
                     <li
                         key={index}

@@ -42,7 +42,7 @@ export const DropZoneWithFileTrigger = ()=> {
         <img alt="" src={droppedImage} className="aspect-square size-full object-contain" />
       ) : (
         <div className="grid space-y-3">
-          <div className="mx-auto text-fg grid size-12 place-content-center rounded-full border bg-bg-muted/70 border-border group-data-drop-target:border-primary/70 group-data-drop-target:bg-primary/20">
+          <div className="mx-auto text-foreground grid size-12 place-content-center rounded-full border bg-bg-muted/70 border-border group-data-drop-target:border-primary/70 group-data-drop-target:bg-primary/20">
             <span aria-hidden className="size-5 iconify ph--image" />
           </div>
           <div className="flex justify-center">

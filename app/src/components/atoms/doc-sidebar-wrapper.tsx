@@ -18,7 +18,7 @@ export const DocsSidebarWrapper = ({ children }: { children: React.ReactNode }) 
                 <Button
                     onPress={() => closeSidebar?.()}
                     aria-label="Close Sidebar"
-                    className="size-8 text-fg border border-border bg-bg ease-linear absolute top-16 -right-3 flex items-center justify-center lg:hidden rounded-lg z-10"
+                    className="size-8 text-foreground border border-border bg-bg ease-linear absolute top-16 -right-3 flex items-center justify-center lg:hidden rounded-lg z-10"
                 >
                     <span aria-hidden="true" className="flex iconify ph--caret-left"></span>
                 </Button>

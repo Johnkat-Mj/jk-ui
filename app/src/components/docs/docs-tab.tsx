@@ -50,7 +50,7 @@ export const DocsTab = ({
           "flex items-center gap-x-3",
           tabList
             ? tabList
-            : "border-b border-border-strong/60 relative text-fg-muted"
+            : "border-b border-border-strong/60 relative text-muted-foreground"
         )}
       >
         {values.map((value) => {

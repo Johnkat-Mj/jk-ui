@@ -84,7 +84,7 @@ export const Sidebar = () => {
                         Intouch
                     </span>
                 </div>
-                <ul className="flex flex-col space-y-1.5 pt-10.5 px-3.25">
+                <ul className="flex flex-col space-y-1.5 pt-10.5 px-3.25 text-foreground">
                     {items.map((item) => (
                         <SidebarItem key={item.id} {...item} />
                     ))}

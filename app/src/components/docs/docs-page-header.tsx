@@ -29,7 +29,7 @@ export const DocsPageHeader = ({ breadcrumbsMain, breadcrumbsWords: words, title
                             <li key={`a-new-${index}`}
                                 className={cx(
                                     {
-                                        "truncate text-fg-muted":
+                                        "truncate text-muted-foreground":
                                             index === words.length - 1,
                                         "flex items-center gap-1": index < words.length - 1,
                                     },

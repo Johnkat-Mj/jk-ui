@@ -36,16 +36,16 @@ export const HeroSection = () => {
                         <UiLink
                             href={"https://flexiwind.unoforge.com/"}
                             aria-label={`URL to flexiwind UI`}
-                            className={"relative text-fg-muted dark:text-fg-title/70 w-max bg-bg ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface dark:before:bg-bg-muted/80 before:rounded-[7px]"}
+                            className={"relative text-muted-foreground dark:text-fg-title/70 w-max bg-bg ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface dark:before:bg-bg-muted/80 before:rounded-[7px]"}
                         >
                             <span className="text-sm relative"> Flexiwind v1 is live </span>
                         </UiLink>
                         <h1
-                            className="max-w-3xl md:max-w-4xl mt-7 font-semibold text-transparent bg-clip-text bg-linear-to-t from-primary-950 via-fg to-fg-muted dark:from-primary-50 dark:to-fg-title text-4xl sm:text-5xl/tight text-balance"
+                            className="max-w-3xl md:max-w-4xl mt-7 font-semibold text-transparent bg-clip-text bg-linear-to-t from-primary-950 via-foreground to-fg-muted dark:from-primary-50 dark:to-fg-title text-4xl sm:text-5xl/tight text-balance"
                         >
                             Modern, Beautifull and Accessible React components
                         </h1>
-                        <p className="text-sm md:text-base text-fg mt-8 max-w-md">
+                        <p className="text-sm md:text-base text-foreground mt-8 max-w-md">
                             A Set of modern, accessible UI components built with React aria components and Tailwind CSS.
                         </p>
                         <div className="flex items-center flex-wrap gap-2 mt-10">
