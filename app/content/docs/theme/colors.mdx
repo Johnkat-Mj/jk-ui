@@ -13,40 +13,61 @@ Make sure `jk-ui-cli setup` has run and generated your `jk-ui-theme.css`. This f
 
 ### shadcn-Standard Tokens
 
-| Variable | Light (`:root`) | Dark (`.dark`) | Tailwind Class |
-|----------|----------------|----------------|----------------|
-| `--background` | `--color-white` | `--color-gray-950` | `bg-background` |
-| `--foreground` | `--color-gray-700` | `--color-gray-300` | `text-foreground` |
-| `--card` | `--color-white` | `--color-gray-950` | `bg-card` |
-| `--card-foreground` | `--color-gray-900` | `--color-white` | `text-card-foreground` |
-| `--popover` | `--color-white` | `--color-gray-950` | `bg-popover` |
-| `--popover-foreground` | `--color-gray-700` | `--color-gray-300` | `text-popover-foreground` |
-| `--primary` | `--color-primary-600` | `--color-primary-500` | `bg-primary` |
-| `--primary-foreground` | `--color-white` | `--color-white` | `text-primary-foreground` |
-| `--secondary` | `--color-secondary-600` | `--color-secondary-500` | `bg-secondary` |
-| `--secondary-foreground` | `--color-white` | `--color-white` | `text-secondary-foreground` |
-| `--muted` | `--color-gray-100` | `--color-gray-900` | `bg-muted` |
-| `--muted-foreground` | `--color-gray-600` | `--color-gray-400` | `text-muted-foreground` |
-| `--accent` | `--color-accent-600` | `--color-accent-500` | `bg-accent` |
-| `--accent-foreground` | `--color-white` | `--color-white` | `text-accent-foreground` |
-| `--destructive` | `--color-danger-600` | `--color-danger-500` | `bg-destructive` |
-| `--destructive-foreground` | `--color-white` | `--color-white` | `text-destructive-foreground` |
-| `--border` | `--color-gray-200` | `--color-gray-800` | `border-border` |
-| `--input` | `--color-gray-200` | `--color-gray-700` | `border-input` |
-| `--ring` | `--color-primary-600` | `--color-primary-500` | `ring-ring` |
+| Variable | Description | Tailwind Class |
+|----------|-------------|----------------|
+| `--background` | Page background | `bg-background` |
+| `--foreground` | Default text color | `text-foreground` |
+| `--card` | Card background | `bg-card` |
+| `--card-foreground` | Card text | `text-card-foreground` |
+| `--popover` | Popover/dropdown background | `bg-popover` |
+| `--popover-foreground` | Popover text | `text-popover-foreground` |
+| `--primary` | Brand color | `bg-primary` |
+| `--primary-foreground` | Text on primary | `text-primary-foreground` |
+| `--secondary` | Secondary brand | `bg-secondary` |
+| `--secondary-foreground` | Text on secondary | `text-secondary-foreground` |
+| `--muted` | Subtle background | `bg-muted` |
+| `--muted-foreground` | Muted text | `text-muted-foreground` |
+| `--accent` | Accent color | `bg-accent` |
+| `--accent-foreground` | Text on accent | `text-accent-foreground` |
+| `--destructive` | Destructive actions | `bg-destructive` |
+| `--destructive-foreground` | Text on destructive | `text-destructive-foreground` |
+| `--border` | Default border | `border-border` |
+| `--input` | Input border | `border-input` |
+| `--ring` | Focus ring | `ring-ring` |
+| `--radius` | Border radius | `rounded-lg` |
+
+### Semantic State Tokens
+
+| Variable | Description | Tailwind Class |
+|----------|-------------|----------------|
+| `--success` | Success states | `text-success` / `bg-success` |
+| `--warning` | Warning states | `text-warning` / `bg-warning` |
+| `--info` | Informational states | `text-info` / `bg-info` |
 
 ### Extended jk-ui Tokens
 
-| Variable | Light | Dark | Tailwind Class |
-|----------|-------|------|----------------|
-| `--fg-title` | `--color-gray-900` | `--color-white` | `text-fg-title` |
-| `--bg` | `--background` | `--background` | `bg-bg` |
-| `--bg-subtle` | `--muted` | `--muted` | `bg-bg-subtle` |
-| `--bg-surface` | `--color-gray-50` | `--alpha(var(--color-gray-900)/70%)` | `bg-bg-surface` |
-| `--bg-muted` | `--color-gray-200` | `--color-gray-800` | `bg-bg-muted` |
-| `--border-strong` | `--color-gray-300` | `--color-gray-700` | `border-border-strong` |
-| `--border-card` | `--border` | `--border` | `border-border-card` |
-| `--danger` | `--destructive` | `--destructive` | `text-danger` / `bg-danger` |
+| Variable | Description | Tailwind Class |
+|----------|-------------|----------------|
+| `--fg-title` | High-emphasis headings | `text-fg-title` |
+| `--fg-subtitle` | Sub-headings | `text-fg-subtitle` |
+| `--bg` | Default background (alias `--background`) | `bg-bg` |
+| `--bg-subtle` | Subtle section backgrounds | `bg-bg-subtle` |
+| `--bg-surface` | Elevated surfaces | `bg-bg-surface` |
+| `--bg-muted` | Muted backgrounds | `bg-bg-muted` |
+| `--overlay` | Modal/drawer overlays (alias `--popover`) | `bg-overlay` |
+| `--border-strong` | Stronger borders | `border-border-strong` |
+| `--border-card` | Card borders | `border-border-card` |
+| `--border-input` | Input borders (alias `--input`) | `border-border-input` |
+
+### Chart Tokens
+
+| Variable | Description |
+|----------|-------------|
+| `--chart-1` | Chart series 1 |
+| `--chart-2` | Chart series 2 |
+| `--chart-3` | Chart series 3 |
+| `--chart-4` | Chart series 4 |
+| `--chart-5` | Chart series 5 |
 
 ## Theme Modes
 
@@ -69,15 +90,25 @@ Tokens are registered in `@theme inline` so Tailwind generates the utility class
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --radius: var(--radius);
   /* extended tokens */
   --color-fg-title: var(--fg-title);
+  --color-fg-subtitle: var(--fg-subtitle);
   --color-bg-subtle: var(--bg-subtle);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-muted: var(--bg-muted);
+  --color-border-strong: var(--border-strong);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
 }
 ```
 

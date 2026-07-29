@@ -66,7 +66,7 @@ const DialogTitle = ({ className, ref, ...props }: DialogTitleProps) => (
   <Heading
     slot="title"
     ref={ref}
-    className={cx("text-balance font-semibold text-fg-title text-lg/6 sm:text-base/6", className)}
+    className={cx("text-balance font-semibold text-foreground text-lg/6 sm:text-base/6", className)}
     {...props}
   />
 )
@@ -78,7 +78,7 @@ const DialogDescription = ({ className, ref, ...props }: DialogDescriptionProps)
   <p
     data-slot="description"
     className={cx(
-      "text-pretty text-base/6 text-fg-muted group-disabled:opacity-50 sm:text-sm/6",
+      "text-pretty text-base/6 text-muted-foreground group-disabled:opacity-50 sm:text-sm/6",
       className,
     )}
     ref={ref}

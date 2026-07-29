@@ -64,7 +64,8 @@ export const SiteSearch = () => {
                             {results.map((item, index) => (
                                 <Link
                                     key={item.slug}
-                                    href={item.slug}
+                                    to={item.slug}
+                                    onClick={handleItemClick}
                                     className={`flex w-full items-center gap-4 px-3 py-2 inner-radius hover:bg-bg-muted/40 relative before:absolute before:left-10 before:right-0 before:bottom-0 before:flex before:h-0.5 before:bg-linear-to-l before:from-bg-muted/30 before:via-bg-muted/90 before:to-bg-muted/30 ${index === selectedIndex ? "bg-bg-muted/40" : ""
                                         }`}
                                 >

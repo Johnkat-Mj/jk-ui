@@ -10,7 +10,7 @@
   @apply data-[active=true]:ring-(--focus-ring) data-[active=true]:outline-(--ui-input-focus-outline) hover:outline-(--ui-input-focus-outline);
 }
 
-@utility ui-input-opt-ring-danger {
+@utility ui-input-opt-ring-destructive {
   @apply data-[active=true]:aria-invalid:ring-(--focus-ring-invalid) data-[active=true]:aria-invalid:outline-(--ui-input-focus-outline-invalid);
 }
 
@@ -52,7 +52,7 @@
 }
 
 @utility ui-input-select-trigger-base {
-  @apply relative focus:enabled:hover:border-ring/80 enabled:hover:border-fg-muted/30 flex w-full min-w-0 items-center;
+  @apply relative focus:enabled:hover:border-ring/80 enabled:hover:border-muted-foreground/30 flex w-full min-w-0 items-center;
 }
 
 @utility ui-form-select-trigger {
@@ -64,15 +64,15 @@
 }
 
 @utility ui-form-select-triger-invalid-base {
-  @apply group-focus/select:group-invalid/select:border-(--select-trigger-danger-border) group-focus/select:group-invalid/select:enabled:hover:border-(--select-trigger-danger-border-hover);
+  @apply group-focus/select:group-invalid/select:border-(--select-trigger-destructive-border) group-focus/select:group-invalid/select:enabled:hover:border-(--select-trigger-destructive-border-hover);
 }
 
 @utility ui-form-select-trigger-invalid-outline {
-  @apply group-open/select:invalid:border-(--select-trigger-danger-border) group-open/select:invalid:ring-3 group-open/select:invalid:ring-(--select-trigger-danger-ring) group-invalid/select:border-(--select-trigger-danger-border) group-invalid/select:ring-(--select-trigger-danger-ring) group-invalid/select:enabled:hover:border-(--select-trigger-danger-border);
+  @apply group-open/select:invalid:border-(--select-trigger-destructive-border) group-open/select:invalid:ring-3 group-open/select:invalid:ring-(--select-trigger-destructive-ring) group-invalid/select:border-(--select-trigger-destructive-border) group-invalid/select:ring-(--select-trigger-destructive-ring) group-invalid/select:enabled:hover:border-(--select-trigger-destructive-border);
 }
 
 @utility ui-form-select-trigger-access {
-  @apply in-disabled:bg-bg-muted in-disabled:opacity-50 forced-colors:in-disabled:border-[GrayText] forced-colors:in-disabled:text-[GrayText];
+  @apply in-disabled:bg-muted in-disabled:opacity-50 forced-colors:in-disabled:border-[GrayText] forced-colors:in-disabled:text-[GrayText];
 }
 
 @utility ui-form-select-trigger-ring {
@@ -166,7 +166,7 @@
 }
 
 @utility ui-checkbox-base {
-  @apply in-disabled:bg-bg-muted relative size-(--checkbox-size) *:data-[slot=check-indicator]:size-(--checkbox-indicator-size) isolate flex shrink-0 items-center justify-center;
+  @apply in-disabled:bg-muted relative size-(--checkbox-size) *:data-[slot=check-indicator]:size-(--checkbox-indicator-size) isolate flex shrink-0 items-center justify-center;
 }
 
 

@@ -25,7 +25,7 @@ export function SearchInput({ size,groupClass='', ...props }: InputProps &{group
     return (
         <InputGroup size={size} className={groupClass}>
             <InputLeading className='in-disabled:opacity-50' absolute>
-                <span aria-hidden className="size-4 iconify hugeicons--search-01 text-fg-muted/80 forced-colors:text-[ButtonText] group-disabled:text-fg-muted/50 forced-colors:group-disabled:text-[GrayText]" />
+                <span aria-hidden className="size-4 iconify hugeicons--search-01 text-muted-foreground/80 forced-colors:text-[ButtonText] group-disabled:text-muted-foreground/50 forced-colors:group-disabled:text-[GrayText]" />
             </InputLeading>
             <Input variant="unstyled" className="ps-9 pe-9 [&::-webkit-search-cancel-button]:hidden"  {...props} />
             <InputTrailing className="group-fx-empty/search-field:invisible [--right-space:5px]" clickable absolute>

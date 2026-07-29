@@ -77,10 +77,10 @@ export function Checkbox({ className, children, ...props }: CheckboxProps) {
                                     "ui-c_r-ring",
                                     "ui_c_r",
                                     "ui_color_color_base",
-                                    "rounded transition",
+                                    "rounded-checkbox transition",
                                     "ui-c_r-selected-indeterminate",
                                     "ui_c_r-selected",
-                                    "border border-border-input"
+                                    "border border-input"
                                 ])}
                             >
                                 {indicator}

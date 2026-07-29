@@ -37,12 +37,12 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" suppressHydrationWarning className="bg-bg">
+		<html lang="en" suppressHydrationWarning className="bg-background">
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
 				<HeadContent />
 			</head>
-			<body className="bg-gray-50 dark:bg-gray-900/30 min-h-screen">
+		<body className="min-h-screen bg-background text-foreground antialiased">
 				<SidebarProvider>
 					<DashSidebar />
 					<AppWrapper>

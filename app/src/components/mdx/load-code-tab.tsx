@@ -12,12 +12,18 @@ import { CodeLoadPanels } from "../molecules/code-load-panels"
 
 export const LoadCodeTab = ({ data }: { data: CodeItem[] }) => {
   const [codes, setCodes] = useState<HighlightResult[]>([])
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     let active = true
 
     getMultipleHighlights(data).then((highlightedCodes) => {
-      if (active) setCodes(highlightedCodes)
+      if (active) {
+        setCodes(highlightedCodes)
+        requestAnimationFrame(() => {
+          if (active) setVisible(true)
+        })
+      }
     })
 
     return () => {
@@ -28,7 +34,15 @@ export const LoadCodeTab = ({ data }: { data: CodeItem[] }) => {
   return (
     <>
       <DocTabCodeLoader values={data}>
-        <CodeLoadPanels data={codes} />
+        {codes.length > 0 ? (
+          <div
+            className={`transition-opacity duration-200 ease-linear ${visible ? "opacity-100" : "opacity-0"}`}
+          >
+            <CodeLoadPanels data={codes} />
+          </div>
+        ) : (
+          <div className="h-32" />
+        )}
       </DocTabCodeLoader>
     </>
   )

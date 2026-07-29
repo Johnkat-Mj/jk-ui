@@ -112,11 +112,11 @@ const MenuItem = ({ className, intent, children, ...props }: MenuItemProps) => {
                     intent,
                     className: hasSubmenu
                         ? cx(
-                            intent === "danger" && "open:bg-danger-subtle open:text-danger-subtle-fg",
+                            intent === "destructive" && "open:bg-destructive-subtle open:text-destructive-subtle-fg",
                             intent === "warning" && "open:bg-warning-subtle open:text-warning-subtle-fg",
                             intent === undefined &&
                             className,
-                            "text-fg-muted",
+                            "text-muted-foreground",
                         )
                         : className,
                 }),
@@ -159,7 +159,7 @@ const MenuHeader = ({ className, separator = false, ...props }: MenuHeaderProps)
     <Header
         className={cx(
             "col-span-full px-2.5 py-2 font-medium text-base sm:text-sm",
-            separator && "-mx-1 border-b border-fg/10 sm:px-3 sm:pb-2.5",
+            separator && "-mx-1 border-b border-foreground/10 sm:px-3 sm:pb-2.5",
             className,
         )}
         {...props}

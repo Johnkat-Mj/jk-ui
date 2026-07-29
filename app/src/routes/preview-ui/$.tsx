@@ -38,6 +38,29 @@ function BlockPreview() {
     return () => { cancelled = true }
   }, [path])
 
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      if (e.data?.type === 'sync-theme') {
+        const id = 'jk-theme-blocker'
+        if (!document.getElementById(id)) {
+          const style = document.createElement('style')
+          style.id = id
+          style.textContent =
+            '*,*::before,*::after{transition:none!important;animation:none!important}'
+          document.head.appendChild(style)
+          document.documentElement.getBoundingClientRect()
+          requestAnimationFrame(() => {
+            document.getElementById(id)?.remove()
+          })
+        }
+        document.documentElement.classList.remove('light', 'dark')
+        document.documentElement.classList.add(e.data.theme)
+      }
+    }
+    window.addEventListener('message', handler)
+    return () => window.removeEventListener('message', handler)
+  }, [])
+
   if (errored) throw notFound()
   if (!Component) return null
   return <Component />

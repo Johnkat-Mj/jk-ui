@@ -19,6 +19,6 @@
   },
   "iconLibrary": "lucide",
   "registries": {
-    "@jk-ui": "https://jk-ui.unoforge.com/jk/{name}.json"
+    "@jk-ui": "https://jk-ui.unoforge.com/r/{name}.json"
   }
 }

@@ -16,10 +16,9 @@ export const SidebarItem = ({ path, icon, text, badge }: SidebarItemProps) => {
 			<Link
 				to={path}
 				className={cx(
-					"h-10 flex items-center px-2.5 rounded-ui text-[15px]",
-					"aria-[current=page]:bg-bg-surface aria-[current=page]:text-fg-title",
-					"aria-[current=page]:shadow-[0px_0.7px_0px_0px_#E1E1E1,0px_0px_0px_1px_#F0F0F0]",
-					"dark:aria-[current=page]:shadow-[0px_0.7px_0px_0px_var(--color-gray-700),0px_0px_0px_1px_var(--color-gray-800)]",
+					"h-10 flex items-center px-2.5 rounded-lg text-sm transition-colors",
+					"text-muted-foreground hover:bg-muted hover:text-foreground",
+					"aria-[current=page]:bg-gray-50 dark:aria-[current=page]:bg-gray-900/80 aria-[current=page]:text-foreground aria-[current=page]:shadow-sm aria-[current=page]:ring-1 aria-[current=page]:ring-border/80",
 				)}
 			>
 				<Icon name={icon} className="mr-2.5" />

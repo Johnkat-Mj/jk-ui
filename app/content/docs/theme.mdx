@@ -59,15 +59,6 @@ In addition to shadcn-standard tokens, JK-UI provides extended tokens for advanc
 | `--border-strong` | `border-border-strong` | Strong borders |
 | `--border-card` | `border-border-card` | Card borders |
 
-### Semantic Aliases
-
-| Variable | Maps to | Description |
-|----------|---------|-------------|
-| `--danger` | `--destructive` | Backward-compatible danger |
-| `--info` | — | Informational messages |
-| `--warning` | — | Caution states |
-| `--success` | — | Success states |
-
 ## Border Radius
 
 ### shadcn Standard
@@ -104,7 +95,7 @@ Each theme provides light and dark variants plus a complete `@theme inline` bloc
 
 ## Customization
 
-Override any CSS variable at the project, component, or instance level:
+CSS variables are designed to be overridden at any level:
 
 ### Project-level
 ```css
@@ -119,4 +110,12 @@ Override any CSS variable at the project, component, or instance level:
 <Button className="[--btn-solid-bg:var(--color-purple-600)]">
   Custom
 </Button>
+```
+
+### New variant
+```css
+@utility ui-gradient-primary {
+    background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-400));
+    --ui-gradient-text: var(--color-white);
+}
 ```

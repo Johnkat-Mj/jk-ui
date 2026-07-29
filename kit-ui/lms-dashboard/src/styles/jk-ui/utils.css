@@ -21,7 +21,7 @@
 @utility dropdown-item-icon {
   @apply *:data-[slot=icon]:col-start-1 *:data-[slot=icon]:row-start-1
    *:data-[slot=icon]:me-(--mr-icon) *:data-[slot=icon]:-ms-0.5 
-   *:data-[slot=icon]:shrink-0 [&_[data-slot='icon']:not([class*='text-'])]:text-fg-muted;
+   *:data-[slot=icon]:shrink-0 [&_[data-slot='icon']:not([class*='text-'])]:text-muted-foreground;
 }
 
 
@@ -69,8 +69,8 @@
   }
 }
 
-@utility dropdown-item-danger {
-  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-danger-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-danger-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-danger-fg)];
+@utility dropdown-item-destructive {
+  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-destructive-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-destructive-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-destructive-fg)];
 }
 
 @utility dropdown-item-warning {
@@ -138,7 +138,7 @@
     }
   }
 
-  @apply sm:rounded-ui sm:[--visual-viewport-vertical-padding:16px]
+  @apply sm:rounded-lg sm:[--visual-viewport-vertical-padding:16px]
 }
 
 @utility overlay-on-enterring {
@@ -167,7 +167,7 @@
 
 
 @utility cell-span-selection-none {
-  @apply group-hover:bg-bg-muted/60 group-data-pressed:bg-bg-muted/80
+  @apply group-hover:bg-muted/60 group-data-pressed:bg-muted/80
 }
 
 @utility cell-span-selection-middle-base {
@@ -182,7 +182,7 @@
 
 /* disclosure group */
 @utility disclosure-group {
-  @apply [--disclosure-gutter-x:--spacing(4)] [--disclosure-radius:var(--radius-lg)] [--disclosure-collapsed-border:var(--color-border)] [--disclosure-expanded-border:var(--color-muted-fg)/30] [--disclosure-collapsed-bg:var(--color-bg)] [--disclosure-collapsed-fg:var(--color-muted-fg)] [--disclosure-expanded-bg:var(--color-secondary)]/20 [--disclosure-expanded-fg:var(--color-fg)] flex flex-col gap-y-2;
+  @apply [--disclosure-gutter-x:--spacing(4)] [--disclosure-radius:var(--radius-lg)] [--disclosure-collapsed-border:var(--color-border)] [--disclosure-expanded-border:var(--color-muted-foreground)/30] [--disclosure-collapsed-bg:var(--color-background)] [--disclosure-collapsed-fg:var(--color-muted-foreground)] [--disclosure-expanded-bg:var(--color-secondary)]/20 [--disclosure-expanded-fg:var(--color-foreground)] flex flex-col gap-y-2;
 }
 
 

@@ -16,7 +16,7 @@ export const DocsPagination = ({ prevSlug, nextSlug }: {
                     prevSlug ? (
                         nextSlug ? (
                             <Link
-                                href={prevSlug.slug}
+                                to={prevSlug.slug}
                                 className="flex items-center px-5 h-16 text-gray-500 hover:text-fg-title"
                             >
                                 <div className="flex items-center gap-x-1 text-sm">
@@ -26,7 +26,7 @@ export const DocsPagination = ({ prevSlug, nextSlug }: {
                             </Link>
                         ) : (
                             <Link
-                                href={prevSlug.slug}
+                                to={prevSlug.slug}
                                 className="group flex *:first:pr-4 *:last:pl-4 items-center px-4 h-16 text-fg-subtitle hover:text-fg-title flex-1 rounded-md bg-bg divide-x divide-border-strong/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
                             >
                                 <div className="flex items-center gap-x-1 text-sm pl-3 border-r border-border text-gray-500 group-hover:text-fg-title ease-linear duration-300">
@@ -48,7 +48,7 @@ export const DocsPagination = ({ prevSlug, nextSlug }: {
                 {
                     nextSlug ? (
                         <Link
-                            href={nextSlug.slug}
+                            to={nextSlug.slug}
                             className="group flex *:first:pr-4 *:last:pl-4 items-center px-4 h-16 text-foreground hover:text-fg-title flex-1 rounded-md bg-bg divide-x divide-border-strong/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
                         >
                             <div className="flex flex-1 flex-col justify-center text-sm text-right">

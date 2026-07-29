@@ -53,11 +53,11 @@ export const Keyboard = <V extends KbdVariant = "solid">({
     className,
     ...rest
 }: KeyboardProps<V>) => {
-    // Handle default variant (bg-bg-subtle text-fg)
+    // Handle default variant (bg-muted text-foreground)
     if (variant === "default") {
         const classes = kbdVariants({
             size,
-            className: `bg-bg-subtle text-fg ui-radius ${className || ""}`,
+            className: `bg-muted text-foreground rounded-ui ${className || ""}`,
         })
         return <RAC_Keyboard className={classes} {...rest}/>
     }
@@ -66,7 +66,7 @@ export const Keyboard = <V extends KbdVariant = "solid">({
     if (variant === "none") {
         const classes = kbdVariants({
             size,
-            className: `ui-radius ${className || ""}`,
+            className: `rounded-ui ${className || ""}`,
         })
         return <RAC_Keyboard className={classes} {...rest}/>
     }
@@ -77,15 +77,14 @@ export const Keyboard = <V extends KbdVariant = "solid">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes
     const classes = kbdVariants({
         size,
-        className: `${variantClasses} ui-radius ${className || ""}`,
+        className: `${variantClasses} rounded-ui ${className || ""}`,
     })
 
     return <RAC_Keyboard className={classes} {...rest}/>
 }
-

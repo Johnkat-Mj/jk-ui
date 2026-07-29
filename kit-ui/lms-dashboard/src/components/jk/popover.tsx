@@ -49,7 +49,7 @@ const PopoverContent = ({
         "group/popover min-w-(--trigger-width) max-w-xs origin-(--trigger-anchor-point)",
         "[--popover-padding:--spacing(1)] [--popover-radius:var(--radius-ui)]",
         "p-(--popover-padding) rounded-(--popover-radius)",
-        "border border-fg/10 bg-popover text-fg-muted shadow-xs",
+        "border border-foreground/10 bg-popover text-muted-foreground shadow-xs",
         "outline-hidden transition-transform ",
         "sm:text-sm",
         "entering:fade-in entering:animate-in",

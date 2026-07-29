@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({ component: App });
 
 function App() {
 	return (
-		<main className="page-wrap pb-8 pt-6">
+		<main className="bg-gray-50/80 dark:bg-gray-900/40 pb-8 pt-6">
 			<Container className={"grid sm:grid-cols-2 lg:grid-cols-4 gap-4"}>
 				<KpiCard
 					title={"Total Students"}

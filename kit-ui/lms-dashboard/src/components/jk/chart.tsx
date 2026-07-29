@@ -457,14 +457,14 @@ const ChartTooltipContent = <TValue extends ValueType, TName extends NameType>({
     <div
       ref={ref}
       className={twMerge(
-        "grid min-w-48 items-start rounded-lg bg-overlay/70 p-3 py-2 text-overlay-fg text-xs ring ring-current/10 backdrop-blur-lg",
+        "grid min-w-48 items-start rounded-ui bg-popover/70 p-3 py-2 text-popover-foreground text-xs ring ring-current/10 backdrop-blur-lg",
         className,
       )}
     >
       {!hideLabel && (
         <>
           {!nestLabel ? <span className="font-medium">{tooltipLabel}</span> : null}
-          {labelSeparator && <span aria-hidden className="mt-2 mb-3 block h-px w-full bg-bg/10" />}
+          {labelSeparator && <span aria-hidden className="mt-2 mb-3 block h-px w-full bg-background/10" />}
         </>
       )}
       <div className="grid gap-3">
@@ -520,7 +520,7 @@ const ChartTooltipContent = <TValue extends ValueType, TName extends NameType>({
                     </div>
 
                     {item.value && (
-                      <span className="font-medium font-mono text-fg tabular-nums">
+                      <span className="font-medium font-mono text-foreground tabular-nums">
                         {item.value.toString()}
                       </span>
                     )}

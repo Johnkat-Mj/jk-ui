@@ -54,7 +54,7 @@ export function Radio({ className, children, ...props }: RadioProps) {
                                 "ui_c_r-selected",
                                 "ui-c_r-selected-indeterminate",
                                 "ui-radio-indicator",
-                                "border border-border-input"
+                                "border border-input"
                             ])}
                         />
                         {content}

@@ -54,12 +54,6 @@ export const sidebarItems: SidebarGroupCat[] = [
                 path: '/docs/dark-mode',
                 description: 'Implementing and toggling dark mode support.',
                 keywords: 'Dark Mode, Color Schemes, Appearance, Tailwind Dark',
-            },
-            {
-                title: 'Customization',
-                path: '/docs/customization',
-                description: 'Guide to customizing JK-UI components, themes, and variants.',
-                keywords: 'Customization, Theming, Variants, Override',
             }
         ]
     },

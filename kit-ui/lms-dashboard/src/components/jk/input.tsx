@@ -25,7 +25,7 @@ export type InputVariant = "default" | "outline" | "flush" | "unstyled"
 // ============================================================================
 
 const labelVariants = tv({
-  base: "text-sm font-medium leading-none text-fg-muted block peer-disabled:cursor-not-allowed peer-disabled:opacity-70 disabled:opacity-70",
+  base: "text-sm font-medium leading-none text-muted-foreground block peer-disabled:cursor-not-allowed peer-disabled:opacity-70 disabled:opacity-70",
 })
 
 interface LabelProps extends RACLabelProps {
@@ -62,7 +62,7 @@ export function FieldError(props: FieldErrorProps) {
 // Description
 // ============================================================================
 export const descriptionStyles = tv({
-  base: "block text-fg-muted text-sm/6 in-disabled:opacity-50 group-disabled:opacity-50",
+  base: "block text-muted-foreground text-sm/6 in-disabled:opacity-50 group-disabled:opacity-50",
 })
 export function Description({ className, ...props }: TextProps) {
   return <Text {...props} slot="description" className={descriptionStyles({ className })} />
@@ -75,7 +75,7 @@ export function Description({ className, ...props }: TextProps) {
 // ============================================================================
 
 export const inputGroupVariants = tv({
-  base: "ui-form-group-base ui-form-group ui-form-group-ring ui-form-ring-base relative flex text-fg",
+  base: "ui-form-group-base ui-form-group ui-form-group-ring ui-form-ring-base relative flex text-foreground",
   variants: {
     size: {
       none: "",
@@ -84,8 +84,8 @@ export const inputGroupVariants = tv({
       lg: "h-10",
     },
     variant: {
-      default: "border border-border-input bg-bg ",
-      outline: "border border-border-input bg-transparent ",
+      default: "border border-input bg-background ",
+      outline: "border border-input bg-transparent ",
       flush: "rounded-ui",
       unstyled: "",
     },
@@ -214,9 +214,9 @@ export const inputVariants = tv({
       lg: "ui-form-input-lg",
     },
     variant: {
-      default: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring border border-border-input bg-bg rounded-ui",
-      outline: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring border border-border-input bg-transparent rounded-ui",
-      flush: "ui-form-input ui-form-outline text-fg ui-form-ring-base ui-form-ring rounded-ui",
+      default: "ui-form-input ui-form-outline text-foreground ui-form-ring-base ui-form-ring border border-input bg-background rounded-ui",
+      outline: "ui-form-input ui-form-outline text-foreground ui-form-ring-base ui-form-ring border border-input bg-transparent rounded-ui",
+      flush: "ui-form-input ui-form-outline text-foreground ui-form-ring-base ui-form-ring rounded-ui",
       unstyled: "",
     },
   },

@@ -101,11 +101,11 @@ export const selectTriggerVariants = tv({
 			lg: "ui-form-input-lg",
 		},
 		border: {
-			true: "border border-border-input",
+			true: "border border-input",
 			false: "",
 		},
 		bg: {
-			true: "bg-bg",
+			true: "bg-background",
 			false: "",
 		},
 		radius: {
@@ -117,7 +117,7 @@ export const selectTriggerVariants = tv({
 				"ui-input-select-trigger-base",
 				"group/select-trigger cursor-default",
 				"gap-x-2",
-				"text-start text-fg outline-hidden transition duration-200",
+				"text-start text-foreground outline-hidden transition duration-200",
 				"sm:text-sm/6 sm:*:text-sm/6 dark:shadow-none",
 				"ui-form-select-trigger-access",
 				"ui-form-select-trigger-invalid",
@@ -169,7 +169,7 @@ const SelectTrigger = ({
 				{(values) => (
 					<>
 						{props.prefix && (
-							<span className="text-fg-muted">{props.prefix}</span>
+							<span className="text-muted-foreground">{props.prefix}</span>
 						)}
 						{typeof children === "function" ? children(values) : children}
 
@@ -178,7 +178,7 @@ const SelectTrigger = ({
 								<SelectValue
 									data-slot="select-value"
 									className={cx([
-										"truncate text-start data-placeholder:text-fg-muted sm:text-sm/6 **:[[slot=description]]:hidden",
+										"truncate text-start data-placeholder:text-muted-foreground sm:text-sm/6 **:[[slot=description]]:hidden",
 										"has-data-[slot=avatar]:grid has-data-[slot=avatar]:grid-cols-[1fr_auto] has-data-[slot=avatar]:items-center has-data-[slot=avatar]:gap-x-2",
 										"has-data-[slot=icon]:grid has-data-[slot=icon]:grid-cols-[1fr_auto] has-data-[slot=icon]:items-center has-data-[slot=icon]:gap-x-2",
 										"*:data-[slot=icon]:size-5 sm:*:data-[slot=icon]:size-4",

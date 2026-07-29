@@ -8,6 +8,7 @@ import remarkParse from "remark-parse";
 import { visit } from "unist-util-visit";
 import { toString } from "mdast-util-to-string";
 import GithubSlugger from "github-slugger";
+import { rehypeShiki } from "./src/lib/rehype-shiki";
 
 type TocItem = { depth: number; value: string; url: string };
 
@@ -20,7 +21,7 @@ const baseTransform = async (
   const toc = extractToc(doc.content);
   const mdx = await compileMDX(context as any, doc as any, {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug],
+    rehypePlugins: [rehypeSlug, rehypeShiki],
   });
   return { ...doc, mdx, toc };
 };
