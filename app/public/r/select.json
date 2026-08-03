@@ -3,7 +3,15 @@
   "name": "select",
   "title": "Select",
   "description": "jk-ui Select Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/dropdown",
     "@jk-ui/input",
     "@jk-ui/popover"

@@ -81,11 +81,11 @@ export const TopCourses = () => {
 	return (
 		<Card className="[--card-padding:0px] flex flex-col">
 			<div className="flex items-center justify-between p-4 h-max">
-				<span className="font-semibold text-fg-title">Revenue</span>
+				<span className="font-semibold text-foreground">Revenue</span>
 				<div className="">
 					<Link
 						to="/"
-						className="btn btn-ghost btn-ghost-gray h-7.5 ring ring-border-input rounded-ui pl-2.5 pr-2"
+						className="btn btn-ghost btn-ghost-gray h-8 ring ring-border-input/70 rounded-lg pl-2.5 pr-2 text-xs"
 					>
 						View All
 						<Icon name="hugeicons--arrow-right-01" size="xs" className="ml-1" />
@@ -96,7 +96,7 @@ export const TopCourses = () => {
 				<ul className="flex flex-col divide-y divide-border-card/50">
 					{courses.map((course) => (
 						<li key={course.id} className="px-4 flex items-center py-2.5 gap-4">
-							<div className={`flex size-9.5 p-1.5 rounded-ui ${course.color}`}>
+							<div className={`flex size-9.5 p-1.5 rounded-lg ${course.color}`}>
 								<img
 									src={course.logo}
 									alt={course.title}
@@ -107,14 +107,14 @@ export const TopCourses = () => {
 							</div>
 							<div className="flex items-center justify-between flex-1">
 								<div className="flex flex-col flex-1">
-									<span className="font-semibold text-fg-title">
+									<span className="font-semibold text-foreground">
 										{course.title}
 									</span>
-									<span className="text-fg-muted text-[13px]">
+									<span className="text-muted-foreground text-[13px]">
 										{course.sales_count} sales
 									</span>
 								</div>
-								<span className="font-semibold text-fg-title">
+								<span className="font-semibold text-foreground">
 									${course.sales_revenue}
 								</span>
 							</div>

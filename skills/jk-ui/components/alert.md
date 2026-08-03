@@ -3,9 +3,9 @@
 ```tsx
 import { Alert } from "@/components/jk/alert"
 
-<Alert intent="solid-primary">Primary Alert</Alert>
-<Alert variant="soft" intent="soft-success" size="sm">Success Alert</Alert>
-<Alert variant="outline" intent="outline-danger">Danger Alert</Alert>
+<Alert intent="primary">Primary Alert</Alert>
+<Alert variant="soft" intent="success" size="sm">Success Alert</Alert>
+<Alert variant="outline" intent="destructive">Destructive Alert</Alert>
 ```
 
 ## Installation

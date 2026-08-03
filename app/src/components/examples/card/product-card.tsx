@@ -24,7 +24,7 @@ export const ProductCard = () => {
           <span className="text-fg-subtitle">$12</span>
         </div>
         <div className="flex justify-between items-start gap-2">
-          <span className="flex-1 text-fg-muted text-xs">Colored</span>
+          <span className="flex-1 text-muted-foreground text-xs">Colored</span>
           <Button size="xs" intent="neutral">
             Add to cart
           </Button>

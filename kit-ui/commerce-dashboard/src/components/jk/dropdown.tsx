@@ -74,8 +74,8 @@ const dropdownItemStyles = tv({
     ],
     variants: {
         intent: {
-            danger: [
-                "dropdown-item-danger text-(--dropdown-item-danger-fg)"
+            destructive: [
+                "dropdown-item-destructive text-(--dropdown-item-destructive-fg)"
             ],
             warning: [
                 "dropdown-item-warning text-(--dropdown-item-warning-fg)"
@@ -85,7 +85,7 @@ const dropdownItemStyles = tv({
 })
 
 interface DropdownItemProps extends ListBoxItemProps {
-    intent?: "danger" | "warning"
+    intent?: "destructive" | "warning"
 }
 
 const DropdownItem = ({ className, children, intent, ...props }: DropdownItemProps) => {

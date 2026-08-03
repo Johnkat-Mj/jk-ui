@@ -11,7 +11,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="none"
           />
-          <span className="text-xs text-fg-muted">none</span>
+          <span className="text-xs text-muted-foreground">none</span>
         </div>
         <div className="flex flex-col items-center gap-2">
           <Avatar 
@@ -20,7 +20,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="default"
           />
-          <span className="text-xs text-fg-muted">default</span>
+          <span className="text-xs text-muted-foreground">default</span>
         </div>
         <div className="flex flex-col items-center gap-2">
           <Avatar 
@@ -29,7 +29,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="circle"
           />
-          <span className="text-xs text-fg-muted">circle</span>
+          <span className="text-xs text-muted-foreground">circle</span>
         </div>
       </div>
       <div className="flex items-center gap-4 justify-center flex-wrap">
@@ -41,7 +41,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="none"
           />
-          <span className="text-xs text-fg-muted">none</span>
+          <span className="text-xs text-muted-foreground">none</span>
         </div>
         <div className="flex flex-col items-center gap-2">
           <Avatar 
@@ -51,7 +51,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="default"
           />
-          <span className="text-xs text-fg-muted">default</span>
+          <span className="text-xs text-muted-foreground">default</span>
         </div>
         <div className="flex flex-col items-center gap-2">
           <Avatar 
@@ -61,7 +61,7 @@ export const AvatarRadius = () => {
             size="md"
             radius="circle"
           />
-          <span className="text-xs text-fg-muted">circle</span>
+          <span className="text-xs text-muted-foreground">circle</span>
         </div>
       </div>
     </div>

@@ -12,10 +12,10 @@ export const SiteCta = () => {
                     </div>
                     <div className="px-3.5 sm:px-8 md:px-16 lg:px-8 xl:px-0 mx-auto w-full max-w-3xl lg:max-w-5xl flex flex-col items-center text-center">
                         <h2
-                            className="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-fg">
+                            className="font-bold text-3xl md:text-4xl/tight max-w-2xl text-balance text-transparent bg-clip-text bg-linear-to-br from-fg-title to-fg-muted/60 dark:via-foreground">
                             Stop rebuilding UI. Start shipping beautiful apps faster.
                         </h2>
-                        <p className="text-fg-muted max-w-md text-sm mt-6.5">
+                        <p className="text-muted-foreground max-w-md text-sm mt-6.5">
                             Prebuilt React components and blocks designed for speed, structure, and complete code ownership.
                         </p>
                         <div className="flex flex-wrap gap-3 mt-9 ">

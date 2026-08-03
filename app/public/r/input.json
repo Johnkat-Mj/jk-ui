@@ -3,6 +3,16 @@
   "name": "input",
   "title": "Input",
   "description": "jk-ui Input Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/input.tsx",

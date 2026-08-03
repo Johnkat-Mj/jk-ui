@@ -6,8 +6,17 @@
         {
             "name": "base",
             "title": "JK-UI utilities",
-            "type": "registry:file",
-            "description": "Base styles for JK UI components.",
+            "type": "registry:style",
+            "description": "Complete JK-UI foundation: semantic CSS variables, utilities and variant helpers.",
+            "dependencies": [
+                "@iconify-json/ph",
+                "@iconify/tailwind4",
+                "clsx",
+                "react-aria-components",
+                "tailwind-merge",
+                "tailwind-variants",
+                "tw-animate-css"
+            ],
             "files": [
                 {
                     "path": "src/styles/jk-ui/base.css",

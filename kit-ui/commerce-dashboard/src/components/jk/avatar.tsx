@@ -98,7 +98,7 @@ const Avatar = <V extends UiComponentVariant = "solid">({
   // When variant is "default", resolvedIntent is already "none", so we can use it directly
   const variantClasses = uiStyles({
     variant: uiVariant,
-    intent: resolvedIntent as UiIntent<UiVariant>,
+    intent: resolvedIntent as UiIntent,
   })
 
   // For placeholder, use radius prop if "none", otherwise use radius prop from parent

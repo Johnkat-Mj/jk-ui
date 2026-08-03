@@ -147,7 +147,7 @@ const TableBody = <T extends object>({
             className={cx(
                 "text-sm divide-(--table-border-color)",
                 "in-fx-table-grid:divide-y",
-                "in-fx-striped:*:even:bg-bg-muted/40",
+                "in-fx-striped:*:even:bg-muted/40",
                 !noDivider && "divide-y",
                 className,
             )}
@@ -180,7 +180,7 @@ const TableColumn = ({
                 className,
                 (className, { allowsSorting }) =>
                     cx(
-                        "px-(--gutter-x) py-(--gutter-y) font-medium capitalize text-sm text-fg-title relative outline-hidden",
+                        "px-(--gutter-x) py-(--gutter-y) font-medium capitalize text-sm text-foreground relative outline-hidden",
                         "dragging:cursor-grabbing",
                         {
                             "cursor-default":allowsSorting,
@@ -202,7 +202,7 @@ const TableColumn = ({
                     {values.allowsSorting && (
                         <span
                             className={cx(
-                                "grid size-[1.15rem] flex-none shrink-0 place-content-center rounded bg-bg-muted/70 text-fg",
+                                "grid size-[1.15rem] flex-none shrink-0 place-content-center rounded bg-muted/70 text-foreground",
                                 "*:data-[slot=icon]:size-3.5 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:transition-transform *:data-[slot=icon]:duration-200",
                                 values.isHovered && "bg-secondary-fg/10",
                             )}
@@ -245,7 +245,7 @@ const TableHeader = <T extends object>({
             className={cx(
                 "[&_tr]:divide-(--table-border-color) in-fx-table-grid:[&_tr]:divide-x",
                 {
-                    'bg-bg-muted/50': fillGray,
+                    'bg-muted/50': fillGray,
                 },
                 className,
             )}
@@ -299,9 +299,9 @@ const TableRow = <T extends object>({
                 (className, { isSelected, selectionMode, isDragging, isDisabled }) =>
                     cx(
                         "divide-(--table-border-color) in-fx-table-grid:divide-x",
-                        "in-fx-hoverable:hover:bg-bg-muted/40",
-                        "in-fx-striped:in-fx-hoverable:hover:bg-bg-muted/40",
-                        (props.href || props.onAction || selectionMode === "multiple") && "hover:bg-bg-muted/60",
+                        "in-fx-hoverable:hover:bg-muted/40",
+                        "in-fx-striped:in-fx-hoverable:hover:bg-muted/40",
+                        (props.href || props.onAction || selectionMode === "multiple") && "hover:bg-muted/60",
                         isSelected && "bg-(--table-selected-bg,var(--color-bg-surface)) text-(--table-selected-fg,var(--color-fg-subtitle))",
                         isDragging && "cursor-grabbing",
                         isDisabled && "opacity-50",

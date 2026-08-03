@@ -3,6 +3,16 @@
   "name": "keyboard",
   "title": "Keyboard",
   "description": "jk-ui Keyboard Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/keyboard.tsx",

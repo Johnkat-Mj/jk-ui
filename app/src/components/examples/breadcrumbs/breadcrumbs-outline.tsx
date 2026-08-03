@@ -15,7 +15,7 @@ export const BreadcrumbsOutline = () => {
                     Current Page
                 </BreadcrumbsItem>
             </Breadcrumbs>
-            <Breadcrumbs wrapper="border-y py-2 px-4 border-border-strong" className="text-fg-muted">
+            <Breadcrumbs wrapper="border-y py-2 px-4 border-border-strong" className="text-muted-foreground">
                 <BreadcrumbsItem href="#">
                     <span aria-hidden="true" className="flex iconify ph--house text-xl"></span>
                     Home

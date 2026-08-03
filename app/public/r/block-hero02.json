@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-hero02",
+  "type": "registry:block",
+  "title": "Hero 02",
+  "description": "Marketing hero section with headline and CTA",
+  "files": [
+    {
+      "path": "src/blocks/marketing/hero/hero02.tsx",
+      "type": "registry:block",
+      "target": "components/hero02.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

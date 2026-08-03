@@ -27,7 +27,7 @@ export const SiteSectionHeader = ({
             )}
         >
             {subtitle && (
-                <span className="relative text-fg-muted dark:text-fg-title/70 w-max bg-bg ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface before:rounded-[7px]">
+                <span className="relative text-muted-foreground dark:text-fg-title/70 w-max bg-background ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface before:rounded-[7px]">
                     <span className="text-sm relative">
                         {subtitle}
                     </span>
@@ -36,7 +36,7 @@ export const SiteSectionHeader = ({
             <h2 className={`font-semibold text-fg-title text-3xl sm:text-4xl max-w-xl ${subtitle ? 'mt-2' : ''}`}>
                 {title}
             </h2>
-            <p className="text-fg-muted max-w-md text-sm mt-2.5">{description}</p>
+            <p className="text-muted-foreground max-w-md text-sm mt-2.5">{description}</p>
             {children}
         </div>
     );

@@ -1,0 +1,208 @@
+---
+title: Migration Guide
+description: Start using jk-ui in an existing shadcn/ui project
+keywords: migration, shadcn, switch, upgrade, react-aria
+---
+
+This guide shows how to adopt jk-ui components alongside your existing shadcn/ui setup. You can migrate incrementally — install jk-ui components as you need them without removing shadcn/ui.
+
+## Why jk-ui?
+
+jk-ui offers:
+
+- **Full theming system** with 17 built-in theme presets
+- **React Aria Components** for better accessibility
+- **Variant/intent system** — clearer semantic control over component appearance
+- **Pre-built blocks** for common page layouts
+- **Familiar to shadcn users** — same registry-based installation model
+
+## Migration Strategy
+
+You can use jk-ui and shadcn/ui **side-by-side**. No need to replace everything at once.
+
+**Recommended approach:**
+1. Install jk-ui base + icons
+2. Start using jk-ui components in new pages
+3. Gradually replace shadcn components when building new features
+4. Keep shadcn components where they're working fine
+
+## Setup: 7 Steps
+
+**Step 1: Register the @jk-ui namespace**
+```bash
+bunx shadcn@latest registry add @jk-ui=https://jk-ui.unoforge.com/r/{name}.json
+```
+
+**Step 2: Install an icon library** (if not already done)
+```bash
+# Phosphor (jk-ui default)
+bun add -D @iconify-json/ph
+```
+
+**Step 3: Install jk-ui/base**
+```bash
+bunx shadcn add @jk-ui/base
+```
+
+**Step 4: Update your main CSS**
+
+Add these references to your main CSS file:
+```css
+@reference "./jk-ui/base.css";
+@reference "./jk-ui/form.css";
+@reference "./jk-ui/button.css";
+@reference "./jk-ui/ui.css";
+@reference "./jk-ui/intents.css";
+@reference "./jk-ui/utils.css";
+```
+
+(You may need to add the `@plugin "@iconify/tailwind4"` block if not already present — see [Installation](/docs/installation))
+
+**Step 5: Update components.json** (if needed)
+```json
+{
+  "iconLibrary": "ph"
+}
+```
+
+**Step 6: Start installing jk-ui components**
+```bash
+bunx shadcn add @jk-ui/button
+bunx shadcn add @jk-ui/card
+bunx shadcn add @jk-ui/input
+```
+
+**Step 7: Use them alongside shadcn/ui**
+
+You can now use both:
+```tsx
+// shadcn/ui (existing)
+import { Button as ShadcnButton } from "@/components/ui/button"
+
+// jk-ui (new)
+import { Button } from "@/components/jk/button"
+
+export function MyComponent() {
+  return (
+    <>
+      <ShadcnButton>Old shadcn button</ShadcnButton>
+      <Button>New jk-ui button</Button>
+    </>
+  )
+}
+```
+
+## Key Differences from shadcn/ui
+
+### Button
+
+**shadcn/ui:**
+```tsx
+<Button variant="default">Click me</Button>
+<Button variant="destructive">Delete</Button>
+```
+
+**jk-ui:**
+```tsx
+<Button intent="primary">Click me</Button>
+<Button intent="destructive">Delete</Button>
+```
+
+jk-ui separates `variant` (visual style) from `intent` (semantic color). See [Principles](/docs/principles#separate-appearance-from-meaning) for why.
+
+### Input
+
+**shadcn/ui:**
+```tsx
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+<div>
+  <Label htmlFor="email">Email</Label>
+  <Input id="email" type="email" />
+</div>
+```
+
+**jk-ui:**
+```tsx
+import { Input } from "@/components/jk/input"
+
+<Input label="Email" type="email" />
+```
+
+jk-ui's `Input` includes a built-in `label` prop.
+
+### Dialog → Modal
+
+**shadcn/ui:**
+```tsx
+<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>Content</DialogContent>
+</Dialog>
+```
+
+**jk-ui:**
+```tsx
+<Modal>
+  <Button>Open</Button>
+  <ModalContent>Content</ModalContent>
+</Modal>
+```
+
+Both work fine — choose based on your needs.
+
+## Coexistence Tips
+
+**File organization:**
+```
+components/
+├── ui/              # shadcn/ui components
+│   ├── button.tsx
+│   ├── input.tsx
+│   └── ...
+├── jk/              # jk-ui components
+│   ├── button.tsx
+│   ├── input.tsx
+│   └── ...
+└── atoms/           # Your custom components
+```
+
+**Avoid naming conflicts:**
+
+In `components.json`, make sure both registries coexist:
+```json
+{
+  "registries": {
+    "default": "https://ui.shadcn.com/r",
+    "@jk-ui": "https://jk-ui.unoforge.com/r/{name}.json"
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
+```
+
+**CSS colors:**
+
+jk-ui uses the same semantic token names as shadcn/ui, so your existing theme colors will work for both.
+
+## Full Migration Path (Optional)
+
+If you want to migrate completely to jk-ui:
+
+1. Install all jk-ui components you need
+2. Gradually replace `@/components/ui/{name}` imports with `@/components/jk/{name}`
+3. Update component usage to match jk-ui APIs
+4. Remove shadcn/ui components from `components/ui/`
+5. Uninstall Radix dependencies: `bun remove @radix-ui/*`
+
+But remember: partial adoption works great too. Use what makes sense for your project.
+
+## Need Help?
+
+- Check [Components](/components) for individual jk-ui component docs
+- Visit [Theming](/docs/theme) for customization
+- See [Principles](/docs/principles) for design philosophy
+- Read the [jk-ui Skill](https://github.com/Johnkat-Mj/jk-ui/tree/main/skills/jk-ui) for AI-assisted development

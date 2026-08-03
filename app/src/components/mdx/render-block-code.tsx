@@ -11,12 +11,18 @@ interface RenderBlockCodeProps {
 
 export const RenderBlockCode = ({ code, lang }: RenderBlockCodeProps) => {
   const [html, setHtml] = useState<string>()
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     let active = true
 
     getHighlightedCode(code, lang).then((highlightedCode) => {
-      if (active) setHtml(highlightedCode)
+      if (active) {
+        setHtml(highlightedCode)
+        requestAnimationFrame(() => {
+          if (active) setVisible(true)
+        })
+      }
     })
 
     return () => {
@@ -25,18 +31,14 @@ export const RenderBlockCode = ({ code, lang }: RenderBlockCodeProps) => {
   }, [code, lang])
 
   if (!html) {
-    return (
-      <pre data-code-snippet className="w-full overflow-auto p-4 text-sm">
-        <code>{code}</code>
-      </pre>
-    )
+    return <div className="min-h-4" />
   }
 
   return (
     <figure
       dangerouslySetInnerHTML={{ __html: html }}
       data-code-snippet
-      className="*:py-4 w-full min-w-max"
+      className={`*:py-4 w-full min-w-max transition-opacity duration-200 ease-linear ${visible ? "opacity-100" : "opacity-0"}`}
     />
   )
 }

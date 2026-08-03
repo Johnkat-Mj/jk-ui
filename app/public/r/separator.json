@@ -3,6 +3,15 @@
   "name": "separator",
   "title": "Separator",
   "description": "jk-ui Separator Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/separator.tsx",

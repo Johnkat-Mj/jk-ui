@@ -32,7 +32,7 @@ export function Tag({ children, className, ...props }: TagProps) {
     <AriaTag
       textValue={textValue}
       className={cx(
-        "text-fg [--tag-selected-bg:color-mix(in_oklab,var(--color-primary)_10%,transparent)] [--tag-selected-fg:var(--color-primary)]",
+        "text-foreground [--tag-selected-bg:color-mix(in_oklab,var(--color-primary)_10%,transparent)] [--tag-selected-fg:var(--color-primary)]",
         "[--tag-selected-ring:color-mix(in_oklab,var(--color-primary)_35%,transparent)]",
         "inset-ring inset-ring-border-input outline-hidden bg-background",
         "inline-flex items-center gap-x-1.5 py-0.5 font-medium text-xs/5 forced-colors:outline",

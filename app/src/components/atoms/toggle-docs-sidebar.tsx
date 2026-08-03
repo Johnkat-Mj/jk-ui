@@ -8,7 +8,7 @@ export const ToggleDocsSidebar = () => {
         <Button onPress={() => toggleSidebar?.()}
             data-sidebar-trigger
             aria-label="toggle sidebar"
-            className="flex flex-col space-y-2 text-fg-muted hover:bg-bg-subtle ease-linear duration-200 px-1.5 py-2.5 lg:hidden group pr-2 border-r border-bg-muted mr-2"
+            className="flex flex-col space-y-2 text-muted-foreground hover:bg-bg-subtle ease-linear duration-200 px-1.5 py-2.5 lg:hidden group pr-2 border-r border-bg-muted mr-2"
         >
             <span
                 aria-hidden="true"

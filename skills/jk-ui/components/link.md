@@ -5,7 +5,7 @@ import { Link } from "@/components/jk/link"
 
 <Link href="/dashboard">Dashboard</Link>
 <Link href="https://example.com" underlined underlineOffset="2">External Link</Link>
-<Link asButton variant="solid" intent="solid-primary" size="sm" href="/action">Button Link</Link>
+<Link asButton variant="solid" intent="primary" size="sm" href="/action">Button Link</Link>
 ```
 
 ## Installation

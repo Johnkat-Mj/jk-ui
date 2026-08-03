@@ -53,9 +53,9 @@ const Navbar = () => {
                                 Get Started
                             </a>
                             <NavbarToggler aria-label="Toggle navbar" className="lg:hidden lg:invisible outline-none w-7 h-auto flex flex-col relative group">
-                                <span className="w-6 h-0.5 rounded-full bg-fg transition-all duration-300 ease-linear in-aria-expanded:translate-y-1.5 in-aria-expanded:rotate-40" />
-                                <span className="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-fg transition-all duration-300 ease-linear in-aria-expanded:opacity-0 in-aria-expanded:scale-x-0" />
-                                <span className="w-6 mt-1 h-0.5 rounded-ful bg-fg transition-all duration-300 ease-linear in-aria-expanded:-translate-y-1.5 in-aria-expanded:-rotate-40" />
+                                <span className="w-6 h-0.5 rounded-full bg-foreground transition-all duration-300 ease-linear in-aria-expanded:translate-y-1.5 in-aria-expanded:rotate-40" />
+                                <span className="w-6 origin-center  mt-1 h-0.5 rounded-ful bg-foreground transition-all duration-300 ease-linear in-aria-expanded:opacity-0 in-aria-expanded:scale-x-0" />
+                                <span className="w-6 mt-1 h-0.5 rounded-ful bg-foreground transition-all duration-300 ease-linear in-aria-expanded:-translate-y-1.5 in-aria-expanded:-rotate-40" />
                             </NavbarToggler>
                         </div>
                     </nav>

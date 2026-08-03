@@ -9,7 +9,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="xs"
         />
-        <span className="text-xs text-fg-muted">xs</span>
+        <span className="text-xs text-muted-foreground">xs</span>
       </div>
       <div className="flex flex-col items-center gap-2">
         <Avatar 
@@ -17,7 +17,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="sm"
         />
-        <span className="text-xs text-fg-muted">sm</span>
+        <span className="text-xs text-muted-foreground">sm</span>
       </div>
       <div className="flex flex-col items-center gap-2">
         <Avatar 
@@ -25,7 +25,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="default"
         />
-        <span className="text-xs text-fg-muted">default</span>
+        <span className="text-xs text-muted-foreground">default</span>
       </div>
       <div className="flex flex-col items-center gap-2">
         <Avatar 
@@ -33,7 +33,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="md"
         />
-        <span className="text-xs text-fg-muted">md</span>
+        <span className="text-xs text-muted-foreground">md</span>
       </div>
       <div className="flex flex-col items-center gap-2">
         <Avatar 
@@ -41,7 +41,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="lg"
         />
-        <span className="text-xs text-fg-muted">lg</span>
+        <span className="text-xs text-muted-foreground">lg</span>
       </div>
       <div className="flex flex-col items-center gap-2">
         <Avatar 
@@ -49,7 +49,7 @@ export const AvatarSizes = () => {
           alt="User avatar"
           size="xl"
         />
-        <span className="text-xs text-fg-muted">xl</span>
+        <span className="text-xs text-muted-foreground">xl</span>
       </div>
     </div>
   )

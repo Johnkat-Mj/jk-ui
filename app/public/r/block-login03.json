@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-login03",
+  "type": "registry:block",
+  "title": "Login 03",
+  "description": "Split-screen login page with illustration side panel",
+  "files": [
+    {
+      "path": "src/blocks/application/auth/login03.tsx",
+      "type": "registry:block",
+      "target": "components/login.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

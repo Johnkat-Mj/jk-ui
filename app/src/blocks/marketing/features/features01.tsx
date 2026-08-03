@@ -1,6 +1,6 @@
 const CardFeature = ({ icon, title, description }: { icon: string, title: string, description: string }) => {
     return <div className="rounded-lg p-6 sm:p-8 lg:p-10 bg-card flex flex-col hover:bg-muted ease-linear">
-        <div className="p-3 rounded-md bg-background shadow-sm text-foreground-subtitle flex items-center justify-center w-max">
+        <div className="p-3 rounded-md bg-background shadow-sm text-muted-foreground flex items-center justify-center w-max">
             <span className={`iconify ${icon} size-6`}></span>
         </div>
         <h3 className="text-foreground font-medium text-2xl mt-10">

@@ -27,8 +27,8 @@ export const DocsWrapper = ({ hideTableOfContent = false, nextSlug, prevSlug,
                     "xl:grid-cols-[1fr_15rem]": !hideTableOfContent
                 }
             )}>
-                <article className=" px-4 sm:px-8 xl:px-16 grid text-fg w-full relative">
-                    <div className="absolute bottom-0 top-1 sm:top-2 inset-x-1 sm:inset-x-2 border border-b-0 border-border bg-bg dark:bg-gray-900/10 rounded-t-2xl"></div>
+                <article className=" px-4 sm:px-8 xl:px-16 grid text-foreground w-full relative">
+                    <div className="absolute bottom-0 top-1 sm:top-2 inset-x-1 sm:inset-x-2 border border-b-0 border-border bg-background dark:bg-gray-900/10 rounded-t-2xl"></div>
                     <div className={cx(
                         "relative w-full  mx-auto mb-13",
                         {

@@ -3,7 +3,15 @@
   "name": "checkbox",
   "title": "Checkbox",
   "description": "jk-ui Checkbox Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/input"
   ],
   "files": [
@@ -14,5 +22,16 @@
       "target": "components/jk/checkbox.tsx"
     }
   ],
+  "cssVars": {
+    "light": {
+      "checkbox-radius": "var(--radius-sm)",
+      "checkbox-bg": "var(--background)",
+      "checkbox-fg": "transparent",
+      "checkbox-bg-checked": "var(--primary)",
+      "checkbox-fg-checked": "var(--primary-foreground)",
+      "checkbox-bg-invalid": "var(--destructive)",
+      "checkbox-fg-invalid": "var(--destructive-foreground)"
+    }
+  },
   "type": "registry:ui"
 }

@@ -3,6 +3,16 @@
   "name": "disclosure",
   "title": "Disclosure",
   "description": "jk-ui Disclosure Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/disclosure-group.tsx",

@@ -5,7 +5,7 @@ export const BadgeVariants = () => {
     <div className="space-y-8">
       {/* Solid Variants */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-fg-muted">Solid</h3>
+        <h3 className="text-sm font-semibold text-muted-foreground">Solid</h3>
         <div className="flex flex-wrap gap-3">
           <Badge variant="solid" intent="primary">Primary</Badge>
           <Badge variant="solid" intent="secondary">Secondary</Badge>
@@ -20,7 +20,7 @@ export const BadgeVariants = () => {
 
       {/* Soft Variants */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-fg-muted">Soft</h3>
+        <h3 className="text-sm font-semibold text-muted-foreground">Soft</h3>
         <div className="flex flex-wrap gap-3">
           <Badge variant="soft" intent="primary">Primary</Badge>
           <Badge variant="soft" intent="secondary">Secondary</Badge>
@@ -36,7 +36,7 @@ export const BadgeVariants = () => {
 
       {/* Subtle Variants */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-fg-muted">Subtle</h3>
+        <h3 className="text-sm font-semibold text-muted-foreground">Subtle</h3>
         <div className="flex flex-wrap gap-3">
           <Badge variant="subtle" intent="primary">Primary</Badge>
           <Badge variant="subtle" intent="secondary">Secondary</Badge>
@@ -52,7 +52,7 @@ export const BadgeVariants = () => {
 
       {/* Outline Variants */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-fg-muted">Outline</h3>
+        <h3 className="text-sm font-semibold text-muted-foreground">Outline</h3>
         <div className="flex flex-wrap gap-3">
           <Badge variant="outline" intent="primary">Primary</Badge>
           <Badge variant="outline" intent="secondary">Secondary</Badge>
@@ -67,7 +67,7 @@ export const BadgeVariants = () => {
 
       {/* Default Variant */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-fg-muted">Default</h3>
+        <h3 className="text-sm font-semibold text-muted-foreground">Default</h3>
         <div className="flex flex-wrap gap-3">
           <Badge variant="default">Default Badge</Badge>
         </div>

@@ -2,8 +2,22 @@
 
 Full index of jk-ui components. Each component is installed individually via shadcn CLI and imported as a React component.
 
+## Dependencies
+
+**All npm dependencies are automatically detected and included** in each component's registry item. When you install a component, shadcn automatically installs required packages like:
+- `react-aria-components` (for accessible primitives)
+- `tailwind-variants` (for styling)
+- `tailwind-merge` (for class merging)
+- Any component-specific packages (e.g., `input-otp` for OTP, `recharts` for charts)
+
+You don't need to manually install dependencies — shadcn handles it.
+
+## Install Commands
+
 Base install command for all components:
 ```bash
+npx shadcn add @jk-ui/{name}
+# or
 npx shadcn add https://jk-ui.unoforge.com/r/{name}.json
 ```
 

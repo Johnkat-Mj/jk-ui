@@ -3,6 +3,16 @@
   "name": "input-date",
   "title": "Input Date",
   "description": "jk-ui Input Date Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/input-date.tsx",
@@ -11,5 +21,11 @@
       "target": "components/jk/input-date.tsx"
     }
   ],
+  "cssVars": {
+    "light": {
+      "date-segment-focus-bg": "var(--primary)",
+      "date-segment-focus-fg": "var(--primary-foreground)"
+    }
+  },
   "type": "registry:ui"
 }

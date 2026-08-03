@@ -80,7 +80,7 @@ export const ButtonCopyBlock = ({ name }: { name: string }) => {
                 {copying ? (
                     <>
                         <span aria-hidden="true" className="flex iconify ph--circle-notch animate-spin"></span>
-                        <span className="text-fg-muted ml-1">Copying</span>
+                        <span className="text-muted-foreground ml-1">Copying</span>
                     </>
                 ) : copiedState === "copied" ? (
                     <>
@@ -90,7 +90,7 @@ export const ButtonCopyBlock = ({ name }: { name: string }) => {
                 ) : (
                     <>
                         <span aria-hidden className="flex iconify ph--terminal"></span>
-                        <span className="text-fg-muted ml-1">{command}</span>
+                        <span className="text-muted-foreground ml-1">{command}</span>
                     </>
                 )}
             </Button>

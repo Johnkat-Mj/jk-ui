@@ -56,10 +56,10 @@ export const sidebarItems: SidebarGroupCat[] = [
                 keywords: 'Dark Mode, Color Schemes, Appearance, Tailwind Dark',
             },
             {
-                title: 'Customization',
-                path: '/docs/customization',
-                description: 'Guide to customizing JK-UI components, themes, and variants.',
-                keywords: 'Customization, Theming, Variants, Override',
+                title: 'Migration Guide',
+                path: '/docs/migration',
+                description: 'Migrate from shadcn/ui (Radix) to jk-ui (React Aria).',
+                keywords: 'Migration, shadcn, Radix, React Aria, Upgrade, Switch',
             }
         ]
     },
@@ -209,7 +209,6 @@ export const sidebarItems: SidebarGroupCat[] = [
                 path: "/components/multi-select",
                 description: "Pick multiple options, often displayed as tags or checkmarks.",
                 keywords: "multi select, selection, tags, choices",
-                state: "draft"
             },
             {
                 title: "Switch",

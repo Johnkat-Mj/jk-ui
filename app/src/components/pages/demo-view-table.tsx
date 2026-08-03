@@ -140,7 +140,7 @@ export const DemoViewTable = () => {
     const isIndeterminate = selectedUsers.length > 0 && selectedUsers.length < usersDemo.length
 
     return (
-        <div className="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-bg dark:bg-bg-surface/40 rounded-ui">
+        <div className="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-background dark:bg-bg-surface/40 rounded-ui">
             <div className="relative z-11 p-4 flex gap-4 flex-col sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex">
                     <SearchField aria-label="Search field">
@@ -220,7 +220,7 @@ export const DemoViewTable = () => {
                                             <div className="font-medium text-fg-title text-sm text-nowrap">
                                                 {user.info.full_name}
                                             </div>
-                                            <div className="text-xs text-fg-muted text-nowrap">
+                                            <div className="text-xs text-muted-foreground text-nowrap">
                                                 {user.info.email}
                                             </div>
                                         </div>
@@ -232,7 +232,7 @@ export const DemoViewTable = () => {
                                             value={user.tokens.used} className={"w-44"}>
                                             <ProgressBarTrack className={`${statusColor} min-w-44 h-1`} />
                                         </ProgressBar>
-                                        <span className="text-xs text-fg-muted ml-2">
+                                        <span className="text-xs text-muted-foreground ml-2">
                                             {tokenPercentage}%
                                         </span>
                                     </div>

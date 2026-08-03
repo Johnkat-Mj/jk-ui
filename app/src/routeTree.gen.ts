@@ -17,38 +17,8 @@ import { Route as SiteTemplatesRouteImport } from './routes/_site/templates'
 import { Route as ThemesThemesRouteImport } from './routes/_themes/themes'
 import { Route as BlocksIndexRouteImport } from './routes/blocks/index'
 import { Route as BlocksCategoryIdRouteImport } from './routes/blocks/$categoryId'
-import { Route as PreviewUiActivity01RouteImport } from './routes/preview-ui/activity01'
-import { Route as PreviewUiContent01RouteImport } from './routes/preview-ui/content01'
-import { Route as PreviewUiContent02RouteImport } from './routes/preview-ui/content02'
+import { Route as PreviewUiSplatRouteImport } from './routes/preview-ui/$'
 import { Route as PreviewUiDemoNavbarRouteImport } from './routes/preview-ui/demo-navbar'
-import { Route as PreviewUiEmptyState01RouteImport } from './routes/preview-ui/empty-state01'
-import { Route as PreviewUiFeatures01RouteImport } from './routes/preview-ui/features01'
-import { Route as PreviewUiHeader01RouteImport } from './routes/preview-ui/header01'
-import { Route as PreviewUiHeader02RouteImport } from './routes/preview-ui/header02'
-import { Route as PreviewUiHeader03RouteImport } from './routes/preview-ui/header03'
-import { Route as PreviewUiHero01RouteImport } from './routes/preview-ui/hero01'
-import { Route as PreviewUiHero02RouteImport } from './routes/preview-ui/hero02'
-import { Route as PreviewUiHero03RouteImport } from './routes/preview-ui/hero03'
-import { Route as PreviewUiKpi01RouteImport } from './routes/preview-ui/kpi01'
-import { Route as PreviewUiKpi02RouteImport } from './routes/preview-ui/kpi02'
-import { Route as PreviewUiKpi03RouteImport } from './routes/preview-ui/kpi03'
-import { Route as PreviewUiLogin01RouteImport } from './routes/preview-ui/login01'
-import { Route as PreviewUiLogin02RouteImport } from './routes/preview-ui/login02'
-import { Route as PreviewUiLogin03RouteImport } from './routes/preview-ui/login03'
-import { Route as PreviewUiOtp01RouteImport } from './routes/preview-ui/otp01'
-import { Route as PreviewUiPricing01RouteImport } from './routes/preview-ui/pricing01'
-import { Route as PreviewUiPricing02RouteImport } from './routes/preview-ui/pricing02'
-import { Route as PreviewUiPricing03RouteImport } from './routes/preview-ui/pricing03'
-import { Route as PreviewUiShell01RouteImport } from './routes/preview-ui/shell01'
-import { Route as PreviewUiSidebar01RouteImport } from './routes/preview-ui/sidebar01'
-import { Route as PreviewUiSidebar02RouteImport } from './routes/preview-ui/sidebar02'
-import { Route as PreviewUiSidebar03RouteImport } from './routes/preview-ui/sidebar03'
-import { Route as PreviewUiSidebar04RouteImport } from './routes/preview-ui/sidebar04'
-import { Route as PreviewUiSidebar05RouteImport } from './routes/preview-ui/sidebar05'
-import { Route as PreviewUiSignup01RouteImport } from './routes/preview-ui/signup01'
-import { Route as PreviewUiTable01RouteImport } from './routes/preview-ui/table01'
-import { Route as PreviewUiTable02RouteImport } from './routes/preview-ui/table02'
-import { Route as PreviewUiTable03RouteImport } from './routes/preview-ui/table03'
 import { Route as DocsComponentsSplatRouteImport } from './routes/_docs/components.$'
 import { Route as DocsDocsSplatRouteImport } from './routes/_docs/docs.$'
 
@@ -89,164 +59,14 @@ const BlocksCategoryIdRoute = BlocksCategoryIdRouteImport.update({
   path: '/blocks/$categoryId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PreviewUiActivity01Route = PreviewUiActivity01RouteImport.update({
-  id: '/preview-ui/activity01',
-  path: '/preview-ui/activity01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiContent01Route = PreviewUiContent01RouteImport.update({
-  id: '/preview-ui/content01',
-  path: '/preview-ui/content01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiContent02Route = PreviewUiContent02RouteImport.update({
-  id: '/preview-ui/content02',
-  path: '/preview-ui/content02',
+const PreviewUiSplatRoute = PreviewUiSplatRouteImport.update({
+  id: '/preview-ui/$',
+  path: '/preview-ui/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PreviewUiDemoNavbarRoute = PreviewUiDemoNavbarRouteImport.update({
   id: '/preview-ui/demo-navbar',
   path: '/preview-ui/demo-navbar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiEmptyState01Route = PreviewUiEmptyState01RouteImport.update({
-  id: '/preview-ui/empty-state01',
-  path: '/preview-ui/empty-state01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiFeatures01Route = PreviewUiFeatures01RouteImport.update({
-  id: '/preview-ui/features01',
-  path: '/preview-ui/features01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHeader01Route = PreviewUiHeader01RouteImport.update({
-  id: '/preview-ui/header01',
-  path: '/preview-ui/header01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHeader02Route = PreviewUiHeader02RouteImport.update({
-  id: '/preview-ui/header02',
-  path: '/preview-ui/header02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHeader03Route = PreviewUiHeader03RouteImport.update({
-  id: '/preview-ui/header03',
-  path: '/preview-ui/header03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHero01Route = PreviewUiHero01RouteImport.update({
-  id: '/preview-ui/hero01',
-  path: '/preview-ui/hero01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHero02Route = PreviewUiHero02RouteImport.update({
-  id: '/preview-ui/hero02',
-  path: '/preview-ui/hero02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiHero03Route = PreviewUiHero03RouteImport.update({
-  id: '/preview-ui/hero03',
-  path: '/preview-ui/hero03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiKpi01Route = PreviewUiKpi01RouteImport.update({
-  id: '/preview-ui/kpi01',
-  path: '/preview-ui/kpi01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiKpi02Route = PreviewUiKpi02RouteImport.update({
-  id: '/preview-ui/kpi02',
-  path: '/preview-ui/kpi02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiKpi03Route = PreviewUiKpi03RouteImport.update({
-  id: '/preview-ui/kpi03',
-  path: '/preview-ui/kpi03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiLogin01Route = PreviewUiLogin01RouteImport.update({
-  id: '/preview-ui/login01',
-  path: '/preview-ui/login01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiLogin02Route = PreviewUiLogin02RouteImport.update({
-  id: '/preview-ui/login02',
-  path: '/preview-ui/login02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiLogin03Route = PreviewUiLogin03RouteImport.update({
-  id: '/preview-ui/login03',
-  path: '/preview-ui/login03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiOtp01Route = PreviewUiOtp01RouteImport.update({
-  id: '/preview-ui/otp01',
-  path: '/preview-ui/otp01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiPricing01Route = PreviewUiPricing01RouteImport.update({
-  id: '/preview-ui/pricing01',
-  path: '/preview-ui/pricing01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiPricing02Route = PreviewUiPricing02RouteImport.update({
-  id: '/preview-ui/pricing02',
-  path: '/preview-ui/pricing02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiPricing03Route = PreviewUiPricing03RouteImport.update({
-  id: '/preview-ui/pricing03',
-  path: '/preview-ui/pricing03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiShell01Route = PreviewUiShell01RouteImport.update({
-  id: '/preview-ui/shell01',
-  path: '/preview-ui/shell01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSidebar01Route = PreviewUiSidebar01RouteImport.update({
-  id: '/preview-ui/sidebar01',
-  path: '/preview-ui/sidebar01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSidebar02Route = PreviewUiSidebar02RouteImport.update({
-  id: '/preview-ui/sidebar02',
-  path: '/preview-ui/sidebar02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSidebar03Route = PreviewUiSidebar03RouteImport.update({
-  id: '/preview-ui/sidebar03',
-  path: '/preview-ui/sidebar03',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSidebar04Route = PreviewUiSidebar04RouteImport.update({
-  id: '/preview-ui/sidebar04',
-  path: '/preview-ui/sidebar04',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSidebar05Route = PreviewUiSidebar05RouteImport.update({
-  id: '/preview-ui/sidebar05',
-  path: '/preview-ui/sidebar05',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiSignup01Route = PreviewUiSignup01RouteImport.update({
-  id: '/preview-ui/signup01',
-  path: '/preview-ui/signup01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiTable01Route = PreviewUiTable01RouteImport.update({
-  id: '/preview-ui/table01',
-  path: '/preview-ui/table01',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiTable02Route = PreviewUiTable02RouteImport.update({
-  id: '/preview-ui/table02',
-  path: '/preview-ui/table02',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewUiTable03Route = PreviewUiTable03RouteImport.update({
-  id: '/preview-ui/table03',
-  path: '/preview-ui/table03',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocsComponentsSplatRoute = DocsComponentsSplatRouteImport.update({
@@ -265,38 +85,8 @@ export interface FileRoutesByFullPath {
   '/templates': typeof SiteTemplatesRoute
   '/themes': typeof ThemesThemesRoute
   '/blocks/$categoryId': typeof BlocksCategoryIdRoute
-  '/preview-ui/activity01': typeof PreviewUiActivity01Route
-  '/preview-ui/content01': typeof PreviewUiContent01Route
-  '/preview-ui/content02': typeof PreviewUiContent02Route
+  '/preview-ui/$': typeof PreviewUiSplatRoute
   '/preview-ui/demo-navbar': typeof PreviewUiDemoNavbarRoute
-  '/preview-ui/empty-state01': typeof PreviewUiEmptyState01Route
-  '/preview-ui/features01': typeof PreviewUiFeatures01Route
-  '/preview-ui/header01': typeof PreviewUiHeader01Route
-  '/preview-ui/header02': typeof PreviewUiHeader02Route
-  '/preview-ui/header03': typeof PreviewUiHeader03Route
-  '/preview-ui/hero01': typeof PreviewUiHero01Route
-  '/preview-ui/hero02': typeof PreviewUiHero02Route
-  '/preview-ui/hero03': typeof PreviewUiHero03Route
-  '/preview-ui/kpi01': typeof PreviewUiKpi01Route
-  '/preview-ui/kpi02': typeof PreviewUiKpi02Route
-  '/preview-ui/kpi03': typeof PreviewUiKpi03Route
-  '/preview-ui/login01': typeof PreviewUiLogin01Route
-  '/preview-ui/login02': typeof PreviewUiLogin02Route
-  '/preview-ui/login03': typeof PreviewUiLogin03Route
-  '/preview-ui/otp01': typeof PreviewUiOtp01Route
-  '/preview-ui/pricing01': typeof PreviewUiPricing01Route
-  '/preview-ui/pricing02': typeof PreviewUiPricing02Route
-  '/preview-ui/pricing03': typeof PreviewUiPricing03Route
-  '/preview-ui/shell01': typeof PreviewUiShell01Route
-  '/preview-ui/sidebar01': typeof PreviewUiSidebar01Route
-  '/preview-ui/sidebar02': typeof PreviewUiSidebar02Route
-  '/preview-ui/sidebar03': typeof PreviewUiSidebar03Route
-  '/preview-ui/sidebar04': typeof PreviewUiSidebar04Route
-  '/preview-ui/sidebar05': typeof PreviewUiSidebar05Route
-  '/preview-ui/signup01': typeof PreviewUiSignup01Route
-  '/preview-ui/table01': typeof PreviewUiTable01Route
-  '/preview-ui/table02': typeof PreviewUiTable02Route
-  '/preview-ui/table03': typeof PreviewUiTable03Route
   '/blocks/': typeof BlocksIndexRoute
   '/components/$': typeof DocsComponentsSplatRoute
   '/docs/$': typeof DocsDocsSplatRoute
@@ -306,38 +96,8 @@ export interface FileRoutesByTo {
   '/templates': typeof SiteTemplatesRoute
   '/themes': typeof ThemesThemesRoute
   '/blocks/$categoryId': typeof BlocksCategoryIdRoute
-  '/preview-ui/activity01': typeof PreviewUiActivity01Route
-  '/preview-ui/content01': typeof PreviewUiContent01Route
-  '/preview-ui/content02': typeof PreviewUiContent02Route
+  '/preview-ui/$': typeof PreviewUiSplatRoute
   '/preview-ui/demo-navbar': typeof PreviewUiDemoNavbarRoute
-  '/preview-ui/empty-state01': typeof PreviewUiEmptyState01Route
-  '/preview-ui/features01': typeof PreviewUiFeatures01Route
-  '/preview-ui/header01': typeof PreviewUiHeader01Route
-  '/preview-ui/header02': typeof PreviewUiHeader02Route
-  '/preview-ui/header03': typeof PreviewUiHeader03Route
-  '/preview-ui/hero01': typeof PreviewUiHero01Route
-  '/preview-ui/hero02': typeof PreviewUiHero02Route
-  '/preview-ui/hero03': typeof PreviewUiHero03Route
-  '/preview-ui/kpi01': typeof PreviewUiKpi01Route
-  '/preview-ui/kpi02': typeof PreviewUiKpi02Route
-  '/preview-ui/kpi03': typeof PreviewUiKpi03Route
-  '/preview-ui/login01': typeof PreviewUiLogin01Route
-  '/preview-ui/login02': typeof PreviewUiLogin02Route
-  '/preview-ui/login03': typeof PreviewUiLogin03Route
-  '/preview-ui/otp01': typeof PreviewUiOtp01Route
-  '/preview-ui/pricing01': typeof PreviewUiPricing01Route
-  '/preview-ui/pricing02': typeof PreviewUiPricing02Route
-  '/preview-ui/pricing03': typeof PreviewUiPricing03Route
-  '/preview-ui/shell01': typeof PreviewUiShell01Route
-  '/preview-ui/sidebar01': typeof PreviewUiSidebar01Route
-  '/preview-ui/sidebar02': typeof PreviewUiSidebar02Route
-  '/preview-ui/sidebar03': typeof PreviewUiSidebar03Route
-  '/preview-ui/sidebar04': typeof PreviewUiSidebar04Route
-  '/preview-ui/sidebar05': typeof PreviewUiSidebar05Route
-  '/preview-ui/signup01': typeof PreviewUiSignup01Route
-  '/preview-ui/table01': typeof PreviewUiTable01Route
-  '/preview-ui/table02': typeof PreviewUiTable02Route
-  '/preview-ui/table03': typeof PreviewUiTable03Route
   '/blocks': typeof BlocksIndexRoute
   '/components/$': typeof DocsComponentsSplatRoute
   '/docs/$': typeof DocsDocsSplatRoute
@@ -350,38 +110,8 @@ export interface FileRoutesById {
   '/_site/templates': typeof SiteTemplatesRoute
   '/_themes/themes': typeof ThemesThemesRoute
   '/blocks/$categoryId': typeof BlocksCategoryIdRoute
-  '/preview-ui/activity01': typeof PreviewUiActivity01Route
-  '/preview-ui/content01': typeof PreviewUiContent01Route
-  '/preview-ui/content02': typeof PreviewUiContent02Route
+  '/preview-ui/$': typeof PreviewUiSplatRoute
   '/preview-ui/demo-navbar': typeof PreviewUiDemoNavbarRoute
-  '/preview-ui/empty-state01': typeof PreviewUiEmptyState01Route
-  '/preview-ui/features01': typeof PreviewUiFeatures01Route
-  '/preview-ui/header01': typeof PreviewUiHeader01Route
-  '/preview-ui/header02': typeof PreviewUiHeader02Route
-  '/preview-ui/header03': typeof PreviewUiHeader03Route
-  '/preview-ui/hero01': typeof PreviewUiHero01Route
-  '/preview-ui/hero02': typeof PreviewUiHero02Route
-  '/preview-ui/hero03': typeof PreviewUiHero03Route
-  '/preview-ui/kpi01': typeof PreviewUiKpi01Route
-  '/preview-ui/kpi02': typeof PreviewUiKpi02Route
-  '/preview-ui/kpi03': typeof PreviewUiKpi03Route
-  '/preview-ui/login01': typeof PreviewUiLogin01Route
-  '/preview-ui/login02': typeof PreviewUiLogin02Route
-  '/preview-ui/login03': typeof PreviewUiLogin03Route
-  '/preview-ui/otp01': typeof PreviewUiOtp01Route
-  '/preview-ui/pricing01': typeof PreviewUiPricing01Route
-  '/preview-ui/pricing02': typeof PreviewUiPricing02Route
-  '/preview-ui/pricing03': typeof PreviewUiPricing03Route
-  '/preview-ui/shell01': typeof PreviewUiShell01Route
-  '/preview-ui/sidebar01': typeof PreviewUiSidebar01Route
-  '/preview-ui/sidebar02': typeof PreviewUiSidebar02Route
-  '/preview-ui/sidebar03': typeof PreviewUiSidebar03Route
-  '/preview-ui/sidebar04': typeof PreviewUiSidebar04Route
-  '/preview-ui/sidebar05': typeof PreviewUiSidebar05Route
-  '/preview-ui/signup01': typeof PreviewUiSignup01Route
-  '/preview-ui/table01': typeof PreviewUiTable01Route
-  '/preview-ui/table02': typeof PreviewUiTable02Route
-  '/preview-ui/table03': typeof PreviewUiTable03Route
   '/_site/': typeof SiteIndexRoute
   '/blocks/': typeof BlocksIndexRoute
   '/_docs/components/$': typeof DocsComponentsSplatRoute
@@ -394,38 +124,8 @@ export interface FileRouteTypes {
     | '/templates'
     | '/themes'
     | '/blocks/$categoryId'
-    | '/preview-ui/activity01'
-    | '/preview-ui/content01'
-    | '/preview-ui/content02'
+    | '/preview-ui/$'
     | '/preview-ui/demo-navbar'
-    | '/preview-ui/empty-state01'
-    | '/preview-ui/features01'
-    | '/preview-ui/header01'
-    | '/preview-ui/header02'
-    | '/preview-ui/header03'
-    | '/preview-ui/hero01'
-    | '/preview-ui/hero02'
-    | '/preview-ui/hero03'
-    | '/preview-ui/kpi01'
-    | '/preview-ui/kpi02'
-    | '/preview-ui/kpi03'
-    | '/preview-ui/login01'
-    | '/preview-ui/login02'
-    | '/preview-ui/login03'
-    | '/preview-ui/otp01'
-    | '/preview-ui/pricing01'
-    | '/preview-ui/pricing02'
-    | '/preview-ui/pricing03'
-    | '/preview-ui/shell01'
-    | '/preview-ui/sidebar01'
-    | '/preview-ui/sidebar02'
-    | '/preview-ui/sidebar03'
-    | '/preview-ui/sidebar04'
-    | '/preview-ui/sidebar05'
-    | '/preview-ui/signup01'
-    | '/preview-ui/table01'
-    | '/preview-ui/table02'
-    | '/preview-ui/table03'
     | '/blocks/'
     | '/components/$'
     | '/docs/$'
@@ -435,38 +135,8 @@ export interface FileRouteTypes {
     | '/templates'
     | '/themes'
     | '/blocks/$categoryId'
-    | '/preview-ui/activity01'
-    | '/preview-ui/content01'
-    | '/preview-ui/content02'
+    | '/preview-ui/$'
     | '/preview-ui/demo-navbar'
-    | '/preview-ui/empty-state01'
-    | '/preview-ui/features01'
-    | '/preview-ui/header01'
-    | '/preview-ui/header02'
-    | '/preview-ui/header03'
-    | '/preview-ui/hero01'
-    | '/preview-ui/hero02'
-    | '/preview-ui/hero03'
-    | '/preview-ui/kpi01'
-    | '/preview-ui/kpi02'
-    | '/preview-ui/kpi03'
-    | '/preview-ui/login01'
-    | '/preview-ui/login02'
-    | '/preview-ui/login03'
-    | '/preview-ui/otp01'
-    | '/preview-ui/pricing01'
-    | '/preview-ui/pricing02'
-    | '/preview-ui/pricing03'
-    | '/preview-ui/shell01'
-    | '/preview-ui/sidebar01'
-    | '/preview-ui/sidebar02'
-    | '/preview-ui/sidebar03'
-    | '/preview-ui/sidebar04'
-    | '/preview-ui/sidebar05'
-    | '/preview-ui/signup01'
-    | '/preview-ui/table01'
-    | '/preview-ui/table02'
-    | '/preview-ui/table03'
     | '/blocks'
     | '/components/$'
     | '/docs/$'
@@ -478,38 +148,8 @@ export interface FileRouteTypes {
     | '/_site/templates'
     | '/_themes/themes'
     | '/blocks/$categoryId'
-    | '/preview-ui/activity01'
-    | '/preview-ui/content01'
-    | '/preview-ui/content02'
+    | '/preview-ui/$'
     | '/preview-ui/demo-navbar'
-    | '/preview-ui/empty-state01'
-    | '/preview-ui/features01'
-    | '/preview-ui/header01'
-    | '/preview-ui/header02'
-    | '/preview-ui/header03'
-    | '/preview-ui/hero01'
-    | '/preview-ui/hero02'
-    | '/preview-ui/hero03'
-    | '/preview-ui/kpi01'
-    | '/preview-ui/kpi02'
-    | '/preview-ui/kpi03'
-    | '/preview-ui/login01'
-    | '/preview-ui/login02'
-    | '/preview-ui/login03'
-    | '/preview-ui/otp01'
-    | '/preview-ui/pricing01'
-    | '/preview-ui/pricing02'
-    | '/preview-ui/pricing03'
-    | '/preview-ui/shell01'
-    | '/preview-ui/sidebar01'
-    | '/preview-ui/sidebar02'
-    | '/preview-ui/sidebar03'
-    | '/preview-ui/sidebar04'
-    | '/preview-ui/sidebar05'
-    | '/preview-ui/signup01'
-    | '/preview-ui/table01'
-    | '/preview-ui/table02'
-    | '/preview-ui/table03'
     | '/_site/'
     | '/blocks/'
     | '/_docs/components/$'
@@ -521,38 +161,8 @@ export interface RootRouteChildren {
   SiteRoute: typeof SiteRouteWithChildren
   ThemesRoute: typeof ThemesRouteWithChildren
   BlocksCategoryIdRoute: typeof BlocksCategoryIdRoute
-  PreviewUiActivity01Route: typeof PreviewUiActivity01Route
-  PreviewUiContent01Route: typeof PreviewUiContent01Route
-  PreviewUiContent02Route: typeof PreviewUiContent02Route
+  PreviewUiSplatRoute: typeof PreviewUiSplatRoute
   PreviewUiDemoNavbarRoute: typeof PreviewUiDemoNavbarRoute
-  PreviewUiEmptyState01Route: typeof PreviewUiEmptyState01Route
-  PreviewUiFeatures01Route: typeof PreviewUiFeatures01Route
-  PreviewUiHeader01Route: typeof PreviewUiHeader01Route
-  PreviewUiHeader02Route: typeof PreviewUiHeader02Route
-  PreviewUiHeader03Route: typeof PreviewUiHeader03Route
-  PreviewUiHero01Route: typeof PreviewUiHero01Route
-  PreviewUiHero02Route: typeof PreviewUiHero02Route
-  PreviewUiHero03Route: typeof PreviewUiHero03Route
-  PreviewUiKpi01Route: typeof PreviewUiKpi01Route
-  PreviewUiKpi02Route: typeof PreviewUiKpi02Route
-  PreviewUiKpi03Route: typeof PreviewUiKpi03Route
-  PreviewUiLogin01Route: typeof PreviewUiLogin01Route
-  PreviewUiLogin02Route: typeof PreviewUiLogin02Route
-  PreviewUiLogin03Route: typeof PreviewUiLogin03Route
-  PreviewUiOtp01Route: typeof PreviewUiOtp01Route
-  PreviewUiPricing01Route: typeof PreviewUiPricing01Route
-  PreviewUiPricing02Route: typeof PreviewUiPricing02Route
-  PreviewUiPricing03Route: typeof PreviewUiPricing03Route
-  PreviewUiShell01Route: typeof PreviewUiShell01Route
-  PreviewUiSidebar01Route: typeof PreviewUiSidebar01Route
-  PreviewUiSidebar02Route: typeof PreviewUiSidebar02Route
-  PreviewUiSidebar03Route: typeof PreviewUiSidebar03Route
-  PreviewUiSidebar04Route: typeof PreviewUiSidebar04Route
-  PreviewUiSidebar05Route: typeof PreviewUiSidebar05Route
-  PreviewUiSignup01Route: typeof PreviewUiSignup01Route
-  PreviewUiTable01Route: typeof PreviewUiTable01Route
-  PreviewUiTable02Route: typeof PreviewUiTable02Route
-  PreviewUiTable03Route: typeof PreviewUiTable03Route
   BlocksIndexRoute: typeof BlocksIndexRoute
 }
 
@@ -614,25 +224,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlocksCategoryIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/preview-ui/activity01': {
-      id: '/preview-ui/activity01'
-      path: '/preview-ui/activity01'
-      fullPath: '/preview-ui/activity01'
-      preLoaderRoute: typeof PreviewUiActivity01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/content01': {
-      id: '/preview-ui/content01'
-      path: '/preview-ui/content01'
-      fullPath: '/preview-ui/content01'
-      preLoaderRoute: typeof PreviewUiContent01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/content02': {
-      id: '/preview-ui/content02'
-      path: '/preview-ui/content02'
-      fullPath: '/preview-ui/content02'
-      preLoaderRoute: typeof PreviewUiContent02RouteImport
+    '/preview-ui/$': {
+      id: '/preview-ui/$'
+      path: '/preview-ui/$'
+      fullPath: '/preview-ui/$'
+      preLoaderRoute: typeof PreviewUiSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/preview-ui/demo-navbar': {
@@ -640,202 +236,6 @@ declare module '@tanstack/react-router' {
       path: '/preview-ui/demo-navbar'
       fullPath: '/preview-ui/demo-navbar'
       preLoaderRoute: typeof PreviewUiDemoNavbarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/empty-state01': {
-      id: '/preview-ui/empty-state01'
-      path: '/preview-ui/empty-state01'
-      fullPath: '/preview-ui/empty-state01'
-      preLoaderRoute: typeof PreviewUiEmptyState01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/features01': {
-      id: '/preview-ui/features01'
-      path: '/preview-ui/features01'
-      fullPath: '/preview-ui/features01'
-      preLoaderRoute: typeof PreviewUiFeatures01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/header01': {
-      id: '/preview-ui/header01'
-      path: '/preview-ui/header01'
-      fullPath: '/preview-ui/header01'
-      preLoaderRoute: typeof PreviewUiHeader01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/header02': {
-      id: '/preview-ui/header02'
-      path: '/preview-ui/header02'
-      fullPath: '/preview-ui/header02'
-      preLoaderRoute: typeof PreviewUiHeader02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/header03': {
-      id: '/preview-ui/header03'
-      path: '/preview-ui/header03'
-      fullPath: '/preview-ui/header03'
-      preLoaderRoute: typeof PreviewUiHeader03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/hero01': {
-      id: '/preview-ui/hero01'
-      path: '/preview-ui/hero01'
-      fullPath: '/preview-ui/hero01'
-      preLoaderRoute: typeof PreviewUiHero01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/hero02': {
-      id: '/preview-ui/hero02'
-      path: '/preview-ui/hero02'
-      fullPath: '/preview-ui/hero02'
-      preLoaderRoute: typeof PreviewUiHero02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/hero03': {
-      id: '/preview-ui/hero03'
-      path: '/preview-ui/hero03'
-      fullPath: '/preview-ui/hero03'
-      preLoaderRoute: typeof PreviewUiHero03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/kpi01': {
-      id: '/preview-ui/kpi01'
-      path: '/preview-ui/kpi01'
-      fullPath: '/preview-ui/kpi01'
-      preLoaderRoute: typeof PreviewUiKpi01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/kpi02': {
-      id: '/preview-ui/kpi02'
-      path: '/preview-ui/kpi02'
-      fullPath: '/preview-ui/kpi02'
-      preLoaderRoute: typeof PreviewUiKpi02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/kpi03': {
-      id: '/preview-ui/kpi03'
-      path: '/preview-ui/kpi03'
-      fullPath: '/preview-ui/kpi03'
-      preLoaderRoute: typeof PreviewUiKpi03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/login01': {
-      id: '/preview-ui/login01'
-      path: '/preview-ui/login01'
-      fullPath: '/preview-ui/login01'
-      preLoaderRoute: typeof PreviewUiLogin01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/login02': {
-      id: '/preview-ui/login02'
-      path: '/preview-ui/login02'
-      fullPath: '/preview-ui/login02'
-      preLoaderRoute: typeof PreviewUiLogin02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/login03': {
-      id: '/preview-ui/login03'
-      path: '/preview-ui/login03'
-      fullPath: '/preview-ui/login03'
-      preLoaderRoute: typeof PreviewUiLogin03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/otp01': {
-      id: '/preview-ui/otp01'
-      path: '/preview-ui/otp01'
-      fullPath: '/preview-ui/otp01'
-      preLoaderRoute: typeof PreviewUiOtp01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/pricing01': {
-      id: '/preview-ui/pricing01'
-      path: '/preview-ui/pricing01'
-      fullPath: '/preview-ui/pricing01'
-      preLoaderRoute: typeof PreviewUiPricing01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/pricing02': {
-      id: '/preview-ui/pricing02'
-      path: '/preview-ui/pricing02'
-      fullPath: '/preview-ui/pricing02'
-      preLoaderRoute: typeof PreviewUiPricing02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/pricing03': {
-      id: '/preview-ui/pricing03'
-      path: '/preview-ui/pricing03'
-      fullPath: '/preview-ui/pricing03'
-      preLoaderRoute: typeof PreviewUiPricing03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/shell01': {
-      id: '/preview-ui/shell01'
-      path: '/preview-ui/shell01'
-      fullPath: '/preview-ui/shell01'
-      preLoaderRoute: typeof PreviewUiShell01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/sidebar01': {
-      id: '/preview-ui/sidebar01'
-      path: '/preview-ui/sidebar01'
-      fullPath: '/preview-ui/sidebar01'
-      preLoaderRoute: typeof PreviewUiSidebar01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/sidebar02': {
-      id: '/preview-ui/sidebar02'
-      path: '/preview-ui/sidebar02'
-      fullPath: '/preview-ui/sidebar02'
-      preLoaderRoute: typeof PreviewUiSidebar02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/sidebar03': {
-      id: '/preview-ui/sidebar03'
-      path: '/preview-ui/sidebar03'
-      fullPath: '/preview-ui/sidebar03'
-      preLoaderRoute: typeof PreviewUiSidebar03RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/sidebar04': {
-      id: '/preview-ui/sidebar04'
-      path: '/preview-ui/sidebar04'
-      fullPath: '/preview-ui/sidebar04'
-      preLoaderRoute: typeof PreviewUiSidebar04RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/sidebar05': {
-      id: '/preview-ui/sidebar05'
-      path: '/preview-ui/sidebar05'
-      fullPath: '/preview-ui/sidebar05'
-      preLoaderRoute: typeof PreviewUiSidebar05RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/signup01': {
-      id: '/preview-ui/signup01'
-      path: '/preview-ui/signup01'
-      fullPath: '/preview-ui/signup01'
-      preLoaderRoute: typeof PreviewUiSignup01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/table01': {
-      id: '/preview-ui/table01'
-      path: '/preview-ui/table01'
-      fullPath: '/preview-ui/table01'
-      preLoaderRoute: typeof PreviewUiTable01RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/table02': {
-      id: '/preview-ui/table02'
-      path: '/preview-ui/table02'
-      fullPath: '/preview-ui/table02'
-      preLoaderRoute: typeof PreviewUiTable02RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/preview-ui/table03': {
-      id: '/preview-ui/table03'
-      path: '/preview-ui/table03'
-      fullPath: '/preview-ui/table03'
-      preLoaderRoute: typeof PreviewUiTable03RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_docs/components/$': {
@@ -895,38 +295,8 @@ const rootRouteChildren: RootRouteChildren = {
   SiteRoute: SiteRouteWithChildren,
   ThemesRoute: ThemesRouteWithChildren,
   BlocksCategoryIdRoute: BlocksCategoryIdRoute,
-  PreviewUiActivity01Route: PreviewUiActivity01Route,
-  PreviewUiContent01Route: PreviewUiContent01Route,
-  PreviewUiContent02Route: PreviewUiContent02Route,
+  PreviewUiSplatRoute: PreviewUiSplatRoute,
   PreviewUiDemoNavbarRoute: PreviewUiDemoNavbarRoute,
-  PreviewUiEmptyState01Route: PreviewUiEmptyState01Route,
-  PreviewUiFeatures01Route: PreviewUiFeatures01Route,
-  PreviewUiHeader01Route: PreviewUiHeader01Route,
-  PreviewUiHeader02Route: PreviewUiHeader02Route,
-  PreviewUiHeader03Route: PreviewUiHeader03Route,
-  PreviewUiHero01Route: PreviewUiHero01Route,
-  PreviewUiHero02Route: PreviewUiHero02Route,
-  PreviewUiHero03Route: PreviewUiHero03Route,
-  PreviewUiKpi01Route: PreviewUiKpi01Route,
-  PreviewUiKpi02Route: PreviewUiKpi02Route,
-  PreviewUiKpi03Route: PreviewUiKpi03Route,
-  PreviewUiLogin01Route: PreviewUiLogin01Route,
-  PreviewUiLogin02Route: PreviewUiLogin02Route,
-  PreviewUiLogin03Route: PreviewUiLogin03Route,
-  PreviewUiOtp01Route: PreviewUiOtp01Route,
-  PreviewUiPricing01Route: PreviewUiPricing01Route,
-  PreviewUiPricing02Route: PreviewUiPricing02Route,
-  PreviewUiPricing03Route: PreviewUiPricing03Route,
-  PreviewUiShell01Route: PreviewUiShell01Route,
-  PreviewUiSidebar01Route: PreviewUiSidebar01Route,
-  PreviewUiSidebar02Route: PreviewUiSidebar02Route,
-  PreviewUiSidebar03Route: PreviewUiSidebar03Route,
-  PreviewUiSidebar04Route: PreviewUiSidebar04Route,
-  PreviewUiSidebar05Route: PreviewUiSidebar05Route,
-  PreviewUiSignup01Route: PreviewUiSignup01Route,
-  PreviewUiTable01Route: PreviewUiTable01Route,
-  PreviewUiTable02Route: PreviewUiTable02Route,
-  PreviewUiTable03Route: PreviewUiTable03Route,
   BlocksIndexRoute: BlocksIndexRoute,
 }
 export const routeTree = rootRouteImport

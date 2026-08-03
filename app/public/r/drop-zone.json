@@ -3,6 +3,16 @@
   "name": "drop-zone",
   "title": "Drop Zone",
   "description": "jk-ui Drop Zone Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/drop-zone.tsx",

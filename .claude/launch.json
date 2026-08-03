@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rk-store-dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/mac/projects/uno-forge/jk-ui/kit-ui/rk-store && bun run dev"],
+      "port": 3504
+    }
+  ]
+}

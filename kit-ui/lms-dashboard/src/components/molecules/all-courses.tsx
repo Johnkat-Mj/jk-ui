@@ -17,11 +17,11 @@ export const AllCourses = () => {
 	return (
 		<Card className="[--card-padding:0px]">
 			<div className="flex items-center justify-between p-4 h-max">
-				<span className="font-semibold text-fg-title">All Courses </span>
+				<span className="font-semibold text-foreground">All Courses </span>
 				<div className="flex">
 					<Link
 						to="/"
-						className="btn btn-ghost btn-ghost-gray h-7.5 ring ring-border-input rounded-ui pl-2.5 pr-2"
+						className="btn btn-ghost btn-ghost-gray h-8 ring ring-border-input/70 rounded-lg pl-2.5 pr-2 text-xs"
 					>
 						View All
 						<Icon name="hugeicons--arrow-right-01" size="xs" className="ml-1" />
@@ -43,7 +43,7 @@ export const AllCourses = () => {
 							<TableCell>
 								<div className="flex items-center">
 									<div
-										className={`mr-2 flex size-7.5 p-1 rounded-ui ${item.logo_color}`}
+										className={`mr-2 flex size-7.5 p-1 rounded-lg ${item.logo_color}`}
 									>
 										<img
 											src={item.logo}
@@ -53,7 +53,7 @@ export const AllCourses = () => {
 											className="size-full"
 										/>
 									</div>
-									<div className="font-medium text-fg-title min-w-50">
+									<div className="font-medium text-foreground min-w-50">
 										{item.name}
 									</div>
 								</div>
@@ -85,9 +85,9 @@ export const AllCourses = () => {
 											</MenuLabel>
 										</MenuItem>
 										<MenuSeparator />
-										<MenuItem intent="danger">
+										<MenuItem intent="destructive">
 											<MenuIcon>
-												<Icon size="xs" name="hugeicons--delete-02" className="text-danger iconify" />
+												<Icon size="xs" name="hugeicons--delete-02" className="text-destructive iconify" />
 											</MenuIcon>
 											<MenuLabel>
 												Delete

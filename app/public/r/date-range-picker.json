@@ -3,7 +3,15 @@
   "name": "date-range-picker",
   "title": "Date Range Picker",
   "description": "jk-ui Date Range Picker Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/field-button",
     "@jk-ui/range-calendar",
     "@jk-ui/input",

@@ -3,7 +3,15 @@
   "name": "toggle-group",
   "title": "Toggle Group",
   "description": "jk-ui Toggle Group Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/toggle"
   ],
   "files": [

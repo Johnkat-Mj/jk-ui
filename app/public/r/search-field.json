@@ -3,6 +3,16 @@
   "name": "search-field",
   "title": "Search Field",
   "description": "jk-ui Search Field Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/search-field.tsx",

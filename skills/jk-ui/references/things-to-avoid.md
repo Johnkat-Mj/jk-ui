@@ -6,7 +6,7 @@ Most important mistakes to avoid when answering jk-ui questions.
 
 - Do not invent components that are not in `registries/components.json` or `registries/blocks.json`.
 - Do not invent props that are not declared in the component implementation.
-- Do not invent install commands (use `npx shadcn add https://jk-ui.unoforge.com/r/{name}.json`).
+- Do not invent install commands (use `npx shadcn add @jk-ui/{name}` after setup, or `npx shadcn add https://jk-ui.unoforge.com/r/{name}.json` as fallback).
 - Do not invent block names outside the registry.
 
 ## Do Not Confuse Import Names
@@ -26,7 +26,9 @@ Most important mistakes to avoid when answering jk-ui questions.
 
 ## Do Not Ignore Theme Guidance
 
-- Do not hardcode hex colors when semantic tokens exist (`bg-primary`, `text-fg`).
+- Do not hardcode hex colors when semantic tokens exist (`bg-primary`, `text-foreground`).
+- Do not reintroduce `--color-bg` or `--color-fg`; use `--color-background` and `--color-foreground`.
+- Do not require 50–950 scales for every semantic color. Keep the gray scale and add only product-specific shades that are actually used.
 - Do not suggest `tailwind.config.js` modifications — jk-ui uses Tailwind v4 CSS-first config.
 - Do not treat jk-ui as plain Tailwind snippets — the variant/intent system and CSS utilities are part of the library.
 

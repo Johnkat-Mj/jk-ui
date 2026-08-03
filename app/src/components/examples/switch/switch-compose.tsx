@@ -6,13 +6,13 @@ import { Switch, SwitchIndicator, SwitchLabel } from '@/components/jk/switch'
 export const SwitchCompose = () => {
   return (
     <Switch composeAll className="ui-card rounded-ui [--card-padding:--spacing(2.5)] [--card-radius:--radius-ui] bg-bg-surface flex items-center gap-3">
-      <div className="inner-radius bg-bg shadow-sm size-10 text-xl d-flex-place-center">
+      <div className="inner-radius bg-background shadow-sm size-10 text-xl d-flex-place-center">
         <span aria-hidden="true" className="flex iconify ph--globe" />
       </div>
       <div className="flex items-center gap-4 flex-1">
         <div className="flex flex-col flex-1">
           <SwitchLabel className="font-semibold text-fg-title">Public access</SwitchLabel>
-          <Description className="text-fg-muted text-xs sm:text-sm line-clamp-1">
+          <Description className="text-muted-foreground text-xs sm:text-sm line-clamp-1">
             Publish and share link with anyone
           </Description>
         </div>

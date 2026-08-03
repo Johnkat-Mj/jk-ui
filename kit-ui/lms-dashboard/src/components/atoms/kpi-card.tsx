@@ -15,15 +15,15 @@ export const KpiCard = ({
 }) => {
 	return (
 		<Card>
-			<span className="text-fg-muted text-sm">{title}</span>
+			<span className="text-muted-foreground text-sm">{title}</span>
 			<div className="flex items-center space-x-1.5 mt-2">
-				<span className="text-fg-title text-lg md:text-2xl font-semibold">
+				<span className="text-foreground text-2xl font-semibold tracking-tight">
 					{stat}
 				</span>
 				<span
-					className={cx("text-sm flex items-center gap-px", {
-						"text-success": type === "increase",
-						"text-danger": type === "decrease",
+					className={cx("text-xs font-medium flex items-center gap-px rounded-full px-1.5 py-0.5", {
+						"bg-emerald-500/10 text-emerald-600": type === "increase",
+						"bg-destructive/10 text-destructive": type === "decrease",
 					})}
 				>
 					<svg

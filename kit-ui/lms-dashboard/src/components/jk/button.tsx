@@ -1,10 +1,23 @@
 "use client"
 
-import { tv } from "tailwind-variants"
 import {
   Button as RACButton,
   type ButtonProps as RACButtonProps,
-} from "react-aria-components"
+} from "react-aria-components/Button"
+import { tv } from "tailwind-variants"
+
+type ButtonVariantIntentMap = {
+  solid: "primary" | "secondary" | "accent" | "neutral" | "destructive"
+  soft: "primary" | "destructive" | "warning" | "gray"
+  ghost: "gray"
+  outline: "gray"
+  none: "none"
+}
+
+export type ButtonVariant = keyof ButtonVariantIntentMap
+export type ButtonIntent<V extends ButtonVariant> = ButtonVariantIntentMap[V]
+export type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl" | "none"
+export type ButtonRadius = "none" | "default" | "circle"
 
 const buttonVariants = tv({
   base: "btn",
@@ -14,39 +27,16 @@ const buttonVariants = tv({
       outline: "btn-outline",
       soft: "btn-soft",
       ghost: "btn-ghost",
-      "white/black-outline": "btn-white-black-base btn-white-black",
-      none: ""
+      none: "",
     },
-
     intent: {
-      // solid intents
-      "solid-primary": "btn-solid-primary text-white",
-      "solid-secondary": "btn-solid-secondary text-white",
-      "solid-success": "btn-solid-success text-white",
-      "solid-danger": "btn-solid-danger text-white",
-      "solid-neutral": "btn-solid-neutral text-bg",
-      // outline intents
-      "outline-gray": "btn-outline-gray",
-      "outline-primary": "btn-outline-primary",
-      "outline-secondary": "btn-outline-secondary",
-      "outline-success": "btn-outline-success",
-      "outline-danger": "btn-outline-danger",
-      "outline-neutral": "btn-outline-neutral",
-      // soft intents
-      "soft-gray": "btn-soft-gray",
-      "soft-primary": "btn-soft-primary",
-      "soft-secondary": "btn-soft-secondary",
-      "soft-success": "btn-soft-success",
-      "soft-danger": "btn-soft-danger",
-      "soft-neutral": "btn-soft-neutral",
-      // ghost intents
-      "ghost-gray": "btn-ghost-gray",
-      "ghost-primary": "btn-ghost-primary",
-      "ghost-secondary": "btn-ghost-secondary",
-      "ghost-danger": "btn-ghost-danger",
-      "ghost-neutral": "btn-ghost-neutral",
-      // default/none
-      default: "",
+      primary: "",
+      secondary: "",
+      accent: "",
+      neutral: "",
+      destructive: "",
+      warning: "",
+      gray: "",
       none: "",
     },
     size: {
@@ -55,20 +45,30 @@ const buttonVariants = tv({
       md: "btn-md",
       lg: "btn-lg",
       xl: "btn-xl",
-      none: ''
+      none: "",
     },
     iconOnly: {
       true: "",
-      false: ""
+      false: "",
     },
-    radius:{
-      none:"",
-      default:"rounded-ui",
-      circle:"rounded-full"
-    }
+    radius: {
+      none: "",
+      default: "rounded-ui",
+      circle: "rounded-full",
+    },
   },
   compoundVariants: [
-    // Icon-only size variants
+    { variant: "solid", intent: "primary", class: "btn-solid-primary" },
+    { variant: "solid", intent: "secondary", class: "btn-solid-secondary" },
+    { variant: "solid", intent: "accent", class: "btn-solid-accent" },
+    { variant: "solid", intent: "neutral", class: "btn-solid-neutral" },
+    { variant: "solid", intent: "destructive", class: "btn-solid-destructive" },
+    { variant: "soft", intent: "primary", class: "btn-soft-primary" },
+    { variant: "soft", intent: "destructive", class: "btn-soft-destructive" },
+    { variant: "soft", intent: "warning", class: "btn-soft-warning" },
+    { variant: "soft", intent: "gray", class: "btn-soft-gray" },
+    { variant: "ghost", intent: "gray", class: "btn-ghost-gray" },
+    { variant: "outline", intent: "gray", class: "btn-outline-gray" },
     { iconOnly: true, size: "xs", class: "btn-icon-xs" },
     { iconOnly: true, size: "sm", class: "btn-icon-sm" },
     { iconOnly: true, size: "md", class: "btn-icon-md" },
@@ -77,110 +77,94 @@ const buttonVariants = tv({
   ],
   defaultVariants: {
     variant: "solid",
-    intent: "solid-primary",
+    intent: "primary",
     size: "md",
-    iconOnly:true,
+    iconOnly: false,
     radius: "default",
-  }
+  },
 })
 
-type VariantIntentMap = {
-  solid: "solid-primary" | "solid-secondary" | "solid-success" | "solid-danger" | "solid-neutral" | "none"
-  outline: "outline-gray" | "outline-primary" | "outline-secondary" | "outline-success" | "outline-danger" | "outline-neutral" | "none"
-  soft: "soft-gray" | "soft-primary" | "soft-secondary" | "soft-success" | "soft-danger" | "soft-neutral" | "none"
-  ghost: "ghost-gray" | "ghost-primary" | "ghost-secondary" | "ghost-danger" | "ghost-neutral" | "none"
-  "white/black-outline": "default" | "none",
-  none: "none"
+const defaultIntents: {
+  [V in ButtonVariant]: ButtonIntent<V>
+} = {
+  solid: "primary",
+  soft: "gray",
+  ghost: "gray",
+  outline: "gray",
+  none: "none",
 }
 
-type Variant = keyof VariantIntentMap
-type Intent<V extends Variant> = VariantIntentMap[V]
-
-type Size = "xs" | "sm" | "md" | "lg" | "xl" | "none"
-type Radius = "none" | "default"|"circle"
-
-interface CommonProps extends RACButtonProps {
-  size?: Size
+export interface ButtonProps<V extends ButtonVariant = "solid">
+  extends Omit<RACButtonProps, "className"> {
+  variant?: V
+  intent?: ButtonIntent<V>
+  size?: ButtonSize
+  /** @deprecated Use radius="circle" instead. */
   circle?: boolean
   iconOnly?: boolean
-  className?: string,
-  radius?: Radius
+  radius?: ButtonRadius
+  className?: string
   ref?: React.Ref<HTMLButtonElement>
 }
 
-export type ButtonProps<V extends Variant = "solid"> = CommonProps & {
-  variant?: V
-  intent?: Intent<V>
-}
-
-const defaultIntents: { [K in Variant]: Intent<K> | undefined } = {
-  solid: "solid-primary",
-  outline: "outline-gray",
-  soft: "soft-gray",
-  ghost: "ghost-gray",
-  "white/black-outline": "default",
-  none: 'none'
-}
-
-
-export const buttonStyles = <V extends Variant = "solid">({
+export const buttonStyles = <V extends ButtonVariant = "solid">({
   className,
   variant = "solid" as V,
   intent,
   size = "md",
+  circle = false,
   iconOnly = false,
-  radius
+  radius = "default",
 }: {
-  className?: string,
-  variant?: V,
-  intent?: Intent<V>,
-  size?: Size,
-  iconOnly?: boolean,
-  radius?: Radius
+  className?: string
+  variant?: V
+  intent?: ButtonIntent<V>
+  size?: ButtonSize
+  circle?: boolean
+  iconOnly?: boolean
+  radius?: ButtonRadius
 }) => {
-  const resolvedIntent =
-    intent ?? (defaultIntents[variant] as Intent<V> | undefined)
+  const resolvedIntent = intent ?? defaultIntents[variant]
 
   const classes = buttonVariants({
     variant,
     intent: resolvedIntent,
     size,
     iconOnly,
+    radius: circle ? "circle" : radius,
     className,
-    radius
   })
 
-  // Remove btn-{size} classes when iconOnly is true, keeping only btn-icon-{size}
-  const finalClasses = iconOnly
-    ? classes.replace(/\bbtn-(xs|sm|md|lg|xl)\b/g, '').replace(/\s+/g, ' ').trim()
+  return iconOnly
+    ? classes
+        .replace(/\bbtn-(xs|sm|md|lg|xl)\b/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
     : classes
-
-  return finalClasses
 }
 
-export const Button = <V extends Variant = "solid">({
+export const Button = <V extends ButtonVariant = "solid">({
   className,
   variant = "solid" as V,
   intent,
   size = "md",
+  circle = false,
   iconOnly = false,
-  radius,
+  radius = "default",
   ref,
   ...props
-}: ButtonProps<V>) => {
-
-  return (
-    <RACButton
-      ref={ref}
-      {...props}
-      className={buttonStyles({
-        radius,
-        variant,
-        intent,
-        size,
-        iconOnly,
-        className,
-      })}
-    />
-  )
-}
+}: ButtonProps<V>) => (
+  <RACButton
+    ref={ref}
+    {...props}
+    className={buttonStyles({
+      className,
+      variant,
+      intent,
+      size,
+      circle,
+      iconOnly,
+      radius,
+    })}
+  />
+)

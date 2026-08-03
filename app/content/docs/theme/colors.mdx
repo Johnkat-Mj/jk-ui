@@ -1,86 +1,59 @@
 ---
 title: Colors
-description: "JK-UI color system: shadcn-standard tokens, theme modes, and CSS variables."
+description: JK-UI semantic color tokens and palette policy
 ---
 
-JK-UI uses **shadcn-standard CSS variable names** consumed through Tailwind v4 `@theme` utilities. All color values are semantic tokens, never hardcoded.
+Color values live directly in the main CSS file declared in `components.json`. Installing `@jk-ui/base` writes the default `:root`, `.dark`, and `@theme inline` variables there through the shadcn registry.
 
-## Prerequisites
+## Core tokens
 
-Make sure `jk-ui-cli setup` has run and generated your `jk-ui-theme.css`. This file defines the CSS variables and `@theme inline` mappings for your chosen theme.
+| Token | Purpose |
+|---|---|
+| `background`, `foreground` | Page background and body text |
+| `card`, `card-foreground` | Card surfaces |
+| `popover`, `popover-foreground` | Floating surfaces |
+| `primary`, `primary-foreground` | Primary actions and emphasis |
+| `secondary`, `secondary-foreground` | Secondary brand actions |
+| `accent`, `accent-foreground` | Accent emphasis |
+| `muted`, `muted-foreground` | Quiet surfaces and supporting text |
+| `destructive`, `destructive-foreground` | Destructive actions and errors |
+| `success`, `warning`, `info` | Status communication |
+| `border`, `input`, `ring` | Borders, controls, and focus |
 
-## Token Reference
+## Direct values
 
-### shadcn-Standard Tokens
+Semantic colors use direct values rather than mandatory shade palettes:
 
-| Variable | Light (`:root`) | Dark (`.dark`) | Tailwind Class |
-|----------|----------------|----------------|----------------|
-| `--background` | `--color-white` | `--color-gray-950` | `bg-background` |
-| `--foreground` | `--color-gray-700` | `--color-gray-300` | `text-foreground` |
-| `--card` | `--color-white` | `--color-gray-950` | `bg-card` |
-| `--card-foreground` | `--color-gray-900` | `--color-white` | `text-card-foreground` |
-| `--popover` | `--color-white` | `--color-gray-950` | `bg-popover` |
-| `--popover-foreground` | `--color-gray-700` | `--color-gray-300` | `text-popover-foreground` |
-| `--primary` | `--color-primary-600` | `--color-primary-500` | `bg-primary` |
-| `--primary-foreground` | `--color-white` | `--color-white` | `text-primary-foreground` |
-| `--secondary` | `--color-secondary-600` | `--color-secondary-500` | `bg-secondary` |
-| `--secondary-foreground` | `--color-white` | `--color-white` | `text-secondary-foreground` |
-| `--muted` | `--color-gray-100` | `--color-gray-900` | `bg-muted` |
-| `--muted-foreground` | `--color-gray-600` | `--color-gray-400` | `text-muted-foreground` |
-| `--accent` | `--color-accent-600` | `--color-accent-500` | `bg-accent` |
-| `--accent-foreground` | `--color-white` | `--color-white` | `text-accent-foreground` |
-| `--destructive` | `--color-danger-600` | `--color-danger-500` | `bg-destructive` |
-| `--destructive-foreground` | `--color-white` | `--color-white` | `text-destructive-foreground` |
-| `--border` | `--color-gray-200` | `--color-gray-800` | `border-border` |
-| `--input` | `--color-gray-200` | `--color-gray-700` | `border-input` |
-| `--ring` | `--color-primary-600` | `--color-primary-500` | `ring-ring` |
+```css
+:root {
+  --primary: oklch(0.52 0.14 215);
+  --primary-foreground: oklch(1 0 0);
+  --success: oklch(0.52 0.14 160);
+  --warning: oklch(0.68 0.16 65);
+  --destructive: oklch(0.58 0.22 27);
+}
+```
 
-### Extended jk-ui Tokens
+JK-UI does not require `primary-50` through `primary-950` when components only consume `primary`. Add a shade only when application code needs that shade.
 
-| Variable | Light | Dark | Tailwind Class |
-|----------|-------|------|----------------|
-| `--fg-title` | `--color-gray-900` | `--color-white` | `text-fg-title` |
-| `--fg` | `--foreground` | `--foreground` | `text-fg` |
-| `--fg-muted` | `--muted-foreground` | `--muted-foreground` | `text-fg-muted` |
-| `--bg` | `--background` | `--background` | `bg-bg` |
-| `--bg-subtle` | `--muted` | `--muted` | `bg-bg-subtle` |
-| `--bg-surface` | `--color-gray-50` | `--alpha(var(--color-gray-900)/70%)` | `bg-bg-surface` |
-| `--bg-muted` | `--color-gray-200` | `--color-gray-800` | `bg-bg-muted` |
-| `--border-strong` | `--color-gray-300` | `--color-gray-700` | `border-border-strong` |
-| `--border-card` | `--border` | `--border` | `border-border-card` |
-| `--danger` | `--destructive` | `--destructive` | `text-danger` / `bg-danger` |
+Gray is the exception: a full neutral scale is useful across text, surfaces, borders, charts, and skeleton states.
 
-## Theme Modes
+## Tailwind mappings
 
-JK-UI supports choosing your color scheme during setup:
-
-| Mode | Description |
-|------|-------------|
-| `both` | Full light and dark variable sets. Recommended. |
-| `light` | Light mode only. |
-| `dark` | Dark mode only. |
-
-The `jk-ui-cli setup` command prompts you to choose and generates the appropriate CSS.
-
-## @theme Registration
-
-Tokens are registered in `@theme inline` so Tailwind generates the utility classes:
+The registry adds mappings such as these to `@theme inline` in the same CSS file:
 
 ```css
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --radius: var(--radius);
-  /* extended tokens */
-  --color-fg-title: var(--fg-title);
-  --color-bg-subtle: var(--bg-subtle);
 }
 ```
 
-Once registered, use `bg-background`, `text-foreground`, `border-input`, `ring-ring`, etc. throughout the UI.
+This exposes `bg-background`, `text-foreground`, `bg-primary`, `text-destructive`, `border-input`, and `ring-ring`.
+
+Do not add redundant `--color-bg`, `--color-fg`, or `--color-danger` aliases.

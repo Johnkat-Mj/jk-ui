@@ -18,12 +18,12 @@ export const SiteNavbar = () => {
             </span>
             <header className="px-1.5 max-[350px]:px-2.5 sm:px-4 pt-2 w-full z-45 relative">
                 <nav
-                    className="sm:max-w-4xl bg-bg shadow-sm border border-border/60 dark:border-border-strong shadow-gray-50 dark:shadow-transparent sm:mx-auto w-full flex justify-between ui-card [--card-padding:--spacing(4)] [--card-radius:var(--radius-ui)]">
+                    className="sm:max-w-4xl bg-background shadow-sm border border-border/60 dark:border-border-strong shadow-gray-50 dark:shadow-transparent sm:mx-auto w-full flex justify-between ui-card [--card-padding:--spacing(4)] [--card-radius:var(--radius-ui)]">
                     <div className="flex items-center gap-2 pr-3">
                         <div className="flex lg:hidden pr-2 border-r border-border-strong/70">
 
                         </div>
-                        <Link href="/" className="hidden min-[20rem]:flex gap-2 items-center relative">
+                        <Link to="/" className="hidden min-[20rem]:flex gap-2 items-center relative">
                             <SiteLogo />
                         </Link>
                     </div>
@@ -35,13 +35,13 @@ export const SiteNavbar = () => {
                             {/* <button data-modal-trigger data-modal-target="page-find-modal"
                                 className="btn px-2 h-8 border border-border shadow-sm shadow-bg-muted/20 bg-bg-subtle/60 hover:bg-bg-muted/60 w-full rounded-lg flex justify-between items-center"
                             >
-                                <span className="mr-2 iconify ph--magnifying-glass text-xs text-fg-muted"
+                                <span className="mr-2 iconify ph--magnifying-glass text-xs text-muted-foreground"
                                 ></span>
                                 <span
-                                    className="min-[32rem]:flex-1 min-[32rem]:flex hidden text-fg-muted text-xs"
+                                    className="min-[32rem]:flex-1 min-[32rem]:flex hidden text-muted-foreground text-xs"
                                 >Search...</span
                                 >
-                                <span className="flex items-center text-xs text-fg-muted ml-1">
+                                <span className="flex items-center text-xs text-muted-foreground ml-1">
                                     <span aria-hidden="true" className="iconify ph--command"></span>
                                     K
                                 </span>
@@ -50,13 +50,13 @@ export const SiteNavbar = () => {
                         </div>
                         <UiLink
                             href="https://github.com/johnkat-mj/jk-ui"
-                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-fg hover:text-fg-title"
+                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-foreground hover:text-fg-title"
                         >
                             <span className="iconify ph--github-logo"></span>
                         </UiLink>
                         <UiLink
                             href="https://x.com/johnkat_Mj"
-                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-fg hover:text-fg-title"
+                            className="hidden min-[22rem]:d-flex-place-center size-8 hover:bg-bg-muted rounded-lg text-foreground hover:text-fg-title"
                         >
                             <span className="iconify ph--x-logo"></span>
                         </UiLink>

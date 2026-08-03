@@ -8,7 +8,22 @@ license: MIT
 
 jk-ui is a React 19 component library built on **react-aria-components** and distributed via **shadcn registry**. Think of it like shadcn/ui but with a full semantic theming system, Phosphor icons, and prebuilt blocks — all installable via CLI into your own codebase.
 
-**Docs site:** `https://jk-ui.unoforge.com`
+**Docs site:** `https://jk-ui.unoforge.com`  
+**GitHub:** `https://github.com/Johnkat-Mj/jk-ui`
+
+## Quick Navigation
+
+- [Goal](#goal) — What this skill does
+- [How jk-ui Works](#how-jk-ui-works) — The three-layer architecture
+- [Source of Truth](#source-of-truth) — Files to reference
+- [Tech Stack](#tech-stack) — Dependencies and versions
+- [Setup Flow](#setup-flow) — Quick vs Manual setup (pick one)
+- [Component Categories](#component-categories) — Find what you need
+- [Install Commands](#install-commands) — How to add components
+- [Theming](#theming) — Colors, tokens, presets
+- [Key Composition Patterns](#key-composition-patterns) — Common examples
+- [Working Rules](#working-rules) — Never break these
+- [Important Name Mappings](#important-name-mappings) — Registry vs Import
 
 ## Goal
 
@@ -22,21 +37,29 @@ jk-ui has three layers:
 
 2. **Blocks** — Pre-built page sections (login forms, sidebars, KPI cards, hero sections, etc.) composed from primitives. Listed in the registry as `type: "registry:block"`.
 
-3. **Theme** — CSS variable tokens (`--primary`, `--bg`, `--fg`, `--border`, etc.) consumed through Tailwind v4 `@theme` utilities (`bg-primary`, `text-fg`, `border-border-input`). Supported by 5 built-in theme presets (default, air, earth, fire, water).
+3. **Theme** — shadcn-style semantic values and Tailwind mappings in the application's main CSS, with variant/intent utilities in `styles/jk-ui/`.
 
 ## Source of Truth
 
-Use the files in this skill first. The public docs site is at `https://jk-ui.unoforge.com`.
+**Use the files in this skill first** — they are the single source of truth for accurate jk-ui information. The public docs site (`https://jk-ui.unoforge.com`) is secondary and may lag behind.
 
-- [references/components.md](./references/components.md) — Full component index with install commands
-- [references/theming.md](./references/theming.md) — CSS variable tokens, theme setup, semantic colors
-- [references/colors.md](./references/colors.md) — Light/dark CSS variable token reference
-- [references/best-practices.md](./references/best-practices.md) — Verified usage patterns
-- [references/things-to-avoid.md](./references/things-to-avoid.md) — Common mistakes and invented APIs
-- [references/accessibility.md](./references/accessibility.md) — RAC-based accessibility patterns
-- [references/performance.md](./references/performance.md) — Performance guidance
-- [references/composition-patterns.md](./references/composition-patterns.md) — Common React composition patterns
-- [references/style-variants.md](./references/style-variants.md) — Shared variant/intent system (uiStyles)
+### References (Read these for accuracy)
+- **[references/components.md](./references/components.md)** — Full component index, install commands, exports
+- **[references/theming.md](./references/theming.md)** — CSS variable tokens, theme setup, semantic colors
+- **[references/colors.md](./references/colors.md)** — Light/dark mode CSS variable reference
+- **[references/style-variants.md](./references/style-variants.md)** — Shared variant/intent system (uiStyles)
+
+### Best Practices (Read these before answering)
+- **[references/best-practices.md](./references/best-practices.md)** — Verified usage patterns (DO this)
+- **[references/things-to-avoid.md](./references/things-to-avoid.md)** — Common mistakes and invented APIs (DON'T do this)
+- **[references/composition-patterns.md](./references/composition-patterns.md)** — Common React composition patterns
+- **[references/accessibility.md](./references/accessibility.md)** — RAC-based accessibility patterns (WCAG compliance)
+- **[references/performance.md](./references/performance.md)** — Performance guidance
+
+### When Uncertain
+1. Check [references/components.md](./references/components.md) first
+2. Then check [references/things-to-avoid.md](./references/things-to-avoid.md) for what NOT to do
+3. If still uncertain, say "I need to check the component file" rather than inventing
 
 ## Tech Stack
 
@@ -53,89 +76,176 @@ Use the files in this skill first. The public docs site is at `https://jk-ui.uno
 
 ## Working Rules
 
-1. Never invent jk-ui components that are not in the registry (`registries/components.json`).
-2. Never invent props, install commands, or block names.
-3. Components import from `@/components/jk/{name}` in docs site, but the actual install target is `components/jk/{name}.tsx`.
-4. Prefer documented composition patterns over custom abstractions.
-5. When a component, prop, or block is not in the skill files or the live docs, do not invent it.
-6. Do not invent unused imports. jk-ui uses `tailwind-variants` (not `cva`), `clsx`+`tailwind-merge` (exported as `cx` from `@/lib/utils`).
-7. The `cx()` utility from `@/lib/utils` is the standard class merge function.
-8. Components with `"use client"` directive need to be client components.
+### ✅ DO
+1. **Reference the skill files first** — components.md, best-practices.md, things-to-avoid.md
+2. **Use exact install commands** from [references/components.md](./references/components.md)
+3. **Follow documented composition patterns** — don't invent new abstractions
+4. **Check variant/intent system** — use only the variants listed in [references/style-variants.md](./references/style-variants.md)
+5. **Use `cx()` from `@/lib/utils`** — this is the standard class merge utility
+6. **Mark client components** with `"use client"` when needed
+
+### ❌ DON'T
+1. **Never invent components** — if it's not in [references/components.md](./references/components.md), it doesn't exist
+2. **Never invent props** — only use documented props for each component
+3. **Never invent install commands** — use exact names: `npx shadcn add @jk-ui/{name}`
+4. **Never invent block names** — blocks are listed in [SKILL.md](#blocks-pre-built-sections)
+5. **Never use `cva()`** — jk-ui uses `tailwind-variants` instead
+6. **Never use `clsx()`** — use `cx()` from `@/lib/utils`
+7. **Never invent variants** — only use variants documented in [references/style-variants.md](./references/style-variants.md)
+
+### Common Pitfalls
+| Wrong | Right | Fix |
+|-------|-------|-----|
+| `variant="primary"` | `variant="solid" intent="primary"` | Variants are style types, intents are colors |
+| `npx shadcn add button` | `npx shadcn add @jk-ui/button` | Must include `@jk-ui/` namespace |
+| Import from `jk-ui` | Import from `@/components/jk/button` | Always use local path after install |
+| `clsx()` for classes | `cx()` from `@/lib/utils` | jk-ui provides cx() |
 
 ## Setup Flow
 
-Setting up jk-ui requires two steps:
+jk-ui setup is straightforward — just 5 manual steps. No CLI overhead.
 
-1. **jk-ui CLI** — Initializes the base configuration, theme tokens, appearance mode (light, dark, or both), and registers the `@jk-ui` namespace.
+### 5 Simple Steps
 
-   ```bash
-   npx jk-ui-cli@latest init
-   ```
+**Step 1: Initialize shadcn with React Aria base**
+```bash
+bunx --bun shadcn@latest init --base aria
+```
 
-2. **shadcn CLI** — Installs individual components using the `@jk-ui` namespace (no full URL needed).
+**Step 2: Register the `@jk-ui` namespace**
+```bash
+bunx shadcn@latest registry add @jk-ui=https://jk-ui.unoforge.com/r/{name}.json
+```
 
-   ```bash
-   npx shadcn add @jk-ui/base
-   npx shadcn add @jk-ui/button
-   ```
+**Step 3: Install the base**
+```bash
+bunx shadcn add @jk-ui/base
+```
 
-The jk-ui CLI must run first — without it, the `@jk-ui` namespace is not configured and component installs will fail.
+**Step 4: Install an icon library** (choose one)
+```bash
+# Phosphor (default)
+bun add -D @iconify-json/ph
+
+# Or: Heroicons, Lucide, HugeIcons, Solar
+bun add -D @iconify-json/heroicons  # or lucide, hugeicons, solar
+```
+
+Update `iconLibrary` in `components.json`:
+```json
+{ "iconLibrary": "ph" }  // or "heroicons", "lucide", etc.
+```
+
+**Step 5: Update your main CSS file** (e.g., `src/styles/globals.css` or `globals.css`)
+```css
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@reference "./jk-ui/base.css";
+@reference "./jk-ui/form.css";
+@reference "./jk-ui/button.css";
+@reference "./jk-ui/ui.css";
+@reference "./jk-ui/intents.css";
+@reference "./jk-ui/utils.css";
+
+@plugin "@iconify/tailwind4" {
+  prefixes: ph;
+  scale: 1.0;
+}
+```
+
+**Done.** Now install components:
+```bash
+bunx shadcn add @jk-ui/button
+bunx shadcn add @jk-ui/card
+bunx shadcn add @jk-ui/input
+```
+
 
 ## Install Commands
 
-Once the CLI has been run and the `@jk-ui` namespace is configured, all components install via the shadcn CLI:
+Once the `@jk-ui` namespace is configured in `components.json`, all components install via the shadcn CLI:
 
 ```bash
-# Using the namespace (CLI must have been run first)
+# Using the namespace
 npx shadcn add @jk-ui/{name}
 ```
 
-If the CLI has not been run, use the full registry URL instead:
+If the namespace is not configured, use the full registry URL instead:
 
 ```bash
 npx shadcn add https://jk-ui.unoforge.com/r/{name}.json
 ```
 
-Install base styles first:
+Or use the GitHub namespace (no config needed):
+
 ```bash
-npx shadcn add @jk-ui/base
+npx shadcn add johnkat-mj/jk-ui/{name}
 ```
+
+Each component brings its own CSS variables — no manual CSS setup needed.
 
 ## Answering Pattern
 
-1. **Identify the need**: Component, block, theming, or install question?
-2. **Read the source**: Open the relevant file from `components/*.md` or `references/*.md`.
-3. **Give the smallest working example**:
-   - Install command: `npx shadcn add @jk-ui/{name}` (if CLI has been run) or `npx shadcn add https://jk-ui.unoforge.com/r/{name}.json`
-   - Import + minimal React usage
-   - Note required providers (e.g., `react-aria-components` Provider for dialogs)
-4. **Call out important props** — variant, intent, size, and any required attributes.
-5. **Add one short "avoid" note** when there is a common jk-ui mistake.
+### 4-Step Framework
 
-### Example Answer (good)
+1. **Identify** — Component, block, theming, install, or patterns question?
+2. **Source** — Read the relevant reference file (components.md, best-practices.md, things-to-avoid.md)
+3. **Provide** — Install command + minimal working example + key props
+4. **Protect** — Add one "avoid" note if there's a common mistake
 
-> To add a button:
+### Template
+
+```
+**To add a [component]:**
+
+# Install
+npx shadcn add @jk-ui/{name}
+
+# Usage
+\`\`\`tsx
+import { Component } from "@/components/jk/{name}"
+
+export function Example() {
+  return <Component prop="value" />
+}
+\`\`\`
+
+**Key props:** `prop1` (values), `prop2` (values)  
+**Avoid:** [one common mistake]
+```
+
+### Example ✅ (Good)
+
+> **To add a button:**
+>
+> Install:
 > ```bash
 > npx shadcn add @jk-ui/button
 > ```
+>
+> Usage:
 > ```tsx
 > import { Button } from "@/components/jk/button"
 >
-> export function MyComponent() {
->   return (
->     <Button variant="solid" intent="solid-primary" size="md">
->       Click me
->     </Button>
->   )
-> }
+> <Button variant="solid" intent="primary" size="md">
+>   Click me
+> </Button>
 > ```
-> Key props: `variant` (solid|outline|soft|ghost|white/black-outline|none), `intent` (variant-specific, e.g. `solid-primary`), `size` (xs|sm|md|lg|xl), `radius` (none|default|circle).
-> Avoid: Do not invent variant names outside the documented set. Intent names are prefixed with the variant name (e.g., `solid-primary`, `outline-danger`).
+>
+> **Key props:**
+> - `variant` — solid|outline|soft|ghost|white-outline|black-outline|none
+> - `intent` — varies by variant (primary/gray/success/warning/destructive)
+> - `size` — xs|sm|md|lg|xl
+> - `radius` — none|default|circle
+>
+> **Avoid:** Don't use `variant="primary"` — primary is an intent, not a variant.
 
-### Example Answer (bad)
+### Example ❌ (Bad)
 
 > Use `<Button variant="primary" />`.
-> ❌ "primary" is not a variant. Variants are solid|outline|soft|ghost. Intents are prefixed, e.g. `solid-primary`.
+>
+> ❌ Wrong — "primary" is not a variant. Variants are solid|outline|soft|ghost...
 
 ## Component Categories
 
@@ -277,18 +387,38 @@ Blocks are full page sections composed from primitives. They install as `type: "
 | `info` | Informational messages |
 | `success` | Positive states |
 | `warning` | Caution states |
-| `danger` | Destructive actions |
+| `destructive` | Destructive actions |
 | `gray` | Neutrals and backgrounds |
 
 ### Token Families
 
-- Background: `--bg`, `--bg-subtle`, `--bg-surface`, `--bg-muted`, `--card`, `--card-gray`
-- Foreground: `--fg-title`, `--fg`, `--fg-muted`
-- Border: `--border-strong`, `--border`, `--border-subtle`, `--border-card`, `--border-input`
+**shadcn Standard CSS Variables:**
+- `--background`, `--foreground` — page bg / body text
+- `--card`, `--card-foreground` — card bg / title text
+- `--popover`, `--popover-foreground` — popover bg / text
+- `--primary`, `--primary-foreground` — brand / text on primary
+- `--secondary`, `--secondary-foreground` — secondary brand / text
+- `--muted`, `--muted-foreground` — subtle bg / secondary text
+- `--accent`, `--accent-foreground` — accent / text on accent
+- `--destructive`, `--destructive-foreground` — danger / text on danger
+- `--border`, `--input`, `--ring` — borders, inputs, focus rings
+- `--radius`, `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-xl` — border radius
+- `--ui-radius` → `rounded-ui` — generic component radius (default `--radius-lg`)
+- `--card-radius` → `rounded-card` — card radius (default `--radius-lg`)
+- `--checkbox-radius` → `rounded-checkbox` — checkbox indicator radius (default `--radius-sm`)
+- `--sidebar-*` — sidebar specific tokens
+- `--chart-1..5` — chart color tokens
+
+**jk-ui Extended Tokens (for internal component utilities):**
+- Background: `--bg-subtle`, `--bg-surface`, `--bg-muted`
+- Foreground: `--fg-title`, `--fg-subtitle`
+- Border: `--border-strong`, `--border-card`
+- Semantic states: `--destructive`, `--info`, `--warning`, `--success`
+- Internal: `--focus-ring`, etc.
 
 ### Theme Presets
 
-Multiple theme presets are available and selected during `npx jk-ui-cli@latest init`. The CLI prompts you to choose a theme preset (default, air, earth, fire, water, and more) and generates the corresponding CSS variables automatically.
+17 built-in theme presets are available. Install via `npx shadcn add @jk-ui/theme-{name}`.
 
 ## Key Composition Patterns
 
@@ -326,8 +456,8 @@ import { Button } from "@/components/jk/button"
   </CardHeader>
   <CardBody>Content</CardBody>
   <CardFooter className="flex justify-end gap-2">
-    <Button variant="outline" size="sm">Cancel</Button>
-    <Button size="sm">Save</Button>
+    <Button variant="outline" intent="gray" size="sm">Cancel</Button>
+    <Button intent="primary" size="sm">Save</Button>
   </CardFooter>
 </Card>
 ```
@@ -339,7 +469,7 @@ import { Button } from "@/components/jk/button"
 import { Input } from "@/components/jk/input"
 
 <Modal>
-  <Button variant="outline">Open Modal</Button>
+  <Button variant="outline" intent="gray">Open Modal</Button>
   <ModalContent>
     {({ close }) => (
       <>
@@ -392,23 +522,51 @@ import { Table, TableColumns, TableColumn, TableBody as TableRows, TableRow, Tab
 | `progress-bar-circle` | `@/components/jk/progress-bar-circle` |
 | `native-table` | `@/components/jk/native-table` |
 
-## Loading Files
+## Loading Strategy
 
-Do not load everything at once. Read only the files relevant to the current task. Use the component map in `references/components.md` to find the right file.
+### Don't Load Everything
+Load only files relevant to the task. This keeps context small and prevents outdated information.
+
+### What to Load When
+
+**For component questions:**
+1. Load `references/components.md` first
+2. Then load `references/style-variants.md` for variant/intent details
+3. Load component-specific file from `components/` if needed
+
+**For theming questions:**
+1. Load `references/theming.md` for structure
+2. Load `references/colors.md` for token values
+
+**For "how do I use X?" questions:**
+1. Load `references/best-practices.md` first
+2. Load `references/composition-patterns.md` for examples
+
+**For "is this valid?" questions:**
+1. Load `references/things-to-avoid.md` first
+2. Then load component file to verify correct usage
 
 ## Quick Start
 
 ```bash
-# Step 1: Initialize jk-ui (required — configures @jk-ui namespace)
-npx jk-ui-cli@latest init
+# Initialize
+bunx --bun shadcn@latest init --base aria
+bunx shadcn@latest registry add @jk-ui=https://jk-ui.unoforge.com/r/{name}.json
+bunx shadcn add @jk-ui/base
+bun add -D @iconify-json/ph
 
-# Step 2: Install base styles
-npx shadcn add @jk-ui/base
+# Update src/styles/globals.css (see Setup Flow step 5 above)
 
-# Step 3: Install components
-npx shadcn add @jk-ui/button
-npx shadcn add @jk-ui/card
-npx shadcn add @jk-ui/input
+# Install components
+bunx shadcn add @jk-ui/button
+bunx shadcn add @jk-ui/card
+bunx shadcn add @jk-ui/input
 ```
 
-Docs: `https://jk-ui.unoforge.com`
+## Resources
+
+- **Docs Site:** https://jk-ui.unoforge.com
+- **GitHub:** https://github.com/Johnkat-Mj/jk-ui
+- **CLI Help:** `npx jk-ui@latest --help`
+- **Install:** `npx jk-ui@latest init`
+- **Add Components:** `npx shadcn add @jk-ui/{name}`

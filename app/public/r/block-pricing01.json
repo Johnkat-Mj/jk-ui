@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-pricing01",
+  "type": "registry:block",
+  "title": "Pricing 01",
+  "description": "Feature grid section with icons and descriptions",
+  "files": [
+    {
+      "path": "src/blocks/marketing/pricing/pricing01.tsx",
+      "type": "registry:block",
+      "target": "components/pricing01.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

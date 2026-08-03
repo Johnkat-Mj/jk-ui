@@ -6,9 +6,9 @@ export const DashSidebar = () => {
 	return (
 		<>
 			<SidebarOverlayElement className="md:hidden fx-open:visible fx-open:opacity-100 opacity-0 invisible" />
-			<SidebarBase className="w-64 h-screen fixed border-r border-border bg-bg lg:translate-x-0 left-0 -translate-x-full fx-open:translate-x-0 transform transition-transform ease-linear lg:transition-none z-50">
+			<SidebarBase className="w-64 h-dvh fixed border-r border-border bg-background/95 backdrop-blur-sm lg:translate-x-0 left-0 -translate-x-full fx-open:translate-x-0 transform transition-transform ease-linear lg:transition-none z-50">
 				<div className="flex items-center gap-2 pt-6 px-6">
-					<span className="size-8 d-flex-place-center ring-1 bg-primary ring-primary-800 dark:ring-primary-400 rounded-ui">
+					<span className="size-8 d-flex-place-center ring-1 ring-border bg-primary text-primary-foreground rounded-xl shadow-sm">
 						<svg
 							width={15}
 							height={15}
@@ -23,11 +23,11 @@ export const DashSidebar = () => {
 							/>
 						</svg>
 					</span>
-                    <span className="font-semibold text-fg-title text-lg">
+					<span className="font-semibold text-foreground text-lg tracking-tight">
                         Intouch
                     </span>
 				</div>
-				<ul className="flex flex-col space-y-1.5 pt-10.5 px-3.25">
+				<ul className="flex flex-col space-y-1.5 pt-10 px-3">
 					{sidebarItems.map((item) => (
 						<SidebarItem key={item.id} {...item} />
 					))}

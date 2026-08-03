@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-shell01",
+  "type": "registry:block",
+  "title": "App Shell 01",
+  "description": "Application shell layout with sidebar and header",
+  "files": [
+    {
+      "path": "src/blocks/application/app-shell/shell01.tsx",
+      "type": "registry:block",
+      "target": "components/app-shell.tsx"
+    }
+  ],
+  "registryDependencies": [
+    "@jk-ui/base",
+    "@jk-ui/sidebar01"
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ]
+}

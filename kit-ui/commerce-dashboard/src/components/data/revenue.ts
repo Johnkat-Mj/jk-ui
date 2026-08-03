@@ -1,7 +1,7 @@
 export interface MonthlyRevenue {
-	month: string
-	revenue: number
-	previousYear: number
+	month: string;
+	revenue: number;
+	previousYear: number;
 }
 
 export const monthlyRevenue: MonthlyRevenue[] = [
@@ -17,11 +17,11 @@ export const monthlyRevenue: MonthlyRevenue[] = [
 	{ month: "Oct", revenue: 57400, previousYear: 46300 },
 	{ month: "Nov", revenue: 62800, previousYear: 50200 },
 	{ month: "Dec", revenue: 68500, previousYear: 55800 },
-]
+];
 
 export function formatCurrency(value: number): string {
 	if (value >= 1000) {
-		return `$${(value / 1000).toFixed(0)}k`
+		return `$${(value / 1000).toFixed(0)}k`;
 	}
-	return `$${value}`
+	return `$${value}`;
 }

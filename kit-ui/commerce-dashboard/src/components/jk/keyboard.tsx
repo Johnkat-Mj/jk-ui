@@ -77,7 +77,7 @@ export const Keyboard = <V extends KbdVariant = "solid">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes
@@ -88,4 +88,3 @@ export const Keyboard = <V extends KbdVariant = "solid">({
 
     return <RAC_Keyboard className={classes} {...rest}/>
 }
-

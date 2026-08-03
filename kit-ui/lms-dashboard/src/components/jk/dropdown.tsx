@@ -23,7 +23,7 @@ const dropdownSectionStyles = tv({
     slots: {
         section: "col-span-full grid grid-cols-[auto_1fr]",
         header:
-            "col-span-full px-3 py-2 font-medium text-fg-muted text-sm/6 sm:px-2.5 sm:py-1.5 sm:text-xs/3",
+            "col-span-full px-3 py-2 font-medium text-muted-foreground text-sm/6 sm:px-2.5 sm:py-1.5 sm:text-xs/3",
     },
 })
 
@@ -52,9 +52,9 @@ const dropdownItemStyles = tv({
         "dropdown-item-base-vars",
         "min-w-0 [--mr-icon:--spacing(2.5)] sm:[--mr-icon:--spacing(2)]",
         "not-has-[[slot=description]]:items-center",
-        "group relative cursor-default select-none dropdown-item-radius rounded-dropdown-item",
+        "group relative cursor-default select-none dropdown-item-radius rounded-md",
         "outline-0",
-        "text-base/6 text-fg-muted sm:text-sm/6 forced-colors:text-[CanvasText]",
+        "text-base/6 text-muted-foreground sm:text-sm/6 forced-colors:text-[CanvasText]",
         "ease-linear duration-200",
         "dropdown-item-grid",
         "dropdown-item-icon",
@@ -74,8 +74,8 @@ const dropdownItemStyles = tv({
     ],
     variants: {
         intent: {
-            danger: [
-                "dropdown-item-danger text-(--dropdown-item-danger-fg)"
+            destructive: [
+                "dropdown-item-destructive text-(--dropdown-item-destructive-fg)"
             ],
             warning: [
                 "dropdown-item-warning text-(--dropdown-item-warning-fg)"
@@ -85,7 +85,7 @@ const dropdownItemStyles = tv({
 })
 
 interface DropdownItemProps extends ListBoxItemProps {
-    intent?: "danger" | "warning"
+    intent?: "destructive" | "warning"
 }
 
 const DropdownItem = ({ className, children, intent, ...props }: DropdownItemProps) => {
@@ -145,7 +145,7 @@ const DropdownDescription = ({ className, ref, ...props }: DropdownDescriptionPr
     <Text
         slot="description"
         ref={ref}
-        className={cx("col-start-2 font-normal text-fg-muted text-sm", className)}
+        className={cx("col-start-2 font-normal text-muted-foreground text-sm", className)}
         {...props}
     />
 )
@@ -153,7 +153,7 @@ const DropdownDescription = ({ className, ref, ...props }: DropdownDescriptionPr
 const DropdownSeparator = ({ className, ...props }: Omit<SeparatorProps, "orientation">) => (
     <Separator
         orientation="horizontal"
-        className={cx("col-span-full -mx-1 h-px bg-fg/10", className)}
+        className={cx("col-span-full -mx-1 h-px bg-foreground/10", className)}
         {...props}
     />
 )

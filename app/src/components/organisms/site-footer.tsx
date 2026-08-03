@@ -34,20 +34,20 @@ export const SiteFooter = () => {
                             </Link>
                         </div>
                         <div className="flex flex-col mt-8">
-                            <p className="text-sm max-w-xs text-fg-muted">
+                            <p className="text-sm max-w-xs text-muted-foreground">
                                 Composable jk-ui blocks for modern developers.
                                 Built for speed. Designed for control.
                             </p>
                             <div className="flex flex-wrap gap-2 mt-4">
                                 <Link href="https://github.com/johnkat-mj/jk-ui"
-                                    className="flex items-center px-2 h-6.5 rounded-ui ring ring-border-strong/70 text-sm text-fg-muted hover:text-fg-title hover:bg-bg-surface">
+                                    className="flex items-center px-2 h-6.5 rounded-ui ring ring-border-strong/70 text-sm text-muted-foreground hover:text-fg-title hover:bg-bg-surface">
                                     <span aria-hidden="true" className="iconify ph--github-logo"/>
                                     <span>
                                         Github
                                     </span>
                                 </Link>
                                 <Link href="https://x.com/johnkat_Mj"
-                                    className="flex items-center px-2 h-6.5 rounded-ui ring ring-border-strong/70 text-sm text-fg-muted hover:text-fg-title hover:bg-bg-surface">
+                                    className="flex items-center px-2 h-6.5 rounded-ui ring ring-border-strong/70 text-sm text-muted-foreground hover:text-fg-title hover:bg-bg-surface">
                                     <span aria-hidden="true" className="iconify ph--x-logo"/>
                                     <span>
                                         Follow us
@@ -60,7 +60,7 @@ export const SiteFooter = () => {
                         footerItems.map(footerGroup => <SiteBlockFooter key={footerGroup.id} {...footerGroup} />)
                     }
                 </div>
-                <div className="col-span-full text-fg-muted text-sm px-4 sm:px-6 lg:px-8 pb-3">
+                <div className="col-span-full text-muted-foreground text-sm px-4 sm:px-6 lg:px-8 pb-3">
                     <div className="text-sm border border-border bg-bg-surface/50 px-4 py-2 rounded-ui text-center">
                         © jk-ui {new Date().getFullYear()}.
                         Designed by <Link href="https://x.com/johnkat_Mj" aria-label="Link to https://x.com/johnkat_Mj"

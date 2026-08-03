@@ -69,8 +69,8 @@
   }
 }
 
-@utility dropdown-item-danger {
-  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-danger-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-danger-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-danger-fg)];
+@utility dropdown-item-destructive {
+  @apply [--dropdown-item-hover-and-select:var(--dropdown-item-destructive-hover-and-select)] [--dropdown-item-hover-and-select-fg:var(--dropdown-item-destructive-hover-and-select-fg)] [--dropdown-item-selected-fg:var(--dropdown-item-destructive-fg)];
 }
 
 @utility dropdown-item-warning {
@@ -182,7 +182,7 @@
 
 /* disclosure group */
 @utility disclosure-group {
-  @apply [--disclosure-gutter-x:--spacing(4)] [--disclosure-radius:var(--radius-lg)] [--disclosure-collapsed-border:var(--color-border)] [--disclosure-expanded-border:var(--color-muted-fg)/30] [--disclosure-collapsed-bg:var(--color-bg)] [--disclosure-collapsed-fg:var(--color-muted-fg)] [--disclosure-expanded-bg:var(--color-secondary)]/20 [--disclosure-expanded-fg:var(--color-fg)] flex flex-col gap-y-2;
+  @apply [--disclosure-gutter-x:--spacing(4)] [--disclosure-radius:var(--radius-lg)] [--disclosure-collapsed-border:var(--color-border)] [--disclosure-expanded-border:var(--color-muted-foreground)/30] [--disclosure-collapsed-bg:var(--color-background)] [--disclosure-collapsed-fg:var(--color-muted-foreground)] [--disclosure-expanded-bg:var(--color-secondary)]/20 [--disclosure-expanded-fg:var(--color-foreground)] flex flex-col gap-y-2;
 }
 
 

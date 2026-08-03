@@ -3,7 +3,7 @@ import { cx } from "@/lib/utils"
 interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
   name: string
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
-  intent?: "current" | "fg" | "muted" | "primary" | "secondary" | "success" | "warning" | "danger"
+  intent?: "current" | "fg" | "muted" | "primary" | "secondary" | "success" | "warning" | "destructive"
 }
 
 const sizeClasses = {
@@ -17,13 +17,13 @@ const sizeClasses = {
 
 const intentClasses = {
   current: "text-current",
-  fg: "text-fg",
-  muted: "text-fg-muted",
+  fg: "text-foreground",
+  muted: "text-muted-foreground",
   primary: "text-primary",
   secondary: "text-secondary",
   success: "text-success",
   warning: "text-warning",
-  danger: "text-danger",
+  destructive: "text-destructive",
 } as const
 
 export function Icon({

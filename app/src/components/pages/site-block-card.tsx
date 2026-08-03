@@ -15,7 +15,7 @@ export const SiteBlockCard = ({ title, illustrations, categoryId }: { title: str
                     {title}
                 </h3>
                 <span aria-hidden="true"
-                    className="iconify ph--arrow-right size-3.5 text-fg-muted origin-left ease-linear duration-200 opacity-0 scale-x-60 group-hover:opacity-100 group-hover:scale-x-100"></span>
+                    className="iconify ph--arrow-right size-3.5 text-muted-foreground origin-left ease-linear duration-200 opacity-0 scale-x-60 group-hover:opacity-100 group-hover:scale-x-100"></span>
             </div>
         </Link>
     )

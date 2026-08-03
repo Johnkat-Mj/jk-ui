@@ -1,21 +1,33 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import { sidebarGroups, sidebarItems } from "@/data"
 import { SidebarGroup } from "../docs/sidebar-group"
 import { GroupItem } from "../docs/group-item"
 import { DocsSidebarWrapper } from "../atoms/doc-sidebar-wrapper";
 
+let savedScrollTop = 0
 
 export const DocsSidebar = ({ activeGroup, activeItem }: {
     activeGroup: string;
     activeItem: string;
 }) => {
+    const scrollRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const el = scrollRef.current
+        if (el) el.scrollTop = savedScrollTop
+        return () => {
+            if (el) savedScrollTop = el.scrollTop
+        }
+    }, [])
+
     return (
         <>
             <DocsSidebarWrapper>
-                <div className="w-full overflow-hidden overflow-y-auto">
+                <div ref={scrollRef} className="w-full overflow-hidden overflow-y-auto">
                     <nav className="w-full space-y-6 relative px-5 lg:pl-0 lg:pr-4 h-full">
-                        <ul className="space-y-3 text-fg">
+                        <ul className="space-y-3 text-foreground">
                             {
                                 sidebarGroups.map((group) => (
                                     <GroupItem key={`index-group-${group.name}`} isActive={activeGroup === group.name} {...group} />

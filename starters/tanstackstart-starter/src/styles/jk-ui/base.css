@@ -1,0 +1,52 @@
+@custom-variant fx-open (&[data-state="open"]);
+@custom-variant fx-close (&[data-state="close"]);
+@custom-variant fx-visible (&[data-state="visible"]);
+@custom-variant fx-hidden (&[data-state="hidden"]);
+@custom-variant fx-opened (&[data-state="opened"]);
+@custom-variant fx-closed (&[data-state="closed"]);
+@custom-variant fx-resized (&[data-resized="true"]);
+@custom-variant fx-active (&[data-state="active"]);
+@custom-variant fx-inactive (&[data-state="inactive"]);
+@custom-variant fx-focus-active (&[data-focus="active"]);
+
+@custom-variant fx-selected (&[data-selected]);
+@custom-variant selected (&[data-selected="true"]);
+@custom-variant fx-checked (&[data-checked="true"]);
+@custom-variant fx-indeterminate (&[data-indeterminate="true"]);
+@custom-variant fx-inert (&[data-inert]);
+@custom-variant fx-focused (&[data-focus="true"]);
+@custom-variant fx-focus-visible (&[data-focus-visible="true"]);
+@custom-variant fx-invalid (&[data-invalid="true"]);
+@custom-variant fx-expanded (&[data-expanded="true"]);
+@custom-variant fx-pressed (&[data-pressed="true"]);
+
+@custom-variant fx-table-grid (&[data-table-grid]);
+@custom-variant fx-hoverable (&[data-table-hoverable]);
+@custom-variant fx-striped (&[data-table-striped]);
+
+@custom-variant fx-empty (&[data-empty="true"]);
+
+/* data-focus-visible-within */
+@custom-variant fx-focus-visible-within (&[data-focus-visible-within="true"]);
+@custom-variant fx-focus-visible (&[data-focus-visible="true"]);
+
+
+@custom-variant slot-icon (&[slot="icon"]);
+@custom-variant slot-label (&[slot="label"]);
+@custom-variant slot-description (&[slot="description"]);
+@custom-variant slot-kbd (&[slot="kbd"]);
+
+@custom-variant fx-slide-x (&[data-ax="x"]);
+@custom-variant fx-slide-y (&[data-ax="y"]);
+
+
+@custom-variant placement-left (&[data-placement="left"]);
+@custom-variant placement-right (&[data-placement="right"]);
+@custom-variant placement-top (&[data-placement="top"]);
+@custom-variant placement-bottom (&[data-placement="bottom"]);
+
+@custom-variant exiting (&[data-exiting]);
+@custom-variant entering (&[data-entering]);
+
+@custom-variant orientation-horizontal (&[data-orientation=horizontal]);
+@custom-variant orientation-vertical (&[data-orientation=vertical]);

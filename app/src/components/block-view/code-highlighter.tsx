@@ -37,18 +37,26 @@ export const CodeHighlighter = memo(function CodeHighlighter({
   ...props
 }: CodeHighlighterProps) {
   const [formattedCode, setFormattedCode] = useState<string>(() => {
-    // Synchronously return from cache if available
     const key = `${lang}::${code}`
     return highlightCache.get(key) ?? ""
   })
+  const [visible, setVisible] = useState(false)
   const [error, setError] = useState("")
 
   useEffect(() => {
     let cancelled = false
-    if (formattedCode) return // already have it from cache
+    if (formattedCode) {
+      requestAnimationFrame(() => { if (!cancelled) setVisible(true) })
+      return
+    }
 
     highlight(code, lang ?? "tsx")
-      .then((html) => { if (!cancelled) setFormattedCode(html) })
+      .then((html) => {
+        if (!cancelled) {
+          setFormattedCode(html)
+          requestAnimationFrame(() => { if (!cancelled) setVisible(true) })
+        }
+      })
       .catch((err) => {
         if (!cancelled) {
           setError("Failed to highlight code.")
@@ -67,7 +75,7 @@ export const CodeHighlighter = memo(function CodeHighlighter({
       {...props}
       dangerouslySetInnerHTML={{ __html: formattedCode }}
       data-code-snippet
-      className="*:py-4 w-full min-w-max"
+      className={`*:py-4 w-full min-w-max transition-opacity duration-200 ease-linear ${visible ? "opacity-100" : "opacity-0"}`}
     />
   )
 })

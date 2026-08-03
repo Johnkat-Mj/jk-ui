@@ -57,6 +57,7 @@ const users = [
         initials: 'AL',
     },
     {
+        id: 'user06',
         name: 'David Chen',
         email: 'david.chen@company.com',
         role: 'Developer',
@@ -66,6 +67,7 @@ const users = [
         initials: 'DC',
     },
     {
+        id: 'user07',
         name: 'Lisa Rodriguez',
         email: 'lisa.rodriguez@company.com',
         role: 'Manager',
@@ -75,6 +77,7 @@ const users = [
         initials: 'LR',
     },
     {
+        id: 'user08',
         name: 'Robert Kim',
         email: 'robert.kim@company.com',
         role: 'Support',

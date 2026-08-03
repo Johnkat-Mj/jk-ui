@@ -12,8 +12,8 @@ const button = tv({
   base: [
     'relative inline-flex items-center border-0 font-sans',
     'text-sm text-center transition rounded-md cursor-default',
-    'p-1 flex items-center justify-center text-fg-muted',
-    'bg-transparent hover:bg-bg-muted pressed:bg-bg-muted/60',
+    'p-1 flex items-center justify-center text-muted-foreground',
+    'bg-transparent hover:bg-muted pressed:bg-muted/60',
     ' ',
     'disabled:bg-transparent [-webkit-tap-highlight-color:transparent]'],
   variants: {

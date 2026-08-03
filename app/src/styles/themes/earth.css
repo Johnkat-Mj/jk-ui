@@ -23,8 +23,6 @@
   --ring: var(--primary);
   --fg-title: oklch(20.8% 0.042 265.755);
   --fg-subtitle: oklch(27.9% 0.041 260.031);
-  --fg: var(--foreground);
-  --fg-muted: var(--muted-foreground);
   --bg: var(--background);
   --bg-subtle: var(--muted);
   --bg-surface: oklch(98.4% 0.003 247.858);
@@ -69,16 +67,4 @@
   --bg-muted: oklch(27.9% 0.041 260.031);
   --border-strong: oklch(37.2% 0.044 257.287);
   --border-card: oklch(27.9% 0.041 260.031);
-
-  --gray-50: hsl(195, 38%, 97%);
-  --gray-100: hsl(200, 25%, 95%);
-  --gray-200: hsl(200, 20%, 91%);
-  --gray-300: hsl(196, 18%, 80%);
-  --gray-400: hsl(200, 11%, 64%);
-  --gray-500: hsl(200, 9%, 47%);
-  --gray-600: hsl(200, 12%, 35%);
-  --gray-700: hsl(200, 18%, 27%);
-  --gray-800: hsl(204, 22%, 17%);
-  --gray-900: hsl(200, 26%, 8%);
-  --gray-950: hsl(200, 33%, 1%);
 }

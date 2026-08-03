@@ -3,6 +3,16 @@
   "name": "chart",
   "title": "Chart",
   "description": "Recharts based chart component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/chart.tsx",

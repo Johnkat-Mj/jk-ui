@@ -11,7 +11,7 @@ export const RevenueChart = () => {
 	return (
 		<>
 			<div className="flex items-center justify-between">
-				<span className="font-semibold text-fg-title">Revenue</span>
+				<span className="font-semibold text-foreground">Revenue</span>
 				<div className="">
 					<Select defaultValue={"monthly"}>
 						<SelectTrigger size="sm" className="w-max" />

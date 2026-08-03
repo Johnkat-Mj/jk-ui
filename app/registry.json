@@ -10,7 +10,7 @@
       "title": "Alert",
       "description": "jk-ui Alert Component",
       "registryDependencies": [
-        "@jk-ui/lib"
+        "@jk-ui/base"
       ],
       "files": [
         {
@@ -18,6 +18,12 @@
           "type": "registry:ui",
           "target": "components/jk/alert.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -31,6 +37,15 @@
           "type": "registry:ui",
           "target": "components/jk/avatar.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -44,6 +59,15 @@
           "type": "registry:ui",
           "target": "components/jk/badge.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -59,7 +83,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/link"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -73,6 +105,16 @@
           "type": "registry:ui",
           "target": "components/jk/button.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -81,8 +123,23 @@
       "title": "Calendar",
       "description": "jk-ui Calendar Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button"
       ],
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)",
+          "range-selected-bg": "color-mix(in oklab, var(--primary) 10%, transparent)",
+          "range-selected-invalid-bg": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "range-selected-bg-hover": "color-mix(in oklab, var(--primary) 16%, transparent)",
+          "range-selected-invalid-bg-hover": "color-mix(in oklab, var(--destructive) 16%, transparent)",
+          "range-selected-fg": "var(--primary)",
+          "range-selected-invalid-fg": "var(--destructive)",
+          "range-selected-bg-pressed": "color-mix(in oklab, var(--primary) 22%, transparent)",
+          "range-selected-invalid-bg-pressed": "color-mix(in oklab, var(--destructive) 22%, transparent)"
+        }
+      },
       "files": [
         {
           "path": "src/components/jk/calendar.tsx",
@@ -94,6 +151,13 @@
           "type": "registry:ui",
           "target": "components/jk/calendar-month-year.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -102,6 +166,7 @@
       "title": "Callout",
       "description": "jk-ui Callout Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/alert"
       ],
       "files": [
@@ -110,6 +175,12 @@
           "type": "registry:ui",
           "target": "components/jk/callout.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -123,6 +194,16 @@
           "type": "registry:ui",
           "target": "components/jk/card.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -131,14 +212,33 @@
       "title": "Checkbox",
       "description": "jk-ui Checkbox Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input"
       ],
+      "cssVars": {
+        "light": {
+          "checkbox-radius": "var(--radius-sm)",
+          "checkbox-bg": "var(--background)",
+          "checkbox-fg": "transparent",
+          "checkbox-bg-checked": "var(--primary)",
+          "checkbox-fg-checked": "var(--primary-foreground)",
+          "checkbox-bg-invalid": "var(--destructive)",
+          "checkbox-fg-invalid": "var(--destructive-foreground)"
+        }
+      },
       "files": [
         {
           "path": "src/components/jk/checkbox.tsx",
           "type": "registry:ui",
           "target": "components/jk/checkbox.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -147,6 +247,7 @@
       "title": "Date Picker",
       "description": "jk-ui Date Picker Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/field-button",
         "@jk-ui/calendar",
         "@jk-ui/input",
@@ -159,6 +260,13 @@
           "type": "registry:ui",
           "target": "components/jk/date-picker.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -167,6 +275,7 @@
       "title": "Date Range Picker",
       "description": "jk-ui Date Range Picker Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/field-button",
         "@jk-ui/range-calendar",
         "@jk-ui/input",
@@ -179,6 +288,13 @@
           "type": "registry:ui",
           "target": "components/jk/date-range-picker.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -187,6 +303,7 @@
       "title": "Dialog",
       "description": "jk-ui Dialog Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button"
       ],
       "files": [
@@ -195,6 +312,13 @@
           "type": "registry:ui",
           "target": "components/jk/dialog.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -208,6 +332,16 @@
           "type": "registry:ui",
           "target": "components/jk/disclosure-group.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -216,14 +350,35 @@
       "title": "Dropdown",
       "description": "jk-ui Dropdown Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/keyboard"
       ],
+      "cssVars": {
+        "light": {
+          "dropdown-item-hover-and-select": "var(--bg-muted)",
+          "dropdown-item-hover-and-select-fg": "var(--fg-title)",
+          "dropdown-item-selected-fg": "var(--fg-title)",
+          "dropdown-item-destructive-fg": "var(--destructive)",
+          "dropdown-item-warning-fg": "var(--warning)",
+          "dropdown-item-destructive-hover-and-select": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "dropdown-item-destructive-hover-and-select-fg": "var(--destructive)",
+          "dropdown-item-warning-hover-and-select": "color-mix(in oklab, var(--warning) 10%, transparent)",
+          "dropdown-item-warning-hover-and-select-fg": "var(--warning)"
+        }
+      },
       "files": [
         {
           "path": "src/components/jk/dropdown.tsx",
           "type": "registry:ui",
           "target": "components/jk/dropdown.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -237,6 +392,15 @@
           "type": "registry:ui",
           "target": "components/jk/field-button.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -250,6 +414,15 @@
           "type": "registry:ui",
           "target": "components/jk/native-table.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -257,12 +430,28 @@
       "type": "registry:ui",
       "title": "Input Date",
       "description": "jk-ui Input Date Component",
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)"
+        }
+      },
       "files": [
         {
           "path": "src/components/jk/input-date.tsx",
           "type": "registry:ui",
           "target": "components/jk/input-date.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -271,6 +460,7 @@
       "title": "Input OTP",
       "description": "jk-ui Input OTP Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input"
       ],
       "files": [
@@ -279,6 +469,13 @@
           "type": "registry:ui",
           "target": "components/jk/input-otp.tsx"
         }
+      ],
+      "dependencies": [
+        "input-otp",
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -287,6 +484,7 @@
       "title": "Input Time",
       "description": "jk-ui Input Time Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input-date",
         "@jk-ui/input"
       ],
@@ -296,6 +494,13 @@
           "type": "registry:ui",
           "target": "components/jk/input-time.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -309,6 +514,16 @@
           "type": "registry:ui",
           "target": "components/jk/keyboard.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -324,7 +539,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -333,6 +556,7 @@
       "title": "Menu",
       "description": "jk-ui Menu Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dropdown",
         "@jk-ui/popover"
       ],
@@ -342,6 +566,13 @@
           "type": "registry:ui",
           "target": "components/jk/menu.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -350,6 +581,7 @@
       "title": "Modal",
       "description": "jk-ui Modal Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dialog"
       ],
       "files": [
@@ -358,6 +590,13 @@
           "type": "registry:ui",
           "target": "components/jk/modal.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -373,7 +612,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -382,6 +629,7 @@
       "title": "Popover",
       "description": "jk-ui Popover Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dialog"
       ],
       "files": [
@@ -390,6 +638,13 @@
           "type": "registry:ui",
           "target": "components/jk/popover.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -405,7 +660,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -414,14 +677,36 @@
       "title": "Range Calendar",
       "description": "jk-ui Range Calendar Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/calendar"
       ],
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)",
+          "range-selected-bg": "color-mix(in oklab, var(--primary) 10%, transparent)",
+          "range-selected-invalid-bg": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "range-selected-bg-hover": "color-mix(in oklab, var(--primary) 16%, transparent)",
+          "range-selected-invalid-bg-hover": "color-mix(in oklab, var(--destructive) 16%, transparent)",
+          "range-selected-fg": "var(--primary)",
+          "range-selected-invalid-fg": "var(--destructive)",
+          "range-selected-bg-pressed": "color-mix(in oklab, var(--primary) 22%, transparent)",
+          "range-selected-invalid-bg-pressed": "color-mix(in oklab, var(--destructive) 22%, transparent)"
+        }
+      },
       "files": [
         {
           "path": "src/components/jk/range-calendar.tsx",
           "type": "registry:ui",
           "target": "components/jk/range-calendar.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -430,6 +715,7 @@
       "title": "Select",
       "description": "jk-ui Select Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dropdown",
         "@jk-ui/input",
         "@jk-ui/popover"
@@ -440,6 +726,42 @@
           "type": "registry:ui",
           "target": "components/jk/select.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "title": "Multi Select",
+      "description": "jk-ui Multi Select Component",
+      "registryDependencies": [
+        "@jk-ui/base",
+        "@jk-ui/dropdown",
+        "@jk-ui/field-button",
+        "@jk-ui/popover",
+        "@jk-ui/search-field",
+        "@jk-ui/tag-group",
+        "@jk-ui/text-field"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/multi-select.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/multi-select.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -453,6 +775,15 @@
           "type": "registry:ui",
           "target": "components/jk/separator.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -461,6 +792,7 @@
       "title": "Sheet",
       "description": "jk-ui Sheet Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dialog"
       ],
       "files": [
@@ -469,6 +801,13 @@
           "type": "registry:ui",
           "target": "components/jk/sheet.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -477,6 +816,7 @@
       "title": "Sidebar",
       "description": "jk-ui Sidebar Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button"
       ],
       "files": [
@@ -485,6 +825,13 @@
           "type": "registry:ui",
           "target": "components/jk/sidebar.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -493,6 +840,7 @@
       "title": "Switch",
       "description": "jk-ui Switch Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input"
       ],
       "files": [
@@ -501,6 +849,13 @@
           "type": "registry:ui",
           "target": "components/jk/switch.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -514,6 +869,16 @@
           "type": "registry:ui",
           "target": "components/jk/tabs.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -529,10 +894,18 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/text-field",
         "@jk-ui/input",
         "@jk-ui/dropdown",
         "@jk-ui/popover"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -546,6 +919,16 @@
           "type": "registry:ui",
           "target": "components/jk/drop-zone.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -554,6 +937,7 @@
       "title": "File Trigger",
       "description": "jk-ui File Trigger Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/button",
         "@jk-ui/loader"
       ],
@@ -563,6 +947,13 @@
           "type": "registry:ui",
           "target": "components/jk/file-trigger.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -576,6 +967,16 @@
           "type": "registry:ui",
           "target": "components/jk/input.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -591,8 +992,16 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input",
         "@jk-ui/text-field"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -606,6 +1015,16 @@
           "type": "registry:ui",
           "target": "components/jk/progress-bar.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -619,6 +1038,16 @@
           "type": "registry:ui",
           "target": "components/jk/loader.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -632,6 +1061,16 @@
           "type": "registry:ui",
           "target": "components/jk/progress-bar-circle.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -645,6 +1084,16 @@
           "type": "registry:ui",
           "target": "components/jk/search-field.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -658,6 +1107,15 @@
           "type": "registry:ui",
           "target": "components/jk/skeleton.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -671,6 +1129,16 @@
           "type": "registry:ui",
           "target": "components/jk/slider.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -686,7 +1154,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/checkbox"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -702,9 +1178,17 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/tag-group",
         "@jk-ui/input",
         "@jk-ui/text-field"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -718,6 +1202,16 @@
           "type": "registry:ui",
           "target": "components/jk/tag-group.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -731,6 +1225,16 @@
           "type": "registry:ui",
           "target": "components/jk/text-field.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -744,6 +1248,16 @@
           "type": "registry:ui",
           "target": "components/jk/toggle.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -759,7 +1273,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/toggle"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -773,6 +1295,16 @@
           "type": "registry:ui",
           "target": "components/jk/tooltip.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -786,6 +1318,15 @@
           "type": "registry:ui",
           "target": "components/jk/aspect-ratio.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -801,9 +1342,17 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/dropdown",
         "@jk-ui/loader",
         "@jk-ui/menu"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -817,6 +1366,16 @@
           "type": "registry:ui",
           "target": "components/jk/heading.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -830,6 +1389,15 @@
           "type": "registry:ui",
           "target": "components/jk/icon.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -843,6 +1411,16 @@
           "type": "registry:ui",
           "target": "components/jk/text.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -858,7 +1436,15 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/input"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
@@ -872,6 +1458,16 @@
           "type": "registry:ui",
           "target": "components/jk/chart.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -885,6 +1481,15 @@
           "type": "registry:ui",
           "target": "components/jk/area-chart.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -898,6 +1503,15 @@
           "type": "registry:ui",
           "target": "components/jk/bar-chart.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -911,6 +1525,16 @@
           "type": "registry:ui",
           "target": "components/jk/leaderboard.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -924,6 +1548,15 @@
           "type": "registry:ui",
           "target": "components/jk/line-chart.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -937,6 +1570,15 @@
           "type": "registry:ui",
           "target": "components/jk/pie-chart.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
@@ -945,6 +1587,7 @@
       "title": "Tracker",
       "description": "jk-ui Tracker Component",
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/tooltip"
       ],
       "files": [
@@ -953,10 +1596,17 @@
           "type": "registry:ui",
           "target": "components/jk/tracker.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
-      "name": "login01",
+      "name": "block-login01",
       "type": "registry:block",
       "title": "Login 01",
       "description": "Simple centered login form with email and password fields",
@@ -966,10 +1616,19 @@
           "type": "registry:block",
           "target": "components/login.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "login02",
+      "name": "block-login02",
       "type": "registry:block",
       "title": "Login 02",
       "description": "Login form with social authentication buttons",
@@ -979,10 +1638,19 @@
           "type": "registry:block",
           "target": "components/login.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "login03",
+      "name": "block-login03",
       "type": "registry:block",
       "title": "Login 03",
       "description": "Split-screen login page with illustration side panel",
@@ -992,10 +1660,19 @@
           "type": "registry:block",
           "target": "components/login.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "signup01",
+      "name": "block-signup01",
       "type": "registry:block",
       "title": "Sign Up 01",
       "description": "User registration form with email, password and terms",
@@ -1005,10 +1682,19 @@
           "type": "registry:block",
           "target": "components/signup.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "otp01",
+      "name": "block-otp01",
       "type": "registry:block",
       "title": "OTP 01",
       "description": "One-time password verification input form",
@@ -1018,10 +1704,19 @@
           "type": "registry:block",
           "target": "components/otp.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "kpi01",
+      "name": "block-kpi01",
       "type": "registry:block",
       "title": "KPI Card 01",
       "description": "Key performance indicator card with metric and trend",
@@ -1031,10 +1726,19 @@
           "type": "registry:block",
           "target": "components/kpi-card.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "kpi02",
+      "name": "block-kpi02",
       "type": "registry:block",
       "title": "KPI Card 02",
       "description": "Key performance indicator card with metric and trend",
@@ -1044,10 +1748,19 @@
           "type": "registry:block",
           "target": "components/kpi02.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "kpi03",
+      "name": "block-kpi03",
       "type": "registry:block",
       "title": "KPI Card 03",
       "description": "Key performance indicator card with metric and trend",
@@ -1057,10 +1770,19 @@
           "type": "registry:block",
           "target": "components/kpi03.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "activity01",
+      "name": "block-activity01",
       "type": "registry:block",
       "title": "Activity Card 01",
       "description": "Recent activity feed card for dashboards",
@@ -1070,10 +1792,19 @@
           "type": "registry:block",
           "target": "components/activity-card.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "empty-state01",
+      "name": "block-empty-state01",
       "type": "registry:block",
       "title": "Empty State 01",
       "description": "Empty state placeholder with illustration and action",
@@ -1083,10 +1814,19 @@
           "type": "registry:block",
           "target": "components/empty-state.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "header01",
+      "name": "block-header01",
       "type": "registry:block",
       "title": "Header 01",
       "description": "Simple application header with navigation",
@@ -1096,10 +1836,19 @@
           "type": "registry:block",
           "target": "components/header.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "header02",
+      "name": "block-header02",
       "type": "registry:block",
       "title": "Header 02",
       "description": "Header with search and user menu dropdown",
@@ -1109,10 +1858,19 @@
           "type": "registry:block",
           "target": "components/header.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "header03",
+      "name": "block-header03",
       "type": "registry:block",
       "title": "Header 03",
       "description": "Header with breadcrumb navigation and actions",
@@ -1122,10 +1880,19 @@
           "type": "registry:block",
           "target": "components/header.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "sidebar01",
+      "name": "block-sidebar01",
       "type": "registry:block",
       "title": "Sidebar 01",
       "description": "Collapsible sidebar navigation with icons",
@@ -1145,10 +1912,19 @@
           "type": "registry:block",
           "target": "components/sidebar-item.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "sidebar02",
+      "name": "block-sidebar02",
       "type": "registry:block",
       "title": "Sidebar 02",
       "description": "Multi-level sidebar with nested navigation groups",
@@ -1173,10 +1949,19 @@
           "type": "registry:block",
           "target": "components/sidebar-item.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "sidebar03",
+      "name": "block-sidebar03",
       "type": "registry:block",
       "title": "Sidebar 03",
       "description": "Multi-level sidebar with nested navigation groups",
@@ -1201,10 +1986,19 @@
           "type": "registry:block",
           "target": "components/sidebar-item.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "sidebar04",
+      "name": "block-sidebar04",
       "type": "registry:block",
       "title": "Sidebar 04",
       "description": "Multi-level sidebar with nested navigation groups",
@@ -1224,10 +2018,19 @@
           "type": "registry:block",
           "target": "components/sidebar-item.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "sidebar05",
+      "name": "block-sidebar05",
       "type": "registry:block",
       "title": "Sidebar 05",
       "description": "Multi-level sidebar with nested navigation groups",
@@ -1247,10 +2050,19 @@
           "type": "registry:block",
           "target": "components/sidebar-item.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "shell01",
+      "name": "block-shell01",
       "type": "registry:block",
       "title": "App Shell 01",
       "description": "Application shell layout with sidebar and header",
@@ -1262,11 +2074,18 @@
         }
       ],
       "registryDependencies": [
+        "@jk-ui/base",
         "@jk-ui/sidebar01"
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     },
     {
-      "name": "table01",
+      "name": "block-table01",
       "type": "registry:block",
       "title": "Table 01",
       "description": "Sortable data table with pagination and filtering",
@@ -1276,10 +2095,19 @@
           "type": "registry:block",
           "target": "components/data-table.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "table02",
+      "name": "block-table02",
       "type": "registry:block",
       "title": "Table 02",
       "description": "Table",
@@ -1289,10 +2117,19 @@
           "type": "registry:block",
           "target": "components/table02.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "table03",
+      "name": "block-table03",
       "type": "registry:block",
       "title": "Table 03",
       "description": "Table",
@@ -1302,13 +2139,31 @@
           "type": "registry:block",
           "target": "components/table03.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
       "name": "base",
       "title": "JK-UI utilities",
-      "type": "registry:file",
-      "description": "Base styles for JK UI components.",
+      "type": "registry:style",
+      "description": "Complete JK-UI foundation: semantic CSS variables, utilities and variant helpers.",
+      "dependencies": [
+        "@iconify-json/ph",
+        "@iconify/tailwind4",
+        "clsx",
+        "react-aria-components",
+        "tailwind-merge",
+        "tailwind-variants",
+        "tw-animate-css"
+      ],
       "files": [
         {
           "path": "src/styles/jk-ui/base.css",
@@ -1355,10 +2210,159 @@
           "type": "registry:lib",
           "target": "lib/utils.ts"
         }
-      ]
+      ],
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "hsl(240 5% 26%)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "hsl(240 6% 10%)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "hsl(240 5% 26%)",
+          "primary": "hsl(243 75% 59%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(187 92% 36%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(209 92% 36%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "hsl(240 5% 96%)",
+          "muted-foreground": "hsl(240 5% 34%)",
+          "destructive": "hsl(0 72% 51%)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "hsl(161 94% 30%)",
+          "warning": "hsl(21 90% 48%)",
+          "info": "hsl(200 98% 39%)",
+          "border": "hsl(240 6% 90%)",
+          "input": "hsl(240 6% 90%)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(240 6% 10%)",
+          "fg-subtitle": "hsl(240 4% 16%)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "hsl(0 0% 98%)",
+          "bg-muted": "hsl(240 6% 90%)",
+          "overlay": "var(--popover)",
+          "border-strong": "hsl(240 5% 84%)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "hsl(240 10% 4%)",
+          "foreground": "hsl(240 5% 84%)",
+          "card": "hsl(240 10% 4%)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "hsl(240 10% 4%)",
+          "popover-foreground": "hsl(240 5% 84%)",
+          "primary": "hsl(245 86% 67%)",
+          "secondary": "hsl(187 97% 43%)",
+          "accent": "hsl(208 84% 48%)",
+          "destructive": "hsl(0 84% 60%)",
+          "success": "hsl(160 84% 39%)",
+          "warning": "hsl(25 95% 53%)",
+          "info": "hsl(199 89% 48%)",
+          "muted": "hsl(240 6% 10%)",
+          "muted-foreground": "hsl(240 5% 65%)",
+          "border": "hsl(240 6% 10%)",
+          "input": "hsl(240 4% 16%)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "hsl(240 5% 96%)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "hsl(240 4% 16%)",
+          "overlay": "var(--popover)",
+          "border-strong": "hsl(240 5% 26%)",
+          "border-card": "hsl(240 4% 16%)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      }
     },
     {
-      "name": "hero01",
+      "name": "block-hero01",
       "type": "registry:block",
       "title": "Hero 01",
       "description": "Marketing hero section with headline and CTA",
@@ -1368,10 +2372,19 @@
           "type": "registry:block",
           "target": "components/hero01.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "hero02",
+      "name": "block-hero02",
       "type": "registry:block",
       "title": "Hero 02",
       "description": "Marketing hero section with headline and CTA",
@@ -1381,10 +2394,19 @@
           "type": "registry:block",
           "target": "components/hero02.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "hero03",
+      "name": "block-hero03",
       "type": "registry:block",
       "title": "Hero 03",
       "description": "Marketing hero section with headline and CTA",
@@ -1394,10 +2416,19 @@
           "type": "registry:block",
           "target": "components/hero03.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "features01",
+      "name": "block-features01",
       "type": "registry:block",
       "title": "Features 01",
       "description": "Feature grid section with icons and descriptions",
@@ -1407,10 +2438,19 @@
           "type": "registry:block",
           "target": "components/features.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "content01",
+      "name": "block-content01",
       "type": "registry:block",
       "title": "Content 01",
       "description": "Feature grid section with icons and descriptions",
@@ -1420,10 +2460,19 @@
           "type": "registry:block",
           "target": "components/content01.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "content02",
+      "name": "block-content02",
       "type": "registry:block",
       "title": "Content 02",
       "description": "Feature grid section with icons and descriptions",
@@ -1433,10 +2482,19 @@
           "type": "registry:block",
           "target": "components/content02.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "pricing01",
+      "name": "block-pricing01",
       "type": "registry:block",
       "title": "Pricing 01",
       "description": "Feature grid section with icons and descriptions",
@@ -1446,10 +2504,19 @@
           "type": "registry:block",
           "target": "components/pricing01.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "pricing02",
+      "name": "block-pricing02",
       "type": "registry:block",
       "title": "Pricing 02",
       "description": "Feature grid section with icons and descriptions",
@@ -1459,10 +2526,19 @@
           "type": "registry:block",
           "target": "components/pricing02.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
       ]
     },
     {
-      "name": "pricing03",
+      "name": "block-pricing03",
       "type": "registry:block",
       "title": "Pricing 03",
       "description": "Feature grid section with icons and descriptions",
@@ -1472,6 +2548,2793 @@
           "type": "registry:block",
           "target": "components/pricing03.tsx"
         }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "@jk-ui/base"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-jk-ui",
+      "dependencies": [
+        "tailwindcss-react-aria-components",
+        "tw-animate-css"
+      ],
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "hsl(240 5% 26%)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "hsl(240 6% 10%)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "hsl(240 5% 26%)",
+          "primary": "hsl(243 75% 59%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(187 92% 36%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(209 92% 36%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "hsl(240 5% 96%)",
+          "muted-foreground": "hsl(240 5% 34%)",
+          "destructive": "hsl(0 72% 51%)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "hsl(161 94% 30%)",
+          "warning": "hsl(21 90% 48%)",
+          "info": "hsl(200 98% 39%)",
+          "border": "hsl(240 6% 90%)",
+          "input": "hsl(240 6% 90%)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(240 6% 10%)",
+          "fg-subtitle": "hsl(240 4% 16%)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "hsl(0 0% 98%)",
+          "bg-muted": "hsl(240 6% 90%)",
+          "overlay": "var(--popover)",
+          "border-strong": "hsl(240 5% 84%)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "hsl(240 10% 4%)",
+          "foreground": "hsl(240 5% 84%)",
+          "card": "hsl(240 10% 4%)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "hsl(240 10% 4%)",
+          "popover-foreground": "hsl(240 5% 84%)",
+          "primary": "hsl(245 86% 67%)",
+          "secondary": "hsl(187 97% 43%)",
+          "accent": "hsl(208 84% 48%)",
+          "destructive": "hsl(0 84% 60%)",
+          "success": "hsl(160 84% 39%)",
+          "warning": "hsl(25 95% 53%)",
+          "info": "hsl(199 89% 48%)",
+          "muted": "hsl(240 6% 10%)",
+          "muted-foreground": "hsl(240 5% 65%)",
+          "border": "hsl(240 6% 10%)",
+          "input": "hsl(240 4% 16%)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "hsl(240 5% 96%)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "hsl(240 4% 16%)",
+          "overlay": "var(--popover)",
+          "border-strong": "hsl(240 5% 26%)",
+          "border-card": "hsl(240 4% 16%)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "css": {
+        "@layer base": {
+          "*": {
+            "text-rendering": "optimizeLegibility",
+            "scrollbar-width": "thin",
+            "scrollbar-color": "var(--border-strong) transparent"
+          },
+          "html": {
+            "font-variation-settings": "normal",
+            "height": "100%",
+            "-webkit-font-smoothing": "antialiased",
+            "-moz-osx-font-smoothing": "grayscale",
+            "-webkit-tap-highlight-color": "transparent",
+            "scroll-behavior": "smooth"
+          },
+          "::-webkit-scrollbar": {
+            "width": "4px"
+          },
+          "::-webkit-scrollbar-track": {
+            "background": "transparent"
+          },
+          "::-webkit-scrollbar-thumb": {
+            "background": "var(--border-strong)",
+            "border-radius": "4px"
+          }
+        },
+        "@utility touch-target": {
+          "position": "relative",
+          "&::before": {
+            "content": "\"\"",
+            "position": "absolute",
+            "display": "block",
+            "top": "50%",
+            "left": "50%",
+            "transform": "translate(-50%, -50%)",
+            "width": "100%",
+            "height": "100%",
+            "min-height": "44px",
+            "min-width": "44px",
+            "z-index": "9999"
+          }
+        }
+      },
+      "type": "registry:style"
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-air",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.1% 0 0)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.5% 0 0)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.1% 0 0)",
+          "primary": "hsl(15, 100%, 48%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(2, 85%, 47%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(37, 67%, 40%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0 0)",
+          "muted-foreground": "oklch(43.9% 0 0)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.2% 0 0)",
+          "input": "oklch(92.2% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.5% 0 0)",
+          "fg-subtitle": "oklch(26.9% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0 0)",
+          "bg-muted": "oklch(92.2% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(87% 0 0)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.5% 0 0)",
+          "foreground": "oklch(87% 0 0)",
+          "card": "oklch(14.5% 0 0)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.5% 0 0)",
+          "popover-foreground": "oklch(87% 0 0)",
+          "primary": "hsl(15, 100%, 48%)",
+          "secondary": "hsl(2, 85%, 47%)",
+          "accent": "hsl(37, 67%, 40%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.5% 0 0)",
+          "muted-foreground": "oklch(70.8% 0 0)",
+          "border": "oklch(20.5% 0 0)",
+          "input": "oklch(26.9% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.9% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.1% 0 0)",
+          "border-card": "oklch(26.9% 0 0)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-caffeine",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.4% 0.01 67.558)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21.6% 0.006 56.043)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.4% 0.01 67.558)",
+          "primary": "hsl(25, 33%, 33%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(32, 48%, 38%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(40, 78%, 42%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0.001 106.424)",
+          "muted-foreground": "oklch(44.4% 0.011 73.639)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.3% 0.003 48.717)",
+          "input": "oklch(92.3% 0.003 48.717)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21.6% 0.006 56.043)",
+          "fg-subtitle": "oklch(26.8% 0.007 34.298)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0.001 106.423)",
+          "bg-muted": "oklch(92.3% 0.003 48.717)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.005 56.366)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.7% 0.004 49.25)",
+          "foreground": "oklch(86.9% 0.005 56.366)",
+          "card": "oklch(14.7% 0.004 49.25)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.7% 0.004 49.25)",
+          "popover-foreground": "oklch(86.9% 0.005 56.366)",
+          "primary": "hsl(25, 33%, 33%)",
+          "secondary": "hsl(32, 48%, 38%)",
+          "accent": "hsl(40, 78%, 42%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21.6% 0.006 56.043)",
+          "muted-foreground": "oklch(70.9% 0.01 56.259)",
+          "border": "oklch(21.6% 0.006 56.043)",
+          "input": "oklch(26.8% 0.007 34.298)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0.001 106.424)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.8% 0.007 34.298)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.4% 0.01 67.558)",
+          "border-card": "oklch(26.8% 0.007 34.298)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-claude",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.4% 0.01 67.558)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21.6% 0.006 56.043)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.4% 0.01 67.558)",
+          "primary": "hsl(22, 100%, 40%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(38, 85%, 42%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(12, 78%, 42%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0.001 106.424)",
+          "muted-foreground": "oklch(44.4% 0.011 73.639)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.3% 0.003 48.717)",
+          "input": "oklch(92.3% 0.003 48.717)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21.6% 0.006 56.043)",
+          "fg-subtitle": "oklch(26.8% 0.007 34.298)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0.001 106.423)",
+          "bg-muted": "oklch(92.3% 0.003 48.717)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.005 56.366)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.7% 0.004 49.25)",
+          "foreground": "oklch(86.9% 0.005 56.366)",
+          "card": "oklch(14.7% 0.004 49.25)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.7% 0.004 49.25)",
+          "popover-foreground": "oklch(86.9% 0.005 56.366)",
+          "primary": "hsl(22, 100%, 40%)",
+          "secondary": "hsl(38, 85%, 42%)",
+          "accent": "hsl(12, 78%, 42%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21.6% 0.006 56.043)",
+          "muted-foreground": "oklch(70.9% 0.01 56.259)",
+          "border": "oklch(21.6% 0.006 56.043)",
+          "input": "oklch(26.8% 0.007 34.298)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0.001 106.424)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.8% 0.007 34.298)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.4% 0.01 67.558)",
+          "border-card": "oklch(26.8% 0.007 34.298)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-earth",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "hsl(149, 54%, 30%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(37, 67%, 40%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(2, 85%, 47%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "hsl(149, 54%, 30%)",
+          "secondary": "hsl(37, 67%, 40%)",
+          "accent": "hsl(2, 85%, 47%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-energy",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.4% 0.01 67.558)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21.6% 0.006 56.043)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.4% 0.01 67.558)",
+          "primary": "oklch(66.6% 0.179 58.318)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(68.1% 0.162 75.834)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(64.8% 0.2 131.684)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0.001 106.424)",
+          "muted-foreground": "oklch(44.4% 0.011 73.639)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.3% 0.003 48.717)",
+          "input": "oklch(92.3% 0.003 48.717)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21.6% 0.006 56.043)",
+          "fg-subtitle": "oklch(26.8% 0.007 34.298)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0.001 106.423)",
+          "bg-muted": "oklch(92.3% 0.003 48.717)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.005 56.366)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.7% 0.004 49.25)",
+          "foreground": "oklch(86.9% 0.005 56.366)",
+          "card": "oklch(14.7% 0.004 49.25)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.7% 0.004 49.25)",
+          "popover-foreground": "oklch(86.9% 0.005 56.366)",
+          "primary": "oklch(66.6% 0.179 58.318)",
+          "secondary": "oklch(68.1% 0.162 75.834)",
+          "accent": "oklch(64.8% 0.2 131.684)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21.6% 0.006 56.043)",
+          "muted-foreground": "oklch(70.9% 0.01 56.259)",
+          "border": "oklch(21.6% 0.006 56.043)",
+          "input": "oklch(26.8% 0.007 34.298)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0.001 106.424)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.8% 0.007 34.298)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.4% 0.01 67.558)",
+          "border-card": "oklch(26.8% 0.007 34.298)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-fire",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.4% 0.01 67.558)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21.6% 0.006 56.043)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.4% 0.01 67.558)",
+          "primary": "hsl(2, 85%, 47%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(15, 100%, 48%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(209, 92%, 36%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0.001 106.424)",
+          "muted-foreground": "oklch(44.4% 0.011 73.639)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.3% 0.003 48.717)",
+          "input": "oklch(92.3% 0.003 48.717)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21.6% 0.006 56.043)",
+          "fg-subtitle": "oklch(26.8% 0.007 34.298)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0.001 106.423)",
+          "bg-muted": "oklch(92.3% 0.003 48.717)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.005 56.366)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.7% 0.004 49.25)",
+          "foreground": "oklch(86.9% 0.005 56.366)",
+          "card": "oklch(14.7% 0.004 49.25)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.7% 0.004 49.25)",
+          "popover-foreground": "oklch(86.9% 0.005 56.366)",
+          "primary": "hsl(2, 85%, 47%)",
+          "secondary": "hsl(15, 100%, 48%)",
+          "accent": "hsl(209, 92%, 36%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21.6% 0.006 56.043)",
+          "muted-foreground": "oklch(70.9% 0.01 56.259)",
+          "border": "oklch(21.6% 0.006 56.043)",
+          "input": "oklch(26.8% 0.007 34.298)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0.001 106.424)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.8% 0.007 34.298)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.4% 0.01 67.558)",
+          "border-card": "oklch(26.8% 0.007 34.298)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-mystery",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "oklch(55.8% 0.288 302.321)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(59.1% 0.293 322.896)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(59.2% 0.249 0.584)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "oklch(55.8% 0.288 302.321)",
+          "secondary": "oklch(59.1% 0.293 322.896)",
+          "accent": "oklch(59.2% 0.249 0.584)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-nature",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "oklch(62.7% 0.194 149.214)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(64.8% 0.2 131.684)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(60% 0.118 184.704)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "oklch(62.7% 0.194 149.214)",
+          "secondary": "oklch(64.8% 0.2 131.684)",
+          "accent": "oklch(60% 0.118 184.704)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-oz",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37% 0.013 285.805)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21% 0.006 285.885)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37% 0.013 285.805)",
+          "primary": "oklch(51.1% 0.262 276.966)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(60.9% 0.126 221.723)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(59.1% 0.293 322.896)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.7% 0.001 286.375)",
+          "muted-foreground": "oklch(44.2% 0.017 285.786)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92% 0.004 286.32)",
+          "input": "oklch(92% 0.004 286.32)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21% 0.006 285.885)",
+          "fg-subtitle": "oklch(27.4% 0.006 286.033)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0 0)",
+          "bg-muted": "oklch(92% 0.004 286.32)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(87.1% 0.006 286.286)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.1% 0.005 285.823)",
+          "foreground": "oklch(87.1% 0.006 286.286)",
+          "card": "oklch(14.1% 0.005 285.823)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.1% 0.005 285.823)",
+          "popover-foreground": "oklch(87.1% 0.006 286.286)",
+          "primary": "oklch(51.1% 0.262 276.966)",
+          "secondary": "oklch(60.9% 0.126 221.723)",
+          "accent": "oklch(59.1% 0.293 322.896)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21% 0.006 285.885)",
+          "muted-foreground": "oklch(70.5% 0.015 286.067)",
+          "border": "oklch(21% 0.006 285.885)",
+          "input": "oklch(27.4% 0.006 286.033)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.7% 0.001 286.375)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.4% 0.006 286.033)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37% 0.013 285.805)",
+          "border-card": "oklch(27.4% 0.006 286.033)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-passion",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.1% 0 0)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.5% 0 0)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.1% 0 0)",
+          "primary": "oklch(57.7% 0.245 27.325)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(64.6% 0.222 41.116)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(66.6% 0.179 58.318)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0 0)",
+          "muted-foreground": "oklch(43.9% 0 0)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.2% 0 0)",
+          "input": "oklch(92.2% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.5% 0 0)",
+          "fg-subtitle": "oklch(26.9% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0 0)",
+          "bg-muted": "oklch(92.2% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(87% 0 0)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.5% 0 0)",
+          "foreground": "oklch(87% 0 0)",
+          "card": "oklch(14.5% 0 0)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.5% 0 0)",
+          "popover-foreground": "oklch(87% 0 0)",
+          "primary": "oklch(57.7% 0.245 27.325)",
+          "secondary": "oklch(64.6% 0.222 41.116)",
+          "accent": "oklch(66.6% 0.179 58.318)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.5% 0 0)",
+          "muted-foreground": "oklch(70.8% 0 0)",
+          "border": "oklch(20.5% 0 0)",
+          "input": "oklch(26.9% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.9% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.1% 0 0)",
+          "border-card": "oklch(26.9% 0 0)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-romance",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37% 0.013 285.805)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(21% 0.006 285.885)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37% 0.013 285.805)",
+          "primary": "oklch(58.6% 0.253 17.585)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(57.7% 0.245 27.325)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(64.6% 0.222 41.116)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.7% 0.001 286.375)",
+          "muted-foreground": "oklch(44.2% 0.017 285.786)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92% 0.004 286.32)",
+          "input": "oklch(92% 0.004 286.32)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(21% 0.006 285.885)",
+          "fg-subtitle": "oklch(27.4% 0.006 286.033)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0 0)",
+          "bg-muted": "oklch(92% 0.004 286.32)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(87.1% 0.006 286.286)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.1% 0.005 285.823)",
+          "foreground": "oklch(87.1% 0.006 286.286)",
+          "card": "oklch(14.1% 0.005 285.823)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.1% 0.005 285.823)",
+          "popover-foreground": "oklch(87.1% 0.006 286.286)",
+          "primary": "oklch(58.6% 0.253 17.585)",
+          "secondary": "oklch(57.7% 0.245 27.325)",
+          "accent": "oklch(64.6% 0.222 41.116)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(21% 0.006 285.885)",
+          "muted-foreground": "oklch(70.5% 0.015 286.067)",
+          "border": "oklch(21% 0.006 285.885)",
+          "input": "oklch(27.4% 0.006 286.033)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.7% 0.001 286.375)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.4% 0.006 286.033)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37% 0.013 285.805)",
+          "border-card": "oklch(27.4% 0.006 286.033)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-spotify",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.1% 0 0)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.5% 0 0)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.1% 0 0)",
+          "primary": "hsl(141, 73%, 35%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(170, 55%, 35%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(120, 70%, 35%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(97% 0 0)",
+          "muted-foreground": "oklch(43.9% 0 0)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.2% 0 0)",
+          "input": "oklch(92.2% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.5% 0 0)",
+          "fg-subtitle": "oklch(26.9% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.5% 0 0)",
+          "bg-muted": "oklch(92.2% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(87% 0 0)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(14.5% 0 0)",
+          "foreground": "oklch(87% 0 0)",
+          "card": "oklch(14.5% 0 0)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(14.5% 0 0)",
+          "popover-foreground": "oklch(87% 0 0)",
+          "primary": "hsl(141, 73%, 35%)",
+          "secondary": "hsl(170, 55%, 35%)",
+          "accent": "hsl(120, 70%, 35%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.5% 0 0)",
+          "muted-foreground": "oklch(70.8% 0 0)",
+          "border": "oklch(20.5% 0 0)",
+          "input": "oklch(26.9% 0 0)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(97% 0 0)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(26.9% 0 0)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.1% 0 0)",
+          "border-card": "oklch(26.9% 0 0)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-spring",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "oklch(64.8% 0.2 131.684)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(62.7% 0.194 149.214)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(68.1% 0.162 75.834)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "oklch(64.8% 0.2 131.684)",
+          "secondary": "oklch(62.7% 0.194 149.214)",
+          "accent": "oklch(68.1% 0.162 75.834)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-trust",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "oklch(54.6% 0.245 262.881)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(55.8% 0.288 302.321)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(64.8% 0.2 131.684)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "oklch(54.6% 0.245 262.881)",
+          "secondary": "oklch(55.8% 0.288 302.321)",
+          "accent": "oklch(64.8% 0.2 131.684)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-water",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "hsl(209, 50%, 48%)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "hsl(172, 50%, 40%)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "hsl(210, 60%, 50%)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "hsl(209, 55%, 60%)",
+          "secondary": "hsl(172, 50%, 55%)",
+          "accent": "hsl(210, 55%, 60%)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "extends": "none",
+      "name": "theme-winter",
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "color-background": "var(--background)",
+          "color-foreground": "var(--foreground)",
+          "color-card": "var(--card)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-popover": "var(--popover)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-primary": "var(--primary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-muted": "var(--muted)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-accent": "var(--accent)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-destructive": "var(--destructive)",
+          "color-destructive-foreground": "var(--destructive-foreground)",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)",
+          "color-sidebar-background": "var(--sidebar-background)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "radius": "var(--radius)",
+          "radius-sm": "var(--radius-sm)",
+          "radius-md": "var(--radius-md)",
+          "radius-lg": "var(--radius-lg)",
+          "radius-xl": "var(--radius-xl)",
+          "color-fg-title": "var(--fg-title)",
+          "color-fg-subtitle": "var(--fg-subtitle)",
+          "color-fg-muted": "var(--muted-foreground)",
+          "color-bg-subtle": "var(--bg-subtle)",
+          "color-bg-surface": "var(--bg-surface)",
+          "color-bg-muted": "var(--bg-muted)",
+          "color-overlay": "var(--overlay)",
+          "color-border-strong": "var(--border-strong)",
+          "color-border-card": "var(--border-card)",
+          "color-warning": "var(--warning)",
+          "color-info": "var(--info)",
+          "color-success": "var(--success)",
+          "color-dark": "var(--background)",
+          "radius-ui": "var(--ui-radius)",
+          "radius-card": "var(--card-radius)",
+          "radius-checkbox": "var(--checkbox-radius)",
+          "radius-dropdown-item": "var(--popover-inner-radius, 0px)",
+          "color-border-input": "var(--border-input)"
+        },
+        "light": {
+          "background": "hsl(0 0% 100%)",
+          "foreground": "oklch(37.2% 0.044 257.287)",
+          "card": "hsl(0 0% 100%)",
+          "card-foreground": "oklch(20.8% 0.042 265.755)",
+          "popover": "hsl(0 0% 100%)",
+          "popover-foreground": "oklch(37.2% 0.044 257.287)",
+          "primary": "oklch(60.9% 0.126 221.723)",
+          "primary-foreground": "hsl(0 0% 100%)",
+          "secondary": "oklch(58.8% 0.158 241.966)",
+          "secondary-foreground": "hsl(0 0% 100%)",
+          "accent": "oklch(59.6% 0.145 163.225)",
+          "accent-foreground": "hsl(0 0% 100%)",
+          "muted": "oklch(96.8% 0.007 247.896)",
+          "muted-foreground": "oklch(44.6% 0.043 257.281)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "destructive-foreground": "hsl(0 0% 100%)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "border": "oklch(92.9% 0.013 255.508)",
+          "input": "oklch(92.9% 0.013 255.508)",
+          "ring": "var(--primary)",
+          "fg-title": "oklch(20.8% 0.042 265.755)",
+          "fg-subtitle": "oklch(27.9% 0.041 260.031)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "oklch(98.4% 0.003 247.858)",
+          "bg-muted": "oklch(92.9% 0.013 255.508)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(86.9% 0.022 252.894)",
+          "border-card": "var(--border)",
+          "border-input": "var(--input)",
+          "gray-50": "oklch(98.5% 0 0)",
+          "gray-100": "oklch(97% 0 0)",
+          "gray-200": "oklch(92.2% 0 0)",
+          "gray-300": "oklch(87% 0 0)",
+          "gray-400": "oklch(70.8% 0 0)",
+          "gray-500": "oklch(55.6% 0 0)",
+          "gray-600": "oklch(43.9% 0 0)",
+          "gray-700": "oklch(37.1% 0 0)",
+          "gray-800": "oklch(26.9% 0 0)",
+          "gray-900": "oklch(20.5% 0 0)",
+          "gray-950": "oklch(14.5% 0 0)",
+          "chart-1": "oklch(0.546 0.245 262.881)",
+          "chart-2": "oklch(0.623 0.214 259.815)",
+          "chart-3": "oklch(0.707 0.165 254.624)",
+          "chart-4": "oklch(0.809 0.105 251.813)",
+          "chart-5": "oklch(0.882 0.059 254.128)",
+          "ui-input-focus-outline": "var(--primary)",
+          "ui-input-place-holder": "var(--muted-foreground)",
+          "ui-input-invalid-outline": "var(--destructive)",
+          "ring-bg": "var(--ring)",
+          "ring-offset-color": "var(--background)",
+          "focus-ring": "color-mix(in oklab, var(--ring) 30%, transparent)",
+          "ui-radius": "var(--radius-lg)",
+          "card-radius": "var(--radius-lg)"
+        },
+        "dark": {
+          "background": "oklch(12.9% 0.042 264.695)",
+          "foreground": "oklch(86.9% 0.022 252.894)",
+          "card": "oklch(12.9% 0.042 264.695)",
+          "card-foreground": "hsl(0 0% 100%)",
+          "popover": "oklch(12.9% 0.042 264.695)",
+          "popover-foreground": "oklch(86.9% 0.022 252.894)",
+          "primary": "oklch(60.9% 0.126 221.723)",
+          "secondary": "oklch(58.8% 0.158 241.966)",
+          "accent": "oklch(59.6% 0.145 163.225)",
+          "destructive": "oklch(57.7% 0.245 27.325)",
+          "success": "oklch(59.6% 0.145 163.225)",
+          "warning": "oklch(64.6% 0.222 41.116)",
+          "info": "oklch(58.8% 0.158 241.966)",
+          "muted": "oklch(20.8% 0.042 265.755)",
+          "muted-foreground": "oklch(70.4% 0.04 256.788)",
+          "border": "oklch(20.8% 0.042 265.755)",
+          "input": "oklch(27.9% 0.041 260.031)",
+          "ring": "var(--primary)",
+          "fg-title": "hsl(0 0% 100%)",
+          "fg-subtitle": "oklch(96.8% 0.007 247.896)",
+          "bg": "var(--background)",
+          "bg-subtle": "var(--muted)",
+          "bg-surface": "color-mix(in oklab, var(--muted) 70%, transparent)",
+          "bg-muted": "oklch(27.9% 0.041 260.031)",
+          "overlay": "var(--popover)",
+          "border-strong": "oklch(37.2% 0.044 257.287)",
+          "border-card": "oklch(27.9% 0.041 260.031)",
+          "border-input": "var(--input)",
+          "chart-1": "oklch(0.488 0.243 264.376)"
+        }
+      },
+      "type": "registry:style",
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
       ]
     }
   ]

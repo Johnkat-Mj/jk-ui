@@ -16,7 +16,7 @@ export const PreviewerCodeUI = ({ noInTabs, component, codeblock, isFrame = fals
                 className="grid w-full gap-1 border border-gray-200 dark:border-gray-800/60 ui-card [--card-padding:--spacing(1)] [--card-radius:var(--radius-ui)] bg-gray-50 dark:bg-gray-900/50 my-5 first:mt-0">
                 <div data-gen-ignore
                     className={
-                        cx("inner-radius  bg-bg shadow border border-gray-200 dark:border-gray-800/60 flex justify-center min-h-max",
+                        cx("inner-radius  bg-background shadow border border-gray-200 dark:border-gray-800/60 flex justify-center min-h-max",
                             {
                                 "p-4 md:p-10": !isFrame
                             }
@@ -37,11 +37,11 @@ export const PreviewerCodeUI = ({ noInTabs, component, codeblock, isFrame = fals
             { 'text': 'Code', 'icon': 'ph--code', 'value': `Code-${id}` },
         ]}
             triggersClass="px-3 cursor-pointer py-1 rounded-(--global-main-radius) fx-selected:bg-white dark:fx-selected:bg-gray-800 border border-transparent fx-selected:border-gray-200 dark:fx-selected:border-gray-700/60 fx-selected:shadow fx-selected:text-fg-title"
-            tabListContainer="relative text-fg-muted" docPanelClass="rounded-[8px]">
+            tabListContainer="relative text-muted-foreground" docPanelClass="rounded-[8px]">
             <TabPanel id={`Preview-${id}`} className={"border border-gray-200 dark:border-gray-800/60 ui-card [--card-padding:--spacing(1)] [--card-radius:var(--global-main-radius)] bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center h-max"} >
                 <div className={
                     cx(
-                        "min-h-60 lg:min-h-80 w-full inner-radius bg-bg shadow border border-gray-200 dark:border-gray-800/60",
+                        "min-h-60 lg:min-h-80 w-full inner-radius bg-background shadow border border-gray-200 dark:border-gray-800/60",
                         {
                             "flex items-center justify-center p-4 md:p-10": !isFrame
                         }

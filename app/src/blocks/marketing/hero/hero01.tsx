@@ -79,10 +79,10 @@ const Navbar = () => {
                             className="flex-col focus:outline-none relative py-3 px-1.5 bg-transparent group">
                             <span className="sr-only">Toggle navbar</span>
                             <div id="line-1" aria-hidden="true"
-                                className="h-0.5 w-6 rounded transition duration-300 bg-fg in-aria-expanded:rotate-45 in-aria-expanded:translate-y-1.5">
+                                className="h-0.5 w-6 rounded transition duration-300 bg-foreground in-aria-expanded:rotate-45 in-aria-expanded:translate-y-1.5">
                             </div>
                             <div id="line-2" aria-hidden="true"
-                                className="mt-2 h-0.5 w-6 rounded transition duration-300 bg-fg in-aria-expanded:-rotate-45 in-aria-expanded:-translate-y-1">
+                                className="mt-2 h-0.5 w-6 rounded transition duration-300 bg-foreground in-aria-expanded:-rotate-45 in-aria-expanded:-translate-y-1">
                             </div>
                         </NavbarToggler>
                     </div>

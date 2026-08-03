@@ -3,6 +3,16 @@
   "name": "tabs",
   "title": "Tabs",
   "description": "jk-ui Tabs Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/tabs.tsx",

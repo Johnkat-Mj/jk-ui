@@ -153,7 +153,7 @@ const DropdownDescription = ({ className, ref, ...props }: DropdownDescriptionPr
 const DropdownSeparator = ({ className, ...props }: Omit<SeparatorProps, "orientation">) => (
     <Separator
         orientation="horizontal"
-        className={cx("col-span-full -mx-1 h-px bg-fg/10", className)}
+        className={cx("col-span-full -mx-1 h-px bg-foreground/10", className)}
         {...props}
     />
 )

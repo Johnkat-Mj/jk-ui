@@ -3,6 +3,15 @@
   "name": "badge",
   "title": "Badge",
   "description": "jk-ui Badge Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/badge.tsx",

@@ -1,82 +1,44 @@
-# Style Variants (uiStyles)
+# Style variants and intents
 
-jk-ui provides a shared variant/intent system accessible via `@/lib/ui-variants.ts`. Components like `Alert`, `Badge`, `Card`, and `Callout` use this system for consistent styling.
-
-The `Button` component has its own extended variant system.
-
-## Shared Variant System
-
-### Variants
-
-| Variant | Description |
-|---------|-------------|
-| `none` | No variant styling |
-| `solid` | Filled background |
-| `soft` | Light tinted background |
-| `subtle` | Very light tinted background |
-| `outline` | Bordered with transparent background |
-
-### Intents (prefixed by variant)
+jk-ui separates the visual recipe (`variant`) from the semantic color (`intent`). Props always use **bare intent names**; combined names only exist as internal CSS utilities.
 
 ```tsx
-solid-primary    solid-secondary    solid-success    solid-danger
-solid-warning    solid-info         solid-gray       solid-neutral
-
-soft-primary     soft-secondary     soft-accent      soft-success
-soft-danger      soft-warning       soft-info        soft-gray
-soft-neutral
-
-subtle-primary   subtle-secondary  subtle-success   subtle-danger
-subtle-accent    subtle-warning    subtle-info      subtle-gray
-subtle-neutral
-
-outline-primary  outline-secondary  outline-success  outline-danger
-outline-warning  outline-info       outline-gray     outline-neutral
+<Badge variant="soft" intent="success">Published</Badge>
+<Button variant="solid" intent="destructive">Delete</Button>
 ```
 
-### Usage Pattern
+## Shared UI variants
 
-All shared-variant components follow this pattern:
+Used by Badge, Alert, Card, Callout and other components powered by `uiStyles()`.
+
+- Variants: `none`, `solid`, `soft`, `subtle`, `outline`
+- Intents: `none`, `primary`, `secondary`, `accent`, `success`, `destructive`, `warning`, `info`, `gray`, `neutral`
 
 ```tsx
-import { uiStyles, type UiVariant, type UiIntent } from "@/lib/ui-variants"
-import { resolveIntent } from "@/lib/ui-variant-types"
-
-const classes = uiStyles({
-    variant: "solid" as UiVariant,
-    intent: "solid-primary" as UiIntent<"solid">,
-})
+uiStyles({ variant: "soft", intent: "primary" })
 ```
 
-## Button Variants
+`uiStyles()` composes `ui-soft` with `ui-soft-primary`. Consumers should pass `intent="primary"`, never `intent="soft-primary"`.
 
-Button has a broader variant set with variant-specific intents:
+## Button combinations
 
-| Variant | Available Intents |
-|---------|------------------|
-| `solid` | `solid-primary`, `solid-secondary`, `solid-success`, `solid-danger`, `solid-neutral` |
-| `outline` | `outline-gray`, `outline-primary`, `outline-secondary`, `outline-success`, `outline-danger`, `outline-neutral` |
-| `soft` | `soft-gray`, `soft-primary`, `soft-secondary`, `soft-success`, `soft-danger`, `soft-neutral` |
-| `ghost` | `ghost-gray`, `ghost-primary`, `ghost-secondary`, `ghost-danger`, `ghost-neutral` |
-| `white/black-outline` | automatic light/dark inversion |
-| `none` | raw unstyled button |
+Buttons intentionally expose only the combinations shipped by default:
 
-Button sizes: `xs`, `sm`, `md`, `lg`, `xl`
-Button radius: `none`, `default`, `circle`
+| Variant | Intents |
+|---|---|
+| `solid` | `primary`, `secondary`, `accent`, `neutral`, `destructive` |
+| `soft` | `primary`, `destructive`, `warning`, `gray` |
+| `ghost` | `gray` |
+| `outline` | `gray` |
+| `none` | `none` |
 
-### Button Helper
+Sizes: `xs`, `sm`, `md`, `lg`, `xl`, `none`. Radii: `none`, `default`, `circle`.
 
-```tsx
-import { buttonStyles } from "@/components/jk/button"
+## CSS organization
 
-// Use buttonStyles as a class utility outside of <Button>
-buttonStyles({ variant: "solid", intent: "solid-primary", size: "md" })
-```
+- `button.css`: visual button recipes and sizes.
+- `ui.css`: visual recipes shared by UI components.
+- `intents.css`: all `btn-{variant}-{intent}` and `ui-{variant}-{intent}` color-variable utilities.
+- `form.css`, `base.css`, `utils.css`: forms, React Aria state variants and structural utilities.
 
-## CSS Utilities
-
-jk-ui's CSS layer provides the actual styling through Tailwind v4 `@utility` definitions in:
-- `src/styles/jk-ui/button.css` — Button-specific utilities
-- `src/styles/jk-ui/ui.css` — Shared UI variant utilities (`ui-solid`, `ui-soft`, etc.)
-- `src/styles/jk-ui/form.css` — Form input utilities
-- `src/styles/jk-ui/base.css` — Base element styles
+To add an intent, add its variable-only utility to `intents.css`, then extend the TypeScript intent map. Do not place palette values inside `button.css` or `ui.css`.

@@ -3,6 +3,15 @@
   "name": "icon",
   "title": "Icon",
   "description": "jk-ui Icon Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/icon.tsx",

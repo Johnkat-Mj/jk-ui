@@ -2,7 +2,7 @@ import { Skeleton } from '@/components/jk/skeleton'
 
 export const SkeletonCard = () => {
     return (
-        <div className="max-w-sm w-full p-8 rounded-md border border-border-strong bg-bg space-y-6">
+        <div className="max-w-sm w-full p-8 rounded-md border border-border-strong bg-background space-y-6">
             <Skeleton radius="none" className="aspect-video rounded-ui" />
             <div className="space-y-3">
                 <Skeleton className="w-4/5 h-7" />

@@ -42,7 +42,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
 				<HeadContent />
 			</head>
-			<body className="min-h-screen">
+			<body className="min-h-screen bg-background text-foreground antialiased">
 				<SidebarProvider>
 					<DashSidebar />
 					<AppWrapper>

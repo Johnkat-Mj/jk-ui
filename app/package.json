@@ -6,6 +6,12 @@
     "#/*": "./src/*"
   },
   "scripts": {
+    "analyze:deps": "bun tools/analyze-dependencies.ts",
+    "generate:components": "bun tools/generate-components.ts",
+    "build:registry-json": "bun tools/build-registries.ts",
+    "generate:blocks": "bun tools/generate-block-previews.ts",
+    "registry:build": "shadcn build",
+    "generate:registries": "bun run analyze:deps && bun run build:registry-json && bun run registry:build && bun tools/generate-registry.ts && bun tools/generate-individual-registries.ts && bun run generate:blocks",
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
     "build": "vite build",

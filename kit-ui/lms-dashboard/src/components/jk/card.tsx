@@ -19,12 +19,12 @@ const cardVariants = tv({
             custom: "ui-card"
         },
         fill: {
-            default: "bg-card text-fg",
-            gray: "bg-card-gray text-fg",
+            default: "bg-card text-foreground",
+            gray: "bg-muted text-foreground",
             none: "",
         },
         border: {
-            true: "ring-1 ring-border-card",
+            true: "ring-1 ring-border",
             false: "",
         },
         shadow: {
@@ -90,7 +90,7 @@ export const Card = <V extends CardVariant = "none">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes
@@ -168,7 +168,7 @@ export const CardHeader = ({
 
 
 const cardTitleVariants = tv({
-    base: "text-balance text-fg-title",
+    base: "text-balance text-foreground",
     variants: {
         size: {
             sm: "text-sm md:text-base/6",

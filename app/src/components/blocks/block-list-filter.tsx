@@ -24,7 +24,7 @@ export const BlockListFilter = () => {
                   to={`/blocks/${category.key}`}
                   className="h-7 text-sm px-2 flex items-center rounded-ui transition-colors duration-200 ring ring-border-strong/60
                     fx-current:bg-bg-muted/50 fx-current:border-border-strong/70 fx-current:text-fg-title fx-current:shadow-md fx-current:shadow-black/5
-                    text-fg-muted hover:bg-bg-muted/70 hover:text-fg-subtitle"
+                    text-muted-foreground hover:bg-bg-muted/70 hover:text-fg-subtitle"
                 >
                   {category.title}
                   <span className="ml-1 pl-1.5 opacity-70 border-l border-border-strong/90">

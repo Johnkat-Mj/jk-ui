@@ -17,7 +17,7 @@ import ThemeToggle from "../theme-toggle";
 
 export const DashHeader = () => {
 	return (
-		<header className="sticky top-0 h-16 flex items-center border-b bg-bg border-border z-35">
+		<header className="sticky top-0 h-16 flex items-center border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 z-35">
 			<Container className="flex items-center justify-between gap-3">
 				<div className="flex items-center gap-4">
 					<div className="flex lg:hidden -ml-2">
@@ -41,7 +41,7 @@ export const DashHeader = () => {
 							</svg>
 						</SidebarToggler>
 					</div>
-					<span className="font-semibold text-fg-title sm:inline-flex hidden">
+					<span className="font-semibold text-foreground sm:inline-flex hidden tracking-tight">
 						Dashboard
 					</span>
 				</div>
@@ -49,15 +49,15 @@ export const DashHeader = () => {
 					<SearchField className={"flex-1 max-w-62.5"}>
 						<SearchInput groupClass="h-9" />
 					</SearchField>
-					<Button
-						variant="ghost"
-						size="none"
-						className="size-9 justify-center"
-						iconOnly
-						aria-label="Notification"
-					>
-						<Icon name="hugeicons--notification-02" />
-					</Button>
+						<Button
+							variant="ghost"
+							size="none"
+							className="size-9 justify-center"
+							iconOnly
+							aria-label="Notification"
+						>
+							<Icon name="hugeicons--notification-02" />
+						</Button>
 					<div className="flex">
 						<Menu>
 							<Button
@@ -65,15 +65,14 @@ export const DashHeader = () => {
 								size="none"
 								variant="none"
 								radius="circle"
-								className="mr-1 size-9 rounded-full [--shadow-color:var(--color-gray-700)] dark:[--shadow-color:var(--color-gray-500)]
-									shadow-[0px_2px_2px_0px_var(--shadow-color)] ring-3 ring-bg"
+								className="mr-1 size-9 rounded-full shadow-sm ring-2 ring-background"
 							>
 								<img
 									src="/avatar.webp"
 									alt="avatar"
 									width={100}
 									height={100}
-									className="border border-border-input/50 size-full object-cover object-top rounded-full"
+									className="border border-input/70 size-full object-cover object-top rounded-full"
 								/>
 							</Button>
 							<MenuContent
@@ -82,7 +81,7 @@ export const DashHeader = () => {
 							>
 								<MenuHeader separator>
 									<span className="block">Kurt Cobain</span>
-									<span className="font-normal text-fg-muted">@cobain</span>
+									<span className="font-normal text-muted-foreground">@cobain</span>
 								</MenuHeader>
 
 								<MenuSection>
@@ -118,7 +117,7 @@ export const DashHeader = () => {
 
 								<MenuSeparator />
 
-								<MenuItem intent="danger" href="#logout">
+								<MenuItem intent="destructive" href="#logout">
 									<MenuIcon aria-hidden="true">
 										<span className="iconify hugeicons--logout-03 text-current" />
 									</MenuIcon>

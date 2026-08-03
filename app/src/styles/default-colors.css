@@ -28,8 +28,6 @@
 
   --fg-title: hsl(240 6% 10%);
   --fg-subtitle: hsl(240 4% 16%);
-  --fg: var(--foreground);
-  --fg-muted: var(--muted-foreground);
 
   --bg: var(--background);
   --bg-subtle: var(--muted);
@@ -85,8 +83,6 @@
 
   --fg-title: hsl(0 0% 100%);
   --fg-subtitle: hsl(240 5% 96%);
-  --fg: var(--foreground);
-  --fg-muted: var(--muted-foreground);
 
   --bg: var(--background);
   --bg-subtle: var(--muted);
@@ -99,16 +95,4 @@
   --border-input: var(--input);
 
   --chart-1: oklch(0.488 0.243 264.376);
-
-  --gray-50: oklch(98.5% 0 0);
-  --gray-100: oklch(97% 0 0);
-  --gray-200: oklch(92.2% 0 0);
-  --gray-300: oklch(87% 0 0);
-  --gray-400: oklch(70.8% 0 0);
-  --gray-500: oklch(55.6% 0 0);
-  --gray-600: oklch(43.9% 0 0);
-  --gray-700: oklch(37.1% 0 0);
-  --gray-800: oklch(26.9% 0 0);
-  --gray-900: oklch(20.5% 0 0);
-  --gray-950: oklch(14.5% 0 0);
 }

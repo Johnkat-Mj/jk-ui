@@ -1,153 +1,107 @@
 ---
 title: Principles
-description: How JK-UI works — architecture, theming, and design decisions
-keywords: principles, architecture, design system, tailwind, react aria, css variables, theming
+description: The decisions that keep JK-UI accessible, familiar, and easy to customize
+keywords: principles, architecture, shadcn, react aria, tailwind, theming, customization
 ---
 
-JK-UI is a React adaptation of the [Flexiwind](https://github.com/unoforge/flexiwind) design system for Laravel, built on top of [Intent UI](https://intentui.com/) patterns and [React Aria Components](https://react-aria.adobe.com/).
+JK-UI follows one central idea: provide a useful starting point without turning that starting point into a framework you have to fight.
 
-## Architecture
+Components are copied into your project, their styles are visible, and the default design language stays close to shadcn. You can adopt JK-UI progressively and change any layer when the product needs it.
 
-### TailwindCSS v4 + React Aria Components
+## Accessibility is structural
 
-JK-UI combines two core technologies:
+Interactive components are built with [React Aria Components](https://react-aria.adobe.com/). Keyboard navigation, focus management, disabled states, selection behavior, labels, and ARIA relationships come from accessible primitives rather than being recreated with visual-only markup.
 
-- **React Aria Components** — Accessible, headless UI primitives from Adobe
-- **TailwindCSS v4** — Utility-first CSS with `@theme`, `@utility`, and `@apply` directives
+JK-UI styles React Aria states through Tailwind variants such as `fx-selected`, `fx-open`, and `fx-invalid`. Changing the appearance should not require replacing the accessible behavior.
 
-Components use `tailwind-variants` to compose utilities with full TypeScript safety.
+## Use familiar semantic tokens
 
-### CSS Variable-Based Theming
-
-All design tokens use CSS variables. This makes customization straightforward — change a variable, and every component updates:
-
-```css
-@utility ui-solid-primary {
-    --ui-color: var(--color-primary);
-    --ui-fg: var(--color-primary-foreground);
-
-    &:is(.dark *) {
-        --ui-color: var(--color-primary);
-    }
-}
-```
-
-Components consume these through class names:
+Application code uses the standard shadcn vocabulary:
 
 ```tsx
-<span className="ui-solid ui-solid-primary">Label</span>
+<main className="bg-background text-foreground">
+  <section className="border border-border bg-card text-card-foreground" />
+</main>
 ```
 
-Or inline directly using arbitrary values:
+The public foundation includes tokens such as `background`, `foreground`, `primary`, `muted`, `accent`, `destructive`, `border`, `input`, and `ring`. JK-UI adds a small number of meaningful roles only where components need a real distinction, for example `fg-title`, `bg-surface`, and `border-strong`.
 
-```tsx
-<span className="ui-solid text-white bg-violet-600">Label</span>
-```
+Aliases that only shorten an existing name are avoided. Use `bg-background` and `text-foreground`, not `bg-bg` and `text-fg`.
 
-### Utility Classes
+## Keep palette values direct
 
-TailwindCSS v4's `@utility` directive creates reusable utility classes:
+Real light and dark values live directly in your main CSS file. The commonly used semantic colors receive direct values instead of carrying complete `50–950` scales that most applications never consume.
 
-```css
-@utility ui-solid {
-  @apply bg-(--ui-solid-bg) text-(--ui-solid-text);
-}
-
-@utility ui-soft {
-  @apply bg-(--ui-soft-bg) text-(--ui-soft-text);
-}
-
-@utility ui-outline {
-  @apply text-(--ui-outline-text) border border-(--ui-outline-border);
-}
-```
-
-## Variant & Intent System
-
-Components use a two-level styling system for consistency.
-
-### Variants
-The visual style layer:
-- `solid` — Filled background
-- `soft` — Subtle tinted background
-- `outline` — Border only, transparent background
-- `subtle` — Very subtle background with border
-- `ghost` — Transparent until hover
-
-### Intents
-The semantic meaning:
-- `primary`, `secondary`, `accent`
-- `success`, `warning`, `destructive`, `info`
-- `gray`, `neutral`
-
-```tsx
-<Badge variant="solid" intent="primary">Primary</Badge>
-<Badge variant="soft" intent="success">Success</Badge>
-<Badge variant="outline" intent="destructive">Destructive</Badge>
-```
-
-TypeScript ensures valid combinations — incorrect intent/variant pairs are caught at compile time.
-
-## shadcn Compatibility
-
-JK-UI follows the **shadcn distribution model** — components are copied into your project as source code, not installed as dependencies. This gives you:
-
-- **Full ownership** — Every component file is yours to edit
-- **Tree-shaking by default** — Only the components you install
-- **No lock-in** — Migrate away at any time by keeping the source files
-
-The `@jk-ui` namespace works seamlessly with the shadcn CLI after running `jk-ui-cli setup`.
-
-## shadcn-Standard CSS Variables
-
-JK-UI uses shadcn-standard CSS variable names so that components work out of the box with Tailwind's `@theme inline` mappings:
-
-| Category | Variable | Tailwind Utility |
-|----------|----------|-----------------|
-| Background | `--background` | `bg-background` |
-| Foreground | `--foreground` | `text-foreground` |
-| Primary | `--primary` | `bg-primary` |
-| Muted | `--muted` | `bg-muted` |
-| Border | `--border` | `border-border` |
-| Input | `--input` | `border-input` |
-| Ring | `--ring` | `ring-ring` |
-| Radius | `--radius` | `rounded-lg` |
-
-JK-UI also provides **component-specific radius utilities** backed by dedicated variables:
-
-| Utility | Variable | Default |
-|---------|----------|---------|
-| `rounded-ui` | `--ui-radius` | `var(--radius-lg)` |
-| `rounded-card` | `--card-radius` | `var(--radius-lg)` |
-| `rounded-checkbox` | `--checkbox-radius` | `var(--radius-sm)` |
-
-Extended jk-ui tokens (`--fg-title`, `--bg-subtle`, `--border-strong`, etc.) are maintained for backward compatibility.
-
-## Customization
-
-CSS variables are designed to be overridden at any level:
-
-### Component-level override
-```tsx
-<Button className="[--btn-solid-bg:var(--color-purple-600)]">
-  Custom Color
-</Button>
-```
-
-### Theme-level override
 ```css
 :root {
-  --primary: var(--color-purple-600);
-  --radius: 0.375rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.01 260);
+  --primary: oklch(0.52 0.14 215);
+  --primary-foreground: oklch(1 0 0);
 }
 ```
 
-### New variant
+Gray keeps a complete scale because surfaces, dividers, borders, and text often need several neutral levels. Additional shades remain an application decision: add one when the interface actually uses it.
+
+## Separate appearance from meaning
+
+`variant` describes the visual treatment. `intent` describes the semantic color.
+
+```tsx
+<Button variant="solid" intent="primary">Save</Button>
+<Button variant="soft" intent="destructive">Delete</Button>
+<Badge variant="soft" intent="success">Published</Badge>
+```
+
+Consumers pass bare intent names such as `primary` or `destructive`. Combined names such as `btn-solid-primary` and `ui-soft-success` are internal CSS utilities, not component prop values.
+
+The CSS keeps those responsibilities separate:
+
+| File | Responsibility |
+|---|---|
+| `button.css` | Button structure, sizes, and visual recipes |
+| `ui.css` | Shared UI recipes such as solid, soft, subtle, and outline |
+| `intents.css` | Color variables for each supported variant/intent combination |
+
+A recipe consumes variables; it does not choose a palette:
+
 ```css
-@utility ui-gradient-primary {
-    background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-400));
-    --ui-gradient-text: var(--color-white);
+@utility btn-solid {
+  color: var(--btn-fg);
+  background-color: var(--btn-color);
+}
+
+@utility btn-solid-primary {
+  --btn-color: var(--color-primary);
+  --btn-fg: var(--color-primary-foreground);
 }
 ```
 
-All component tokens are documented and accessible for override.
+This keeps a new visual treatment independent from a new semantic color.
+
+## Ship useful defaults, not every combination
+
+JK-UI intentionally does not expose every possible button intent. Its default button map covers the combinations most interfaces need:
+
+| Variant | Included intents |
+|---|---|
+| `solid` | `primary`, `secondary`, `accent`, `neutral`, `destructive` |
+| `soft` | `primary`, `destructive`, `warning`, `gray` |
+| `ghost` | `gray` |
+| `outline` | `gray` |
+
+Shared display components can use the broader UI intent set for badges, alerts, and status surfaces. Button combinations stay deliberately narrower because action hierarchy benefits from restraint.
+
+If a product needs another combination, add its variable utility to `intents.css` and extend the component's TypeScript map. The defaults demonstrate the extension point without making every project carry every possibility.
+
+## Customize at the smallest useful layer
+
+Choose the narrowest change that matches the requirement:
+
+1. Change semantic values in the main CSS file to recolor the whole product.
+2. Change the component variables in that same file to adjust a shared component decision.
+3. Change or add an intent in `intents.css` to support a color combination.
+4. Edit the copied component when its API or structure should differ.
+5. Use `className` for a one-off composition.
+
+This is the practical meaning of being shadcn-friendly: sensible defaults, visible source code, familiar tokens, and no hidden theming system between the application and its CSS.

@@ -3,7 +3,15 @@
   "name": "input-time",
   "title": "Input Time",
   "description": "jk-ui Input Time Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/input-date",
     "@jk-ui/input"
   ],

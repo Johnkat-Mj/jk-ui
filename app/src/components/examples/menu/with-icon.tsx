@@ -26,7 +26,7 @@ export const MenuWithIcon = () => {
       <MenuContent popover={{ placement: "bottom" }} className="min-w-50">
         <MenuHeader separator>
           <span className="block">Kurt Cobain</span>
-          <span className="font-normal text-fg-muted">@cobain</span>
+          <span className="font-normal text-muted-foreground">@cobain</span>
         </MenuHeader>
 
         <MenuSection>
