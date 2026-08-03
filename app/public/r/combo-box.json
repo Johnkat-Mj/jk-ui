@@ -3,7 +3,15 @@
   "name": "combo-box",
   "title": "Combobox",
   "description": "jk-ui Combobox Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/text-field",
     "@jk-ui/input",
     "@jk-ui/dropdown",

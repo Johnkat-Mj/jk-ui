@@ -1,357 +1,489 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry.json",
-    "name": "blocks",
-    "type": "registry:block",
-    "homepage": "https://jk-ui.vercel.app",
-    "items": [
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "blocks",
+  "type": "registry:block",
+  "homepage": "https://jk-ui.vercel.app",
+  "items": [
+    {
+      "name": "login01",
+      "type": "registry:block",
+      "title": "Login 01",
+      "description": "Simple centered login form with email and password fields",
+      "files": [
         {
-            "name": "login01",
-            "type": "registry:block",
-            "title": "Login 01",
-            "description": "Simple centered login form with email and password fields",
-            "files": [
-                {
-                    "path": "src/blocks/application/auth/login01.tsx",
-                    "type": "registry:block",
-                    "target": "components/login.tsx"
-                }
-            ]
-        },
-        {
-            "name": "login02",
-            "type": "registry:block",
-            "title": "Login 02",
-            "description": "Login form with social authentication buttons",
-            "files": [
-                {
-                    "path": "src/blocks/application/auth/login02.tsx",
-                    "type": "registry:block",
-                    "target": "components/login.tsx"
-                }
-            ]
-        },
-        {
-            "name": "login03",
-            "type": "registry:block",
-            "title": "Login 03",
-            "description": "Split-screen login page with illustration side panel",
-            "files": [
-                {
-                    "path": "src/blocks/application/auth/login03.tsx",
-                    "type": "registry:block",
-                    "target": "components/login.tsx"
-                }
-            ]
-        },
-        {
-            "name": "signup01",
-            "type": "registry:block",
-            "title": "Sign Up 01",
-            "description": "User registration form with email, password and terms",
-            "files": [
-                {
-                    "path": "src/blocks/application/auth/signup01.tsx",
-                    "type": "registry:block",
-                    "target": "components/signup.tsx"
-                }
-            ]
-        },
-        {
-            "name": "otp01",
-            "type": "registry:block",
-            "title": "OTP 01",
-            "description": "One-time password verification input form",
-            "files": [
-                {
-                    "path": "src/blocks/application/auth/otp01.tsx",
-                    "type": "registry:block",
-                    "target": "components/otp.tsx"
-                }
-            ]
-        },
-        {
-            "name": "kpi01",
-            "type": "registry:block",
-            "title": "KPI Card 01",
-            "description": "Key performance indicator card with metric and trend",
-            "files": [
-                {
-                    "path": "src/blocks/application/dash-card/kpi01.tsx",
-                    "type": "registry:block",
-                    "target": "components/kpi-card.tsx"
-                }
-            ]
-        },
-        {
-            "name": "kpi02",
-            "type": "registry:block",
-            "title": "KPI Card 02",
-            "description": "Key performance indicator card with metric and trend",
-            "files": [
-                {
-                    "path": "src/blocks/application/dash-card/kpi02.tsx",
-                    "type": "registry:block",
-                    "target": "components/kpi02.tsx"
-                }
-            ]
-        },
-        {
-            "name": "kpi03",
-            "type": "registry:block",
-            "title": "KPI Card 03",
-            "description": "Key performance indicator card with metric and trend",
-            "files": [
-                {
-                    "path": "src/blocks/application/dash-card/kpi03.tsx",
-                    "type": "registry:block",
-                    "target": "components/kpi03.tsx"
-                }
-            ]
-        },
-        {
-            "name": "activity01",
-            "type": "registry:block",
-            "title": "Activity Card 01",
-            "description": "Recent activity feed card for dashboards",
-            "files": [
-                {
-                    "path": "src/blocks/application/dash-card/activity01.tsx",
-                    "type": "registry:block",
-                    "target": "components/activity-card.tsx"
-                }
-            ]
-        },
-        {
-            "name": "empty-state01",
-            "type": "registry:block",
-            "title": "Empty State 01",
-            "description": "Empty state placeholder with illustration and action",
-            "files": [
-                {
-                    "path": "src/blocks/application/empty-state/empty-state01.tsx",
-                    "type": "registry:block",
-                    "target": "components/empty-state.tsx"
-                }
-            ]
-        },
-        {
-            "name": "header01",
-            "type": "registry:block",
-            "title": "Header 01",
-            "description": "Simple application header with navigation",
-            "files": [
-                {
-                    "path": "src/blocks/application/header/header01.tsx",
-                    "type": "registry:block",
-                    "target": "components/header.tsx"
-                }
-            ]
-        },
-        {
-            "name": "header02",
-            "type": "registry:block",
-            "title": "Header 02",
-            "description": "Header with search and user menu dropdown",
-            "files": [
-                {
-                    "path": "src/blocks/application/header/header02.tsx",
-                    "type": "registry:block",
-                    "target": "components/header.tsx"
-                }
-            ]
-        },
-        {
-            "name": "header03",
-            "type": "registry:block",
-            "title": "Header 03",
-            "description": "Header with breadcrumb navigation and actions",
-            "files": [
-                {
-                    "path": "src/blocks/application/header/header03.tsx",
-                    "type": "registry:block",
-                    "target": "components/header.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar01",
-            "type": "registry:block",
-            "title": "Sidebar 01",
-            "description": "Collapsible sidebar navigation with icons",
-            "files": [
-                {
-                    "path": "src/blocks/application/sidebar/01/sidebar01.tsx",
-                    "type": "registry:block",
-                    "target": "page.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/01/sidebar.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/01/sidebar-item.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-item.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar02",
-            "type": "registry:block",
-            "title": "Sidebar 02",
-            "description": "Multi-level sidebar with nested navigation groups",
-            "files": [
-                {
-                    "path": "src/blocks/application/sidebar/02/sidebar02.tsx",
-                    "type": "registry:block",
-                    "target": "page.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/02/sidebar.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/02/sidebar-nav-group.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-nav-group.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/02/sidebar-item.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-item.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar03",
-            "type": "registry:block",
-            "title": "Sidebar 03",
-            "description": "Multi-level sidebar with nested navigation groups",
-            "files": [
-                 {
-                    "path": "src/blocks/application/sidebar/03/sidebar03.tsx",
-                    "type": "registry:block",
-                    "target": "page.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/03/sidebar.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/03/sidebar-nav-group.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-nav-group.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/03/sidebar-item.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-item.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar04",
-            "type": "registry:block",
-            "title": "Sidebar 04",
-            "description": "Multi-level sidebar with nested navigation groups",
-            "files": [
-               {
-                    "path": "src/blocks/application/sidebar/04/sidebar04.tsx",
-                    "type": "registry:block",
-                    "target": "page.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/04/sidebar.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/04/sidebar-item.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-item.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar05",
-            "type": "registry:block",
-            "title": "Sidebar 05",
-            "description": "Multi-level sidebar with nested navigation groups",
-            "files": [
-                {
-                    "path": "src/blocks/application/sidebar/05/sidebar05.tsx",
-                    "type": "registry:block",
-                    "target": "page.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/05/sidebar.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar.tsx"
-                },
-                {
-                    "path": "src/blocks/application/sidebar/05/sidebar-item.tsx",
-                    "type": "registry:block",
-                    "target": "components/sidebar-item.tsx"
-                }
-            ]
-        },
-        {
-            "name": "shell01",
-            "type": "registry:block",
-            "title": "App Shell 01",
-            "description": "Application shell layout with sidebar and header",
-            "files": [
-                {
-                    "path": "src/blocks/application/app-shell/shell01.tsx",
-                    "type": "registry:block",
-                    "target": "components/app-shell.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/sidebar01"
-            ]
-        },
-        {
-            "name": "table01",
-            "type": "registry:block",
-            "title": "Table 01",
-            "description": "Sortable data table with pagination and filtering",
-            "files": [
-                {
-                    "path": "src/blocks/application/table/table01.tsx",
-                    "type": "registry:block",
-                    "target": "components/data-table.tsx"
-                }
-            ]
-        },
-         {
-            "name": "table02",
-            "type": "registry:block",
-            "title": "Table 02",
-            "description": "Table",
-            "files": [
-                {
-                    "path": "src/blocks/application/table/table02.tsx",
-                    "type": "registry:block",
-                    "target": "components/table02.tsx"
-                }
-            ]
-        },
-         {
-            "name": "table03",
-            "type": "registry:block",
-            "title": "Table 03",
-            "description": "Table",
-            "files": [
-                {
-                    "path": "src/blocks/application/table/table03.tsx",
-                    "type": "registry:block",
-                    "target": "components/table03.tsx"
-                }
-            ]
+          "path": "src/blocks/application/auth/login01.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
         }
-    ]
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "login02",
+      "type": "registry:block",
+      "title": "Login 02",
+      "description": "Login form with social authentication buttons",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/login02.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "login03",
+      "type": "registry:block",
+      "title": "Login 03",
+      "description": "Split-screen login page with illustration side panel",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/login03.tsx",
+          "type": "registry:block",
+          "target": "components/login.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "signup01",
+      "type": "registry:block",
+      "title": "Sign Up 01",
+      "description": "User registration form with email, password and terms",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/signup01.tsx",
+          "type": "registry:block",
+          "target": "components/signup.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "otp01",
+      "type": "registry:block",
+      "title": "OTP 01",
+      "description": "One-time password verification input form",
+      "files": [
+        {
+          "path": "src/blocks/application/auth/otp01.tsx",
+          "type": "registry:block",
+          "target": "components/otp.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "kpi01",
+      "type": "registry:block",
+      "title": "KPI Card 01",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi01.tsx",
+          "type": "registry:block",
+          "target": "components/kpi-card.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "kpi02",
+      "type": "registry:block",
+      "title": "KPI Card 02",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi02.tsx",
+          "type": "registry:block",
+          "target": "components/kpi02.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "kpi03",
+      "type": "registry:block",
+      "title": "KPI Card 03",
+      "description": "Key performance indicator card with metric and trend",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/kpi03.tsx",
+          "type": "registry:block",
+          "target": "components/kpi03.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "activity01",
+      "type": "registry:block",
+      "title": "Activity Card 01",
+      "description": "Recent activity feed card for dashboards",
+      "files": [
+        {
+          "path": "src/blocks/application/dash-card/activity01.tsx",
+          "type": "registry:block",
+          "target": "components/activity-card.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "empty-state01",
+      "type": "registry:block",
+      "title": "Empty State 01",
+      "description": "Empty state placeholder with illustration and action",
+      "files": [
+        {
+          "path": "src/blocks/application/empty-state/empty-state01.tsx",
+          "type": "registry:block",
+          "target": "components/empty-state.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "header01",
+      "type": "registry:block",
+      "title": "Header 01",
+      "description": "Simple application header with navigation",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header01.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "header02",
+      "type": "registry:block",
+      "title": "Header 02",
+      "description": "Header with search and user menu dropdown",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header02.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "header03",
+      "type": "registry:block",
+      "title": "Header 03",
+      "description": "Header with breadcrumb navigation and actions",
+      "files": [
+        {
+          "path": "src/blocks/application/header/header03.tsx",
+          "type": "registry:block",
+          "target": "components/header.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar01",
+      "type": "registry:block",
+      "title": "Sidebar 01",
+      "description": "Collapsible sidebar navigation with icons",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar01.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/01/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar02",
+      "type": "registry:block",
+      "title": "Sidebar 02",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar02.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar-nav-group.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-nav-group.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/02/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar03",
+      "type": "registry:block",
+      "title": "Sidebar 03",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar03.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar-nav-group.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-nav-group.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/03/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar04",
+      "type": "registry:block",
+      "title": "Sidebar 04",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar04.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/04/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar05",
+      "type": "registry:block",
+      "title": "Sidebar 05",
+      "description": "Multi-level sidebar with nested navigation groups",
+      "files": [
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar05.tsx",
+          "type": "registry:block",
+          "target": "page.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar.tsx"
+        },
+        {
+          "path": "src/blocks/application/sidebar/05/sidebar-item.tsx",
+          "type": "registry:block",
+          "target": "components/sidebar-item.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "shell01",
+      "type": "registry:block",
+      "title": "App Shell 01",
+      "description": "Application shell layout with sidebar and header",
+      "files": [
+        {
+          "path": "src/blocks/application/app-shell/shell01.tsx",
+          "type": "registry:block",
+          "target": "components/app-shell.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/sidebar01"
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "table01",
+      "type": "registry:block",
+      "title": "Table 01",
+      "description": "Sortable data table with pagination and filtering",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table01.tsx",
+          "type": "registry:block",
+          "target": "components/data-table.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "table02",
+      "type": "registry:block",
+      "title": "Table 02",
+      "description": "Table",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table02.tsx",
+          "type": "registry:block",
+          "target": "components/table02.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "table03",
+      "type": "registry:block",
+      "title": "Table 03",
+      "description": "Table",
+      "files": [
+        {
+          "path": "src/blocks/application/table/table03.tsx",
+          "type": "registry:block",
+          "target": "components/table03.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-sidebar04",
+  "type": "registry:block",
+  "title": "Sidebar 04",
+  "description": "Multi-level sidebar with nested navigation groups",
+  "files": [
+    {
+      "path": "src/blocks/application/sidebar/04/sidebar04.tsx",
+      "type": "registry:block",
+      "target": "page.tsx"
+    },
+    {
+      "path": "src/blocks/application/sidebar/04/sidebar.tsx",
+      "type": "registry:block",
+      "target": "components/sidebar.tsx"
+    },
+    {
+      "path": "src/blocks/application/sidebar/04/sidebar-item.tsx",
+      "type": "registry:block",
+      "target": "components/sidebar-item.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

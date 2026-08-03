@@ -3,8 +3,14 @@
   "name": "alert",
   "title": "Alert",
   "description": "jk-ui Alert Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
-    "@jk-ui/lib"
+    "@jk-ui/base"
   ],
   "files": [
     {

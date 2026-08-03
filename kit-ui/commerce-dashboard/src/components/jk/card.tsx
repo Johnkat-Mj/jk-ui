@@ -90,7 +90,7 @@ export const Card = <V extends CardVariant = "none">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes

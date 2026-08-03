@@ -3,6 +3,16 @@
   "name": "tag-group",
   "title": "Tag Group",
   "description": "jk-ui Tag Group Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/tag-group.tsx",

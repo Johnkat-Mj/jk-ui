@@ -3,7 +3,15 @@
   "name": "tracker",
   "title": "Tracker",
   "description": "jk-ui Tracker Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/tooltip"
   ],
   "files": [

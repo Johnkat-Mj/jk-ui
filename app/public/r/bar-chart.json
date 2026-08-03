@@ -3,6 +3,15 @@
   "name": "bar-chart",
   "title": "Bar Chart",
   "description": "jk-ui Bar Chart Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/bar-chart.tsx",

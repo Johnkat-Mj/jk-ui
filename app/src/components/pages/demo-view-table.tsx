@@ -140,7 +140,7 @@ export const DemoViewTable = () => {
     const isIndeterminate = selectedUsers.length > 0 && selectedUsers.length < usersDemo.length
 
     return (
-        <div className="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-bg dark:bg-bg-surface/40 rounded-ui">
+        <div className="grid grid-rows-[auto_1fr_auto] border border-border-strong/40 dark:border-border bg-background dark:bg-bg-surface/40 rounded-ui">
             <div className="relative z-11 p-4 flex gap-4 flex-col sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex">
                     <SearchField aria-label="Search field">

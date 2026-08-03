@@ -36,7 +36,7 @@ export const HeroSection = () => {
                         <UiLink
                             href={"https://flexiwind.unoforge.com/"}
                             aria-label={`URL to flexiwind UI`}
-                            className={"relative text-muted-foreground dark:text-fg-title/70 w-max bg-bg ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface dark:before:bg-bg-muted/80 before:rounded-[7px]"}
+                            className={"relative text-muted-foreground dark:text-fg-title/70 w-max bg-background ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface dark:before:bg-bg-muted/80 before:rounded-[7px]"}
                         >
                             <span className="text-sm relative"> Flexiwind v1 is live </span>
                         </UiLink>

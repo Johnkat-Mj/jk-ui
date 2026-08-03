@@ -3,7 +3,15 @@
   "name": "radio",
   "title": "Radio",
   "description": "jk-ui Radio Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/input"
   ],
   "files": [

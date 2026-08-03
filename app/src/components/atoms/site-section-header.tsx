@@ -27,7 +27,7 @@ export const SiteSectionHeader = ({
             )}
         >
             {subtitle && (
-                <span className="relative text-muted-foreground dark:text-fg-title/70 w-max bg-bg ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface before:rounded-[7px]">
+                <span className="relative text-muted-foreground dark:text-fg-title/70 w-max bg-background ring-1 ring-border before:absolute before:inset-0.5 px-2 py-1 rounded-ui before:bg-bg-surface before:rounded-[7px]">
                     <span className="text-sm relative">
                         {subtitle}
                     </span>

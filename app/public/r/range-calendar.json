@@ -3,7 +3,15 @@
   "name": "range-calendar",
   "title": "Range Calendar",
   "description": "jk-ui Range Calendar Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/calendar"
   ],
   "files": [
@@ -14,5 +22,19 @@
       "target": "components/jk/range-calendar.tsx"
     }
   ],
+  "cssVars": {
+    "light": {
+      "date-segment-focus-bg": "var(--primary)",
+      "date-segment-focus-fg": "var(--primary-foreground)",
+      "range-selected-bg": "color-mix(in oklab, var(--primary) 10%, transparent)",
+      "range-selected-invalid-bg": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+      "range-selected-bg-hover": "color-mix(in oklab, var(--primary) 16%, transparent)",
+      "range-selected-invalid-bg-hover": "color-mix(in oklab, var(--destructive) 16%, transparent)",
+      "range-selected-fg": "var(--primary)",
+      "range-selected-invalid-fg": "var(--destructive)",
+      "range-selected-bg-pressed": "color-mix(in oklab, var(--primary) 22%, transparent)",
+      "range-selected-invalid-bg-pressed": "color-mix(in oklab, var(--destructive) 22%, transparent)"
+    }
+  },
   "type": "registry:ui"
 }

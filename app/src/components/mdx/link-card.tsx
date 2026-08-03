@@ -9,7 +9,7 @@ export const LinkCard = ({ href, title, description, icon, iconDark }: UiCardPro
             href={href}
             className={`${cx(
                 "flex flex-col w-full ui-card text-foreground ease-linear duration-200 relative",
-                "hover:border-primary border border-gray-200 dark:border-gray-800/60 bg-bg hover:bg-bg-subtle",
+                "hover:border-primary border border-gray-200 dark:border-gray-800/60 bg-background hover:bg-bg-subtle",
                 "[--card-padding:calc(var(--spacing,0.25rem)*5)] [--card-radius:var(--global-main-radius)]",
             )}`}
         >

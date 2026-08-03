@@ -105,7 +105,7 @@ interface CalloutProps<V extends CalloutVariant = "solid"> {
  * ```
  */
 export const Callout = <V extends CalloutVariant = "solid">({
-    variant = "solid" as V,
+    variant = "default" as V,
     intent,
     type = "default",
     size = "md",
@@ -118,8 +118,7 @@ export const Callout = <V extends CalloutVariant = "solid">({
     children,
 }: CalloutProps<V>) => {
     // Resolve intent based on type if not explicitly provided
-    // Need to construct the full intent name: variant-intentColor (e.g., "gray", "primary")
-    const resolvedIntent = intent || (`${variant}-${calloutTypeIntents[type]}` as CalloutIntent<V>)
+    const resolvedIntent = (intent || calloutTypeIntents[type]) as UiComponentIntent<V>
 
     // Get icon for the type
     const icon = calloutTypeIcons[type]

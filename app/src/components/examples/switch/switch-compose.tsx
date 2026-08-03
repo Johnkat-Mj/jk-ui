@@ -6,7 +6,7 @@ import { Switch, SwitchIndicator, SwitchLabel } from '@/components/jk/switch'
 export const SwitchCompose = () => {
   return (
     <Switch composeAll className="ui-card rounded-ui [--card-padding:--spacing(2.5)] [--card-radius:--radius-ui] bg-bg-surface flex items-center gap-3">
-      <div className="inner-radius bg-bg shadow-sm size-10 text-xl d-flex-place-center">
+      <div className="inner-radius bg-background shadow-sm size-10 text-xl d-flex-place-center">
         <span aria-hidden="true" className="flex iconify ph--globe" />
       </div>
       <div className="flex items-center gap-4 flex-1">

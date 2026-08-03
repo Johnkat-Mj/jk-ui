@@ -3,6 +3,16 @@
   "name": "card",
   "title": "Card",
   "description": "jk-ui Card Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/card.tsx",

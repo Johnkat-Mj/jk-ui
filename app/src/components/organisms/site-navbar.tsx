@@ -18,12 +18,12 @@ export const SiteNavbar = () => {
             </span>
             <header className="px-1.5 max-[350px]:px-2.5 sm:px-4 pt-2 w-full z-45 relative">
                 <nav
-                    className="sm:max-w-4xl bg-bg shadow-sm border border-border/60 dark:border-border-strong shadow-gray-50 dark:shadow-transparent sm:mx-auto w-full flex justify-between ui-card [--card-padding:--spacing(4)] [--card-radius:var(--radius-ui)]">
+                    className="sm:max-w-4xl bg-background shadow-sm border border-border/60 dark:border-border-strong shadow-gray-50 dark:shadow-transparent sm:mx-auto w-full flex justify-between ui-card [--card-padding:--spacing(4)] [--card-radius:var(--radius-ui)]">
                     <div className="flex items-center gap-2 pr-3">
                         <div className="flex lg:hidden pr-2 border-r border-border-strong/70">
 
                         </div>
-                        <Link href="/" className="hidden min-[20rem]:flex gap-2 items-center relative">
+                        <Link to="/" className="hidden min-[20rem]:flex gap-2 items-center relative">
                             <SiteLogo />
                         </Link>
                     </div>

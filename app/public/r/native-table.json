@@ -3,6 +3,15 @@
   "name": "native-table",
   "title": "Native Table",
   "description": "jk-ui Native Table Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/native-table.tsx",

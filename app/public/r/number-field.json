@@ -3,7 +3,15 @@
   "name": "number-field",
   "title": "Number Field",
   "description": "jk-ui Number Field Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/input",
     "@jk-ui/text-field"
   ],

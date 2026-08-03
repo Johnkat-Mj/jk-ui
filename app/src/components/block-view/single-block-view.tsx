@@ -55,7 +55,7 @@ const SingleBlockViewComponent = ({ name, preview }: SingleBlockViewProps) => {
                 target="_blank"
                 rel="noreferrer"
                 title="Open in new tab"
-                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-bg shadow border border-border/50"
+                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-background shadow border border-border/50"
               >
                 <span aria-hidden="true" className="flex iconify ph--arrows-out"></span>
               </a>
@@ -63,7 +63,7 @@ const SingleBlockViewComponent = ({ name, preview }: SingleBlockViewProps) => {
                 onClick={handleReload}
                 aria-label="Reload preview"
                 title="Reload preview"
-                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-bg shadow border border-border/50 text-muted-foreground hover:text-foreground"
+                className="p-1.5 flex text-sm rounded-[5px] ease-linear duration-200 bg-background shadow border border-border/50 text-muted-foreground hover:text-foreground"
               >
                 <span aria-hidden="true" className="flex iconify ph--arrow-clockwise"></span>
               </button>

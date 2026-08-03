@@ -120,7 +120,7 @@ export const mdxComponents = {
   ),
 
   table: ({ className, ...props }: React.ComponentProps<"table">) => (
-    <div className="relative overflow-x-auto w-full rounded-lg border border-border/70 p-1 mt-6">
+    <div className="relative overflow-x-auto w-full rounded-lg border border-border-input p-1 mt-6">
       <table
         className={cn(
           "w-full table-head-row",

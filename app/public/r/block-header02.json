@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-header02",
+  "type": "registry:block",
+  "title": "Header 02",
+  "description": "Header with search and user menu dropdown",
+  "files": [
+    {
+      "path": "src/blocks/application/header/header02.tsx",
+      "type": "registry:block",
+      "target": "components/header.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

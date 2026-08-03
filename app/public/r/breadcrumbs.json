@@ -3,7 +3,15 @@
   "name": "breadcrumbs",
   "title": "Breadcrumbs",
   "description": "jk-ui Breadcrumbs Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/link"
   ],
   "files": [

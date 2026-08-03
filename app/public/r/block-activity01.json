@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-activity01",
+  "type": "registry:block",
+  "title": "Activity Card 01",
+  "description": "Recent activity feed card for dashboards",
+  "files": [
+    {
+      "path": "src/blocks/application/dash-card/activity01.tsx",
+      "type": "registry:block",
+      "target": "components/activity-card.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

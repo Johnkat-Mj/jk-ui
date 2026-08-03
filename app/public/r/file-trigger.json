@@ -3,7 +3,15 @@
   "name": "file-trigger",
   "title": "File Trigger",
   "description": "jk-ui File Trigger Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/button",
     "@jk-ui/loader"
   ],

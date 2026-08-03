@@ -31,13 +31,13 @@ Accepts all `react-aria-components/Button` props (`onPress`, `isDisabled`, `aria
 
 | Variant | Default Intent | Available Intents |
 |---------|---------------|-------------------|
-| solid | solid-primary | primary, secondary, success, danger, neutral |
-| outline | outline-gray | gray, primary, secondary, success, danger, neutral |
-| soft | soft-gray | gray, primary, secondary, success, danger, neutral |
-| ghost | ghost-gray | gray, primary, secondary, danger, neutral |
+| solid | primary | primary, secondary, accent, neutral, destructive |
+| outline | gray | gray |
+| soft | gray | primary, destructive, warning, gray |
+| ghost | gray | gray |
 | white/black-outline | auto | — |
 
-Intent values are prefixed: e.g. `intent="solid-danger"`, `intent="outline-primary"`, `intent="soft-success"`.
+Intent props use bare semantic names: e.g. `intent="destructive"`, `intent="primary"`, `intent="gray"`.
 
 ## Sizes
 
@@ -73,4 +73,4 @@ Intent values are prefixed: e.g. `intent="solid-danger"`, `intent="outline-prima
 
 - Do not invent variant names outside the documented set.
 - Do not use raw `<button>` when `Button` covers the need.
-- Intent values are prefixed (e.g. `solid-primary`), not bare color names.
+- Intent props use bare semantic names. Combined names such as `btn-solid-primary` are internal CSS utilities only.

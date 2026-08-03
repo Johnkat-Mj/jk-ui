@@ -7,65 +7,99 @@ An AI skill is a packaged set of instructions and reference files that helps AI 
 
 ## jk-ui Skill
 
-The [jk-ui skill](/skills/jk-ui) covers the full JK-UI component library — install commands, props, composition patterns, theming, accessibility, and blocks.
+The [jk-ui skill](https://github.com/Johnkat-Mj/jk-ui/tree/main/skills/jk-ui) is a comprehensive guide for AI assistants and developers. It includes:
 
-Install the skill:
+- Per-component documentation and APIs
+- Install commands for every component
+- Theming system and CSS variables
+- Verified best practices and common mistakes
+- Accessibility patterns (React Aria)
+- Composition examples
+- Performance guidance
 
-<Terminal command="npx skills add johnkat-mj/ui --skill jk-ui" />
+## Setup: 7 Simple Steps
 
-### Setup Flow
+JK-UI setup is straightforward — no CLI overhead, just shadcn basics:
 
-Setting up jk-ui follows the standard shadcn flow:
+**Step 1: Initialize shadcn**
+```bash
+bunx --bun shadcn@latest init --base aria
+```
 
-1. **shadcn init** — Initialize with React Aria base:
-   ```bash
-   bunx --bun shadcn@latest init --base aria
-   ```
+**Step 2: Register the @jk-ui namespace**
+```bash
+bunx shadcn@latest registry add @jk-ui=https://jk-ui.unoforge.com/r/{name}.json
+```
 
-2. **Install base CSS** — JK-UI base styles:
-   ```bash
-   npx shadcn add @jk-ui/base
-   ```
+**Step 3: Install an icon library** (choose one)
+```bash
+# Phosphor (default)
+bun add -D @iconify-json/ph
 
-3. **jk-ui CLI setup** — Configure theme and namespace:
-   ```bash
-   npx jk-ui-cli setup
-   ```
+# Or: Heroicons, Lucide, HugeIcons, Solar
+# bun add -D @iconify-json/heroicons
+```
 
-4. **Install components** — Add individual components:
-   ```bash
-   npx shadcn add @jk-ui/button @jk-ui/card
-   ```
+**Step 4: Install the base**
+```bash
+bunx shadcn add @jk-ui/base
+```
 
-### What's Included
+**Step 5: Configure your main CSS**
 
-| Area | File |
-|------|------|
-| Component reference | `components/*.md` — per-component API docs |
-| Install commands | `SKILL.md` — shadcn CLI install for every component |
-| Theming | `references/theming.md` — CSS variable tokens, semantic colors, theme presets |
-| Variants | `references/style-variants.md` — shared variant/intent system (`uiStyles`) |
-| Best practices | `references/best-practices.md` — verified usage patterns |
-| Things to avoid | `references/things-to-avoid.md` — common mistakes |
-| Accessibility | `references/accessibility.md` — RAC-based patterns |
-| Composition | `references/composition-patterns.md` — common React patterns |
-| Performance | `references/performance.md` — performance guidance |
-| Colors | `references/colors.md` — light/dark CSS variable reference |
-| Components | `references/components.md` — full component index |
+Add to `src/styles/globals.css` (or your main CSS file):
+```css
+@import "tailwindcss";
+@import "tw-animate-css";
 
-### Tech Stack
+@reference "./jk-ui/base.css";
+@reference "./jk-ui/form.css";
+@reference "./jk-ui/button.css";
+@reference "./jk-ui/ui.css";
+@reference "./jk-ui/intents.css";
+@reference "./jk-ui/utils.css";
+
+@plugin "@iconify/tailwind4" {
+  prefixes: ph;
+  scale: 1.0;
+}
+```
+
+**Step 6: Update components.json** (if needed)
+```json
+{
+  "iconLibrary": "ph"
+}
+```
+
+**Step 7: Install components**
+```bash
+bunx shadcn add @jk-ui/button
+bunx shadcn add @jk-ui/card
+bunx shadcn add @jk-ui/input
+```
+
+Done! See [Installation](/docs/installation) for full details.
+
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | React 19 (Next.js, TanStack Router/Start, React Router, or any React project) |
+| Framework | React 19 (Next.js, TanStack Start, React Router, etc.) |
 | Primitives | react-aria-components |
-| Styling | Tailwind CSS 4 with `@tailwindcss/postcss` |
-| Variants | `tailwind-variants` 3.2 + `tailwind-merge` 3.4 |
-| Icons | Phosphor via `@iconify-json/ph` |
-| Animation | `motion` 12 + `tw-animate-css` |
+| Styling | Tailwind CSS 4 |
+| Variants | `tailwind-variants` + `tailwind-merge` |
+| Icons | Iconify (Phosphor, Heroicons, Lucide, etc.) |
+| Animation | `motion` + `tw-animate-css` |
 | Charts | Recharts 3.7 |
 | OTP | `input-otp` 1.4 |
 
-### Source
+## Reference
 
-The skill files live in [`./skills/jk-ui/`](https://github.com/johnkatmj/jk-ui/tree/main/skills/jk-ui) in the repository root.
+**Skill files:** [`./skills/jk-ui/`](https://github.com/Johnkat-Mj/jk-ui/tree/main/skills/jk-ui)
+
+**Key files:**
+- `SKILL.md` — Main skill guide
+- `INDEX.md` — Navigation guide
+- `references/` — Technical references
+- `components/` — Per-component docs

@@ -1,0 +1,107 @@
+/*
+ * Variant + intent tokens
+ *
+ * Add or customize button and UI intents here. The visual recipes live in
+ * button.css and ui.css; these utilities only provide their color variables.
+ */
+
+@utility btn-solid-primary {
+  --btn-color: var(--color-primary);
+  --btn-fg: var(--color-primary-foreground);
+}
+
+@utility btn-solid-secondary {
+  --btn-color: var(--color-secondary);
+  --btn-fg: var(--color-secondary-foreground);
+}
+
+@utility btn-solid-accent {
+  --btn-color: var(--color-accent);
+  --btn-fg: var(--color-accent-foreground);
+}
+
+@utility btn-solid-neutral {
+  --btn-color: var(--color-foreground);
+  --btn-fg: var(--color-background);
+}
+
+@utility btn-solid-destructive {
+  --btn-color: var(--color-destructive);
+  --btn-fg: var(--color-destructive-foreground);
+}
+
+@utility btn-soft-primary {
+  --btn-color: var(--color-primary);
+  --btn-fg: var(--color-primary);
+}
+
+@utility btn-soft-destructive {
+  --btn-color: var(--color-destructive);
+  --btn-fg: var(--color-destructive);
+}
+
+@utility btn-soft-warning {
+  --btn-color: var(--color-warning);
+  --btn-fg: var(--color-warning);
+}
+
+@utility btn-soft-gray {
+  --btn-color: var(--color-muted-foreground);
+  --btn-fg: var(--color-foreground);
+}
+
+@utility btn-ghost-gray {
+  --btn-fg: var(--color-foreground);
+  --btn-hover-color: var(--color-muted);
+  --btn-active-color: color-mix(in oklab, var(--color-muted) 82%, var(--color-foreground));
+  --btn-ring-color: var(--color-ring);
+}
+
+@utility btn-outline-gray {
+  --btn-color: var(--color-background);
+  --btn-fg: var(--color-foreground);
+  --btn-border-color: var(--color-border);
+  --btn-hover-color: var(--color-muted);
+  --btn-active-color: color-mix(in oklab, var(--color-muted) 82%, var(--color-foreground));
+  --btn-ring-color: var(--color-ring);
+}
+
+@utility ui-solid-primary { --ui-color: var(--color-primary); --ui-fg: var(--color-primary-foreground); }
+@utility ui-solid-secondary { --ui-color: var(--color-secondary); --ui-fg: var(--color-secondary-foreground); }
+@utility ui-solid-accent { --ui-color: var(--color-accent); --ui-fg: var(--color-accent-foreground); }
+@utility ui-solid-success { --ui-color: var(--color-success); --ui-fg: var(--color-white); }
+@utility ui-solid-destructive { --ui-color: var(--color-destructive); --ui-fg: var(--color-destructive-foreground); }
+@utility ui-solid-warning { --ui-color: var(--color-warning); --ui-fg: var(--color-foreground); }
+@utility ui-solid-info { --ui-color: var(--color-info); --ui-fg: var(--color-white); }
+@utility ui-solid-gray { --ui-color: var(--color-muted); --ui-fg: var(--color-foreground); }
+@utility ui-solid-neutral { --ui-color: var(--color-foreground); --ui-fg: var(--color-background); }
+
+@utility ui-soft-primary { --ui-color: var(--color-primary); --ui-fg: var(--color-primary-foreground); }
+@utility ui-soft-secondary { --ui-color: var(--color-secondary); --ui-fg: var(--color-secondary-foreground); }
+@utility ui-soft-accent { --ui-color: var(--color-accent); --ui-fg: var(--color-accent-foreground); }
+@utility ui-soft-success { --ui-color: var(--color-success); --ui-fg: var(--color-white); }
+@utility ui-soft-destructive { --ui-color: var(--color-destructive); --ui-fg: var(--color-destructive-foreground); }
+@utility ui-soft-warning { --ui-color: var(--color-warning); --ui-fg: var(--color-foreground); }
+@utility ui-soft-info { --ui-color: var(--color-info); --ui-fg: var(--color-white); }
+@utility ui-soft-gray { --ui-color: var(--color-muted-foreground); --ui-fg: var(--color-foreground); }
+@utility ui-soft-neutral { --ui-color: var(--color-foreground); --ui-fg: var(--color-background); }
+
+@utility ui-outline-primary { --ui-color: var(--color-primary); --ui-fg: var(--color-primary-foreground); }
+@utility ui-outline-secondary { --ui-color: var(--color-secondary); --ui-fg: var(--color-secondary-foreground); }
+@utility ui-outline-accent { --ui-color: var(--color-accent); --ui-fg: var(--color-accent-foreground); }
+@utility ui-outline-success { --ui-color: var(--color-success); --ui-fg: var(--color-white); }
+@utility ui-outline-destructive { --ui-color: var(--color-destructive); --ui-fg: var(--color-destructive-foreground); }
+@utility ui-outline-warning { --ui-color: var(--color-warning); --ui-fg: var(--color-foreground); }
+@utility ui-outline-info { --ui-color: var(--color-info); --ui-fg: var(--color-white); }
+@utility ui-outline-gray { --ui-color: var(--color-muted-foreground); --ui-fg: var(--color-foreground); }
+@utility ui-outline-neutral { --ui-color: var(--color-foreground); --ui-fg: var(--color-background); }
+
+@utility ui-subtle-primary { --ui-color: var(--color-primary); --ui-fg: var(--color-primary-foreground); }
+@utility ui-subtle-secondary { --ui-color: var(--color-secondary); --ui-fg: var(--color-secondary-foreground); }
+@utility ui-subtle-accent { --ui-color: var(--color-accent); --ui-fg: var(--color-accent-foreground); }
+@utility ui-subtle-success { --ui-color: var(--color-success); --ui-fg: var(--color-white); }
+@utility ui-subtle-destructive { --ui-color: var(--color-destructive); --ui-fg: var(--color-destructive-foreground); }
+@utility ui-subtle-warning { --ui-color: var(--color-warning); --ui-fg: var(--color-foreground); }
+@utility ui-subtle-info { --ui-color: var(--color-info); --ui-fg: var(--color-white); }
+@utility ui-subtle-gray { --ui-color: var(--color-muted-foreground); --ui-fg: var(--color-foreground); }
+@utility ui-subtle-neutral { --ui-color: var(--color-foreground); --ui-fg: var(--color-background); }

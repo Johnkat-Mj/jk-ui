@@ -52,9 +52,9 @@ interface BadgeProps<V extends BadgeVariant = "solid"> {
  *
  * @example
  * ```tsx
- * <Badge variant="solid" intent="solid-primary">Primary</Badge>
- * <Badge variant="soft" intent="soft-success" size="sm">Success</Badge>
- * <Badge variant="outline" intent="outline-danger" size="lg">Danger</Badge>
+ * <Badge variant="solid" intent="primary">Primary</Badge>
+ * <Badge variant="soft" intent="success" size="sm">Success</Badge>
+ * <Badge variant="outline" intent="destructive" size="lg">Destructive</Badge>
  * ```
  */
 export const Badge = <V extends BadgeVariant = "solid">({
@@ -89,7 +89,7 @@ export const Badge = <V extends BadgeVariant = "solid">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes

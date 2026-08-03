@@ -34,6 +34,8 @@
     "examples/callout-message": "src/components/examples/alert/callout-message.tsx",
     "examples/callout-with-title": "src/components/examples/alert/callout-with-title.tsx",
     "examples/select-demo": "src/components/examples/select/select-demo.tsx",
+    "examples/multi-select-demo": "src/components/examples/multi-select/multi-select-demo.tsx",
+    "examples/multi-select-with-label": "src/components/examples/multi-select/multi-select-with-label.tsx",
     "examples/menu-demo": "src/components/examples/menu/menu-demo.tsx",
     "examples/menu-with-icon": "src/components/examples/menu/with-icon.tsx",
     "examples/popover-demo": "src/components/examples/popover/popover-demo.tsx",

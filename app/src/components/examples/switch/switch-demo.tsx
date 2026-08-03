@@ -16,7 +16,7 @@ export const SwitchDemo = () => {
                     Switch 2
                 </Switch>
                 <Switch name="switch_def3" id="switch_def3"
-                    indicatorClassName="[--switch-bg:var(--color-bg-muted)] [--switch-bg-selected:var(--color-fg-title)] [--knob-bg:var(--color-bg)]">
+                    indicatorClassName="[--switch-bg:var(--color-bg-muted)] [--switch-bg-selected:var(--color-fg-title)] [--knob-bg:var(--color-background)]">
                     Switch 3
                 </Switch>
             </div>

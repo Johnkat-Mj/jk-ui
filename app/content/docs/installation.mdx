@@ -1,91 +1,150 @@
 ---
 title: Installation
-description: Get started with JK-UI in your React project
-keywords: installation, setup, tanstack start, nextjs, shadcn, cli, tailwindcss
+description: Set up JK-UI with the same file structure used by the official templates
+keywords: installation, setup, tanstack start, nextjs, shadcn, tailwindcss
 ---
 
-## Prerequisites
+JK-UI follows the shadcn distribution model: components and styles are copied into your project and remain yours to customize.
 
-Before you begin, make sure you have:
+## 1. Initialize shadcn
 
-- Node.js 18+ installed
-- A React project (Next.js, TanStack Start, Vite + React, or any React framework)
-- A package manager (npm, yarn, pnpm, or bun)
-
-## Setup Flow
-
-JK-UI follows the standard shadcn setup flow with `--base aria`:
-
-### Step 1: Initialize shadcn with React Aria
+Use the React Aria base:
 
 ```bash
 bunx --bun shadcn@latest init --base aria
 ```
 
-This configures `shadcn` for your project with React Aria Components as the base primitives.
+Verify that `components.json` points to your real main CSS file and aliases:
 
-### Step 2: Install JK-UI base CSS
-
-```bash
-npx shadcn add @jk-ui/base
+```json
+{
+  "tailwind": {
+    "css": "src/styles/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  }
+}
 ```
 
-Then add these imports to your main CSS file:
+## 2. Register JK-UI
+
+```bash
+bunx shadcn@latest registry add @jk-ui=https://jk-ui.unoforge.com/r/{name}.json
+```
+
+Equivalent manual `components.json` configuration:
+
+```json
+{
+  "registries": {
+    "@jk-ui": "https://jk-ui.unoforge.com/r/{name}.json"
+  }
+}
+```
+
+## 3. Install an icon library
+
+JK-UI supports any Iconify icon source. Choose one:
+
+**Phosphor (default):**
+```bash
+bun add -D @iconify-json/ph
+```
+
+**Or any Iconify source:**
+```bash
+# Heroicons
+bun add -D @iconify-json/heroicons
+
+# Lucide
+bun add -D @iconify-json/lucide
+
+# HugeIcons
+bun add -D @iconify-json/hugeicons
+
+# Solar
+bun add -D @iconify-json/solar
+```
+
+Update the `iconLibrary` in `components.json`:
+```json
+{
+  "iconLibrary": "ph"  // or "heroicons", "lucide", "hugeicons", "solar"
+}
+```
+
+## 5. Install the foundation
+
+```bash
+bunx shadcn add @jk-ui/base
+```
+
+`base` installs everything shared by JK-UI:
+
+- the default light/dark variables and Tailwind mappings into the main CSS declared in `components.json`
+- `styles/jk-ui/base.css`, `form.css`, `button.css`, `ui.css`, `intents.css`, `utils.css`
+- `lib/utils.ts`, `lib/ui-variants.ts`, `lib/ui-variant-types.ts`
+- Required dependencies (React Aria, tailwind-variants, animations)
+
+## 6. Configure the main CSS
+
+Use this structure in the CSS file declared in `components.json`:
 
 ```css
-@import "./jk-ui/base.css";
-@import "./jk-ui/button.css";
-@import "./jk-ui/form.css";
-@import "./jk-ui/ui.css";
-@import "./jk-ui/intents.css";
-@import "./jk-ui/utils.css";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@reference "./jk-ui/base.css";
+@reference "./jk-ui/form.css";
+@reference "./jk-ui/button.css";
+@reference "./jk-ui/ui.css";
+@reference "./jk-ui/intents.css";
+@reference "./jk-ui/utils.css";
+
+@plugin "@iconify/tailwind4" {
+  prefixes: ph;
+  scale: 1.0;
+}
 ```
 
-### Step 3: Run JK-UI setup
+The shadcn CLI writes the semantic variables and their `@theme inline` mappings directly into this main CSS file. The `@reference` files expose reusable JK-UI utilities without duplicating their CSS. Adjust relative paths when your main CSS lives elsewhere.
+
+## 7. Install components
 
 ```bash
-npx jk-ui-cli setup
+bunx shadcn add @jk-ui/button
+bunx shadcn add @jk-ui/card
+bunx shadcn add @jk-ui/input
 ```
 
-This prompts you to:
-- Choose a **theme preset** (default, air, earth, fire, water, and more)
-- Select an **icon library** (Phosphor by default)
-- Generates a self-contained `jk-ui-theme.css` with your chosen theme
-- Patches `components.json` to add the `@jk-ui` registry namespace
-
-### Step 4: Install components
-
-```bash
-npx shadcn add @jk-ui/button
-npx shadcn add @jk-ui/card
-npx shadcn add @jk-ui/input
-npx shadcn add @jk-ui/checkbox
-```
-
-All components are available under the `@jk-ui` namespace.
-
-## Quick Start
-
-```bash
-# One-line setup (all steps)
-bunx --bun shadcn@latest init --base aria
-npx shadcn add @jk-ui/base
-npx jk-ui-cli setup
-npx shadcn add @jk-ui/button
-
-# Use in your app
-```
+Every UI registry item depends on `@jk-ui/base`; installing a component in a fresh project therefore brings the foundation automatically. You only configure the main CSS once.
 
 ```tsx
 import { Button } from "@/components/jk/button"
 
-export default function Home() {
-  return <Button>Hello, JK-UI!</Button>
+export default function Page() {
+  return <Button intent="primary">Continue</Button>
 }
 ```
 
-## Next Steps
+## Optional theme preset
 
-- Browse the [Components](/components) section
-- Learn about [Theming](/docs/theme)
-- Explore [Theme Colors](/docs/theme/colors)
+The base already contains the editable default palette. Install a preset only when you want to replace it:
+
+```bash
+npx shadcn add @jk-ui/theme-water
+```
+
+## Alternative install methods
+
+| Method | Example |
+|---|---|
+| Namespace | `npx shadcn add @jk-ui/button` |
+| Direct URL | `npx shadcn add https://jk-ui.unoforge.com/r/button.json` |
+| GitHub | `npx shadcn add johnkat-mj/jk-ui/button` |
+
+Next: [Theming](/docs/theme), [Colors](/docs/theme/colors), [Migration](/docs/migration).

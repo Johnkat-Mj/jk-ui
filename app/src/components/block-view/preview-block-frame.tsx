@@ -29,12 +29,12 @@ const PreviewBlockFrameComponent = ({ preview, reloadKey = 0 }: PreviewBlockFram
 
   return (
     <div
-      className="w-full h-full bg-bg duration-300 ease-linear ui-preview-frame
+      className="w-full h-full bg-background duration-300 ease-linear ui-preview-frame
             flex items-center justify-center relative lg:group-data-[size=mobile]:rounded-ui lg:group-data-[size=md]:rounded-ui
             lg:group-data-[size=md]:w-194.5 lg:group-data-[size=mobile]:w-96 overflow-hidden"
     >
       {frameIsLoading && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-bg">
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-background">
           <span
             aria-label="Loading preview"
             className="iconify ph--spinner-gap size-6 text-muted-foreground animate-spin"

@@ -3,7 +3,15 @@
   "name": "sidebar",
   "title": "Sidebar",
   "description": "jk-ui Sidebar Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/button"
   ],
   "files": [

@@ -16,7 +16,7 @@ export const PreviewerCodeUI = ({ noInTabs, component, codeblock, isFrame = fals
                 className="grid w-full gap-1 border border-gray-200 dark:border-gray-800/60 ui-card [--card-padding:--spacing(1)] [--card-radius:var(--radius-ui)] bg-gray-50 dark:bg-gray-900/50 my-5 first:mt-0">
                 <div data-gen-ignore
                     className={
-                        cx("inner-radius  bg-bg shadow border border-gray-200 dark:border-gray-800/60 flex justify-center min-h-max",
+                        cx("inner-radius  bg-background shadow border border-gray-200 dark:border-gray-800/60 flex justify-center min-h-max",
                             {
                                 "p-4 md:p-10": !isFrame
                             }
@@ -41,7 +41,7 @@ export const PreviewerCodeUI = ({ noInTabs, component, codeblock, isFrame = fals
             <TabPanel id={`Preview-${id}`} className={"border border-gray-200 dark:border-gray-800/60 ui-card [--card-padding:--spacing(1)] [--card-radius:var(--global-main-radius)] bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center h-max"} >
                 <div className={
                     cx(
-                        "min-h-60 lg:min-h-80 w-full inner-radius bg-bg shadow border border-gray-200 dark:border-gray-800/60",
+                        "min-h-60 lg:min-h-80 w-full inner-radius bg-background shadow border border-gray-200 dark:border-gray-800/60",
                         {
                             "flex items-center justify-center p-4 md:p-10": !isFrame
                         }

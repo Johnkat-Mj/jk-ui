@@ -3,6 +3,15 @@
   "name": "pie-chart",
   "title": "Pie chart",
   "description": "Pie chart component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/pie-chart.tsx",

@@ -1,861 +1,1336 @@
 {
-    "items": [
+  "items": [
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "jk-ui Alert Component",
+      "registryDependencies": [
+        "@jk-ui/lib"
+      ],
+      "files": [
         {
-            "name": "alert",
-            "type": "registry:ui",
-            "title": "Alert",
-            "description": "jk-ui Alert Component",
-            "registryDependencies": [
-                "@jk-ui/lib"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/alert.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/alert.tsx"
-                }
-            ]
-        },
-        {
-            "name": "avatar",
-            "type": "registry:ui",
-            "title": "Avatar",
-            "description": "jk-ui Avatar Component",
-            "files": [
-                {
-                    "path": "src/components/jk/avatar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/avatar.tsx"
-                }
-            ]
-        },
-        {
-            "name": "badge",
-            "type": "registry:ui",
-            "title": "Badge",
-            "description": "jk-ui Badge Component",
-            "files": [
-                {
-                    "path": "src/components/jk/badge.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/badge.tsx"
-                }
-            ]
-        },
-        {
-            "name": "breadcrumbs",
-            "type": "registry:ui",
-            "title": "Breadcrumbs",
-            "description": "jk-ui Breadcrumbs Component",
-            "files": [
-                {
-                    "path": "src/components/jk/breadcrumbs.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/breadcrumbs.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/link"
-            ]
-        },
-        {
-            "name": "button",
-            "type": "registry:ui",
-            "title": "Button",
-            "description": "jk-ui Button Component",
-            "files": [
-                {
-                    "path": "src/components/jk/button.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/button.tsx"
-                }
-            ]
-        },
-        {
-            "name": "calendar",
-            "type": "registry:ui",
-            "title": "Calendar",
-            "description": "jk-ui Calendar Component",
-            "registryDependencies": [
-                "@jk-ui/button"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/calendar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/calendar.tsx"
-                },
-                {
-                    "path": "src/components/jk/calendar-month-year.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/calendar-month-year.tsx"
-                }
-            ]
-        },
-        {
-            "name": "callout",
-            "type": "registry:ui",
-            "title": "Callout",
-            "description": "jk-ui Callout Component",
-            "registryDependencies": [
-                "@jk-ui/alert"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/callout.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/callout.tsx"
-                }
-            ]
-        },
-        {
-            "name": "card",
-            "type": "registry:ui",
-            "title": "Card",
-            "description": "jk-ui Card Component",
-            "files": [
-                {
-                    "path": "src/components/jk/card.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/card.tsx"
-                }
-            ]
-        },
-        {
-            "name": "checkbox",
-            "type": "registry:ui",
-            "title": "Checkbox",
-            "description": "jk-ui Checkbox Component",
-            "registryDependencies": [
-                "@jk-ui/input"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/checkbox.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/checkbox.tsx"
-                }
-            ]
-        },
-        {
-            "name": "date-picker",
-            "type": "registry:ui",
-            "title": "Date Picker",
-            "description": "jk-ui Date Picker Component",
-            "registryDependencies": [
-                "@jk-ui/field-button",
-                "@jk-ui/calendar",
-                "@jk-ui/input",
-                "@jk-ui/input-date",
-                "@jk-ui/popover"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/date-picker.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/date-picker.tsx"
-                }
-            ]
-        },
-        {
-            "name": "date-range-picker",
-            "type": "registry:ui",
-            "title": "Date Range Picker",
-            "description": "jk-ui Date Range Picker Component",
-            "registryDependencies": [
-                "@jk-ui/field-button",
-                "@jk-ui/range-calendar",
-                "@jk-ui/input",
-                "@jk-ui/input-date",
-                "@jk-ui/popover"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/date-range-picker.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/date-range-picker.tsx"
-                }
-            ]
-        },
-        {
-            "name": "dialog",
-            "type": "registry:ui",
-            "title": "Dialog",
-            "description": "jk-ui Dialog Component",
-            "registryDependencies": [
-                "@jk-ui/button"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/dialog.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/dialog.tsx"
-                }
-            ]
-        },
-        {
-            "name": "disclosure",
-            "type": "registry:ui",
-            "title": "Disclosure",
-            "description": "jk-ui Disclosure Component",
-            "files": [
-                {
-                    "path": "src/components/jk/disclosure-group.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/disclosure-group.tsx"
-                }
-            ]
-        },
-        {
-            "name": "dropdown",
-            "type": "registry:ui",
-            "title": "Dropdown",
-            "description": "jk-ui Dropdown Component",
-            "registryDependencies": [
-                "@jk-ui/keyboard"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/dropdown.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/dropdown.tsx"
-                }
-            ]
-        },
-        {
-            "name": "field-button",
-            "type": "registry:ui",
-            "title": "Field Button",
-            "description": "jk-ui Field Button Component",
-            "files": [
-                {
-                    "path": "src/components/jk/field-button.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/field-button.tsx"
-                }
-            ]
-        },
-        {
-            "name": "native-table",
-            "type": "registry:ui",
-            "title": "Native Table",
-            "description": "jk-ui Native Table Component",
-            "files": [
-                {
-                    "path": "src/components/jk/native-table.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/native-table.tsx"
-                }
-            ]
-        },
-        {
-            "name": "input-date",
-            "type": "registry:ui",
-            "title": "Input Date",
-            "description": "jk-ui Input Date Component",
-            "files": [
-                {
-                    "path": "src/components/jk/input-date.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/input-date.tsx"
-                }
-            ]
-        },
-        {
-            "name": "input-otp",
-            "type": "registry:ui",
-            "title": "Input OTP",
-            "description": "jk-ui Input OTP Component",
-            "registryDependencies": [
-                "@jk-ui/input"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/input-otp.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/input-otp.tsx"
-                }
-            ]
-        },
-        {
-            "name": "input-time",
-            "type": "registry:ui",
-            "title": "Input Time",
-            "description": "jk-ui Input Time Component",
-            "registryDependencies": [
-                "@jk-ui/input-date",
-                "@jk-ui/input"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/input-time.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/input-time.tsx"
-                }
-            ]
-        },
-        {
-            "name": "keyboard",
-            "type": "registry:ui",
-            "title": "Keyboard",
-            "description": "jk-ui Keyboard Component",
-            "files": [
-                {
-                    "path": "src/components/jk/keyboard.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/keyboard.tsx"
-                }
-            ]
-        },
-        {
-            "name": "link",
-            "type": "registry:ui",
-            "title": "Link",
-            "description": "jk-ui Link Component",
-            "files": [
-                {
-                    "path": "src/components/jk/link.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/link.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/button"
-            ]
-        },
-        {
-            "name": "menu",
-            "type": "registry:ui",
-            "title": "Menu",
-            "description": "jk-ui Menu Component",
-            "registryDependencies": [
-                "@jk-ui/dropdown",
-                "@jk-ui/popover"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/menu.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/menu.tsx"
-                }
-            ]
-        },
-        {
-            "name": "modal",
-            "type": "registry:ui",
-            "title": "Modal",
-            "description": "jk-ui Modal Component",
-            "registryDependencies": [
-                "@jk-ui/dialog"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/modal.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/modal.tsx"
-                }
-            ]
-        },
-        {
-            "name": "navbar",
-            "type": "registry:ui",
-            "title": "Navbar",
-            "description": "jk-ui Navbar Component",
-            "files": [
-                {
-                    "path": "src/components/jk/navbar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/navbar.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/button"
-            ]
-        },
-        {
-            "name": "popover",
-            "type": "registry:ui",
-            "title": "Popover",
-            "description": "jk-ui Popover Component",
-            "registryDependencies": [
-                "@jk-ui/dialog"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/popover.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/popover.tsx"
-                }
-            ]
-        },
-        {
-            "name": "radio",
-            "type": "registry:ui",
-            "title": "Radio",
-            "description": "jk-ui Radio Component",
-            "files": [
-                {
-                    "path": "src/components/jk/radio.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/radio.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/input"
-            ]
-        },
-        {
-            "name": "range-calendar",
-            "type": "registry:ui",
-            "title": "Range Calendar",
-            "description": "jk-ui Range Calendar Component",
-            "registryDependencies": [
-                "@jk-ui/calendar"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/range-calendar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/range-calendar.tsx"
-                }
-            ]
-        },
-        {
-            "name": "select",
-            "type": "registry:ui",
-            "title": "Select",
-            "description": "jk-ui Select Component",
-            "registryDependencies": [
-                "@jk-ui/dropdown",
-                "@jk-ui/input",
-                "@jk-ui/popover"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/select.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/select.tsx"
-                }
-            ]
-        },
-        {
-            "name": "separator",
-            "type": "registry:ui",
-            "title": "Separator",
-            "description": "jk-ui Separator Component",
-            "files": [
-                {
-                    "path": "src/components/jk/separator.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/separator.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sheet",
-            "type": "registry:ui",
-            "title": "Sheet",
-            "description": "jk-ui Sheet Component",
-            "registryDependencies": [
-                "@jk-ui/dialog"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/sheet.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/sheet.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidebar",
-            "type": "registry:ui",
-            "title": "Sidebar",
-            "description": "jk-ui Sidebar Component",
-            "registryDependencies": [
-                "@jk-ui/button"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/sidebar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/sidebar.tsx"
-                }
-            ]
-        },
-        {
-            "name": "switch",
-            "type": "registry:ui",
-            "title": "Switch",
-            "description": "jk-ui Switch Component",
-            "registryDependencies": [
-                "@jk-ui/input"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/switch.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/switch.tsx"
-                }
-            ]
-        },
-        {
-            "name": "tabs",
-            "type": "registry:ui",
-            "title": "Tabs",
-            "description": "jk-ui Tabs Component",
-            "files": [
-                {
-                    "path": "src/components/jk/tabs.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/tabs.tsx"
-                }
-            ]
-        },
-        {
-            "name": "combo-box",
-            "type": "registry:ui",
-            "title": "Combobox",
-            "description": "jk-ui Combobox Component",
-            "files": [
-                {
-                    "path": "src/components/jk/combo-box.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/combo-box.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/text-field",
-                "@jk-ui/input",
-                "@jk-ui/dropdown",
-                "@jk-ui/popover"
-            ]
-        },
-        {
-            "name": "drop-zone",
-            "type": "registry:ui",
-            "title": "Drop Zone",
-            "description": "jk-ui Drop Zone Component",
-            "files": [
-                {
-                    "path": "src/components/jk/drop-zone.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/drop-zone.tsx"
-                }
-            ]
-        },
-        {
-            "name": "file-trigger",
-            "type": "registry:ui",
-            "title": "File Trigger",
-            "description": "jk-ui File Trigger Component",
-            "registryDependencies": [
-                "@jk-ui/button",
-                "@jk-ui/loader"
-            ],
-            "files": [
-                {
-                    "path": "src/components/jk/file-trigger.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/file-trigger.tsx"
-                }
-            ]
-        },
-        {
-            "name": "input",
-            "type": "registry:ui",
-            "title": "Input",
-            "description": "jk-ui Input Component",
-            "files": [
-                {
-                    "path": "src/components/jk/input.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/input.tsx"
-                }
-            ]
-        },
-        {
-            "name": "number-field",
-            "type": "registry:ui",
-            "title": "Number Field",
-            "description": "jk-ui Number Field Component",
-            "files": [
-                {
-                    "path": "src/components/jk/number-field.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/number-field.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/input",
-                "@jk-ui/text-field"
-            ]
-        },
-        {
-            "name": "progress-bar",
-            "type": "registry:ui",
-            "title": "Progress Bar",
-            "description": "jk-ui Progress Bar Component",
-            "files": [
-                {
-                    "path": "src/components/jk/progress-bar.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/progress-bar.tsx"
-                }
-            ]
-        },
-        {
-            "name": "loader",
-            "type": "registry:ui",
-            "title": "Loader",
-            "description": "jk-ui Loader Component",
-            "files": [
-                {
-                    "path": "src/components/jk/loader.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/loader.tsx"
-                }
-            ]
-        },
-        {
-            "name": "progress-bar-circle",
-            "type": "registry:ui",
-            "title": "Progress Bar Circle",
-            "description": "jk-ui Circular Progress Bar Component",
-            "files": [
-                {
-                    "path": "src/components/jk/progress-bar-circle.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/progress-bar-circle.tsx"
-                }
-            ]
-        },
-        {
-            "name": "search-field",
-            "type": "registry:ui",
-            "title": "Search Field",
-            "description": "jk-ui Search Field Component",
-            "files": [
-                {
-                    "path": "src/components/jk/search-field.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/search-field.tsx"
-                }
-            ]
-        },
-        {
-            "name": "skeleton",
-            "type": "registry:ui",
-            "title": "Skeleton",
-            "description": "jk-ui Skeleton Component",
-            "files": [
-                {
-                    "path": "src/components/jk/skeleton.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/skeleton.tsx"
-                }
-            ]
-        },
-        {
-            "name": "slider",
-            "type": "registry:ui",
-            "title": "Slider",
-            "description": "jk-ui Slider Component",
-            "files": [
-                {
-                    "path": "src/components/jk/slider.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/slider.tsx"
-                }
-            ]
-        },
-        {
-            "name": "table",
-            "type": "registry:ui",
-            "title": "Table",
-            "description": "jk-ui Table Component",
-            "files": [
-                {
-                    "path": "src/components/jk/table.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/table.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/checkbox"
-            ]
-        },
-        {
-            "name": "tag-field",
-            "type": "registry:ui",
-            "title": "Tag Field",
-            "description": "jk-ui Tag Field Component",
-            "files": [
-                {
-                    "path": "src/components/jk/tag-field.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/tag-field.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/tag-group",
-                "@jk-ui/input",
-                "@jk-ui/text-field"
-            ]
-        },
-        {
-            "name": "tag-group",
-            "type": "registry:ui",
-            "title": "Tag Group",
-            "description": "jk-ui Tag Group Component",
-            "files": [
-                {
-                    "path": "src/components/jk/tag-group.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/tag-group.tsx"
-                }
-            ]
-        },
-        {
-            "name": "text-field",
-            "type": "registry:ui",
-            "title": "Text Field",
-            "description": "jk-ui Text Field Component",
-            "files": [
-                {
-                    "path": "src/components/jk/text-field.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/text-field.tsx"
-                }
-            ]
-        },
-        {
-            "name": "toggle",
-            "type": "registry:ui",
-            "title": "Toggle",
-            "description": "jk-ui Toggle Component",
-            "files": [
-                {
-                    "path": "src/components/jk/toggle.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/toggle.tsx"
-                }
-            ]
-        },
-        {
-            "name": "toggle-group",
-            "type": "registry:ui",
-            "title": "Toggle Group",
-            "description": "jk-ui Toggle Group Component",
-            "files": [
-                {
-                    "path": "src/components/jk/toggle-group.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/toggle-group.tsx"
-                }
-            ],
-            "registryDependencies":[
-                "@jk-ui/toggle"
-            ]
-        },
-        {
-            "name": "tooltip",
-            "type": "registry:ui",
-            "title": "Tooltip",
-            "description": "jk-ui Tooltip Component",
-            "files": [
-                {
-                    "path": "src/components/jk/tooltip.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/tooltip.tsx"
-                }
-            ]
-        },
-        {
-            "name": "aspect-ratio",
-            "type": "registry:ui",
-            "title": "Aspect Ratio",
-            "description": "jk-ui Aspect Ratio Component",
-            "files": [
-                {
-                    "path": "src/components/jk/aspect-ratio.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/aspect-ratio.tsx"
-                }
-            ]
-        },
-        {
-            "name": "command-menu",
-            "type": "registry:ui",
-            "title": "Command Menu",
-            "description": "jk-ui Command Menu Component",
-            "files": [
-                {
-                    "path": "src/components/jk/command-menu.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/command-menu.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/dropdown",
-                "@jk-ui/loader",
-                "@jk-ui/menu"
-            ]
-        },
-        {
-            "name": "heading",
-            "type": "registry:ui",
-            "title": "Heading",
-            "description": "jk-ui Heading Component",
-            "files": [
-                {
-                    "path": "src/components/jk/heading.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/heading.tsx"
-                }
-            ]
-        },
-        {
-            "name": "icon",
-            "type": "registry:ui",
-            "title": "Icon",
-            "description": "jk-ui Icon Component",
-            "files": [
-                {
-                    "path": "src/components/jk/icon.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/icon.tsx"
-                }
-            ]
-        },
-        {
-            "name": "text",
-            "type": "registry:ui",
-            "title": "Text",
-            "description": "jk-ui Text Component",
-            "files": [
-                {
-                    "path": "src/components/jk/text.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/text.tsx"
-                }
-            ]
-        },
-        {
-            "name": "textarea",
-            "type": "registry:ui",
-            "title": "Textarea",
-            "description": "jk-ui Textarea Component",
-            "files": [
-                {
-                    "path": "src/components/jk/textarea.tsx",
-                    "type": "registry:ui",
-                    "target": "components/jk/textarea.tsx"
-                }
-            ],
-            "registryDependencies": [
-                "@jk-ui/input"
-            ]
+          "path": "src/components/jk/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/alert.tsx"
         }
-    ]
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "jk-ui Avatar Component",
+      "files": [
+        {
+          "path": "src/components/jk/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/avatar.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "jk-ui Badge Component",
+      "files": [
+        {
+          "path": "src/components/jk/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/badge.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "jk-ui Breadcrumbs Component",
+      "files": [
+        {
+          "path": "src/components/jk/breadcrumbs.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/breadcrumbs.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/link"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "jk-ui Button Component",
+      "files": [
+        {
+          "path": "src/components/jk/button.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/button.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "jk-ui Calendar Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)",
+          "range-selected-bg": "color-mix(in oklab, var(--primary) 10%, transparent)",
+          "range-selected-invalid-bg": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "range-selected-bg-hover": "color-mix(in oklab, var(--primary) 16%, transparent)",
+          "range-selected-invalid-bg-hover": "color-mix(in oklab, var(--destructive) 16%, transparent)",
+          "range-selected-fg": "var(--primary)",
+          "range-selected-invalid-fg": "var(--destructive)",
+          "range-selected-bg-pressed": "color-mix(in oklab, var(--primary) 22%, transparent)",
+          "range-selected-invalid-bg-pressed": "color-mix(in oklab, var(--destructive) 22%, transparent)"
+        }
+      },
+      "files": [
+        {
+          "path": "src/components/jk/calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/calendar.tsx"
+        },
+        {
+          "path": "src/components/jk/calendar-month-year.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/calendar-month-year.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "registry:ui",
+      "title": "Callout",
+      "description": "jk-ui Callout Component",
+      "registryDependencies": [
+        "@jk-ui/alert"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/callout.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/callout.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "jk-ui Card Component",
+      "files": [
+        {
+          "path": "src/components/jk/card.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/card.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "jk-ui Checkbox Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "cssVars": {
+        "light": {
+          "checkbox-radius": "var(--radius-sm)",
+          "checkbox-bg": "var(--background)",
+          "checkbox-fg": "transparent",
+          "checkbox-bg-checked": "var(--primary)",
+          "checkbox-fg-checked": "var(--primary-foreground)",
+          "checkbox-bg-invalid": "var(--destructive)",
+          "checkbox-fg-invalid": "var(--destructive-foreground)"
+        }
+      },
+      "files": [
+        {
+          "path": "src/components/jk/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/checkbox.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "jk-ui Date Picker Component",
+      "registryDependencies": [
+        "@jk-ui/field-button",
+        "@jk-ui/calendar",
+        "@jk-ui/input",
+        "@jk-ui/input-date",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/date-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/date-picker.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:ui",
+      "title": "Date Range Picker",
+      "description": "jk-ui Date Range Picker Component",
+      "registryDependencies": [
+        "@jk-ui/field-button",
+        "@jk-ui/range-calendar",
+        "@jk-ui/input",
+        "@jk-ui/input-date",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/date-range-picker.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/date-range-picker.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "jk-ui Dialog Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "disclosure",
+      "type": "registry:ui",
+      "title": "Disclosure",
+      "description": "jk-ui Disclosure Component",
+      "files": [
+        {
+          "path": "src/components/jk/disclosure-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/disclosure-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:ui",
+      "title": "Dropdown",
+      "description": "jk-ui Dropdown Component",
+      "registryDependencies": [
+        "@jk-ui/keyboard"
+      ],
+      "cssVars": {
+        "light": {
+          "dropdown-item-hover-and-select": "var(--bg-muted)",
+          "dropdown-item-hover-and-select-fg": "var(--fg-title)",
+          "dropdown-item-selected-fg": "var(--fg-title)",
+          "dropdown-item-destructive-fg": "var(--destructive)",
+          "dropdown-item-warning-fg": "var(--warning)",
+          "dropdown-item-destructive-hover-and-select": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "dropdown-item-destructive-hover-and-select-fg": "var(--destructive)",
+          "dropdown-item-warning-hover-and-select": "color-mix(in oklab, var(--warning) 10%, transparent)",
+          "dropdown-item-warning-hover-and-select-fg": "var(--warning)"
+        }
+      },
+      "files": [
+        {
+          "path": "src/components/jk/dropdown.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/dropdown.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "field-button",
+      "type": "registry:ui",
+      "title": "Field Button",
+      "description": "jk-ui Field Button Component",
+      "files": [
+        {
+          "path": "src/components/jk/field-button.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/field-button.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "native-table",
+      "type": "registry:ui",
+      "title": "Native Table",
+      "description": "jk-ui Native Table Component",
+      "files": [
+        {
+          "path": "src/components/jk/native-table.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/native-table.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "input-date",
+      "type": "registry:ui",
+      "title": "Input Date",
+      "description": "jk-ui Input Date Component",
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)"
+        }
+      },
+      "files": [
+        {
+          "path": "src/components/jk/input-date.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-date.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "jk-ui Input OTP Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-otp.tsx"
+        }
+      ],
+      "dependencies": [
+        "input-otp",
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "input-time",
+      "type": "registry:ui",
+      "title": "Input Time",
+      "description": "jk-ui Input Time Component",
+      "registryDependencies": [
+        "@jk-ui/input-date",
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/input-time.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input-time.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "keyboard",
+      "type": "registry:ui",
+      "title": "Keyboard",
+      "description": "jk-ui Keyboard Component",
+      "files": [
+        {
+          "path": "src/components/jk/keyboard.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/keyboard.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "title": "Link",
+      "description": "jk-ui Link Component",
+      "files": [
+        {
+          "path": "src/components/jk/link.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/link.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "jk-ui Menu Component",
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/menu.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "jk-ui Modal Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/modal.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/modal.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "title": "Navbar",
+      "description": "jk-ui Navbar Component",
+      "files": [
+        {
+          "path": "src/components/jk/navbar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/navbar.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "jk-ui Popover Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/popover.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "jk-ui Radio Component",
+      "files": [
+        {
+          "path": "src/components/jk/radio.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/radio.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "range-calendar",
+      "type": "registry:ui",
+      "title": "Range Calendar",
+      "description": "jk-ui Range Calendar Component",
+      "registryDependencies": [
+        "@jk-ui/calendar"
+      ],
+      "cssVars": {
+        "light": {
+          "date-segment-focus-bg": "var(--primary)",
+          "date-segment-focus-fg": "var(--primary-foreground)",
+          "range-selected-bg": "color-mix(in oklab, var(--primary) 10%, transparent)",
+          "range-selected-invalid-bg": "color-mix(in oklab, var(--destructive) 10%, transparent)",
+          "range-selected-bg-hover": "color-mix(in oklab, var(--primary) 16%, transparent)",
+          "range-selected-invalid-bg-hover": "color-mix(in oklab, var(--destructive) 16%, transparent)",
+          "range-selected-fg": "var(--primary)",
+          "range-selected-invalid-fg": "var(--destructive)",
+          "range-selected-bg-pressed": "color-mix(in oklab, var(--primary) 22%, transparent)",
+          "range-selected-invalid-bg-pressed": "color-mix(in oklab, var(--destructive) 22%, transparent)"
+        }
+      },
+      "files": [
+        {
+          "path": "src/components/jk/range-calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/range-calendar.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "jk-ui Select Component",
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/input",
+        "@jk-ui/popover"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/select.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/select.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "title": "Multi Select",
+      "description": "jk-ui Multi Select Component",
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/field-button",
+        "@jk-ui/popover",
+        "@jk-ui/search-field",
+        "@jk-ui/tag-group",
+        "@jk-ui/text-field"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/multi-select.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/multi-select.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "jk-ui Separator Component",
+      "files": [
+        {
+          "path": "src/components/jk/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/separator.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "jk-ui Sheet Component",
+      "registryDependencies": [
+        "@jk-ui/dialog"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/sheet.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "jk-ui Sidebar Component",
+      "registryDependencies": [
+        "@jk-ui/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/sidebar.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "jk-ui Switch Component",
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/switch.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "jk-ui Tabs Component",
+      "files": [
+        {
+          "path": "src/components/jk/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tabs.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "combo-box",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "jk-ui Combobox Component",
+      "files": [
+        {
+          "path": "src/components/jk/combo-box.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/combo-box.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/text-field",
+        "@jk-ui/input",
+        "@jk-ui/dropdown",
+        "@jk-ui/popover"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "drop-zone",
+      "type": "registry:ui",
+      "title": "Drop Zone",
+      "description": "jk-ui Drop Zone Component",
+      "files": [
+        {
+          "path": "src/components/jk/drop-zone.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/drop-zone.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "file-trigger",
+      "type": "registry:ui",
+      "title": "File Trigger",
+      "description": "jk-ui File Trigger Component",
+      "registryDependencies": [
+        "@jk-ui/button",
+        "@jk-ui/loader"
+      ],
+      "files": [
+        {
+          "path": "src/components/jk/file-trigger.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/file-trigger.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "jk-ui Input Component",
+      "files": [
+        {
+          "path": "src/components/jk/input.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/input.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "jk-ui Number Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/number-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/number-field.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input",
+        "@jk-ui/text-field"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "progress-bar",
+      "type": "registry:ui",
+      "title": "Progress Bar",
+      "description": "jk-ui Progress Bar Component",
+      "files": [
+        {
+          "path": "src/components/jk/progress-bar.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/progress-bar.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "loader",
+      "type": "registry:ui",
+      "title": "Loader",
+      "description": "jk-ui Loader Component",
+      "files": [
+        {
+          "path": "src/components/jk/loader.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/loader.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "progress-bar-circle",
+      "type": "registry:ui",
+      "title": "Progress Bar Circle",
+      "description": "jk-ui Circular Progress Bar Component",
+      "files": [
+        {
+          "path": "src/components/jk/progress-bar-circle.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/progress-bar-circle.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "jk-ui Search Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/search-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/search-field.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "jk-ui Skeleton Component",
+      "files": [
+        {
+          "path": "src/components/jk/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/skeleton.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "jk-ui Slider Component",
+      "files": [
+        {
+          "path": "src/components/jk/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/slider.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "jk-ui Table Component",
+      "files": [
+        {
+          "path": "src/components/jk/table.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/table.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/checkbox"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "tag-field",
+      "type": "registry:ui",
+      "title": "Tag Field",
+      "description": "jk-ui Tag Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/tag-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tag-field.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/tag-group",
+        "@jk-ui/input",
+        "@jk-ui/text-field"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "tag-group",
+      "type": "registry:ui",
+      "title": "Tag Group",
+      "description": "jk-ui Tag Group Component",
+      "files": [
+        {
+          "path": "src/components/jk/tag-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tag-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text Field",
+      "description": "jk-ui Text Field Component",
+      "files": [
+        {
+          "path": "src/components/jk/text-field.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/text-field.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "jk-ui Toggle Component",
+      "files": [
+        {
+          "path": "src/components/jk/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/toggle.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "jk-ui Toggle Group Component",
+      "files": [
+        {
+          "path": "src/components/jk/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/toggle-group.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/toggle"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "jk-ui Tooltip Component",
+      "files": [
+        {
+          "path": "src/components/jk/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/tooltip.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "jk-ui Aspect Ratio Component",
+      "files": [
+        {
+          "path": "src/components/jk/aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/aspect-ratio.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "command-menu",
+      "type": "registry:ui",
+      "title": "Command Menu",
+      "description": "jk-ui Command Menu Component",
+      "files": [
+        {
+          "path": "src/components/jk/command-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/command-menu.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/dropdown",
+        "@jk-ui/loader",
+        "@jk-ui/menu"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "heading",
+      "type": "registry:ui",
+      "title": "Heading",
+      "description": "jk-ui Heading Component",
+      "files": [
+        {
+          "path": "src/components/jk/heading.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/heading.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "jk-ui Icon Component",
+      "files": [
+        {
+          "path": "src/components/jk/icon.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/icon.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "title": "Text",
+      "description": "jk-ui Text Component",
+      "files": [
+        {
+          "path": "src/components/jk/text.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/text.tsx"
+        }
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "jk-ui Textarea Component",
+      "files": [
+        {
+          "path": "src/components/jk/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/jk/textarea.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@jk-ui/input"
+      ],
+      "dependencies": [
+        "react",
+        "react-aria-components",
+        "react-dom",
+        "tailwind-merge",
+        "tailwind-variants"
+      ]
+    }
+  ]
 }

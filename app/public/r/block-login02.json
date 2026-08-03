@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-login02",
+  "type": "registry:block",
+  "title": "Login 02",
+  "description": "Login form with social authentication buttons",
+  "files": [
+    {
+      "path": "src/blocks/application/auth/login02.tsx",
+      "type": "registry:block",
+      "target": "components/login.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

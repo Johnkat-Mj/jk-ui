@@ -3,6 +3,15 @@
   "name": "area-chart",
   "title": "Area Chart",
   "description": "jk-ui Area Chart Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/area-chart.tsx",

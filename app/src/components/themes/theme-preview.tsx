@@ -34,7 +34,7 @@ export function ThemePreview() {
 
   return (
     <main className="bg-bg-surface p-2.5 h-svh">
-      <div className="relative bg-bg rounded-global ring-2 ring-bg-muted h-full p-1 overflow-hidden">
+      <div className="relative bg-background rounded-ui ring-2 ring-bg-muted h-full p-1 overflow-hidden">
         {/* Preview content */}
         <div className="h-full overflow-y-auto p-6 xl:p-10">
           <div className="max-w-4xl mx-auto flex flex-col gap-10">

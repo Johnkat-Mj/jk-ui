@@ -1,5 +1,5 @@
 import { Button } from "@/components/jk/button"
-import { NavbarBase, NavbarOverlayElement, NavbarProvider, NavbarToggler } from "@/components/jk/navbar"
+import { NavbarBase, NavbarProvider, NavbarToggler } from "@/components/jk/navbar"
 
 export const DemoNavbar = () => {
     return (
@@ -15,7 +15,7 @@ export const DemoNavbar = () => {
                     </div>
 
                     <NavbarBase
-                        className="fixed inset-x-0 h-dvh lg:h-max bg-bg lg:bg-transparent top-0 -translate-y-10 opacity-0 invisible lg:visible  lg:translate-y-0 lg:opacity-100 fx-open:opacity-100 fx-open:visible fx-open:translate-y-0 left-0 w-full lg:top-0 lg:relative  lg:flex lg:justify-between duration-300 ease-linear py-32 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0">
+                        className="fixed inset-x-0 h-dvh lg:h-max bg-background lg:bg-transparent top-0 -translate-y-10 opacity-0 invisible lg:visible  lg:translate-y-0 lg:opacity-100 fx-open:opacity-100 fx-open:visible fx-open:translate-y-0 left-0 w-full lg:top-0 lg:relative  lg:flex lg:justify-between duration-300 ease-linear py-32 lg:py-0 px-5 sm:px-10 md:px-12 lg:px-0">
                         <ul className="flex text-foreground flex-col lg:flex-row gap-6 lg:items-center lg:w-full lg:pl-10">
                             <li className="">
                                 <a href="#"
@@ -39,11 +39,11 @@ export const DemoNavbar = () => {
                             </li>
                         </ul>
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4 lg:min-w-max mt-10 lg:mt-0">
-                            <Button variant="ghost" circle
+                            <Button variant="ghost" radius="circle"
                                 className="justify-center w-full sm:w-max rounded-full">
                                 Login
                             </Button>
-                            <Button intent="neutral" circle
+                            <Button intent="neutral" radius="circle"
                                 className=" justify-center w-full sm:w-max rounded-full">
                                 Sign-up
                             </Button>

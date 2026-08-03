@@ -1,7 +1,7 @@
 "use client"
 
 import { cx } from "@/lib/utils"
-import { createContext, use, type ComponentProps } from "react"
+import { createContext, type ComponentProps } from "react"
 
 type NativeTableProps = {
     wrapper?: string
@@ -23,7 +23,7 @@ const TableContext = createContext<{
     divider: true
 })
 
-const useTableContext = () => use(TableContext)
+
 
 const Table = ({ 
     wrapper = '', 
@@ -113,7 +113,7 @@ const TableRows = ({
             className={cx(
                 "text-sm divide-(--table-border-color)",
                 "in-fx-table-grid:divide-y",
-                "in-fx-striped:*:even:bg-muted/40",
+                "in-fx-striped:*:even:bg-muted/80",
                 {
                     "divide-y": divider,
                 },
@@ -133,14 +133,13 @@ const TableRow = ({
     className,
     ...props 
 }: TableRowProps) => {
-    const { hoverable, striped, grid } = useTableContext()
     return (
         <tr
             data-slot="table-row"
             className={cx(
                 "text-sm divide-(--table-border-color) transition-colors ease-linear",
-                "in-fx-hoverable:hover:bg-muted/40",
-                "in-fx-striped:in-fx-hoverable:hover:bg-muted/40",
+                "in-fx-hoverable:hover:bg-muted/80",
+                "in-fx-striped:in-fx-hoverable:hover:bg-muted/80",
                 "in-fx-table-grid:divide-x",
                 {
                     "divide-x": divider,

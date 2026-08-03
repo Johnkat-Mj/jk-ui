@@ -3,6 +3,15 @@
   "name": "avatar",
   "title": "Avatar",
   "description": "jk-ui Avatar Component",
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/avatar.tsx",

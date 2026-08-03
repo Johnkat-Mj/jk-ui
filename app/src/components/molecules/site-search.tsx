@@ -19,6 +19,7 @@ export const SiteSearch = () => {
         inputRef,
         handleInputChange,
         handleKeyDown,
+        handleItemClick,
         clearSearch,
         isOpen,
         setIsOpen

@@ -54,6 +54,12 @@ export const sidebarItems: SidebarGroupCat[] = [
                 path: '/docs/dark-mode',
                 description: 'Implementing and toggling dark mode support.',
                 keywords: 'Dark Mode, Color Schemes, Appearance, Tailwind Dark',
+            },
+            {
+                title: 'Migration Guide',
+                path: '/docs/migration',
+                description: 'Migrate from shadcn/ui (Radix) to jk-ui (React Aria).',
+                keywords: 'Migration, shadcn, Radix, React Aria, Upgrade, Switch',
             }
         ]
     },
@@ -203,7 +209,6 @@ export const sidebarItems: SidebarGroupCat[] = [
                 path: "/components/multi-select",
                 description: "Pick multiple options, often displayed as tags or checkmarks.",
                 keywords: "multi select, selection, tags, choices",
-                state: "draft"
             },
             {
                 title: "Switch",

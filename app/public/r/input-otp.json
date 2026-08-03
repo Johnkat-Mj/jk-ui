@@ -3,7 +3,15 @@
   "name": "input-otp",
   "title": "Input OTP",
   "description": "jk-ui Input OTP Component",
+  "dependencies": [
+    "input-otp",
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
   "registryDependencies": [
+    "@jk-ui/base",
     "@jk-ui/input"
   ],
   "files": [

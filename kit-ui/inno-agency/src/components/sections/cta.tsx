@@ -6,7 +6,7 @@ export const Cta = () => {
     return (
         <section id="cta" className="py-32 relative">
             <div className="relative py-20 px-5 sm:px-10 md:px-12 lg:px-5 lg:max-w-7xl mx-auto w-full flex flex-col space-y-16 border border-border rounded-lg overflow-hidden">
-                <div className="[--unify-radial-bg:var(--color-bg)] absolute inset-0 h-full w-full text-primary ui-radial-gradient">
+                <div className="[--unify-radial-bg:var(--color-background)] absolute inset-0 h-full w-full text-primary ui-radial-gradient">
                 </div>
                 <div className="text-center relative">
                     <h2 className="font-semibold text-foreground text-4xl lg:text-5xl mx-auto max-w-3xl">

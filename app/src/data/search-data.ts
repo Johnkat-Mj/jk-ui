@@ -17,7 +17,7 @@ const THEMING_PREFIXES = ["/docs/theme"]
 const THEMING_EXACT = new Set(["/docs/dark-mode"])
 
 function isTheming(slug: string) {
-  const url = `/${slug}`
+  const url = `/docs/${slug}`
   return THEMING_EXACT.has(url) || THEMING_PREFIXES.some((p) => url.startsWith(p))
 }
 
@@ -35,7 +35,7 @@ function buildFromDocs(
 
   for (const doc of docs) {
     const slug = doc._meta.path
-    const url = `/${slug}`
+    const url = isComp ? `/components/${slug}` : `/docs/${slug}`
     const theming = !isComp && isTheming(slug)
     const type = isComp ? "component" : theming ? "theme" : "documentation"
     const keywords = doc.keywords?.split(/[,\s]+/).filter(Boolean)

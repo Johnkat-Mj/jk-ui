@@ -20,6 +20,10 @@
 @custom-variant fx-expanded (&[data-expanded="true"]);
 @custom-variant fx-pressed (&[data-pressed="true"]);
 
+@custom-variant fx-table-grid (&[data-table-grid]);
+@custom-variant fx-hoverable (&[data-table-hoverable]);
+@custom-variant fx-striped (&[data-table-striped]);
+
 @custom-variant fx-empty (&[data-empty="true"]);
 
 /* data-focus-visible-within */

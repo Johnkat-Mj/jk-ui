@@ -11,18 +11,18 @@ All theme tokens are defined twice — once under `:root` for light mode and onc
 
 ```css
 :root {
-  --background: var(--color-white);
-  --foreground: var(--color-gray-700);
-  --primary: var(--color-primary-600);
-  --muted: var(--color-gray-100);
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 5% 26%);
+  --primary: hsl(243 75% 59%);
+  --muted: hsl(240 5% 96%);
   /* ... */
 }
 
 .dark {
-  --background: var(--color-gray-950);
-  --foreground: var(--color-gray-300);
-  --primary: var(--color-primary-500);
-  --muted: var(--color-gray-900);
+  --background: hsl(240 10% 4%);
+  --foreground: hsl(240 5% 84%);
+  --primary: hsl(245 86% 67%);
+  --muted: hsl(240 6% 10%);
   /* ... */
 }
 ```
@@ -37,7 +37,7 @@ JK-UI does not prescribe a specific dark mode toggle library. You can use:
 
 ## Theme Modes
 
-When running `npx jk-ui-cli setup`, you choose a color mode:
+The base writes both `:root` and `.dark` values into the main CSS file declared in `components.json`. Theme presets are optional replacements for those values.
 
 | Mode | Description |
 |------|-------------|
@@ -57,4 +57,9 @@ JK-UI includes 17 built-in theme presets, each with both light and dark variants
 | Fire | Bold red/orange |
 | Water | Cool blue tones |
 
-Select a theme during `npx jk-ui-cli setup`, or switch CSS files to change themes dynamically.
+Install the base first with `bunx shadcn add @jk-ui/base`, then optionally apply a preset with `bunx shadcn add @jk-ui/theme-{name}`. Presets replace semantic values; they do not change the six `@reference` directives.
+
+**Example:**
+```bash
+bunx shadcn add @jk-ui/theme-earth  # Install Earth theme preset
+```

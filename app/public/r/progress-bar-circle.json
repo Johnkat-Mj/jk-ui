@@ -3,6 +3,16 @@
   "name": "progress-bar-circle",
   "title": "Progress Bar Circle",
   "description": "jk-ui Circular Progress Bar Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/progress-bar-circle.tsx",

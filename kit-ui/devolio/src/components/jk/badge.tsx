@@ -80,7 +80,7 @@ export const Badge = <V extends BadgeVariant = "solid">({
     // Get variant classes from uiStyles
     const variantClasses = uiStyles({
         variant: variant as UiVariant,
-        intent: resolvedIntent as UiIntent<UiVariant>,
+        intent: resolvedIntent as UiIntent,
     })
 
     // Combine all classes

@@ -147,7 +147,7 @@ const TableBody = <T extends object>({
             className={cx(
                 "text-sm divide-(--table-border-color)",
                 "in-fx-table-grid:divide-y",
-                "in-fx-striped:*:even:bg-muted/40",
+                "in-fx-striped:*:even:bg-muted/70",
                 !noDivider && "divide-y",
                 className,
             )}
@@ -299,8 +299,8 @@ const TableRow = <T extends object>({
                 (className, { isSelected, selectionMode, isDragging, isDisabled }) =>
                     cx(
                         "divide-(--table-border-color) in-fx-table-grid:divide-x",
-                        "in-fx-hoverable:hover:bg-muted/40",
-                        "in-fx-striped:in-fx-hoverable:hover:bg-muted/40",
+                        "in-fx-hoverable:hover:bg-muted/80",
+                        "in-fx-striped:in-fx-hoverable:hover:bg-muted/80",
                         (props.href || props.onAction || selectionMode === "multiple") && "hover:bg-muted/60",
                         isSelected && "bg-(--table-selected-bg,var(--color-bg-surface)) text-(--table-selected-fg,var(--color-fg-subtitle))",
                         isDragging && "cursor-grabbing",

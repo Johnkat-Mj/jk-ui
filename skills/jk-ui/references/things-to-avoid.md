@@ -26,7 +26,9 @@ Most important mistakes to avoid when answering jk-ui questions.
 
 ## Do Not Ignore Theme Guidance
 
-- Do not hardcode hex colors when semantic tokens exist (`bg-primary`, `text-fg`).
+- Do not hardcode hex colors when semantic tokens exist (`bg-primary`, `text-foreground`).
+- Do not reintroduce `--color-bg` or `--color-fg`; use `--color-background` and `--color-foreground`.
+- Do not require 50–950 scales for every semantic color. Keep the gray scale and add only product-specific shades that are actually used.
 - Do not suggest `tailwind.config.js` modifications — jk-ui uses Tailwind v4 CSS-first config.
 - Do not treat jk-ui as plain Tailwind snippets — the variant/intent system and CSS utilities are part of the library.
 

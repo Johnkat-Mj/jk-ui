@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-table02",
+  "type": "registry:block",
+  "title": "Table 02",
+  "description": "Table",
+  "files": [
+    {
+      "path": "src/blocks/application/table/table02.tsx",
+      "type": "registry:block",
+      "target": "components/table02.tsx"
+    }
+  ],
+  "dependencies": [
+    "react",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ]
+}

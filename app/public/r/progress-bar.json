@@ -3,6 +3,16 @@
   "name": "progress-bar",
   "title": "Progress Bar",
   "description": "jk-ui Progress Bar Component",
+  "dependencies": [
+    "react",
+    "react-aria-components",
+    "react-dom",
+    "tailwind-merge",
+    "tailwind-variants"
+  ],
+  "registryDependencies": [
+    "@jk-ui/base"
+  ],
   "files": [
     {
       "path": "src/components/jk/progress-bar.tsx",
